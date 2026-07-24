@@ -489,39 +489,39 @@ ISO 20022 MESSAGE FLOW
     │               ISO 20022 MESSAGE FLOW                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  SENDER BANK                                       │  │
-    │   │  Creates ISO 20022 XML message                    │  │
-    │   │  Contains:                                        │  │
-    │   │  - Payment instruction (amount, currency)         │  │
-    │   │  - Sender and receiver (IBAN, BIC)               │  │
-    │   │  - Remittance information                        │  │
-    │   │  - Settlement information                        │  │
-    │   └───────────────────────────────────────────────────┘  │
+    │   +---------------------------------------------------+   │
+    │   │  SENDER BANK                                      │   │
+    │   │  Creates ISO 20022 XML message                    │   │
+    │   │  Contains:                                        │   │
+    │   │  - Payment instruction (amount, currency)         │   │
+    │   │  - Sender and receiver (IBAN, BIC)                │   │
+    │   │  - Remittance information                         │   │
+    │   │  - Settlement information                         │   │
+    │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │               ┌───────────────────────┐                   │
-    │               │   PAYMENT RAIL       │                   │
-    │               │   (Transmits XML)    │                   │
+    │               │   PAYMENT RAIL        │                   │
+    │               │   (Transmits XML)     │                   │
     │               └───────────────────────┘                   │
     │                           │                               │
     │                           ▼                               │
-    │   +---------------------------------------------------+  │
-    │   │  RECEIVER BANK                                     │  │
-    │   │  Receives and parses ISO 20022 XML               │  │
-    │   │  Validates payment instruction                    │  │
-    │   │  Credits receiver account                         │  │
-    │   │  Sends confirmation                              │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  RECEIVER BANK                                    │   │
+    │   │  Receives and parses ISO 20022 XML                │   │
+    │   │  Validates payment instruction                    │   │
+    │   │  Credits receiver account                         │   │
+    │   │  Sends confirmation                               │   │
+    │   └---------------------------------------------------+   │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  ADVANTAGES OF ISO 20022:                         │  │
-    │   │  - Richer data (more fields)                     │  │
-    │   │  - Better reconciliation                         │  │
-    │   │  - End-to-end tracking                          │  │
-    │   │  - Global interoperability                      │  │
-    │   │  - Future-proof (XML-based)                    │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  ADVANTAGES OF ISO 20022:                         │   │
+    │   │  - Richer data (more fields)                      │   │
+    │   │  - Better reconciliation                          │   │
+    │   │  - End-to-end tracking                            │   │
+    │   │  - Global interoperability                        │   │
+    │   │  - Future-proof (XML-based)                       │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
