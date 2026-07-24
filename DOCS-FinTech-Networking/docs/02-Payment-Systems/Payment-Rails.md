@@ -11,15 +11,15 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the definition and purpose of payment rails                  │
-    │   Learn the different types of payment rails and their characteristics    │
-    │   Study the technical infrastructure and networking architecture          │
-    │   Examine messaging protocols and data exchange standards                 │
-    │   Understand connectivity and integration with banks and processors       │
-    │   Learn about routing, interoperability, and settlement                   │
-    │   Study security, resilience, and operational aspects                     │
-    │   Understand modern payment rails and future trends                       │
-    │   Learn how to select the right rail for different use cases             │
+    │   Understand the definition and purpose of payment rails                    │
+    │   Learn the different types of payment rails and their characteristics      │
+    │   Study the technical infrastructure and networking architecture            │
+    │   Examine messaging protocols and data exchange standards                   │
+    │   Understand connectivity and integration with banks and processors         │
+    │   Learn about routing, interoperability, and settlement                     │
+    │   Study security, resilience, and operational aspects                       │
+    │   Understand modern payment rails and future trends                         │
+    │   Learn how to select the right rail for different use cases                │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -34,9 +34,9 @@ How it works: Payment rails are the foundational networks that connect financial
 PAYMENT RAILS DEFINITION
 
                          +---------------------------+
-                         |    PAYMENT RAILS         |
+                         |    PAYMENT RAILS          |
                          |  Underlying infrastructure|
-                         |  for value transfer      |
+                         |  for value transfer       |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
