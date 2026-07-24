@@ -184,36 +184,36 @@ WIRE TRANSFER RAIL ARCHITECTURE
     |               WIRE TRANSFER RAIL ARCHITECTURE             |
     +-----------------------------------------------------------+
     │                                                           │
-    │   ┌─────────────┐                    ┌─────────────┐     │
-    │   │   Bank A    │   ────────►       │   Bank B    │     │
-    │   │  (Sender)   │   Real-Time       │  (Receiver) │     │
-    │   └──────┬──────┘   Settlement      └──────┬──────┘     │
-    │          │                                   │           │
-    │          │    ┌───────────────────────┐     │           │
-    │          └───►│   CENTRAL BANK RTGS   │◄────┘           │
-    │               │   (Fedwire/TARGET2)   │                 │
-    │               │                       │                 │
-    │               │  ┌─────────────────┐  │                 │
-    │               │  │   Settlement    │  │                 │
-    │               │  │   Engine        │  │                 │
-    │               │  └─────────────────┘  │                 │
-    │               │                       │                 │
-    │               │  ┌─────────────────┐  │                 │
-    │               │  │   Liquidity     │  │                 │
-    │               │  │   Management    │  │                 │
-    │               │  └─────────────────┘  │                 │
-    │               └───────────────────────┘                 │
+    │   ┌─────────────┐                    ┌─────────────┐      │
+    │   │   Bank A    │   ────────►        │   Bank B    │      │
+    │   │  (Sender)   │   Real-Time        │  (Receiver) │      │
+    │   └──────┬──────┘   Settlement       └──────┬──────┘      │
+    │          │                                  │             │
+    │          │    ┌───────────────────────┐     │             │
+    │          └───►│   CENTRAL BANK RTGS   │◄────┘             │
+    │               │   (Fedwire/TARGET2)   │                   │
+    │               │                       │                   │
+    │               │  ┌─────────────────┐  │                   │
+    │               │  │   Settlement    │  │                   │
+    │               │  │   Engine        │  │                   │
+    │               │  └─────────────────┘  │                   │
+    │               │                       │                   │
+    │               │  ┌─────────────────┐  │                   │
+    │               │  │   Liquidity     │  │                   │
+    │               │  │   Management    │  │                   │
+    │               │  └─────────────────┘  │                   │
+    │               └───────────────────────┘                   │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY FEATURES:                                     │  │
-    │   │  - Real-time processing                            │  │
-    │   │  - Gross settlement (individual)                   │  │
-    │   │  - Immediate finality                              │  │
-    │   │  - No settlement risk                              │  │
-    │   │  - High value (wholesale)                          │  │
-    │   │  - Examples: Fedwire (US), TARGET2 (EU),          │  │
-    │   │    CHAPS (UK)                                     │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY FEATURES:                                    │   │
+    │   │  - Real-time processing                           │   │
+    │   │  - Gross settlement (individual)                  │   │
+    │   │  - Immediate finality                             │   │
+    │   │  - No settlement risk                             │   │
+    │   │  - High value (wholesale)                         │   │
+    │   │  - Examples: Fedwire (US), TARGET2 (EU),          │   │
+    │   │    CHAPS (UK)                                     │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
