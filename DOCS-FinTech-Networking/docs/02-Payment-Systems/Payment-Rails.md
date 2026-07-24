@@ -43,13 +43,13 @@ PAYMENT RAILS DEFINITION
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  WHAT RAILS PROVIDE      |  |  WHAT RAILS ARE NOT      |
-|  - Network infrastructure|  |  - Value transfer        |  |  - Payment gateways      |
-|  - Standardized protocols|  |  - Message routing       |  |  - Payment processors    |
-|  - Rules and governance |  |  - Settlement finality    |  |  - Merchant accounts     |
-|  - Connectivity between |  |  - Interbank             |  |  - User interfaces       |
-|    institutions         |  |    communication        |  |  - Customer-facing apps  |
-|  - Secure transmission  |  |  - Clearing coordination |  |  - Individual merchants  |
+|  KEY CHARACTERISTICS      |  |  WHAT RAILS PROVIDE       |  |  WHAT RAILS ARE NOT       |
+|  - Network infrastructure |  |  - Value transfer         |  |  - Payment gateways       |
+|  - Standardized protocols |  |  - Message routing        |  |  - Payment processors     |
+|  - Rules and governance   |  |  - Settlement finality    |  |  - Merchant accounts      |
+|  - Connectivity between   |  |  - Interbank              |  |  - User interfaces        |
+|    institutions           |  |    communication          |  |  - Customer-facing apps   |
+|  - Secure transmission    |  |  - Clearing coordination  |  |  - Individual merchants   |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
