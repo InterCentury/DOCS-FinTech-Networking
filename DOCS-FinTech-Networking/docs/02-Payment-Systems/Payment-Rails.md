@@ -91,33 +91,33 @@ They work together in a hierarchy: the gateway connects the merchant to the ecos
 PAYMENT RAIL VS GATEWAY VS PROCESSOR
 
                          +---------------------------+
-                         |  PAYMENT LAYER HIERARCHY |
+                         |  PAYMENT LAYER HIERARCHY  |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  PAYMENT RAIL            |                            |  PAYMENT GATEWAY         |
-|  (Infrastructure Layer)  |                            |  (Interface Layer)       |
-|  - Network foundation   |                            |  - Customer-facing       |
-|  - Interbank transfer   |                            |  - Data capture          |
-|  - Settlement finality  |                            |  - Encryption            |
-|  - Example: ACH, SWIFT  |                            |  - Example: Stripe       |
-|                         |                            |    Gateway, Adyen        |
+|  PAYMENT RAIL             |                            |  PAYMENT GATEWAY          |
+|  (Infrastructure Layer)   |                            |  (Interface Layer)        |
+|  - Network foundation     |                            |  - Customer-facing        |
+|  - Interbank transfer     |                            |  - Data capture           |
+|  - Settlement finality    |                            |  - Encryption             |
+|  - Example: ACH, SWIFT    |                            |  - Example: Stripe        |
+|                           |                            |    Gateway, Adyen         |
 +---------------------------+                            +---------------------------+
           │                                                         │
           +----------------------------+----------------------------+
                                        │
                                        ▼
                          +---------------------------+
-                         |  PAYMENT PROCESSOR       |
-                         |  (Transaction Layer)     |
-                         |  - Routing               |
-                         |  - Authorization         |
-                         |  - Processing            |
-                         |  - Example: First Data,  |
-                         |    TSYS                  |
+                         |  PAYMENT PROCESSOR        |
+                         |  (Transaction Layer)      |
+                         |  - Routing                |
+                         |  - Authorization          |
+                         |  - Processing             |
+                         |  - Example: First Data,   |
+                         |    TSYS                   |
                          +---------------------------+
 
 ```
