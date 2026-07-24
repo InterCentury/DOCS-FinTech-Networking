@@ -102,21 +102,24 @@ PAYMENT RAIL VS GATEWAY VS PROCESSOR
 |  (Infrastructure Layer)  |                            |  (Interface Layer)       |
 |  - Network foundation   |                            |  - Customer-facing       |
 |  - Interbank transfer   |                            |  - Data capture          |
-|  - Settlement finality  |                            |  - Encryption           |
-|  - Example: ACH, SWIFT  |                            |  - Example: Stripe      |
-|                          |                            |    Gateway, Adyen       |
+|  - Settlement finality  |                            |  - Encryption            |
+|  - Example: ACH, SWIFT  |                            |  - Example: Stripe       |
+|                         |                            |    Gateway, Adyen        |
 +---------------------------+                            +---------------------------+
-          │                                              │
-          ▼                                              ▼
-+---------------------------+              +---------------------------+---------------------------+
-|  PAYMENT PROCESSOR       |
-|  (Transaction Layer)     |
-|  - Routing               |
-|  - Authorization         |
-|  - Processing            |
-|  - Example: First Data,  |
-|    TSYS                  |
-+---------------------------+
+          │                                                         │
+          +----------------------------+----------------------------+
+                                       │
+                                       ▼
+                         +---------------------------+
+                         |  PAYMENT PROCESSOR       |
+                         |  (Transaction Layer)     |
+                         |  - Routing               |
+                         |  - Authorization         |
+                         |  - Processing            |
+                         |  - Example: First Data,  |
+                         |    TSYS                  |
+                         +---------------------------+
+
 ```
 
 ## 5. What Is the Role of Payment Rails in the Financial Ecosystem
