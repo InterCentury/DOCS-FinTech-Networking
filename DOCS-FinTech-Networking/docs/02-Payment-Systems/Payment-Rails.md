@@ -143,29 +143,29 @@ ACH RAIL ARCHITECTURE
     |                    ACH RAIL ARCHITECTURE                  |
     +-----------------------------------------------------------+
     │                                                           │
-    │   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐  │
-    │   │   ODFI      │    │     ACH     │    │   RDFI      │  │
-    │   │  (Bank A)   │───►│   OPERATOR  │───►│  (Bank B)   │  │
-    │   └─────────────┘    └──────┬──────┘    └─────────────┘  │
+    │   ┌─────────────┐    ┌─────────────┐    ┌─────────────┐   │
+    │   │   ODFI      │    │     ACH     │    │   RDFI      │   │
+    │   │  (Bank A)   │───►│   OPERATOR  │───►│  (Bank B)   │   │
+    │   └─────────────┘    └──────┬──────┘    └─────────────┘   │
     │                             │                             │
     │   ┌─────────────┐           │           ┌─────────────┐   │
     │   │   ODFI      │───────────┼───────────│   RDFI      │   │
     │   │  (Bank C)   │           │           │  (Bank D)   │   │
     │   └─────────────┘           │           └─────────────┘   │
     │                             │                             │
-    │                    ┌────────┴────────┐                   │
-    │                    │  NET SETTLEMENT  │                   │
-    │                    │  (Central Bank)  │                   │
-    │                    └─────────────────┘                   │
+    │                    ┌────────┴────────┐                    │
+    │                    │  NET SETTLEMENT │                    │
+    │                    │  (Central Bank) │                    │
+    │                    └─────────────────┘                    │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY FEATURES:                                     │  │
-    │   │  - Batch processing (multiple times daily)        │  │
-    │   │  - Deferred net settlement (1-2 days)             │  │
-    │   │  - Low cost per transaction                       │  │
-    │   │  - High volume (billions annually)               │  │
-    │   │  - NACHA rules and standards                     │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY FEATURES:                                    │   │
+    │   │  - Batch processing (multiple times daily)        │   │
+    │   │  - Deferred net settlement (1-2 days)             │   │
+    │   │  - Low cost per transaction                       │   │
+    │   │  - High volume (billions annually)                │   │
+    │   │  - NACHA rules and standards                      │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
