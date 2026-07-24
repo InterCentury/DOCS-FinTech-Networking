@@ -369,15 +369,15 @@ SWIFT RAIL ARCHITECTURE
     │               │  └─────────────────┘  │                   │
     │               └───────────────────────┘                   │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY FEATURES:                                     │  │
-    │   │  - Global reach (200+ countries)                  │  │
-    │   │  - 11,000+ institutions                           │  │
-    │   │  - Secure messaging (not settlement)              │  │
-    │   │  - Standardized formats (MT, ISO 20022)          │  │
-    │   │  - Correspondent banking integration             │  │
-    │   │  - High security and reliability                 │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY FEATURES:                                    │   │
+    │   │  - Global reach (200+ countries)                  │   │
+    │   │  - 11,000+ institutions                           │   │
+    │   │  - Secure messaging (not settlement)              │   │
+    │   │  - Standardized formats (MT, ISO 20022)           │   │
+    │   │  - Correspondent banking integration              │   │
+    │   │  - High security and reliability                  │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
