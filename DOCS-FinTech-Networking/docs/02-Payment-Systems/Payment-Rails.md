@@ -246,35 +246,35 @@ CARD NETWORK RAIL ARCHITECTURE
     │          └────────────┬─────────────────────┘             │
     │                       │                                   │
     │                       ▼                                   │
-    │               ┌───────────────────────┐                 │
-    │               │    CARD NETWORK       │                 │
-    │               │   (Visa/Mastercard)   │                 │
-    │               │                       │                 │
-    │               │  ┌─────────────────┐  │                 │
-    │               │  │  Authorization  │  │                 │
-    │               │  │   Routing       │  │                 │
-    │               │  └─────────────────┘  │                 │
-    │               │                       │                 │
-    │               │  ┌─────────────────┐  │                 │
-    │               │  │  Clearing       │  │                 │
-    │               │  │  (Settlement)   │  │                 │
-    │               │  └─────────────────┘  │                 │
-    │               │                       │                 │
-    │               │  ┌─────────────────┐  │                 │
-    │               │  │  Token Service  │  │                 │
-    │               │  │  Provider (TSP) │  │                 │
-    │               │  └─────────────────┘  │                 │
-    │               └───────────────────────┘                 │
+    │               ┌───────────────────────┐                   │
+    │               │    CARD NETWORK       │                   │
+    │               │   (Visa/Mastercard)   │                   │
+    │               │                       │                   │
+    │               │  ┌─────────────────┐  │                   │
+    │               │  │  Authorization  │  │                   │
+    │               │  │   Routing       │  │                   │
+    │               │  └─────────────────┘  │                   │
+    │               │                       │                   │
+    │               │  ┌─────────────────┐  │                   │
+    │               │  │  Clearing       │  │                   │
+    │               │  │  (Settlement)   │  │                   │
+    │               │  └─────────────────┘  │                   │
+    │               │                       │                   │
+    │               │  ┌─────────────────┐  │                   │
+    │               │  │  Token Service  │  │                   │
+    │               │  │  Provider (TSP) │  │                   │
+    │               │  └─────────────────┘  │                   │
+    │               └───────────────────────┘                   │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY FEATURES:                                     │  │
-    │   │  - Global reach (200+ countries)                  │  │
-    │   │  - Dual-message processing (auth + clearing)      │  │
-    │   │  - Interchange fees                               │  │
-    │   │  - Network rules and standards                    │  │
-    │   │  - Fraud protection (Visa Secure, Mastercard ID  │  │
-    │   │    Check)                                        │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY FEATURES:                                    │   │
+    │   │  - Global reach (200+ countries)                  │   │
+    │   │  - Dual-message processing (auth + clearing)      │   │
+    │   │  - Interchange fees                               │   │
+    │   │  - Network rules and standards                    │   │
+    │   │  - Fraud protection (Visa Secure, Mastercard ID   │   │
+    │   │    Check)                                         │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
