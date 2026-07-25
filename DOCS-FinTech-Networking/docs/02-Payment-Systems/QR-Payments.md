@@ -430,44 +430,44 @@ QR CODE DECODING PROCESS
 QR CODE GENERATION (Python Example)
 
     +-----------------------------------------------------------+
-    │         QR CODE GENERATION - PYTHON EXAMPLE              │
+    │         QR CODE GENERATION - PYTHON EXAMPLE               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   import qrcode                                        │
-    │   from qrcode.constants import ERROR_CORRECT_M        │
-    │                                                         │
-    │   def generate_qr(data, version=5, box_size=10,       │
-    │                    border=4):                           │
-    │       """                                               │
-    │       Generate a QR code with payment data             │
-    │       """                                               │
-    │                                                         │
-    │       # Create QR code instance                         │
-    │       qr = qrcode.QRCode(                               │
-    │           version=version,                               │
-    │           error_correction=ERROR_CORRECT_M,             │
-    │           box_size=box_size,                             │
-    │           border=border,                                 │
-    │       )                                                 │
-    │                                                         │
-    │       # Add data to QR code                             │
-    │       qr.add_data(data)                                 │
-    │                                                         │
-    │       # Generate QR code matrix                         │
-    │       qr.make(fit=True)                                 │
-    │                                                         │
-    │       # Create image                                    │
-    │       img = qr.make_image(fill_color="black",          │
-    │                           back_color="white")          │
-    │                                                         │
-    │       return img                                        │
-    │                                                         │
-    │   # Usage:                                              │
-    │   payment_data = "upi://pay?pa=merchant@bank&           │
-    │                   am=100.00&tn=REF123456"              │
-    │   qr_image = generate_qr(payment_data)                  │
-    │   qr_image.save("payment_qr.png")                      │
-    │                                                         │
+    │   import qrcode                                           │
+    │   from qrcode.constants import ERROR_CORRECT_M            │
+    │                                                           │
+    │   def generate_qr(data, version=5, box_size=10,           │
+    │                    border=4):                             │
+    │       """                                                 │
+    │       Generate a QR code with payment data                │
+    │       """                                                 │
+    │                                                           │
+    │       # Create QR code instance                           │
+    │       qr = qrcode.QRCode(                                 │
+    │           version=version,                                │
+    │           error_correction=ERROR_CORRECT_M,               │
+    │           box_size=box_size,                              │
+    │           border=border,                                  │
+    │       )                                                   │
+    │                                                           │
+    │       # Add data to QR code                               │
+    │       qr.add_data(data)                                   │
+    │                                                           │
+    │       # Generate QR code matrix                           │
+    │       qr.make(fit=True)                                   │
+    │                                                           │
+    │       # Create image                                      │
+    │       img = qr.make_image(fill_color="black",             │
+    │                           back_color="white")             │
+    │                                                           │
+    │       return img                                          │
+    │                                                           │
+    │   # Usage:                                                │
+    │   payment_data = "upi://pay?pa=merchant@bank&             │
+    │                   am=100.00&tn=REF123456"                 │
+    │   qr_image = generate_qr(payment_data)                    │
+    │   qr_image.save("payment_qr.png")                         │
+    │                                                           │
     +-----------------------------------------------------------+
 ```
 
