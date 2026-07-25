@@ -183,20 +183,20 @@ The encoder first analyzes the input data to determine the most efficient encodi
 DATA ENCODING MODES
 
                          +---------------------------+
-                         |  QR ENCODING MODES       |
+                         |  QR ENCODING MODES        |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  NUMERIC MODE            |  |  ALPHANUMERIC MODE      |  |  BYTE MODE               |
-|  - Characters: 0-9      |  |  - Characters: 0-9,    |  |  - Binary data           |
-|  - Most efficient       |  |    A-Z, $, %, *, +,   |  |  - ISO 8859-1 encoding   |
-|  - 10 bits per 3 chars  |  |    -, ., /, :         |  |  - 8 bits per character  |
-|  - Best for amounts     |  |  - 11 bits per 2 chars |  |  - For UTF-8 strings    |
-|  - Example: 1,000,000  |  |  - Best for merchant   |  |  - General purpose       |
-|                         |  |    IDs                |  |                         |
+|  NUMERIC MODE             |  |  ALPHANUMERIC MODE        |  |  BYTE MODE                |
+|  - Characters: 0-9        |  |  - Characters: 0-9,       |  |  - Binary data            |
+|  - Most efficient         |  |    A-Z, $, %, *, +,       |  |  - ISO 8859-1 encoding    |
+|  - 10 bits per 3 chars    |  |    -, ., /, :             |  |  - 8 bits per character   |
+|  - Best for amounts       |  |  - 11 bits per 2 chars    |  |  - For UTF-8 strings      |
+|  - Example: 1,000,000     |  |  - Best for merchant      |  |  - General purpose        |
+|                           |  |    IDs                    |  |                           |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
