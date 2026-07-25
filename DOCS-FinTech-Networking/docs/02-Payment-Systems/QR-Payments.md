@@ -329,20 +329,20 @@ MASKING PATTERN EXAMPLE
 QR CODE GENERATION ALGORITHM
 
     +-----------------------------------------------------------+
-    │           QR CODE GENERATION ALGORITHM                   │
+    │           QR CODE GENERATION ALGORITHM                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   INPUT: Payment data string                             │
-    │          (Merchant ID, Amount, Reference)               │
+    │   INPUT: Payment data string                              │
+    │          (Merchant ID, Amount, Reference)                 │
     │                                                           │
-    │   OUTPUT: QR Code Image (PNG, SVG, or other format)     │
+    │   OUTPUT: QR Code Image (PNG, SVG, or other format)       │
     │                                                           │
-    │   ALGORITHM:                                             │
+    │   ALGORITHM:                                              │
     │                                                           │
-    │   1. function generateQR(data, errorLevel = 'M'):       │
-    │      ├── selectedMode = detectMode(data)                │
-    │      ├── encodedData = encodeData(data, selectedMode)   │
-    │      ├── version = selectVersion(encodedData, errorLevel)│
+    │   1. function generateQR(data, errorLevel = 'M'):         │
+    │      ├── selectedMode = detectMode(data)                  │
+    │      ├── encodedData = encodeData(data, selectedMode)     │
+    │      ├── version = selectVersion(encodedData, errorLevel) │
     │      ├── matrix = createMatrix(version)                 │
     │      ├── matrix = placeFixedPatterns(matrix, version)   │
     │      ├── codewords = applyReedSolomon(encodedData,     │
