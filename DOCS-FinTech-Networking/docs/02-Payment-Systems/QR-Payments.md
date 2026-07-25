@@ -669,10 +669,10 @@ QR DECODING PROCESS
     │   ├── Convert to text                                     │
     │   └── Parse payment information                           │
     │                                                           │
-    │   STEP 6: PROCESS PAYMENT                                │
-    │   ├── Validate data                                     │
-    │   ├── Send to payment processor                         │
-    │   └── Complete transaction                              │
+    │   STEP 6: PROCESS PAYMENT                                 │
+    │   ├── Validate data                                       │
+    │   ├── Send to payment processor                           │
+    │   └── Complete transaction                                │
     │                                                           │
     +-----------------------------------------------------------+
 ```
