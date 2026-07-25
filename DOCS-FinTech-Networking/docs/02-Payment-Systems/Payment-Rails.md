@@ -950,8 +950,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  SETTLEMENT                                     |
-    |  RTGS (immediate), Net (batched), Continuous   |
-    |  (real-time)                                   |
+    |  RTGS (immediate), Net (batched), Continuous    |
+    |  (real-time)                                    |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
