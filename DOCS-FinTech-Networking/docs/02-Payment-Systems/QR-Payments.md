@@ -343,14 +343,14 @@ QR CODE GENERATION ALGORITHM
     │      ├── selectedMode = detectMode(data)                  │
     │      ├── encodedData = encodeData(data, selectedMode)     │
     │      ├── version = selectVersion(encodedData, errorLevel) │
-    │      ├── matrix = createMatrix(version)                 │
-    │      ├── matrix = placeFixedPatterns(matrix, version)   │
-    │      ├── codewords = applyReedSolomon(encodedData,     │
-    │                                        errorLevel)      │
-    │      ├── matrix = placeDataModules(matrix, codewords)   │
-    │      ├── bestMask = evaluateMasks(matrix)              │
-    │      ├── matrix = applyMask(matrix, bestMask)           │
-    │      └── return matrix                                  │
+    │      ├── matrix = createMatrix(version)                   │
+    │      ├── matrix = placeFixedPatterns(matrix, version)     │
+    │      ├── codewords = applyReedSolomon(encodedData,        │
+    │                                        errorLevel)        │
+    │      ├── matrix = placeDataModules(matrix, codewords)     │
+    │      ├── bestMask = evaluateMasks(matrix)                 │
+    │      ├── matrix = applyMask(matrix, bestMask)             │
+    │      └── return matrix                                    │
     │                                                           │
     │   2. function encodeData(data, mode):                   │
     │      ├── if mode == NUMERIC:                           │
