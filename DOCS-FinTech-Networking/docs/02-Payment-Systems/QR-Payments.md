@@ -11,16 +11,16 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the definition and purpose of QR payments                    │
-    │   Learn QR code fundamentals, structure, and data encoding                │
-    │   Study the QR payment ecosystem and participants                        │
-    │   Examine QR payment technologies including computer vision and decoding │
-    │   Understand the programming side: QR generation, encoding, parsing      │
-    │   Learn different QR payment methods and standards                      │
-    │   Analyze the complete QR payment lifecycle                             │
-    │   Study security mechanisms and fraud prevention                        │
-    │   Learn about real-world QR payment systems                             │
-    │   Understand the engineering behind QR payment processing               │
+    │   Understand the definition and purpose of QR payments                      │
+    │   Learn QR code fundamentals, structure, and data encoding                  │
+    │   Study the QR payment ecosystem and participants                           │
+    │   Examine QR payment technologies including computer vision and decoding    │
+    │   Understand the programming side: QR generation, encoding, parsing         │
+    │   Learn different QR payment methods and standards                          │
+    │   Analyze the complete QR payment lifecycle                                 │
+    │   Study security mechanisms and fraud prevention                            │
+    │   Learn about real-world QR payment systems                                 │
+    │   Understand the engineering behind QR payment processing                   │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
