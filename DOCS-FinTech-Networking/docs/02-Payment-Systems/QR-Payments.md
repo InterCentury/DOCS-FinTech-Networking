@@ -272,24 +272,24 @@ MODULE PLACEMENT PROCESS
     │               MODULE PLACEMENT                            │
     +-----------------------------------------------------------+
     │                                                           │
-    │   STEP 1: Place fixed patterns                           │
-    │   ├── Position detection patterns (3 corners)           │
-    │   ├── Alignment patterns (if applicable)                │
-    │   ├── Timing patterns (horizontal and vertical)         │
-    │   └── Format information (error correction level)       │
+    │   STEP 1: Place fixed patterns                            │
+    │   ├── Position detection patterns (3 corners)             │
+    │   ├── Alignment patterns (if applicable)                  │
+    │   ├── Timing patterns (horizontal and vertical)           │
+    │   └── Format information (error correction level)         │
     │                                                           │
-    │   STEP 2: Create mask pattern                           │
-    │   ├── XOR the data with mask pattern                   │
-    │   ├── 8 mask patterns available                        │
-    │   └── Choose best mask (minimize undesirable patterns)  │
+    │   STEP 2: Create mask pattern                             │
+    │   ├── XOR the data with mask pattern                      │
+    │   ├── 8 mask patterns available                           │
+    │   └── Choose best mask (minimize undesirable patterns)    │
     │                                                           │
-    │   STEP 3: Place data modules                            │
-    │   ├── Start from bottom-right                          │
-    │   ├── Move in a specific zigzag pattern                │
-    │   └── Skip fixed patterns                              │
+    │   STEP 3: Place data modules                              │
+    │   ├── Start from bottom-right                             │
+    │   ├── Move in a specific zigzag pattern                   │
+    │   └── Skip fixed patterns                                 │
     │                                                           │
-    │   STEP 4: Apply mask                                    │
-    │   └── Final module placement with mask applied          │
+    │   STEP 4: Apply mask                                      │
+    │   └── Final module placement with mask applied            │
     │                                                           │
     +-----------------------------------------------------------+
 ```
