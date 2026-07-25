@@ -938,8 +938,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  MESSAGING                                      |
-    |  ISO 8583 (cards), ISO 20022 (future), SWIFT  |
-    |  MT (legacy cross-border)                     |
+    |  ISO 8583 (cards), ISO 20022 (future), SWIFT    |
+    |  MT (legacy cross-border)                       |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
