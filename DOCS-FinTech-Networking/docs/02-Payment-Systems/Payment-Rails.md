@@ -932,8 +932,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  CONNECTIVITY                                   |
-    |  Banks connect through payment hubs, APIs,     |
-    |  aggregators                                   |
+    |  Banks connect through payment hubs, APIs,      |
+    |  aggregators                                    |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
