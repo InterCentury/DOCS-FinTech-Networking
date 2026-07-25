@@ -646,28 +646,28 @@ QR DECODING PROCESS
     │                  QR DECODING PROCESS                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   STEP 1: CAPTURE IMAGE                                  │
-    │   ├── Camera captures QR code image                     │
-    │   └── Image is sent to decoder                          │
+    │   STEP 1: CAPTURE IMAGE                                   │
+    │   ├── Camera captures QR code image                       │
+    │   └── Image is sent to decoder                            │
     │                                                           │
-    │   STEP 2: LOCATE POSITION PATTERNS                       │
-    │   ├── Find three corner squares                         │
-    │   └── Determine orientation                             │
+    │   STEP 2: LOCATE POSITION PATTERNS                        │
+    │   ├── Find three corner squares                           │
+    │   └── Determine orientation                               │
     │                                                           │
-    │   STEP 3: READ GRID                                      │
-    │   ├── Map grid cells                                    │
-    │   ├── Determine black/white values                     │
-    │   └── Create binary matrix                              │
+    │   STEP 3: READ GRID                                       │
+    │   ├── Map grid cells                                      │
+    │   ├── Determine black/white values                        │
+    │   └── Create binary matrix                                │
     │                                                           │
-    │   STEP 4: APPLY ERROR CORRECTION                         │
-    │   ├── Reed-Solomon algorithm                            │
-    │   ├── Detect and correct errors                         │
-    │   └── Recover corrupted data                            │
+    │   STEP 4: APPLY ERROR CORRECTION                          │
+    │   ├── Reed-Solomon algorithm                              │
+    │   ├── Detect and correct errors                           │
+    │   └── Recover corrupted data                              │
     │                                                           │
-    │   STEP 5: DECODE DATA                                    │
-    │   ├── Extract binary data                                │
-    │   ├── Convert to text                                   │
-    │   └── Parse payment information                         │
+    │   STEP 5: DECODE DATA                                     │
+    │   ├── Extract binary data                                 │
+    │   ├── Convert to text                                     │
+    │   └── Parse payment information                           │
     │                                                           │
     │   STEP 6: PROCESS PAYMENT                                │
     │   ├── Validate data                                     │
