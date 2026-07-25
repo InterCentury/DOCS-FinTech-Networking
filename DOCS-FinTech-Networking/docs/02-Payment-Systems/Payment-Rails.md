@@ -720,8 +720,8 @@ DOMESTIC VS INTERNATIONAL RAILS CONNECTION
     │                           │ Correspondent Banking         │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │         CORRESPONDENT BANK                       │   │
-    │   │         Nostro/Vostro Accounts                  │   │
+    │   │         CORRESPONDENT BANK                        │   │
+    │   │         Nostro/Vostro Accounts                    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           │ SWIFT Messaging              │
