@@ -778,40 +778,40 @@ QR PAYMENT LIFECYCLE
     │                 QR PAYMENT LIFECYCLE                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PHASE 1: QR GENERATION                                 │
-    │   ├── Merchant requests QR code                         │
-    │   ├── PSP generates QR code                             │
-    │   ├── QR code displayed (printed/digital)               │
-    │   └── Contains: merchant ID, amount, reference          │
+    │   PHASE 1: QR GENERATION                                  │
+    │   ├── Merchant requests QR code                           │
+    │   ├── PSP generates QR code                               │
+    │   ├── QR code displayed (printed/digital)                 │
+    │   └── Contains: merchant ID, amount, reference            │
     │                                                           │
-    │   PHASE 2: QR SCANNING                                   │
-    │   ├── Customer opens mobile app                         │
-    │   ├── Customer scans QR code                           │
-    │   ├── App decodes payment information                   │
-    │   └── App displays payment details                      │
+    │   PHASE 2: QR SCANNING                                    │
+    │   ├── Customer opens mobile app                           │
+    │   ├── Customer scans QR code                              │
+    │   ├── App decodes payment information                     │
+    │   └── App displays payment details                        │
     │                                                           │
-    │   PHASE 3: PAYMENT INITIATION                            │
-    │   ├── Customer reviews and confirms                     │
-    │   ├── Customer authenticates (PIN, biometric)          │
-    │   ├── Payment request sent to PSP                       │
-    │   └── PSP validates the request                         │
+    │   PHASE 3: PAYMENT INITIATION                             │
+    │   ├── Customer reviews and confirms                       │
+    │   ├── Customer authenticates (PIN, biometric)             │
+    │   ├── Payment request sent to PSP                         │
+    │   └── PSP validates the request                           │
     │                                                           │
-    │   PHASE 4: AUTHORIZATION                                 │
-    │   ├── PSP checks customer account                       │
-    │   ├── Authorization request sent to bank               │
-    │   ├── Bank approves or declines                        │
-    │   └── Response sent back through chain                 │
+    │   PHASE 4: AUTHORIZATION                                  │
+    │   ├── PSP checks customer account                         │
+    │   ├── Authorization request sent to bank                  │
+    │   ├── Bank approves or declines                           │
+    │   └── Response sent back through chain                    │
     │                                                           │
-    │   PHASE 5: CLEARING AND SETTLEMENT                      │
-    │   ├── Payment rail processes transaction               │
-    │   ├── Customer's account debited                       │
-    │   ├── Merchant's account credited                      │
-    │   └── Confirmation sent to both parties                │
+    │   PHASE 5: CLEARING AND SETTLEMENT                        │
+    │   ├── Payment rail processes transaction                  │
+    │   ├── Customer's account debited                          │
+    │   ├── Merchant's account credited                         │
+    │   └── Confirmation sent to both parties                   │
     │                                                           │
-    │   PHASE 6: COMPLETION                                    │
-    │   ├── Merchant provides goods/services                 │
-    │   ├── Customer receives receipt                        │
-    │   └── Transaction complete                             │
+    │   PHASE 6: COMPLETION                                     │
+    │   ├── Merchant provides goods/services                    │
+    │   ├── Customer receives receipt                           │
+    │   └── Transaction complete                                │
     │                                                           │
     +-----------------------------------------------------------+
 ```
