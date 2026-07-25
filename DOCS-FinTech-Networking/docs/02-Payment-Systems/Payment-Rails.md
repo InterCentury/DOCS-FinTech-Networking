@@ -731,11 +731,11 @@ DOMESTIC VS INTERNATIONAL RAILS CONNECTION
     │   │         Cross-Border Messaging                    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Correspondent Banking        │
+    │                           │ Correspondent Banking         │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │         DOMESTIC RAIL (UK)                       │   │
-    │   │         CHAPS / BACS / Faster Payments           │   │
+    │   │         DOMESTIC RAIL (UK)                        │   │
+    │   │         CHAPS / BACS / Faster Payments            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     │   +---------------------------------------------------+  │
