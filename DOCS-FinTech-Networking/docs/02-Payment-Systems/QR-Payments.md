@@ -531,47 +531,47 @@ QR CODE DECODING (Python Example)
 QR CODE DECODING (JavaScript Example)
 
     +-----------------------------------------------------------+
-    │          QR CODE DECODING - JAVASCRIPT EXAMPLE           │
+    │          QR CODE DECODING - JAVASCRIPT EXAMPLE            │
     +-----------------------------------------------------------+
     │                                                           │
-    │   // Using QuaggaJS library                              │
-    │   import Quagga from 'quagga';                          │
-    │                                                         │
-    │   function initQRScanner() {                            │
-    │       Quagga.init({                                     │
-    │           inputStream: {                                │
-    │               name: "Live",                             │
-    │               type: "LiveStream",                       │
-    │               target: document.getElementById('cam'),  │
-    │           },                                            │
-    │           decoder: {                                    │
-    │               readers: ["qr_reader"]                    │
-    │           }                                             │
-    │       }, function(err) {                               │
-    │           if (err) {                                    │
-    │               console.log(err);                         │
-    │               return;                                   │
-    │           }                                             │
-    │           Quagga.start();                               │
-    │       });                                               │
-    │                                                         │
-    │       Quagga.onDetected(function(result) {             │
-    │           const code = result.codeResult.code;        │
-    │           const paymentData = parsePaymentData(code);  │
-    │           processPayment(paymentData);                 │
-    │       });                                               │
-    │   }                                                     │
-    │                                                         │
-    │   function parsePaymentData(data) {                    │
-    │       // Parse QR payment data                        │
-    │       const url = new URL(data);                      │
-    │       const params = new URLSearchParams(            │
-    │           url.search                                   │
-    │       );                                               │
-    │                                                         │
-    │       return {                                         │
-    │           merchant: params.get('pa'),                  │
-    │           amount: params.get('am'),                    │
+    │   // Using QuaggaJS library                               │
+    │   import Quagga from 'quagga';                            │
+    │                                                           │
+    │   function initQRScanner() {                              │
+    │       Quagga.init({                                       │
+    │           inputStream: {                                  │
+    │               name: "Live",                               │
+    │               type: "LiveStream",                         │
+    │               target: document.getElementById('cam'),     │
+    │           },                                              │
+    │           decoder: {                                      │
+    │               readers: ["qr_reader"]                      │
+    │           }                                               │
+    │       }, function(err) {                                  │
+    │           if (err) {                                      │
+    │               console.log(err);                           │
+    │               return;                                     │
+    │           }                                               │
+    │           Quagga.start();                                 │
+    │       });                                                 │
+    │                                                           │
+    │       Quagga.onDetected(function(result) {                │
+    │           const code = result.codeResult.code;            │
+    │           const paymentData = parsePaymentData(code);     │
+    │           processPayment(paymentData);                    │
+    │       });                                                 │
+    │   }                                                       │
+    │                                                           │
+    │   function parsePaymentData(data) {                       │
+    │       // Parse QR payment data                            │
+    │       const url = new URL(data);                          │
+    │       const params = new URLSearchParams(                 │
+    │           url.search                                      │
+    │       );                                                  │
+    │                                                           │
+    │       return {                                            │
+    │           merchant: params.get('pa'),                     │
+    │           amount: params.get('am'),                       │
     │           reference: params.get('tn'),                  │
     │           currency: params.get('cu')                   │
     │       };                                               │
