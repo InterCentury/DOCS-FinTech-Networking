@@ -490,40 +490,40 @@ QR CODE DECODING (Python Example)
     │       # Load image                                        │
     │       image = Image.open(image_path)                      │
     │                                                           │
-    │       # Decode QR code                                 │
-    │       decoded_objects = pyzbar.decode(image)           │
-    │                                                         │
-    │       if decoded_objects:                               │
-    │           for obj in decoded_objects:                   │
-    │               # Extract data                            │
-    │               data = obj.data.decode('utf-8')          │
-    │               type = obj.type                           │
-    │                                                         │
-    │               # Parse payment data                     │
-    │               if data.startswith('upi://'):            │
-    │                   payment_info = parse_upi(data)      │
-    │                   return payment_info                  │
-    │                                                         │
-    │       return None                                       │
-    │                                                         │
-    │   def parse_upi(data):                                  │
-    │       """                                               │
-    │       Parse UPI payment data from QR code             │
-    │       """                                               │
-    │       # Parse query parameters                         │
-    │       params = data.split('?')[1].split('&')          │
-    │       parsed = {}                                      │
-    │                                                         │
-    │       for param in params:                             │
-    │           key, value = param.split('=')                │
-    │           parsed[key] = value                          │
-    │                                                         │
-    │       return parsed                                    │
-    │                                                         │
-    │   # Usage:                                              │
-    │   payment_info = decode_qr("payment_qr.png")          │
-    │   print(payment_info)                                  │
-    │                                                         │
+    │       # Decode QR code                                    │
+    │       decoded_objects = pyzbar.decode(image)              │
+    │                                                           │
+    │       if decoded_objects:                                 │
+    │           for obj in decoded_objects:                     │
+    │               # Extract data                              │
+    │               data = obj.data.decode('utf-8')             │
+    │               type = obj.type                             │
+    │                                                           │
+    │               # Parse payment data                        │
+    │               if data.startswith('upi://'):               │
+    │                   payment_info = parse_upi(data)          │
+    │                   return payment_info                     │
+    │                                                           │
+    │       return None                                         │
+    │                                                           │
+    │   def parse_upi(data):                                    │
+    │       """                                                 │
+    │       Parse UPI payment data from QR code                 │
+    │       """                                                 │
+    │       # Parse query parameters                            │
+    │       params = data.split('?')[1].split('&')              │
+    │       parsed = {}                                         │
+    │                                                           │
+    │       for param in params:                                │
+    │           key, value = param.split('=')                   │
+    │           parsed[key] = value                             │
+    │                                                           │
+    │       return parsed                                       │
+    │                                                           │
+    │   # Usage:                                                │
+    │   payment_info = decode_qr("payment_qr.png")              │
+    │   print(payment_info)                                     │
+    │                                                           │
     +-----------------------------------------------------------+
 ```
 
