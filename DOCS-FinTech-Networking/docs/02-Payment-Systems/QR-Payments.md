@@ -305,20 +305,20 @@ MASKING PATTERN EXAMPLE
     │               MASK PATTERNS                               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Pattern 0: (row + column) % 2 == 0                     │
-    │   Pattern 1: row % 2 == 0                                │
-    │   Pattern 2: column % 3 == 0                             │
-    │   Pattern 3: (row + column) % 3 == 0                     │
-    │   Pattern 4: (row/2 + column/3) % 2 == 0                │
-    │   Pattern 5: (row * column) % 2 + (row * column) % 3    │
-    │   Pattern 6: ((row * column) % 2 + (row * column) % 3)  │
-    │   Pattern 7: ((row + column) % 2 + (row * column) % 3)  │
+    │   Pattern 0: (row + column) % 2 == 0                      │
+    │   Pattern 1: row % 2 == 0                                 │
+    │   Pattern 2: column % 3 == 0                              │
+    │   Pattern 3: (row + column) % 3 == 0                      │
+    │   Pattern 4: (row/2 + column/3) % 2 == 0                  │
+    │   Pattern 5: (row * column) % 2 + (row * column) % 3      │
+    │   Pattern 6: ((row * column) % 2 + (row * column) % 3)    │
+    │   Pattern 7: ((row + column) % 2 + (row * column) % 3)    │
     │                                                           │
-    │   The encoder evaluates all 8 patterns and selects      │
-    │   the one that minimizes:                               │
-    │   - Large same-colored blocks                           │
-    │   - Unbalanced distribution of dark/light modules      │
-    │   - Patterns similar to fixed patterns                  │
+    │   The encoder evaluates all 8 patterns and selects        │
+    │   the one that minimizes:                                 │
+    │   - Large same-colored blocks                             │
+    │   - Unbalanced distribution of dark/light modules         │
+    │   - Patterns similar to fixed patterns                    │
     │                                                           │
     +-----------------------------------------------------------+
 ```
