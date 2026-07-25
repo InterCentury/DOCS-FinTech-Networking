@@ -713,11 +713,11 @@ DOMESTIC VS INTERNATIONAL RAILS CONNECTION
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │         DOMESTIC RAIL (US)                       │   │
-    │   │         Fedwire / ACH / RTP                     │   │
+    │   │         DOMESTIC RAIL (US)                        │   │
+    │   │         Fedwire / ACH / RTP                       │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Correspondent Banking        │
+    │                           │ Correspondent Banking         │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │         CORRESPONDENT BANK                       │   │
