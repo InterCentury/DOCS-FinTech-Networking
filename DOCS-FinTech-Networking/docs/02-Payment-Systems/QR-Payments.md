@@ -728,30 +728,30 @@ QR payment standards ensure interoperability between different systems and provi
 QR PAYMENT STANDARDS
 
                          +---------------------------+
-                         |  QR PAYMENT STANDARDS    |
+                         |  QR PAYMENT STANDARDS     |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  EMVCo QR               |  |  BHARAT QR               |  |  SGQR                   |
-|  - Global standard      |  |  - India's national      |  |  - Singapore's          |
-|  - Merchant-presented  |  |    standard              |  |    national standard    |
-|  - Consumer-presented  |  |  - Based on EMVCo QR    |  |  - Supports 27 payment  |
-|  - Multiple payment    |  |  - Supports UPI, RuPay   |  |    schemes             |
-|    methods             |  |  - Widely used in India  |  |  - Single QR display   |
+|  EMVCo QR                 |  |  BHARAT QR                |  |  SGQR                     |
+|  - Global standard        |  |  - India's national       |  |  - Singapore's            |
+|  - Merchant-presented     |  |    standard               |  |    national standard      |
+|  - Consumer-presented     |  |  - Based on EMVCo QR      |  |  - Supports 27 payment    |
+|  - Multiple payment       |  |  - Supports UPI, RuPay    |  |    schemes                |
+|    methods                |  |  - Widely used in India   |  |  - Single QR display      |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
                                        │
                                        ▼
                          +---------------------------+
-                         |  QRIS                    |
-                         |  - Indonesia's standard  |
-                         |  - Mandatory for all    |
-                         |    providers            |
-                         |  - Interoperability     |
+                         |  QRIS                     |
+                         |  - Indonesia's standard   |
+                         |  - Mandatory for all      |
+                         |    providers              |
+                         |  - Interoperability       |
                          +---------------------------+
 ```
 
