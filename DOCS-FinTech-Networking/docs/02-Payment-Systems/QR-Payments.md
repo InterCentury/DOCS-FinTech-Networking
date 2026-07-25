@@ -400,26 +400,26 @@ QR CODE DECODING PROCESS
     │   ├── Determine which mask was used                       │
     │   └── Apply inverse mask to recover original data         │
     │                                                           │
-    │   STEP 5: READ FORMAT INFORMATION                       │
-    │   ├── Extract error correction level                   │
-    │   └── Extract mask pattern information                 │
+    │   STEP 5: READ FORMAT INFORMATION                         │
+    │   ├── Extract error correction level                      │
+    │   └── Extract mask pattern information                    │
     │                                                           │
-    │   STEP 6: EXTRACT DATA MODULES                          │
-    │   ├── Read data modules in the correct order           │
-    │   └── Reconstruct the bitstream                        │
+    │   STEP 6: EXTRACT DATA MODULES                            │
+    │   ├── Read data modules in the correct order              │
+    │   └── Reconstruct the bitstream                           │
     │                                                           │
-    │   STEP 7: APPLY REED-SOLOMON DECODING                   │
-    │   ├── Separate data and error correction codewords    │
-    │   ├── Apply Reed-Solomon to correct errors            │
-    │   └── Recover the original data codewords             │
+    │   STEP 7: APPLY REED-SOLOMON DECODING                     │
+    │   ├── Separate data and error correction codewords        │
+    │   ├── Apply Reed-Solomon to correct errors                │
+    │   └── Recover the original data codewords                 │
     │                                                           │
-    │   STEP 8: DECODE DATA                                   │
-    │   ├── Determine mode indicator                         │
-    │   ├── Extract character count                          │
-    │   └── Decode data according to mode                    │
+    │   STEP 8: DECODE DATA                                     │
+    │   ├── Determine mode indicator                            │
+    │   ├── Extract character count                             │
+    │   └── Decode data according to mode                       │
     │                                                           │
-    │   STEP 9: RETURN DATA                                   │
-    │   └── Return the decoded payment information           │
+    │   STEP 9: RETURN DATA                                     │
+    │   └── Return the decoded payment information              │
     │                                                           │
     +-----------------------------------------------------------+
 ```
