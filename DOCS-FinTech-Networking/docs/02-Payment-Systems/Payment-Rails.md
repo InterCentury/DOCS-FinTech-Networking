@@ -944,8 +944,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  ROUTING                                        |
-    |  Based on cost, speed, availability, and       |
-    |  geography                                    |
+    |  Based on cost, speed, availability, and        |
+    |  geography                                      |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
