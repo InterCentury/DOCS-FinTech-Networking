@@ -738,9 +738,9 @@ DOMESTIC VS INTERNATIONAL RAILS CONNECTION
     │   │         CHAPS / BACS / Faster Payments            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  CONNECTION MECHANISMS:                           │  │
-    │   │  - Correspondent banking relationships           │  │
+    │   +---------------------------------------------------+   │
+    │   │  CONNECTION MECHANISMS:                           │   │
+    │   │  - Correspondent banking relationships            │   │
     │   │  - SWIFT messaging                              │  │
     │   │  - CLS (FX settlement)                          │  │
     │   │  - Central bank swap lines                      │  │
