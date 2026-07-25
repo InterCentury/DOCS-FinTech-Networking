@@ -572,11 +572,11 @@ QR CODE DECODING (JavaScript Example)
     │       return {                                            │
     │           merchant: params.get('pa'),                     │
     │           amount: params.get('am'),                       │
-    │           reference: params.get('tn'),                  │
-    │           currency: params.get('cu')                   │
-    │       };                                               │
-    │   }                                                     │
-    │                                                         │
+    │           reference: params.get('tn'),                    │
+    │           currency: params.get('cu')                      │
+    │       };                                                  │
+    │   }                                                       │
+    │                                                           │
     +-----------------------------------------------------------+
 ```
 
