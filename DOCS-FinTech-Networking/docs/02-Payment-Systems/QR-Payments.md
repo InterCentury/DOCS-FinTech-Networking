@@ -475,21 +475,21 @@ QR CODE GENERATION (Python Example)
 QR CODE DECODING (Python Example)
 
     +-----------------------------------------------------------+
-    │          QR CODE DECODING - PYTHON EXAMPLE               │
+    │          QR CODE DECODING - PYTHON EXAMPLE                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   import cv2                                            │
-    │   from pyzbar import pyzbar                            │
-    │   from PIL import Image                                 │
-    │                                                         │
-    │   def decode_qr(image_path):                            │
-    │       """                                               │
-    │       Decode a QR code from an image file              │
-    │       """                                               │
-    │                                                         │
-    │       # Load image                                      │
-    │       image = Image.open(image_path)                   │
-    │                                                         │
+    │   import cv2                                              │
+    │   from pyzbar import pyzbar                               │
+    │   from PIL import Image                                   │
+    │                                                           │
+    │   def decode_qr(image_path):                              │
+    │       """                                                 │
+    │       Decode a QR code from an image file                 │
+    │       """                                                 │
+    │                                                           │
+    │       # Load image                                        │
+    │       image = Image.open(image_path)                      │
+    │                                                           │
     │       # Decode QR code                                 │
     │       decoded_objects = pyzbar.decode(image)           │
     │                                                         │
