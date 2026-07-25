@@ -106,12 +106,12 @@ QR PAYMENTS IMPORTANCE
                                        │
                                        ▼
                     +-------------------------------------------------+
-                    |  GLOBAL PAYMENT HARMONIZATION                  |
-                    |  - Cross-border QR initiatives                |
-                    |  - Interoperability between countries        |
-                    |  - Common standards (EMVCo)                 |
-                    |  - Reduced friction in international        |
-                    |    payments                                  |
+                    |  GLOBAL PAYMENT HARMONIZATION                   |
+                    |  - Cross-border QR initiatives                  |
+                    |  - Interoperability between countries           |
+                    |  - Common standards (EMVCo)                     |
+                    |  - Reduced friction in international            |
+                    |    payments                                     |
                     +-------------------------------------------------+
 ```
 
