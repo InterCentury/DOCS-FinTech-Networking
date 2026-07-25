@@ -155,15 +155,15 @@ QR CODE STRUCTURE
     │   │                                                     │ │
     │   └─────────────────────────────────────────────────────┘ │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY COMPONENTS:                                  │  │
-    │   │  - Position detection patterns (3 corners)       │  │
-    │   │  - Alignment patterns (for distortion)           │  │
-    │   │  - Timing patterns (grid alignment)             │  │
-    │   │  - Format information (error correction level)  │  │
-    │   │  - Data area (payment information)             │  │
-    │   │  - Reed-Solomon error correction               │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY COMPONENTS:                                  │   │
+    │   │  - Position detection patterns (3 corners)        │   │
+    │   │  - Alignment patterns (for distortion)            │   │
+    │   │  - Timing patterns (grid alignment)               │   │
+    │   │  - Format information (error correction level)    │   │
+    │   │  - Data area (payment information)                │   │
+    │   │  - Reed-Solomon error correction                  │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
