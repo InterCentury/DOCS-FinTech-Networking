@@ -352,20 +352,20 @@ QR CODE GENERATION ALGORITHM
     │      ├── matrix = applyMask(matrix, bestMask)             │
     │      └── return matrix                                    │
     │                                                           │
-    │   2. function encodeData(data, mode):                   │
-    │      ├── if mode == NUMERIC:                           │
-    │      │   └── convert groups of 3 digits to 10 bits    │
-    │      ├── if mode == ALPHANUMERIC:                     │
-    │      │   └── convert characters to 11-bit values      │
-    │      └── if mode == BYTE:                             │
-    │          └── convert each byte to 8 bits              │
+    │   2. function encodeData(data, mode):                     │
+    │      ├── if mode == NUMERIC:                              │
+    │      │   └── convert groups of 3 digits to 10 bits        │
+    │      ├── if mode == ALPHANUMERIC:                         │
+    │      │   └── convert characters to 11-bit values          │
+    │      └── if mode == BYTE:                                 │
+    │          └── convert each byte to 8 bits                  │
     │                                                           │
-    │   3. function applyReedSolomon(data, errorLevel):      │
-    │      ├── blocks = splitIntoBlocks(data)                │
-    │      ├── for each block:                               │
-    │      │   └── ecc = generateECC(block, errorLevel)     │
-    │      ├── interleave(blocks, ecc)                       │
-    │      └── return full codeword sequence                 │
+    │   3. function applyReedSolomon(data, errorLevel):         │
+    │      ├── blocks = splitIntoBlocks(data)                   │
+    │      ├── for each block:                                  │
+    │      │   └── ecc = generateECC(block, errorLevel)         │
+    │      ├── interleave(blocks, ecc)                          │
+    │      └── return full codeword sequence                    │
     │                                                           │
     +-----------------------------------------------------------+
 ```
