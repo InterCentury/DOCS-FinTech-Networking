@@ -37,22 +37,22 @@ QR payments have become increasingly popular due to their simplicity and low cos
 QR PAYMENTS DEFINITION
 
                          +---------------------------+
-                         |      QR PAYMENTS         |
-                         |  Contactless payment     |
-                         |  using QR codes          |
+                         |      QR PAYMENTS          |
+                         |  Contactless payment      |
+                         |  using QR codes           |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  PRIMARY BENEFITS        |  |  USE CASES               |
-|  - No hardware needed    |  |  - Low cost             |  |  - Retail stores          |
-|  - Works with camera     |  |  - No POS terminals     |  |  - Restaurants            |
-|  - Instant processing    |  |  - Easy to implement    |  |  - Street vendors         |
-|  - Low transaction cost  |  |  - Accessible to all    |  |  - Online payments        |
-|  - Secure encryption     |  |  - Fast transactions    |  |  - P2P transfers          |
-|  - Wide accessibility    |  |  - No hardware cost    |  |  - Bill payments          |
+|  KEY CHARACTERISTICS      |  |  PRIMARY BENEFITS         |  |  USE CASES                |
+|  - No hardware needed     |  |  - Low cost               |  |  - Retail stores          |
+|  - Works with camera      |  |  - No POS terminals       |  |  - Restaurants            |
+|  - Instant processing     |  |  - Easy to implement      |  |  - Street vendors         |
+|  - Low transaction cost   |  |  - Accessible to all      |  |  - Online payments        |
+|  - Secure encryption      |  |  - Fast transactions      |  |  - P2P transfers          |
+|  - Wide accessibility     |  |  - No hardware cost       |  |  - Bill payments          |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
