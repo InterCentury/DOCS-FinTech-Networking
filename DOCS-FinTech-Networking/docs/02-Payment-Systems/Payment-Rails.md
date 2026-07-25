@@ -918,8 +918,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  TYPES OF RAILS                                 |
-    |  ACH, Wire (RTGS), Card Networks, RTP, SWIFT,  |
-    |  SEPA, Blockchain, Regional (UPI, Pix)        |
+    |  ACH, Wire (RTGS), Card Networks, RTP, SWIFT,   |
+    |  SEPA, Blockchain, Regional (UPI, Pix)          |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
