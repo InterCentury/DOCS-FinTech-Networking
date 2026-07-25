@@ -381,24 +381,24 @@ QR CODE DECODING PROCESS
     │                 QR CODE DECODING PROCESS                  │
     +-----------------------------------------------------------+
     │                                                           │
-    │   STEP 1: IMAGE CAPTURE                                  │
-    │   ├── Camera captures QR code image                     │
-    │   ├── Image is preprocessed (gray-scale, contrast)      │
-    │   └── Image is sent to decoder                          │
+    │   STEP 1: IMAGE CAPTURE                                   │
+    │   ├── Camera captures QR code image                       │
+    │   ├── Image is preprocessed (gray-scale, contrast)        │
+    │   └── Image is sent to decoder                            │
     │                                                           │
-    │   STEP 2: LOCATE POSITION PATTERNS                       │
-    │   ├── Find three position detection patterns            │
-    │   ├── Determine orientation and size                   │
-    │   └── Apply perspective correction                     │
+    │   STEP 2: LOCATE POSITION PATTERNS                        │
+    │   ├── Find three position detection patterns              │
+    │   ├── Determine orientation and size                      │
+    │   └── Apply perspective correction                        │
     │                                                           │
-    │   STEP 3: EXTRACT GRID                                   │
-    │   ├── Map grid cells to modules                         │
-    │   ├── Determine dark/light values for each module      │
-    │   └── Create binary matrix                              │
+    │   STEP 3: EXTRACT GRID                                    │
+    │   ├── Map grid cells to modules                           │
+    │   ├── Determine dark/light values for each module         │
+    │   └── Create binary matrix                                │
     │                                                           │
-    │   STEP 4: APPLY INVERSE MASK                            │
-    │   ├── Determine which mask was used                    │
-    │   └── Apply inverse mask to recover original data      │
+    │   STEP 4: APPLY INVERSE MASK                              │
+    │   ├── Determine which mask was used                       │
+    │   └── Apply inverse mask to recover original data         │
     │                                                           │
     │   STEP 5: READ FORMAT INFORMATION                       │
     │   ├── Extract error correction level                   │
