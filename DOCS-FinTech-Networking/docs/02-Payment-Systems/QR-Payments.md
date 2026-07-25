@@ -693,22 +693,22 @@ QR payments can be classified based on who presents the QR code and who initiate
 QR PAYMENT METHODS
 
                          +---------------------------+
-                         |  QR PAYMENT METHODS      |
+                         |  QR PAYMENT METHODS       |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  MERCHANT-PRESENTED QR   |                            |  CUSTOMER-PRESENTED QR   |
-|  (Pull Payment)          |                            |  (Push Payment)          |
+|  MERCHANT-PRESENTED QR    |                            |  CUSTOMER-PRESENTED QR    |
+|  (Pull Payment)           |                            |  (Push Payment)           |
 |                           |                            |                           |
-|  Merchant displays QR   |                            |  Customer displays QR   |
-|  Customer scans        |                            |  Merchant scans        |
-|  Customer initiates    |                            |  Merchant initiates    |
-|  Most common method     |                            |  Used for loyalty      |
-|  Examples: UPI QR,      |                            |  Examples: Alipay      |
-|  Alipay merchant QR    |                            |  customer QR           |
+|  Merchant displays QR     |                            |  Customer displays QR     |
+|  Customer scans           |                            |  Merchant scans           |
+|  Customer initiates       |                            |  Merchant initiates       |
+|  Most common method       |                            |  Used for loyalty         |
+|  Examples: UPI QR,        |                            |  Examples: Alipay         |
+|  Alipay merchant QR       |                            |  customer QR              |
 +---------------------------+                            +---------------------------+
 ```
 
