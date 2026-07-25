@@ -926,8 +926,8 @@ SUMMARY
     |  KEY LAYERS                                     |
     |  Network (physical infrastructure)              |
     |  Protocol (messaging standards)                 |
-    |  Rules (governance and standards)              |
-    |  Settlement (finality mechanism)               |
+    |  Rules (governance and standards)               |
+    |  Settlement (finality mechanism)                |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
