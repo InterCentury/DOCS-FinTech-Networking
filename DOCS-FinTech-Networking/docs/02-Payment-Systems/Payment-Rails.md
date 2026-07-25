@@ -913,7 +913,7 @@ SUMMARY
     +-------------------------------------------------+
     |  WHAT ARE PAYMENT RAILS?                        |
     |  Underlying infrastructure for value transfer   |
-    |  Connecting financial institutions             |
+    |  Connecting financial institutions              |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
