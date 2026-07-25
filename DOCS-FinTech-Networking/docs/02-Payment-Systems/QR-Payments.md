@@ -600,18 +600,18 @@ The ```regulator``` sets rules and standards. It ensures compliance. It protects
 QR PAYMENT ECOSYSTEM
 
                     +-------------------------------------------------+
-                    |            QR PAYMENT ECOSYSTEM               |
+                    |             QR PAYMENT ECOSYSTEM               |
                     +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  CUSTOMER                |  |  MERCHANT                |  |  PSP / PAYMENT           |
-|  - Scans QR code        |  |  - Displays QR code      |  |  PROVIDER                |
-|  - Confirms transaction |  |  - Receives confirmation  |  |  - Generates QR codes    |
-|  - Uses mobile app     |  |  - Provides goods/       |  |  - Processes payments    |
-|  - Pays via bank/wallet |  |    services             |  |  - Integrates with banks  |
+|  CUSTOMER                 |  |  MERCHANT                 |  |  PSP / PAYMENT            |
+|  - Scans QR code          |  |  - Displays QR code       |  |  PROVIDER                 |
+|  - Confirms transaction   |  |  - Receives confirmation  |  |  - Generates QR codes     |
+|  - Uses mobile app        |  |  - Provides goods/        |  |  - Processes payments     |
+|  - Pays via bank/wallet   |  |    services               |  |  - Integrates with banks  |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
@@ -620,10 +620,10 @@ QR PAYMENT ECOSYSTEM
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  MERCHANT BANK           |  |  PAYMENT RAIL            |  |  REGULATOR               |
-|  - Acquiring bank        |  |  - ACH / RTGS / RTP     |  |  - Sets standards        |
-|  - Credits merchant      |  |  - Transports messages  |  |  - Enforces rules        |
-|  - Handles settlement   |  |  - Final settlement     |  |  - Protects consumers    |
+|  MERCHANT BANK            |  |  PAYMENT RAIL             |  |  REGULATOR                |
+|  - Acquiring bank         |  |  - ACH / RTGS / RTP       |  |  - Sets standards         |
+|  - Credits merchant       |  |  - Transports messages    |  |  - Enforces rules         |
+|  - Handles settlement     |  |  - Final settlement       |  |  - Protects consumers     |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
