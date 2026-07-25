@@ -235,29 +235,29 @@ REED-SOLOMON ERROR CORRECTION
     │               REED-SOLOMON ERROR CORRECTION               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   STEP 1: Convert data bits to codewords                 │
-    │   └── Each codeword is 8 bits (1 byte)                   │
+    │   STEP 1: Convert data bits to codewords                  │
+    │   └── Each codeword is 8 bits (1 byte)                    │
     │                                                           │
-    │   STEP 2: Split into blocks                              │
-    │   └── Data is split into multiple blocks                 │
+    │   STEP 2: Split into blocks                               │
+    │   └── Data is split into multiple blocks                  │
     │                                                           │
-    │   STEP 3: Generate error correction codewords            │
-    │   └── Using Galois Field arithmetic (GF(256))           │
+    │   STEP 3: Generate error correction codewords             │
+    │   └── Using Galois Field arithmetic (GF(256))             │
     │                                                           │
-    │   STEP 4: Append error correction codewords              │
-    │   └── Error correction blocks are appended to data      │
+    │   STEP 4: Append error correction codewords               │
+    │   └── Error correction blocks are appended to data        │
     │                                                           │
-    │   STEP 5: Interleave blocks                              │
-    │   └── Blocks are interleaved for better error           │
-    │       correction distribution                           │
+    │   STEP 5: Interleave blocks                               │
+    │   └── Blocks are interleaved for better error             │
+    │       correction distribution                             │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  ERROR CORRECTION LEVELS:                         │  │
-    │   │  L (Low): 7% recovery capability                  │  │
-    │   │  M (Medium): 15% recovery capability              │  │
-    │   │  Q (Quartile): 25% recovery capability            │  │
-    │   │  H (High): 30% recovery capability                │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  ERROR CORRECTION LEVELS:                         │   │
+    │   │  L (Low): 7% recovery capability                  │   │
+    │   │  M (Medium): 15% recovery capability              │   │
+    │   │  Q (Quartile): 25% recovery capability            │   │
+    │   │  H (High): 30% recovery capability                │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
