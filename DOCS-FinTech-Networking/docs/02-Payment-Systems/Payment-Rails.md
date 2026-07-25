@@ -956,11 +956,11 @@ SUMMARY
 
     +-------------------------------------------------+
     |  KEY TAKEAWAY                                   |
-    |  Payment rails are the foundation of the       |
-    |  financial system. They provide the           |
-    |  infrastructure, standards, and connectivity  |
-    |  that enable value transfer between banks,    |
-    |  businesses, and consumers.                  |
+    |  Payment rails are the foundation of the        |
+    |  financial system. They provide the             |
+    |  infrastructure, standards, and connectivity    |
+    |  that enable value transfer between banks,      |
+    |  businesses, and consumers.                     |
     +-------------------------------------------------+
 ```
 
