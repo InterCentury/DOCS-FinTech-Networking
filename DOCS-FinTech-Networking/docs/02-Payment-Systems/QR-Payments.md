@@ -88,18 +88,18 @@ QR payments are important because they democratize digital payments. They enable
 QR PAYMENTS IMPORTANCE
 
                          +---------------------------+
-                         |  QR PAYMENTS IMPORTANCE  |
+                         |  QR PAYMENTS IMPORTANCE   |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  FINANCIAL INCLUSION     |  |  LOW INFRASTRUCTURE      |  |  REAL-TIME PAYMENTS      |
-|  - Unbanked population   |  |  - No POS terminals     |  |  - Instant processing    |
-|  - Small merchants      |  |  - No card machines     |  |  - 24/7 availability    |
-|  - Developing markets   |  |  - Works with phones    |  |  - Immediate settlement  |
-|  - Digital economy      |  |  - Easy to deploy      |  |  - Quick confirmation   |
+|  FINANCIAL INCLUSION      |  |  LOW INFRASTRUCTURE       |  |  REAL-TIME PAYMENTS       |
+|  - Unbanked population    |  |  - No POS terminals       |  |  - Instant processing     |
+|  - Small merchants        |  |  - No card machines       |  |  - 24/7 availability      |
+|  - Developing markets     |  |  - Works with phones      |  |  - Immediate settlement   |
+|  - Digital economy        |  |  - Easy to deploy         |  |  - Quick confirmation     | 
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
