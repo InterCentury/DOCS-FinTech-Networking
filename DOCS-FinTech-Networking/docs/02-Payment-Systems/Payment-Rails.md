@@ -724,11 +724,11 @@ DOMESTIC VS INTERNATIONAL RAILS CONNECTION
     │   │         Nostro/Vostro Accounts                    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ SWIFT Messaging              │
+    │                           │ SWIFT Messaging               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │         INTERNATIONAL RAIL (SWIFT)               │   │
-    │   │         Cross-Border Messaging                   │   │
+    │   │         INTERNATIONAL RAIL (SWIFT)                │   │
+    │   │         Cross-Border Messaging                    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           │ Correspondent Banking        │
