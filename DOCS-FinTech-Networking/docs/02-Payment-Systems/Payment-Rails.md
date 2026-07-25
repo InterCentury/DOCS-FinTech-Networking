@@ -741,10 +741,10 @@ DOMESTIC VS INTERNATIONAL RAILS CONNECTION
     │   +---------------------------------------------------+   │
     │   │  CONNECTION MECHANISMS:                           │   │
     │   │  - Correspondent banking relationships            │   │
-    │   │  - SWIFT messaging                              │  │
-    │   │  - CLS (FX settlement)                          │  │
-    │   │  - Central bank swap lines                      │  │
-    │   └---------------------------------------------------+  │
+    │   │  - SWIFT messaging                                │   │
+    │   │  - CLS (FX settlement)                            │   │
+    │   │  - Central bank swap lines                        │   │
+    │   └---------------------------------------------------+   │
     +-----------------------------------------------------------+
 ```
 
