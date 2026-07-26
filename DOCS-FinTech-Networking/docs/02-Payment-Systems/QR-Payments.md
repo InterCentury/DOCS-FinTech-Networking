@@ -900,11 +900,11 @@ QR PAYMENT SECURITY LAYERS
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  DATA ENCRYPTION         |  |  TOKENIZATION            |  |  DYNAMIC QR               |
-|  - TLS/SSL transmission  |  |  - Replace sensitive     |  |  - Changes per            |
-|  - End-to-end encryption |  |    data with tokens      |  |    transaction           |
-|  - Secure storage       |  |  - Token has no value    |  |  - Cannot be reused      |
-|  - Cannot be intercepted |  |  - Reduces exposure     |  |  - Harder to forge      |
+|  DATA ENCRYPTION          |  |  TOKENIZATION             |  |  DYNAMIC QR               |
+|  - TLS/SSL transmission   |  |  - Replace sensitive      |  |  - Changes per            |
+|  - End-to-end encryption  |  |    data with tokens       |  |    transaction            |
+|  - Secure storage         |  |  - Token has no value     |  |  - Cannot be reused       |
+|  - Cannot be intercepted  |  |  - Reduces exposure       |  |  - Harder to forge        |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
