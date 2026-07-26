@@ -1199,8 +1199,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  METHODS                                        |
-    |  Merchant-Presented (pull), Customer-Presented |
-    |  (push), Static vs Dynamic                    |
+    |  Merchant-Presented (pull), Customer-Presented  |
+    |  (push), Static vs Dynamic                      |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
