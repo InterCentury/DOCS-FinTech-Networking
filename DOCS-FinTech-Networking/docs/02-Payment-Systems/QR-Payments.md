@@ -600,7 +600,7 @@ The ```regulator``` sets rules and standards. It ensures compliance. It protects
 QR PAYMENT ECOSYSTEM
 
                     +-------------------------------------------------+
-                    |             QR PAYMENT ECOSYSTEM               |
+                    |             QR PAYMENT ECOSYSTEM                |
                     +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
