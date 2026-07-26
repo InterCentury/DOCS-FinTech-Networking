@@ -1205,8 +1205,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  STANDARDS                                      |
-    |  EMVCo QR (global), Bharat QR (India),        |
-    |  SGQR (Singapore), QRIS (Indonesia)           |
+    |  EMVCo QR (global), Bharat QR (India),          |
+    |  SGQR (Singapore), QRIS (Indonesia)             |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
