@@ -913,11 +913,11 @@ QR PAYMENT SECURITY LAYERS
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  AUTHENTICATION           |  |  FRAUD DETECTION          |  |  SECURE QR CODES         |
-|  - PIN verification       |  |  - Real-time monitoring   |  |  - Tamper-proof          |
-|  - Biometric (face/finger)|  |  - Anomaly detection      |  |  - Signed QR codes       |
-|  - Two-factor             |  |  - Risk scoring           |  |  - QR code validation   |
-|  - Multi-factor           |  |  - Block suspicious       |  |  - Origin verification  |
+|  AUTHENTICATION           |  |  FRAUD DETECTION          |  |  SECURE QR CODES          |
+|  - PIN verification       |  |  - Real-time monitoring   |  |  - Tamper-proof           |
+|  - Biometric (face/finger)|  |  - Anomaly detection      |  |  - Signed QR codes        |
+|  - Two-factor             |  |  - Risk scoring           |  |  - QR code validation     |
+|  - Multi-factor           |  |  - Block suspicious       |  |  - Origin verification    |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
@@ -934,38 +934,38 @@ QR PAYMENT PROCESSING FLOW
     │               QR PAYMENT PROCESSING FLOW                  │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CUSTOMER SCANS QR                                      │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   APP DECODES QR                                         │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   CUSTOMER CONFIRMS                                      │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   PSP RECEIVES REQUEST                                   │
-    │        │                                                 │
-    │   ┌────┴────┐                                           │
-    │   │         │                                           │
-    │   ▼         ▼                                           │
-    │   VALIDATE  FRAUD CHECK                                 │
-    │        │         │                                       │
-    │   ┌────┴────┐   │                                       │
-    │   │         │   │                                       │
-    │   ▼         ▼   ▼                                       │
-    │   ROUTE TO PAYMENT RAIL                                 │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   PROCESS TRANSACTION                                   │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   DEBIT CUSTOMER / CREDIT MERCHANT                      │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   SEND CONFIRMATION                                     │
-    │        │                                                 │
-    │        ▼                                                 │
-    │   TRANSACTION COMPLETE                                  │
+    │   CUSTOMER SCANS QR                                       │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   APP DECODES QR                                          │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   CUSTOMER CONFIRMS                                       │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   PSP RECEIVES REQUEST                                    │
+    │        │                                                  │
+    │   ┌────┴────┐                                             │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │   VALIDATE  FRAUD CHECK                                   │
+    │        │        │                                         │
+    │   ┌────┴────┐   │                                         │
+    │   │         │   │                                         │
+    │   ▼         ▼   ▼                                         │
+    │   ROUTE TO PAYMENT RAIL                                   │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   PROCESS TRANSACTION                                     │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   DEBIT CUSTOMER / CREDIT MERCHANT                        │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   SEND CONFIRMATION                                       │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   TRANSACTION COMPLETE                                    │
     │                                                           │
     +-----------------------------------------------------------+
 ```
