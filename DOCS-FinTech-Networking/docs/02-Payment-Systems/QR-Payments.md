@@ -1059,18 +1059,18 @@ QR payments must comply with financial regulations, including AML and KYC requir
 QR PAYMENT COMPLIANCE
 
                          +---------------------------+
-                         |  QR PAYMENT COMPLIANCE   |
+                         |  QR PAYMENT COMPLIANCE    |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  AML REQUIREMENTS        |  |  KYC REQUIREMENTS         |  |  STANDARDS               |
-|  - Transaction monitoring |  |  - Customer identity      |  |  - EMVCo QR              |
-|  - Threshold reporting   |  |  - Merchant verification  |  |  - National standards   |
-|  - Suspicious activity   |  |  - Account verification  |  |  - PCI DSS (if cards)   |
-|  - Record keeping       |  |  - Ongoing monitoring    |  |  - Data protection       |
+|  AML REQUIREMENTS         |  |  KYC REQUIREMENTS         |  |  STANDARDS                |
+|  - Transaction monitoring |  |  - Customer identity      |  |  - EMVCo QR               |
+|  - Threshold reporting    |  |  - Merchant verification  |  |  - National standards     |
+|  - Suspicious activity    |  |  - Account verification   |  |  - PCI DSS (if cards)     |
+|  - Record keeping         |  |  - Ongoing monitoring     |  |  - Data protection        |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
