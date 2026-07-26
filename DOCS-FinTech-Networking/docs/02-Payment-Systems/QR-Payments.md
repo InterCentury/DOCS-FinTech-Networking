@@ -857,10 +857,10 @@ QR PAYMENT INFRASTRUCTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │            PAYMENT RAIL                         │   │
-    │   │  - ACH / RTGS / RTP                            │   │
-    │   │  - Message routing                             │   │
-    │   │  - Settlement finality                         │   │
+    │   │            PAYMENT RAIL                           │   │
+    │   │  - ACH / RTGS / RTP                               │   │
+    │   │  - Message routing                                │   │
+    │   │  - Settlement finality                            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
