@@ -1004,11 +1004,11 @@ QR PAYMENT NETWORK OPTIONS
                                        │
                                        ▼
                          +---------------------------+
-                         |  CARD NETWORKS           |
-                         |  - Tokenization          |
-                         |  - Global reach         |
-                         |  - 1-3 day settlement  |
-                         |  - High fees           |
+                         |  CARD NETWORKS            |
+                         |  - Tokenization           |
+                         |  - Global reach           |
+                         |  - 1-3 day settlement     |
+                         |  - High fees              |
                          +---------------------------+
 ```
 
