@@ -1123,18 +1123,18 @@ Several real-world QR payment systems demonstrate the global adoption of QR paym
 REAL-WORLD QR SYSTEMS
 
                          +---------------------------+
-                         |  REAL-WORLD QR SYSTEMS   |
+                         |   REAL-WORLD QR SYSTEMS   |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  UPI QR (India)          |  |  ALIPAY QR (China)        |  |  PIX QR (Brazil)         |
-|  - EMVCo based          |  |  - Market leader          |  |  - Instant settlement    |
-|  - Multiple apps        |  |  - Merchant-presented    |  |  - QR generation        |
-|  - 10B+ monthly         |  |  - Customer-presented   |  |  - Real-time            |
-|  - UPI payment rail    |  |  - Billions daily       |  |  - Growing rapidly      |
+|  UPI QR (India)           |  |  ALIPAY QR (China)        |  |  PIX QR (Brazil)          |
+|  - EMVCo based            |  |  - Market leader          |  |  - Instant settlement     |
+|  - Multiple apps          |  |  - Merchant-presented     |  |  - QR generation          |
+|  - 10B+ monthly           |  |  - Customer-presented     |  |  - Real-time              |
+|  - UPI payment rail       |  |  - Billions daily         |  |  - Growing rapidly        |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
