@@ -1156,18 +1156,18 @@ The future of QR payments includes greater integration with CBDCs, AI-powered fr
 FUTURE OF QR PAYMENTS
 
                          +---------------------------+
-                         |  FUTURE OF QR PAYMENTS   |
+                         |   FUTURE OF QR PAYMENTS   |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  CBDC INTEGRATION        |  |  AI FRAUD DETECTION      |  |  GLOBAL INTEROPERABILITY |
-|  - Digital currencies   |  |  - Real-time detection   |  |  - Cross-border QR      |
-|  - Direct payments      |  |  - Predictive analytics  |  |  - Common standards    |
-|  - Central bank backed  |  |  - Pattern recognition  |  |  - International        |
-|  - Programmable money   |  |  - Adaptive security    |  |    payments            |
+|  CBDC INTEGRATION         |  |  AI FRAUD DETECTION       |  |  GLOBAL INTEROPERABILITY  |
+|  - Digital currencies     |  |  - Real-time detection    |  |  - Cross-border QR        |
+|  - Direct payments        |  |  - Predictive analytics   |  |  - Common standards       |
+|  - Central bank backed    |  |  - Pattern recognition    |  |  - International          |
+|  - Programmable money     |  |  - Adaptive security      |  |    payments               |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
