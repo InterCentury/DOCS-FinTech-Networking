@@ -1223,20 +1223,20 @@ SUMMARY
 
     +-------------------------------------------------+
     |  REAL-WORLD SYSTEMS                             |
-    |  UPI QR, Alipay QR, WeChat Pay QR, PIX QR,    |
-    |  PayNow QR                                    |
+    |  UPI QR, Alipay QR, WeChat Pay QR, PIX QR,      |
+    |  PayNow QR                                      |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
     |  KEY TAKEAWAY                                   |
-    |  QR payments democratize digital payments.     |
-    |  They require no expensive hardware, work     |
-    |  with standard smartphones, and enable        |
-    |  financial inclusion. The technology behind   |
-    |  QR payments involves complex encoding,       |
-    |  Reed-Solomon error correction, and           |
-    |  sophisticated image processing to ensure     |
-    |  secure and reliable transactions.           |
+    |  QR payments democratize digital payments.      |
+    |  They require no expensive hardware, work       |
+    |  with standard smartphones, and enable          |
+    |  financial inclusion. The technology behind     |
+    |  QR payments involves complex encoding,         |
+    |  Reed-Solomon error correction, and             |
+    |  sophisticated image processing to ensure       |
+    |  secure and reliable transactions.              |
     +-------------------------------------------------+
 ```
 
