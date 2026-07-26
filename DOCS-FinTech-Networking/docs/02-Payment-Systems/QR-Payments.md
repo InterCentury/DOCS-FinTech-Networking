@@ -1024,7 +1024,7 @@ Static QR codes are permanent and unchanging. Dynamic QR codes change for each t
 STATIC VS DYNAMIC QR COMPARISON
 
                          +---------------------------+
-                         |  STATIC VS DYNAMIC QR    |
+                         |   STATIC VS DYNAMIC QR    |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
@@ -1186,13 +1186,13 @@ QR CODE GENERATION PIPELINE
     │               QR CODE GENERATION PIPELINE                 │
     +-----------------------------------------------------------+
     │                                                           │
-    │   INPUT DATA ───► Data Analysis ───► Data Encoding       │
+    │   INPUT DATA ───► Data Analysis ───► Data Encoding        │
     │                                                           │
-    │   Data Encoding ───► Error Correction ───► Bit Stream    │
+    │   Data Encoding ───► Error Correction ───► Bit Stream     │
     │                                                           │
-    │   Bit Stream ───► Module Placement ───► Masking          │
+    │   Bit Stream ───► Module Placement ───► Masking           │
     │                                                           │
-    │   Masking ───► Format Information ───► QR Code Image    │
+    │   Masking ───► Format Information ───► QR Code Image      │
     │                                                           │
     └-----------------------------------------------------------+
 ```
