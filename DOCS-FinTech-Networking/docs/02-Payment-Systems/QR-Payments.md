@@ -986,18 +986,18 @@ QR payments can use various payment rails depending on the implementation.
 QR PAYMENT NETWORK OPTIONS
 
                          +---------------------------+
-                         |  QR PAYMENT NETWORKS     |
+                         |  QR PAYMENT NETWORKS      |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  ACH                     |  |  RTGS                   |  |  REAL-TIME               |
-|  - Batch processing      |  |  - Real-time            |  |  - Instant settlement    |
-|  - 1-2 day settlement   |  |  - High value           |  |  - 24/7 availability    |
-|  - Low cost             |  |  - Immediate finality   |  |  - Low value typically   |
-|  - US domestic          |  |  - Wholesale payments   |  |  - Examples: RTP, FedNow |
+|  ACH                      |  |  RTGS                     |  |  REAL-TIME                |
+|  - Batch processing       |  |  - Real-time              |  |  - Instant settlement     |
+|  - 1-2 day settlement     |  |  - High value             |  |  - 24/7 availability      |
+|  - Low cost               |  |  - Immediate finality     |  |  - Low value typically    |
+|  - US domestic            |  |  - Wholesale payments     |  |  - Examples: RTP, FedNow  |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
