@@ -865,11 +865,11 @@ QR PAYMENT INFRASTRUCTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │            BANKING SYSTEMS                      │   │
-    │   │  - Core banking                                 │   │
-    │   │  - Account management                          │   │
-    │   │  - Debit/credit processing                     │   │
-    │   │  - Reconciliation                              │   │
+    │   │            BANKING SYSTEMS                        │   │
+    │   │  - Core banking                                   │   │
+    │   │  - Account management                             │   │
+    │   │  - Debit/credit processing                        │   │
+    │   │  - Reconciliation                                 │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
