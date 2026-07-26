@@ -1208,18 +1208,18 @@ GALOIS FIELD GF(256) PROPERTIES
 
     +-----------------------------------------------------------+
     │                                                           │
-    │   Primitive Polynomial: x^8 + x^4 + x^3 + x^2 + 1        │
+    │   Primitive Polynomial: x^8 + x^4 + x^3 + x^2 + 1         │
     │                                                           │
-    │   Addition: a ⊕ b (XOR)                                   │
+    │   Addition: a ⊕ b (XOR)                                  │
     │                                                           │
     │   Multiplication: a ⊗ b = polynomial multiplication      │
-    │                    modulo primitive polynomial           │
+    │                    modulo primitive polynomial            │
     │                                                           │
     │   Generator Polynomial for QR Codes:                      │
-    │   g(x) = (x - α^0)(x - α^1)...(x - α^(n-k-1))          │
+    │   g(x) = (x - α^0)(x - α^1)...(x - α^(n-k-1))             │
     │                                                           │
-    │   Where n = total codewords, k = data codewords,        │
-    │   α = primitive element (α^1 = 2 in GF(256))            │
+    │   Where n = total codewords, k = data codewords,          │
+    │   α = primitive element (α^1 = 2 in GF(256))              │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -2197,19 +2197,19 @@ QR CODE PAYMENT DATA STRUCTURE (EMVCo)
     │   Format: key-value pairs separated by specific delimiters│
     │                                                           │
     │   Example UPI QR Format:                                  │
-    │   upi://pay?pa=merchant@bank&pn=MerchantName&am=100.00   │
+    │   upi://pay?pa=merchant@bank&pn=MerchantName&am=100.00    │
     │                                                           │
-    │   Key        | Description                               │
+    │   Key        | Description                                │
     │   ───────────┼────────────────────────────────────────────│
-    │   pa         | Payee Address (merchant ID)               │
-    │   pn         | Payee Name (merchant name)                │
-    │   am         | Amount                                    │
-    │   cu         | Currency Code (ISO 4217)                  │
-    │   tn         | Transaction Reference Number              │
-    │   mc         | Merchant Category Code                    │
-    │   tid        | Terminal ID                               │
-    │   mid        | Merchant ID                               │
-    │   url        | Payment URL                               │
+    │   pa         | Payee Address (merchant ID)                │
+    │   pn         | Payee Name (merchant name)                 │
+    │   am         | Amount                                     │
+    │   cu         | Currency Code (ISO 4217)                   │
+    │   tn         | Transaction Reference Number               │
+    │   mc         | Merchant Category Code                     │
+    │   tid        | Terminal ID                                │
+    │   mid        | Merchant ID                                │
+    │   url        | Payment URL                                │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -2221,28 +2221,28 @@ QR CODE GENERATION - ENGINEERING SUMMARY
 
     +-----------------------------------------------------------+
     │                                                           │
-    │   Input: Any string data (URL, payment info, etc.)       │
+    │   Input: Any string data (URL, payment info, etc.)        │
     │                                                           │
     │   Process:                                                │
-    │   1. Data Analysis → Mode Selection                      │
-    │   2. Data Encoding → Bitstream Generation               │
-    │   3. Error Correction → Reed-Solomon Encoding           │
-    │   4. Module Placement → Grid Formation                  │
-    │   5. Masking → Pattern Optimization                     │
-    │   6. Format Information → Error Level & Mask Type      │
+    │   1. Data Analysis → Mode Selection                       │
+    │   2. Data Encoding → Bitstream Generation                 │
+    │   3. Error Correction → Reed-Solomon Encoding             │
+    │   4. Module Placement → Grid Formation                    │
+    │   5. Masking → Pattern Optimization                       │
+    │   6. Format Information → Error Level & Mask Type         │
     │                                                           │
-    │   Output: QR Code Image (PNG, SVG, etc.)                │
+    │   Output: QR Code Image (PNG, SVG, etc.)                  │
     │                                                           │
-    │   Key Parameters:                                        │
-    │   - Version: 1-40 (data capacity)                       │
-    │   - Error Correction: L, M, Q, H (recovery %)          │
-    │   - Box Size: Module pixel size                        │
-    │   - Border: Quiet zone width                           │
+    │   Key Parameters:                                         │
+    │   - Version: 1-40 (data capacity)                         │
+    │   - Error Correction: L, M, Q, H (recovery %)             │
+    │   - Box Size: Module pixel size                           │
+    │   - Border: Quiet zone width                              │
     │                                                           │
-    │   Performance Considerations:                            │
-    │   - Larger version = more data but bigger code         │
-    │   - Higher error correction = more redundancy          │
-    │   - Box size affects readability and scanning distance │
+    │   Performance Considerations:                             │
+    │   - Larger version = more data but bigger code            │
+    │   - Higher error correction = more redundancy             │
+    │   - Box size affects readability and scanning distance    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
