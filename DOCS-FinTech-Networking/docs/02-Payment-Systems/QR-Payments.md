@@ -1031,17 +1031,17 @@ STATIC VS DYNAMIC QR COMPARISON
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  STATIC QR               |                            |  DYNAMIC QR              |
-|  (Fixed)                 |                            |  (Per Transaction)       |
+|  STATIC QR                |                            |  DYNAMIC QR               |
+|  (Fixed)                  |                            |  (Per Transaction)        |
 |                           |                            |                           |
-|  - Fixed amount          |                            |  - Variable amount       |
-|  - Generated once       |                            |  - Generated per         |
-|  - Lower security       |                            |    transaction          |
-|  - Suitable for small   |                            |  - Higher security      |
-|    shops                |                            |  - Suitable for          |
-|  - Easy to display      |                            |    businesses          |
-|  - No transaction       |                            |  - Transaction-          |
-|    tracking             |                            |    specific            |
+|  - Fixed amount           |                            |  - Variable amount        |
+|  - Generated once         |                            |  - Generated per          |
+|  - Lower security         |                            |    transaction            |
+|  - Suitable for small     |                            |  - Higher security        |
+|    shops                  |                            |  - Suitable for           |
+|  - Easy to display        |                            |    businesses             |
+|  - No transaction         |                            |  - Transaction-           |
+|    tracking               |                            |    specific               |
 +---------------------------+                            +---------------------------+
 ```
 
