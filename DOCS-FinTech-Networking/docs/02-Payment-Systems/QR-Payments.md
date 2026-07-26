@@ -1189,12 +1189,12 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  QR CODE PROGRAMMING                           |
-    |  Encoding: Data → Binary → Reed-Solomon →      |
-    |  Masking → Final QR Code                       |
-    |  Decoding: Image → Position Detection →        |
-    |  Grid Extraction → Reed-Solomon Decoding →   |
-    |  Data Extraction                             |
+    |  QR CODE PROGRAMMING                            |
+    |  Encoding: Data → Binary → Reed-Solomon →       |
+    |  Masking → Final QR Code                        |
+    |  Decoding: Image → Position Detection →         |
+    |  Grid Extraction → Reed-Solomon Decoding →      |
+    |  Data Extraction                                |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
