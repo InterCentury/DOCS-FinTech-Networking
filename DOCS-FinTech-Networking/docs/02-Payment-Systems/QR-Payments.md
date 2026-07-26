@@ -1090,18 +1090,18 @@ QR payments face several risks that must be managed.
 QR PAYMENT RISKS
 
                          +---------------------------+
-                         |  QR PAYMENT RISKS        |
+                         |   QR PAYMENT RISKS        |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  QR PHISHING             |  |  QR CODE REPLACEMENT     |  |  MERCHANT IMPERSONATION  |
-|  - Fraudulent QR codes   |  |  - Malicious QR          |  |  - Fake merchant         |
-|  - Redirect to fake page |  |    replacement          |  |  - Collect payments      |
-|  - Steal credentials    |  |  - Tampering            |  |  - No delivery          |
-|  - Financial loss       |  |  - Loss of funds       |  |  - Customer loss        |
+|  QR PHISHING              |  |  QR CODE REPLACEMENT      |  |  MERCHANT IMPERSONATION   |
+|  - Fraudulent QR codes    |  |  - Malicious QR           |  |  - Fake merchant          |
+|  - Redirect to fake page  |  |    replacement            |  |  - Collect payments       |
+|  - Steal credentials      |  |  - Tampering              |  |  - No delivery            |
+|  - Financial loss         |  |  - Loss of funds          |  |  - Customer loss          |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
