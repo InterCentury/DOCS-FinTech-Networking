@@ -1179,20 +1179,20 @@ SUMMARY
     +-------------------------------------------------+
     |  WHAT ARE QR PAYMENTS?                          |
     |  Contactless payments using QR codes            |
-    |  Low cost, accessible, fast                    |
+    |  Low cost, accessible, fast                     |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
     |  KEY TECHNOLOGY                                 |
-    |  QR codes, Reed-Solomon error correction,      |
-    |  computer vision, image processing             |
+    |  QR codes, Reed-Solomon error correction,       |
+    |  computer vision, image processing              |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
     |  QR CODE PROGRAMMING                           |
-    |  Encoding: Data → Binary → Reed-Solomon →     |
-    |  Masking → Final QR Code                      |
-    |  Decoding: Image → Position Detection →       |
+    |  Encoding: Data → Binary → Reed-Solomon →      |
+    |  Masking → Final QR Code                       |
+    |  Decoding: Image → Position Detection →        |
     |  Grid Extraction → Reed-Solomon Decoding →   |
     |  Data Extraction                             |
     +-------------------------------------------------+
