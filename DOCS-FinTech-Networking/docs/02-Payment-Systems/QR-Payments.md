@@ -847,12 +847,12 @@ QR PAYMENT INFRASTRUCTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │            PSP BACKEND SYSTEM                   │   │
-    │   │  - QR code generation                           │   │
-    │   │  - Payment processing                          │   │
-    │   │  - Transaction routing                         │   │
-    │   │  - Fraud detection                             │   │
-    │   │  - Settlement management                      │   │
+    │   │            PSP BACKEND SYSTEM                     │   │
+    │   │  - QR code generation                             │   │
+    │   │  - Payment processing                             │   │
+    │   │  - Transaction routing                            │   │
+    │   │  - Fraud detection                                │   │
+    │   │  - Settlement management                          │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
