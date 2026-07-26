@@ -838,11 +838,11 @@ QR PAYMENT INFRASTRUCTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           CUSTOMER MOBILE APP                   │   │
-    │   │  - QR code scanner                              │   │
-    │   │  - Payment display                              │   │
-    │   │  - Authentication (PIN, biometric)              │   │
-    │   │  - Transaction history                         │   │
+    │   │           CUSTOMER MOBILE APP                     │   │
+    │   │  - QR code scanner                                │   │
+    │   │  - Payment display                                │   │
+    │   │  - Authentication (PIN, biometric)                │   │
+    │   │  - Transaction history                            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
