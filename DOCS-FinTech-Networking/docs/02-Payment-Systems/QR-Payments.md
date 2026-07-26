@@ -1211,14 +1211,14 @@ SUMMARY
 
     +-------------------------------------------------+
     |  LIFECYCLE                                      |
-    |  Generation → Scanning → Initiation →          |
-    |  Authorization → Settlement → Completion       |
+    |  Generation → Scanning → Initiation →           |
+    |  Authorization → Settlement → Completion        |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
     |  SECURITY                                       |
-    |  Encryption, tokenization, dynamic QR,         |
-    |  authentication, fraud detection               |
+    |  Encryption, tokenization, dynamic QR,          |
+    |  authentication, fraud detection                |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
