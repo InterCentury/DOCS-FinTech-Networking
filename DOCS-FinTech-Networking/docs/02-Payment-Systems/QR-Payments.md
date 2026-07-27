@@ -1171,7 +1171,1086 @@ FUTURE OF QR PAYMENTS
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
-## 18. Summary
+## 18. QR Code Generation and Implementation - Complete Engineering Guide
+
+This section covers the complete engineering implementation of QR code generation from the ground up, including custom encoder implementation, library-based generation, and integration with payment systems.
+
+### 18.1 QR Code Generation Pipeline
+
+The QR code generation pipeline consists of multiple stages, each with specific mathematical operations and data transformations.
+
+```
+QR CODE GENERATION PIPELINE
+
+    +-----------------------------------------------------------+
+    │               QR CODE GENERATION PIPELINE                 │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   INPUT DATA ───► Data Analysis ───► Data Encoding       │
+    │                                                           │
+    │   Data Encoding ───► Error Correction ───► Bit Stream    │
+    │                                                           │
+    │   Bit Stream ───► Module Placement ───► Masking          │
+    │                                                           │
+    │   Masking ───► Format Information ───► QR Code Image    │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+### 18.2 Mathematical Foundation
+
+#### Reed-Solomon Error Correction Mathematics
+
+Reed-Solomon codes are based on Galois Field arithmetic, specifically GF(256). This field allows operations on 8-bit values (bytes) with addition as XOR and multiplication as polynomial multiplication modulo the primitive polynomial:
+
+```
+GALOIS FIELD GF(256) PROPERTIES
+
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   Primitive Polynomial: x^8 + x^4 + x^3 + x^2 + 1        │
+    │                                                           │
+    │   Addition: a ⊕ b (XOR)                                   │
+    │                                                           │
+    │   Multiplication: a ⊗ b = polynomial multiplication      │
+    │                    modulo primitive polynomial           │
+    │                                                           │
+    │   Generator Polynomial for QR Codes:                      │
+    │   g(x) = (x - α^0)(x - α^1)...(x - α^(n-k-1))          │
+    │                                                           │
+    │   Where n = total codewords, k = data codewords,        │
+    │   α = primitive element (α^1 = 2 in GF(256))            │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+#### Reed-Solomon Encoding Algorithm
+
+```
+REED-SOLOMON ENCODING ALGORITHM
+
+    def rs_encode(data, error_correction_level):
+        """
+        Reed-Solomon encoding for QR codes
+        data: list of data codewords (bytes)
+        error_correction_level: 'L', 'M', 'Q', or 'H'
+        Returns: list of data codewords + error correction codewords
+        """
+        
+        # Error correction parameters
+        param = {
+            'L': (1, 7),   # (blocks, error correction codewords per block)
+            'M': (1, 10),
+            'Q': (1, 13),
+            'H': (1, 17)
+        }
+        
+        blocks, ec_codewords = param[error_correction_level]
+        
+        # Galois Field arithmetic functions
+        def gf_add(a, b):
+            return a ^ b
+        
+        def gf_mul(a, b):
+            result = 0
+            for i in range(8):
+                if b & (1 << i):
+                    result ^= a << i
+            # Reduce modulo primitive polynomial
+            for i in range(15, 7, -1):
+                if result & (1 << i):
+                    result ^= 0x11D << (i - 8)
+            return result
+        
+        def gf_pow(a, exp):
+            result = 1
+            for _ in range(exp):
+                result = gf_mul(result, a)
+            return result
+        
+        # Build generator polynomial
+        generator = [1]
+        for i in range(ec_codewords):
+            generator = multiply_polynomials(generator, [1, gf_pow(2, i)])
+        
+        # Encode data
+        result = data.copy()
+        
+        # Append zeros
+        result.extend([0] * ec_codewords)
+        
+        # Polynomial long division
+        for i in range(len(data)):
+            if result[i] != 0:
+                factor = gf_mul(result[i], gf_pow(generator[0], -1))
+                for j in range(len(generator)):
+                    result[i+j] ^= gf_mul(factor, generator[j])
+        
+        # Return data + error correction codewords
+        return data + result[-ec_codewords:]
+```
+
+### 18.3 Data Encoding Modes
+
+#### Mode Selection Algorithm
+
+```
+MODE SELECTION ALGORITHM
+
+    def detect_mode(data):
+        """
+        Determine the most efficient encoding mode for the data
+        """
+        if all(c.isdigit() for c in data):
+            return 'NUMERIC'
+        elif all(c in ALPHANUMERIC_CHARS for c in data):
+            return 'ALPHANUMERIC'
+        else:
+            return 'BYTE'  # For binary/UTF-8 data
+```
+
+#### Numeric Mode Encoding
+
+```
+NUMERIC MODE ENCODING
+
+    def encode_numeric(data):
+        """
+        Encode numeric data to bitstream
+        Algorithm: Groups of 3 digits → 10 bits
+        """
+        result = []
+        
+        # Mode indicator: 0001
+        result.extend([0, 0, 0, 1])
+        
+        # Character count indicator (10 bits for numeric mode)
+        char_count = len(data)
+        result.extend(binary_to_bits(char_count, 10))
+        
+        # Process data in groups of 3
+        i = 0
+        while i < len(data):
+            chunk = data[i:i+3]
+            if len(chunk) == 3:
+                value = int(chunk)
+                result.extend(binary_to_bits(value, 10))
+            elif len(chunk) == 2:
+                value = int(chunk)
+                result.extend(binary_to_bits(value, 7))
+            else:  # len(chunk) == 1
+                value = int(chunk)
+                result.extend(binary_to_bits(value, 4))
+            i += 3
+        
+        return result
+```
+
+### 18.4 Complete QR Code Generator Implementation
+
+Below is a complete Python QR code generator that generates a QR code containing a GitHub profile link.
+
+```python
+#!/usr/bin/env python3
+"""
+QR Code Generator - Complete Implementation
+Generates a QR code containing a GitHub profile URL
+"""
+
+import qrcode
+from qrcode.constants import ERROR_CORRECT_H, ERROR_CORRECT_M, ERROR_CORRECT_L, ERROR_CORRECT_Q
+from PIL import Image, ImageDraw, ImageFont
+import io
+import base64
+
+# =============================================================================
+# QR CODE GENERATION FUNCTIONS
+# =============================================================================
+
+def generate_github_qr(
+    username="InterCentury",
+    base_url="https://github.com",
+    version=5,
+    box_size=15,
+    border=6,
+    error_correction=ERROR_CORRECT_H
+):
+    """
+    Generate a QR code pointing to a GitHub profile
+    
+    Parameters:
+    -----------
+    username : str
+        GitHub username
+    base_url : str
+        Base URL for GitHub (default: https://github.com)
+    version : int
+        QR code version (1-40, higher = more data capacity)
+    box_size : int
+        Pixel size of each module (square) in the QR code
+    border : int
+        Number of modules to use as border (white space)
+    error_correction : int
+        Error correction level:
+        - ERROR_CORRECT_L: ~7% recovery
+        - ERROR_CORRECT_M: ~15% recovery (default)
+        - ERROR_CORRECT_Q: ~25% recovery
+        - ERROR_CORRECT_H: ~30% recovery
+    
+    Returns:
+    --------
+    PIL.Image: QR code image object
+    """
+    
+    # Construct the URL
+    url = f"{base_url}/{username}"
+    
+    print(f"[INFO] Generating QR code for: {url}")
+    print(f"[INFO] Version: {version}, Box Size: {box_size}, Border: {border}")
+    print(f"[INFO] Error Correction: {error_correction}")
+    
+    # Create QR code instance
+    qr = qrcode.QRCode(
+        version=version,
+        error_correction=error_correction,
+        box_size=box_size,
+        border=border,
+    )
+    
+    # Add data
+    qr.add_data(url)
+    
+    # Generate QR code matrix (fit=True optimizes version if needed)
+    qr.make(fit=True)
+    
+    # Get the matrix (list of lists of bool)
+    matrix = qr.modules
+    
+    print(f"[INFO] QR Code Size: {len(matrix)}x{len(matrix)} modules")
+    print(f"[INFO] Total Modules: {len(matrix) * len(matrix[0])}")
+    
+    # Create the QR code image with custom styling
+    img = qr.make_image(
+        fill_color="black",
+        back_color="white",
+    )
+    
+    return img, matrix
+
+
+def generate_qr_with_center_logo(qr_image, logo_path=None, logo_size=(60, 60)):
+    """
+    Generate a QR code with a centered logo overlay
+    
+    Parameters:
+    -----------
+    qr_image : PIL.Image
+        The QR code image
+    logo_path : str
+        Path to logo image file (optional)
+    logo_size : tuple
+        Size of the logo (width, height)
+    
+    Returns:
+    --------
+    PIL.Image: QR code with logo overlay
+    """
+    
+    img = qr_image.copy()
+    img_width, img_height = img.size
+    
+    if logo_path:
+        try:
+            logo = Image.open(logo_path)
+            logo = logo.resize(logo_size, Image.Resampling.LANCZOS)
+            
+            # Calculate center position
+            x = (img_width - logo_size[0]) // 2
+            y = (img_height - logo_size[1]) // 2
+            
+            # Create a mask for the logo (handle transparency)
+            if logo.mode == 'RGBA':
+                img.paste(logo, (x, y), logo)
+            else:
+                img.paste(logo, (x, y))
+                
+        except Exception as e:
+            print(f"[WARNING] Could not add logo: {e}")
+    
+    return img
+
+
+def generate_qr_with_custom_colors(
+    username="InterCentury",
+    fill_color="#1F2937",
+    back_color="#FFFFFF",
+    version=5,
+    box_size=15,
+    border=6
+):
+    """
+    Generate a QR code with custom colors
+    
+    Parameters:
+    -----------
+    username : str
+        GitHub username
+    fill_color : str
+        Color for the QR code modules (hex, RGB, or color name)
+    back_color : str
+        Color for the background (hex, RGB, or color name)
+    version, box_size, border : int
+        QR code parameters
+    
+    Returns:
+    --------
+    PIL.Image: QR code image with custom colors
+    """
+    
+    qr = qrcode.QRCode(
+        version=version,
+        error_correction=ERROR_CORRECT_M,
+        box_size=box_size,
+        border=border,
+    )
+    
+    qr.add_data(f"https://github.com/{username}")
+    qr.make(fit=True)
+    
+    img = qr.make_image(
+        fill_color=fill_color,
+        back_color=back_color,
+    )
+    
+    return img
+
+
+def qr_to_base64(qr_image):
+    """
+    Convert QR code image to base64 string for embedding in HTML/APIs
+    """
+    buffer = io.BytesIO()
+    qr_image.save(buffer, format='PNG')
+    b64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
+    return b64
+
+
+def qr_to_bytes(qr_image, format='PNG'):
+    """
+    Convert QR code image to bytes for API responses or file writing
+    """
+    buffer = io.BytesIO()
+    qr_image.save(buffer, format=format)
+    return buffer.getvalue()
+
+
+def save_qr_to_file(qr_image, filename, format='PNG'):
+    """
+    Save QR code to file
+    """
+    qr_image.save(filename, format=format)
+    print(f"[INFO] QR code saved to: {filename}")
+
+
+def get_qr_info(qr_image, matrix):
+    """
+    Get information about the QR code
+    """
+    info = {
+        'url': f"https://github.com/InterCentury",
+        'version': len(matrix),
+        'size': f"{len(matrix)}x{len(matrix)} modules",
+        'total_modules': len(matrix) * len(matrix[0]),
+        'dark_modules': sum(sum(row) for row in matrix),
+        'light_modules': len(matrix) * len(matrix[0]) - sum(sum(row) for row in matrix),
+        'image_size': qr_image.size,
+        'format': qr_image.format,
+        'mode': qr_image.mode,
+    }
+    return info
+
+
+def generate_multiple_qr_sizes(username="InterCentury", sizes=[10, 15, 20, 25]):
+    """
+    Generate multiple QR codes at different sizes
+    """
+    results = []
+    for size in sizes:
+        img, matrix = generate_github_qr(
+            username=username,
+            version=5,
+            box_size=size,
+            border=4,
+            error_correction=ERROR_CORRECT_M
+        )
+        results.append({
+            'box_size': size,
+            'image': img,
+            'matrix': matrix,
+            'info': get_qr_info(img, matrix)
+        })
+    return results
+
+
+def analyze_qr_capacity(username="InterCentury"):
+    """
+    Analyze QR code capacity across different versions and error correction levels
+    """
+    ec_levels = [
+        ('L', ERROR_CORRECT_L, 7),
+        ('M', ERROR_CORRECT_M, 15),
+        ('Q', ERROR_CORRECT_Q, 25),
+        ('H', ERROR_CORRECT_H, 30),
+    ]
+    
+    results = []
+    for name, ec, recovery in ec_levels:
+        for version in range(1, 11):
+            qr = qrcode.QRCode(
+                version=version,
+                error_correction=ec,
+                box_size=1,
+                border=0,
+            )
+            qr.add_data(f"https://github.com/{username}")
+            try:
+                qr.make(fit=True)
+                size = len(qr.modules)
+                results.append({
+                    'version': version,
+                    'ec_level': name,
+                    'recovery': recovery,
+                    'size': size,
+                    'capacity': qr.data_capacity,
+                    'success': True
+                })
+            except Exception:
+                results.append({
+                    'version': version,
+                    'ec_level': name,
+                    'recovery': recovery,
+                    'size': 0,
+                    'capacity': 0,
+                    'success': False
+                })
+    
+    return results
+
+
+# =============================================================================
+# MAIN EXECUTION
+# =============================================================================
+
+if __name__ == "__main__":
+    print("="*60)
+    print("QR CODE GENERATOR - GITHUB PROFILE")
+    print("="*60)
+    
+    # ==========================================
+    # 1. Generate basic QR code
+    # ==========================================
+    print("\n[1] Generating basic QR code...")
+    qr_image, matrix = generate_github_qr(
+        username="InterCentury",
+        version=5,
+        box_size=15,
+        border=6,
+        error_correction=ERROR_CORRECT_H
+    )
+    
+    # Save basic QR code
+    save_qr_to_file(qr_image, "github_qr_basic.png")
+    
+    # Get and display QR code information
+    info = get_qr_info(qr_image, matrix)
+    print(f"\n[INFO] QR Code Information:")
+    print(f"  - URL: {info['url']}")
+    print(f"  - Version: {info['version']}x{info['version']}")
+    print(f"  - Size: {info['size']}")
+    print(f"  - Total Modules: {info['total_modules']}")
+    print(f"  - Dark Modules: {info['dark_modules']}")
+    print(f"  - Light Modules: {info['light_modules']}")
+    print(f"  - Image Size: {info['image_size']}")
+    print(f"  - Image Format: {info['format']}")
+    print(f"  - Image Mode: {info['mode']}")
+    
+    # ==========================================
+    # 2. Generate QR code with custom colors
+    # ==========================================
+    print("\n[2] Generating QR code with custom colors...")
+    qr_custom = generate_qr_with_custom_colors(
+        username="InterCentury",
+        fill_color="#1F2937",
+        back_color="#F3F4F6",
+        version=5,
+        box_size=15,
+        border=6
+    )
+    save_qr_to_file(qr_custom, "github_qr_custom.png")
+    
+    # ==========================================
+    # 3. Generate QR code with logo overlay
+    # ==========================================
+    print("\n[3] Generating QR code with logo overlay...")
+    # If you have a logo file, uncomment the following:
+    # qr_with_logo = generate_qr_with_center_logo(qr_image, "logo.png", (60, 60))
+    # save_qr_to_file(qr_with_logo, "github_qr_with_logo.png")
+    
+    # ==========================================
+    # 4. Generate multiple sizes
+    # ==========================================
+    print("\n[4] Generating multiple QR code sizes...")
+    sizes = generate_multiple_qr_sizes("InterCentury", [8, 10, 12, 15, 20])
+    for i, result in enumerate(sizes):
+        save_qr_to_file(
+            result['image'], 
+            f"github_qr_size_{result['box_size']}.png"
+        )
+    
+    # ==========================================
+    # 5. Analyze QR capacity
+    # ==========================================
+    print("\n[5] Analyzing QR capacity across versions...")
+    capacity_data = analyze_qr_capacity("InterCentury")
+    print("\n[CAPACITY ANALYSIS]")
+    print("  Version | EC Level | Recovery | Size")
+    print("  " + "-"*45)
+    for d in capacity_data:
+        if d['success']:
+            print(f"    {d['version']:7} | {d['ec_level']:8} | {d['recovery']:8}% | {d['size']:4}x{d['size']}")
+    
+    # ==========================================
+    # 6. Export to base64 for API/Web
+    # ==========================================
+    print("\n[6] Generating base64 encoded QR code...")
+    b64 = qr_to_base64(qr_image)
+    print(f"  Base64 Length: {len(b64)} characters")
+    print(f"  Preview: {b64[:100]}...")
+    
+    print("\n" + "="*60)
+    print("QR CODE GENERATION COMPLETE")
+    print("="*60)
+    
+    # ==========================================
+    # 7. Display QR code matrix (partial)
+    # ==========================================
+    print("\n[7] QR Code Matrix Preview (first 20x20 modules):")
+    print("-"*25)
+    for i in range(min(20, len(matrix))):
+        row = ''
+        for j in range(min(20, len(matrix[i]))):
+            if matrix[i][j]:
+                row += '██'
+            else:
+                row += '  '
+        print(row)
+    print("-"*25)
+```
+
+### 18.5 QR Code API Endpoint Example
+
+```python
+#!/usr/bin/env python3
+"""
+QR Code API Endpoint - FastAPI Implementation
+"""
+
+from fastapi import FastAPI, Query, Response
+from fastapi.responses import StreamingResponse, JSONResponse
+from pydantic import BaseModel
+from typing import Optional
+import io
+import qrcode
+from qrcode.constants import ERROR_CORRECT_H
+import logging
+
+# =============================================================================
+# API SETUP
+# =============================================================================
+
+app = FastAPI(
+    title="QR Code Generator API",
+    description="Generate QR codes for payments and URLs",
+    version="1.0.0"
+)
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+
+class QRRequest(BaseModel):
+    """Request model for QR code generation"""
+    data: str
+    version: Optional[int] = 5
+    box_size: Optional[int] = 15
+    border: Optional[int] = 6
+    fill_color: Optional[str] = "black"
+    back_color: Optional[str] = "white"
+    error_correction: Optional[str] = "H"
+
+
+class QRResponse(BaseModel):
+    """Response model for QR code generation"""
+    success: bool
+    message: str
+    data: Optional[str] = None  # base64 encoded image
+    metadata: Optional[dict] = None
+
+
+def get_error_correction(level: str):
+    """Map string level to QR code constant"""
+    levels = {
+        'L': qrcode.constants.ERROR_CORRECT_L,
+        'M': qrcode.constants.ERROR_CORRECT_M,
+        'Q': qrcode.constants.ERROR_CORRECT_Q,
+        'H': qrcode.constants.ERROR_CORRECT_H,
+    }
+    return levels.get(level.upper(), qrcode.constants.ERROR_CORRECT_H)
+
+
+# =============================================================================
+# API ENDPOINTS
+# =============================================================================
+
+@app.get("/qr/generate")
+async def generate_qr_get(
+    data: str = Query(..., description="Data to encode in QR code"),
+    version: int = Query(5, ge=1, le=40, description="QR code version"),
+    box_size: int = Query(15, ge=1, le=50, description="Module size in pixels"),
+    border: int = Query(6, ge=0, le=20, description="Border width"),
+    fill_color: str = Query("black", description="Color of QR modules"),
+    back_color: str = Query("white", description="Background color"),
+    error_correction: str = Query("H", description="Error correction level (L,M,Q,H)"),
+    format: str = Query("png", description="Output format (png, svg)")
+):
+    """
+    Generate a QR code as an image.
+    
+    Returns the QR code as a PNG image.
+    """
+    try:
+        logger.info(f"Generating QR code for: {data[:50]}...")
+        
+        # Create QR code
+        qr = qrcode.QRCode(
+            version=version,
+            error_correction=get_error_correction(error_correction),
+            box_size=box_size,
+            border=border,
+        )
+        qr.add_data(data)
+        qr.make(fit=True)
+        
+        # Generate image
+        img = qr.make_image(fill_color=fill_color, back_color=back_color)
+        
+        # Convert to bytes
+        buffer = io.BytesIO()
+        img.save(buffer, format='PNG')
+        buffer.seek(0)
+        
+        return Response(
+            content=buffer.getvalue(),
+            media_type="image/png",
+            headers={
+                "Content-Disposition": "attachment; filename=qr_code.png",
+                "Cache-Control": "no-cache"
+            }
+        )
+        
+    except Exception as e:
+        logger.error(f"Error generating QR code: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"success": False, "message": str(e)}
+        )
+
+
+@app.post("/qr/generate", response_model=QRResponse)
+async def generate_qr_post(request: QRRequest):
+    """
+    Generate a QR code and return base64 encoded image data.
+    """
+    try:
+        logger.info(f"Generating QR code via POST for: {request.data[:50]}...")
+        
+        # Create QR code
+        qr = qrcode.QRCode(
+            version=request.version,
+            error_correction=get_error_correction(request.error_correction),
+            box_size=request.box_size,
+            border=request.border,
+        )
+        qr.add_data(request.data)
+        qr.make(fit=True)
+        
+        # Generate image
+        img = qr.make_image(
+            fill_color=request.fill_color,
+            back_color=request.back_color
+        )
+        
+        # Convert to base64
+        buffer = io.BytesIO()
+        img.save(buffer, format='PNG')
+        import base64
+        b64 = base64.b64encode(buffer.getvalue()).decode('utf-8')
+        
+        # Get matrix info
+        matrix = qr.modules
+        
+        return QRResponse(
+            success=True,
+            message="QR code generated successfully",
+            data=b64,
+            metadata={
+                'version': len(matrix),
+                'size': f"{len(matrix)}x{len(matrix)}",
+                'total_modules': len(matrix) * len(matrix[0]),
+                'format': 'PNG',
+                'image_size': img.size
+            }
+        )
+        
+    except Exception as e:
+        logger.error(f"Error generating QR code: {e}")
+        return QRResponse(
+            success=False,
+            message=str(e),
+            data=None,
+            metadata=None
+        )
+
+
+@app.get("/qr/health")
+async def health_check():
+    """Health check endpoint"""
+    return {"status": "healthy", "service": "QR Code Generator"}
+
+
+@app.get("/qr/info")
+async def qr_info(data: str = Query(..., description="Data to analyze")):
+    """
+    Analyze QR code capacity information for given data
+    """
+    try:
+        # Analyze capacity across versions
+        results = []
+        for version in range(1, 41):
+            for ec in ['L', 'M', 'Q', 'H']:
+                qr = qrcode.QRCode(
+                    version=version,
+                    error_correction=get_error_correction(ec),
+                    box_size=1,
+                    border=0,
+                )
+                try:
+                    qr.add_data(data)
+                    qr.make(fit=True)
+                    results.append({
+                        'version': version,
+                        'ec_level': ec,
+                        'size': len(qr.modules),
+                        'capacity': qr.data_capacity,
+                        'success': True
+                    })
+                    break  # Found working version for this EC level
+                except Exception:
+                    continue
+        
+        return {
+            "success": True,
+            "data": data,
+            "data_length": len(data),
+            "results": results[:10]  # Return first 10 results
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "message": str(e)
+        }
+
+
+# =============================================================================
+# RUN SERVER
+# =============================================================================
+
+if __name__ == "__main__":
+    import uvicorn
+    print("="*60)
+    print("QR CODE GENERATOR API")
+    print("="*60)
+    print("\nStarting server on http://localhost:8000")
+    print("\nEndpoints:")
+    print("  GET  /qr/generate?data=URL")
+    print("  POST /qr/generate")
+    print("  GET  /qr/info?data=URL")
+    print("  GET  /qr/health")
+    print("\nDocumentation: http://localhost:8000/docs")
+    print("="*60)
+    
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+```
+
+### 18.6 QR Code Frontend Integration (JavaScript/HTML)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1F2937;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover { background: #374151; }
+        .qr-result {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background: #f9fafb;
+            border-radius: 5px;
+            display: none;
+        }
+        .qr-result img { max-width: 100%; }
+        .loading { display: none; text-align: center; padding: 20px; }
+        .error { color: red; padding: 10px; background: #fee; border-radius: 5px; display: none; }
+        .info { 
+            font-size: 12px; 
+            color: #6b7280; 
+            margin-top: 10px; 
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <p>Generate a QR code for any URL or payment data</p>
+        
+        <form id="qrForm">
+            <label for="data">Data to encode:</label>
+            <input type="text" id="data" value="https://github.com/InterCentury" required>
+            
+            <label for="version">Version (1-40):</label>
+            <input type="number" id="version" value="5" min="1" max="40">
+            
+            <label for="boxSize">Box Size (1-50):</label>
+            <input type="number" id="boxSize" value="15" min="1" max="50">
+            
+            <label for="errorCorrection">Error Correction Level:</label>
+            <select id="errorCorrection">
+                <option value="L">Low (7%)</option>
+                <option value="M">Medium (15%)</option>
+                <option value="Q">Quartile (25%)</option>
+                <option value="H" selected>High (30%)</option>
+            </select>
+            
+            <button type="submit">Generate QR Code</button>
+        </form>
+        
+        <div class="loading" id="loading">Generating QR code...</div>
+        <div class="error" id="error"></div>
+        
+        <div class="qr-result" id="result">
+            <img id="qrImage" src="" alt="QR Code">
+            <div class="info" id="info"></div>
+            <button onclick="downloadQR()">Download</button>
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // QR CODE GENERATOR - FRONTEND
+        // ============================================================
+        
+        const API_URL = 'http://localhost:8000';
+        
+        async function generateQR(event) {
+            event.preventDefault();
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+            
+            // Get form data
+            const data = document.getElementById('data').value;
+            const version = document.getElementById('version').value;
+            const boxSize = document.getElementById('boxSize').value;
+            const errorCorrection = document.getElementById('errorCorrection').value;
+            
+            console.log('Generating QR for:', data);
+            
+            try {
+                const response = await fetch(`${API_URL}/qr/generate`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        data: data,
+                        version: parseInt(version),
+                        box_size: parseInt(boxSize),
+                        border: 6,
+                        fill_color: 'black',
+                        back_color: 'white',
+                        error_correction: errorCorrection
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    console.log('QR generated:', result.metadata);
+                    
+                    // Display QR code
+                    document.getElementById('qrImage').src = `data:image/png;base64,${result.data}`;
+                    document.getElementById('info').textContent = 
+                        `Version: ${result.metadata.size} | ` +
+                        `Total Modules: ${result.metadata.total_modules} | ` +
+                        `Format: ${result.metadata.format}`;
+                    
+                    document.getElementById('result').style.display = 'block';
+                    
+                    // Store the data for download
+                    window._qrData = result.data;
+                    
+                } else {
+                    showError(result.message || 'Failed to generate QR code');
+                }
+                
+            } catch (err) {
+                console.error('Error:', err);
+                showError('Failed to connect to the QR generator service. Is the server running?');
+            }
+            
+            document.getElementById('loading').style.display = 'none';
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+        
+        function downloadQR() {
+            if (window._qrData) {
+                const link = document.createElement('a');
+                link.download = 'qr_code.png';
+                link.href = `data:image/png;base64,${window._qrData}`;
+                link.click();
+            }
+        }
+        
+        // Generate QR code for GitHub profile on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('qrForm').dispatchEvent(new Event('submit'));
+        });
+        
+        // Handle form submission
+        document.getElementById('qrForm').addEventListener('submit', generateQR);
+    </script>
+</body>
+</html>
+```
+
+### 18.7 QR Code Data Structure for Payments
+
+```
+QR CODE PAYMENT DATA STRUCTURE (EMVCo)
+
+    +-----------------------------------------------------------+
+    │               QR PAYMENT DATA STRUCTURE                   │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   Format: key-value pairs separated by specific delimiters│
+    │                                                           │
+    │   Example UPI QR Format:                                  │
+    │   upi://pay?pa=merchant@bank&pn=MerchantName&am=100.00   │
+    │                                                           │
+    │   Key        | Description                               │
+    │   ───────────┼────────────────────────────────────────────│
+    │   pa         | Payee Address (merchant ID)               │
+    │   pn         | Payee Name (merchant name)                │
+    │   am         | Amount                                    │
+    │   cu         | Currency Code (ISO 4217)                  │
+    │   tn         | Transaction Reference Number              │
+    │   mc         | Merchant Category Code                    │
+    │   tid        | Terminal ID                               │
+    │   mid        | Merchant ID                               │
+    │   url        | Payment URL                               │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+### 18.8 QR Code Generation Summary
+
+```
+QR CODE GENERATION - ENGINEERING SUMMARY
+
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   Input: Any string data (URL, payment info, etc.)       │
+    │                                                           │
+    │   Process:                                                │
+    │   1. Data Analysis → Mode Selection                      │
+    │   2. Data Encoding → Bitstream Generation               │
+    │   3. Error Correction → Reed-Solomon Encoding           │
+    │   4. Module Placement → Grid Formation                  │
+    │   5. Masking → Pattern Optimization                     │
+    │   6. Format Information → Error Level & Mask Type      │
+    │                                                           │
+    │   Output: QR Code Image (PNG, SVG, etc.)                │
+    │                                                           │
+    │   Key Parameters:                                        │
+    │   - Version: 1-40 (data capacity)                       │
+    │   - Error Correction: L, M, Q, H (recovery %)          │
+    │   - Box Size: Module pixel size                        │
+    │   - Border: Quiet zone width                           │
+    │                                                           │
+    │   Performance Considerations:                            │
+    │   - Larger version = more data but bigger code         │
+    │   - Higher error correction = more redundancy          │
+    │   - Box size affects readability and scanning distance │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+
+
+
+## 19. Summary
 
 ```
 SUMMARY
