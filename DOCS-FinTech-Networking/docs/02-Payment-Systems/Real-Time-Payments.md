@@ -81,18 +81,18 @@ Real-time in payment systems typically means transaction completion in under 10 
 LATENCY REQUIREMENTS
 
                          +---------------------------+
-                         |  LATENCY TARGETS         |
+                         |   LATENCY TARGETS         |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  INITIATION              |  |  PROCESSING              |  |  SETTLEMENT              |
-|  - User request          |  |  - Validation           |  |  - Reserve transfer      |
-|  - API call              |  |  - Fraud check         |  |  - Account credit        |
-|  - Target: < 2s         |  |  - Routing             |  |  - Confirmation          |
-|                          |  |  - Target: < 3s       |  |  - Target: < 2s         |
+|  INITIATION               |  |  PROCESSING               |  |  SETTLEMENT               |
+|  - User request           |  |  - Validation             |  |  - Reserve transfer       |
+|  - API call               |  |  - Fraud check            |  |  - Account credit         |
+|  - Target: < 2s           |  |  - Routing                |  |  - Confirmation           |
+|                           |  |  - Target: < 3s           |  |  - Target: < 2s           |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
