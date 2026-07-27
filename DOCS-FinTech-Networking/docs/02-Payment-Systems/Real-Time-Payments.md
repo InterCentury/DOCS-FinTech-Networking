@@ -2,7 +2,7 @@
 
 ## Documentation Overview
 
-Real-Time Payments (RTP) are payment systems that enable the immediate transfer of funds between bank accounts, 24 hours a day, 7 days a week, 365 days a year, with settlement occurring within seconds. This document provides a comprehensive engineering examination of real-time payment systems: the infrastructure, algorithms, queueing theory, distributed systems, mathematical models, and implementation strategies that make instant payments possible.
+Real-Time Payments (RTP) are payment systems that enable the immediate transfer of funds between bank accounts, 24 hours a day, 7 days a week, 365 days a year, with settlement occurring within seconds. This document provides a comprehensive engineering examination of real-time payment systems: the infrastructure, algorithms, queueing theory, distributed systems, mathematical models, implementation strategies, and modern cloud-native engineering practices that make instant payments possible at scale.
 
 ## Documentation Objectives
 
@@ -11,16 +11,17 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the definition and fundamentals of real-time payments        │
-    │   Study the complete RTP architecture and infrastructure                 │
-    │   Learn the transaction lifecycle from initiation to finality            │
-    │   Examine queueing systems and message processing                        │
-    │   Understand routing algorithms and payment orchestration               │
-    │   Study settlement systems and liquidity management                     │
-    │   Learn distributed systems patterns and high availability              │
-    │   Understand database design and performance engineering                │
-    │   Study security, fraud detection, and observability                    │
-    │   Examine real-world RTP systems and mathematical models               │
+    │   Understand the definition and fundamentals of real-time payments          │
+    │   Study the complete RTP architecture and infrastructure                    │
+    │   Learn the transaction lifecycle from initiation to finality               │
+    │   Examine queueing systems and message processing                           │
+    │   Understand routing algorithms and payment orchestration                   │
+    │   Study settlement systems and liquidity management                         │
+    │   Learn distributed systems patterns and high availability                  │
+    │   Understand database design and performance engineering                    │
+    │   Study security, fraud detection, and observability                        │
+    │   Examine real-world RTP systems and mathematical models                    │
+    │   Master modern cloud engineering: Kubernetes, Kafka, service meshes        │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -282,19 +283,15 @@ RTP NETWORK INFRASTRUCTURE
     └-----------------------------------------------------------+
 ```
 
-### How Are Acknowledgements Handled
+## 5. ISO 20022 Message Formats
 
-Acknowledgements are handled through a multi-step confirmation process. The system sends an acknowledgment that the request was received. It sends a validation confirmation that the transaction was validated. It sends a settlement confirmation that settlement is complete. It sends a finality notification that the payment is irrevocable.
+### ISO 20022 Overview
 
-## 5. Message Processing
+ISO 20022 is the international standard for financial messaging. It provides a common language for payment messages across different systems. It uses XML-based messages with rich data. It supports multiple payment types and scenarios.
 
-### RTP Message Flow
+### Message Structure
 
-The RTP message flow follows a specific sequence. The sender initiates the payment by creating a payment request. The sender's bank validates the request. The sender's bank sends the payment instruction to the RTP network. The RTP network routes the instruction to the receiver's bank. The receiver's bank validates and credits the recipient's account. Confirmation flows back through the network.
-
-### ISO 20022 Messaging
-
-ISO 20022 is the messaging standard for RTP systems. It uses XML-based messages with rich data. The standard supports multiple message types, including payment initiation, payment status, and payment confirmation.
+ISO 20022 messages have a hierarchical structure. The ```Document``` is the root element. ```Group Header``` contains message identification and timestamp. ```Payment Information``` contains payment details. ```Debtor``` contains sender information. ```Creditor``` contains receiver information. ```Amount``` contains the transaction value.
 
 ```
 ISO 20022 MESSAGE STRUCTURE
@@ -307,48 +304,1062 @@ ISO 20022 MESSAGE STRUCTURE
     │     <FIToFICstmrCdtTrf>                                 │
     │       <GrpHdr>                                          │
     │         <MsgId>MSG123456</MsgId>                        │
-    │         <CreDtTm>2024-01-15T10:30:00</CreDtTm>          │
-    │       </GrpHdr>                                         │
-    │       <PmtInf>                                          │
-    │         <PmtInfId>PAY001</PmtInfId>                     │
-    │         <PmtMtd>TRF</PmtMtd>                           │
-    │         <Dbt>                                          │
-    │           <Nm>John Smith</Nm>                          │
-    │           <Acct>                                       │
-    │             <Id>123456789</Id>                         │
-    │           </Acct>                                      │
-    │         </Dbt>                                         │
-    │         <Cdt>                                          │
-    │           <Nm>Jane Doe</Nm>                            │
-    │           <Acct>                                       │
-    │             <Id>987654321</Id>                         │
-    │           </Acct>                                      │
-    │         </Cdt>                                         │
-    │         <Amt>                                          │
-    │           <InstdAmt Ccy="USD">100.00</InstdAmt>       │
-    │         </Amt>                                         │
-    │       </PmtInf>                                        │
-    │     </FIToFICstmrCdtTrf>                               │
+    │         <CreDtTm>2024-01-15T10:30:00Z</CreDtTm>        │
+    │         <NbOfTxs>1</NbOfTxs>                           │
+    │         <TtlIntrBkSttlmAmt Ccy="USD">100.00</TtlIntrBkSttlmAmt>│
+    │       </GrpHdr>                                        │
+    │       <PmtInf>                                         │
+    │         <PmtInfId>PAY001</PmtInfId>                    │
+    │         <PmtMtd>TRF</PmtMtd>                          │
+    │         <ReqdExctnDt>2024-01-15</ReqdExctnDt>          │
+    │         <Dbtr>                                         │
+    │           <Nm>John Smith</Nm>                         │
+    │           <PstlAdr>                                   │
+    │             <AdrLine>123 Main St</AdrLine>            │
+    │           </PstlAdr>                                  │
+    │         </Dbtr>                                        │
+    │         <DbtrAcct>                                     │
+    │           <Id>                                         │
+    │             <IBAN>US123456789</IBAN>                   │
+    │           </Id>                                        │
+    │         </DbtrAcct>                                    │
+    │         <DbtrAgt>                                      │
+    │           <FinInstnId>                                 │
+    │             <BIC>BANKUS33</BIC>                       │
+    │           </FinInstnId>                                │
+    │         </DbtrAgt>                                     │
+    │         <Cdtr>                                         │
+    │           <Nm>Jane Doe</Nm>                           │
+    │         </Cdtr>                                        │
+    │         <CdtrAcct>                                     │
+    │           <Id>                                         │
+    │             <IBAN>US987654321</IBAN>                   │
+    │           </Id>                                        │
+    │         </CdtrAcct>                                    │
+    │         <CdtrAgt>                                      │
+    │           <FinInstnId>                                 │
+    │             <BIC>BANKUS44</BIC>                       │
+    │           </FinInstnId>                                │
+    │         </CdtrAgt>                                     │
+    │         <InstdAmt Ccy="USD">100.00</InstdAmt>        │
+    │         <ChrgBr>SLEV</ChrgBr>                         │
+    │       </PmtInf>                                       │
+    │     </FIToFICstmrCdtTrf>                              │
     │   </Document>                                          │
     │                                                           │
     └-----------------------------------------------------------+
 ```
 
-## 6. Real-Time Network Engineering
+### ISO 20022 Message Types
 
-### Network Architecture
+Key ISO 20022 message types for RTP include:
 
-The network architecture of RTP systems is designed for low latency and high reliability. Edge nodes handle request termination, core nodes handle routing and processing, and settlement nodes handle final settlement. All nodes are connected through redundant, high-speed networks.
+```pacs.008``` is the Financial Institution to Financial Institution Customer Credit Transfer.
 
-### Protocol Design
+```pacs.002``` is the Financial Institution to Financial Institution Payment Status Report.
 
-RTP systems use protocols designed for low latency and high throughput. HTTPS REST APIs are used for simplicity and compatibility. WebSockets are used for real-time communication. gRPC is used for high-performance internal communication.
+```pain.001``` is the Customer to Financial Institution Payment Initiation.
 
-### Network Topology
+```pacs.004``` is the Financial Institution to Financial Institution Return.
 
-The network topology is typically a star topology with the RTP operator at the center, or a mesh topology with direct connections between major participants.
+### Message Validation
 
-## 7. Transaction Lifecycle
+Messages are validated against XML schema. Business rules are applied to validate amounts, dates, and parties. Cryptographic signatures verify message integrity.
+
+## 6. Idempotency in RTP Systems
+
+### What Is Idempotency
+
+Idempotency ensures that processing the same request multiple times produces the same result. In RTP systems, this prevents duplicate payments.
+
+### Why Idempotency Matters
+
+Idempotency is critical in RTP systems because network failures can cause retries. Without idempotency, a payment could be processed multiple times. This would result in duplicate debits and credits.
+
+### Implementing Idempotency
+
+Idempotency is implemented using unique transaction IDs. Each request carries a unique ID. The system checks if the ID has been processed before. If it has, the system returns the existing result. If not, it processes the request.
+
+```
+IDEMPOTENCY MECHANISM
+
+    +-----------------------------------------------------------+
+    │               IDEMPOTENCY MECHANISM                       │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   REQUEST WITH ID TX-123456                              │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   CHECK CACHE FOR TX-123456                              │
+    │        │                                                  │
+    │   ┌────┴────┐                                            │
+    │   │         │                                            │
+    │   ▼         ▼                                            │
+    │ EXISTS    NOT EXISTS                                     │
+    │   │         │                                            │
+    │   ▼         ▼                                            │
+    │ RETURN    PROCESS                                       │
+    │ RESULT    TRANSACTION                                    │
+    │              │                                            │
+    │              ▼                                            │
+    │          STORE RESULT                                   │
+    │          WITH ID                                        │
+    │              │                                            │
+    │              ▼                                            │
+    │          RETURN RESULT                                  │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+### Idempotent Retries
+
+Idempotent retries use the same transaction ID for each retry. The system returns the same result each time. This prevents duplicate processing.
+
+## 7. Event-Driven Architectures
+
+### What Is Event-Driven Architecture
+
+Event-driven architecture (EDA) is a design pattern where system components communicate through events. Events are generated by state changes. Other components react to events.
+
+### Why EDA for RTP
+
+EDA is ideal for RTP systems because it enables loose coupling and scalability. Components can process events asynchronously. This reduces latency and improves throughput.
+
+### Event Flow
+
+Events flow through the system as transactions progress. Each state change generates an event. Components subscribe to relevant events. This enables real-time processing.
+
+```
+EVENT-DRIVEN RTP ARCHITECTURE
+
+    +-----------------------------------------------------------+
+    │               EVENT-DRIVEN RTP ARCHITECTURE               │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   USER INITIATES PAYMENT ───► PAYMENT_INITIATED_EVENT   │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              VALIDATION SERVICE          │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              PAYMENT_VALIDATED_EVENT     │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              FRAUD SERVICE               │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              PAYMENT_AUTHORIZED_EVENT    │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              ROUTING SERVICE             │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              PAYMENT_ROUTED_EVENT        │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              SETTLEMENT SERVICE          │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              PAYMENT_SETTLED_EVENT       │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              NOTIFICATION SERVICE        │
+    │                                      │                    │
+    │                                      ▼                    │
+    │                              PAYMENT_COMPLETE_EVENT      │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 8. Kafka and Message Brokers
+
+### What Is Apache Kafka
+
+Apache Kafka is a distributed streaming platform. It is used as a message broker for event-driven systems. It provides high throughput, low latency, and persistence.
+
+### Kafka Architecture
+
+Kafka has a distributed architecture with multiple components. ```Producers``` publish messages to topics. ```Topics``` are logical channels for messages. ```Partitions``` are ordered sequences of messages. ```Brokers``` store and serve messages. ```Consumers``` read messages from topics.
+
+```
+KAFKA CLUSTER ARCHITECTURE
+
+    +-----------------------------------------------------------+
+    │               KAFKA CLUSTER ARCHITECTURE                  │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+    │   │  PRODUCER A │  │  PRODUCER B │  │  PRODUCER C │     │
+    │   └──────┬──────┘  └──────┬──────┘  └──────┬──────┘     │
+    │          │                │                │             │
+    │          └────────────────┼────────────────┘             │
+    │                           │                               │
+    │                           ▼                               │
+    │   ┌───────────────────────────────────────────────────┐   │
+    │   │              KAFKA CLUSTER                       │   │
+    │   │                                                 │   │
+    │   │  ┌─────────────────────────────────────────────┐ │   │
+    │   │  │  Topic: payments                           │ │   │
+    │   │  │  Partition 0: [msg][msg][msg][msg]        │ │   │
+    │   │  │  Partition 1: [msg][msg][msg]            │ │   │
+    │   │  │  Partition 2: [msg][msg][msg][msg][msg]  │ │   │
+    │   │  └─────────────────────────────────────────────┘ │   │
+    │   │                                                 │   │
+    │   │  Broker 1 (Leader)   Broker 2   Broker 3      │   │
+    │   └───────────────────────────────────────────────────┘   │
+    │                           │                               │
+    │          ┌────────────────┼────────────────┐             │
+    │          │                │                │             │
+    │          ▼                ▼                ▼             │
+    │   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+    │   │ CONSUMER A  │  │ CONSUMER B  │  │ CONSUMER C  │     │
+    │   │ (Group 1)   │  │ (Group 1)   │  │ (Group 2)   │     │
+    │   └─────────────┘  └─────────────┘  └─────────────┘     │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+### Why Kafka for RTP
+
+Kafka is well-suited for RTP systems because it provides high throughput (millions of messages per second), low latency (sub-10 ms), persistence (messages are stored), fault tolerance (replication), and scalability (horizontal scaling).
+
+### Topic Design
+
+Topic design is critical for RTP systems. Topics are separated by payment type, priority, or region. This enables isolation and prioritization.
+
+## 9. CAP Theorem
+
+### What Is the CAP Theorem
+
+The CAP theorem states that a distributed system cannot simultaneously guarantee Consistency, Availability, and Partition Tolerance. A system can only guarantee two of the three.
+
+```Consistency``` means all nodes see the same data at the same time.
+
+```Availability``` means every request receives a response, even if some nodes fail.
+
+```Partition Tolerance``` means the system continues operating despite network partitions.
+
+### CAP Implications for RTP
+
+RTP systems prioritize Availability and Partition Tolerance (AP systems). Consistency is achieved through eventual consistency or strong consistency with trade-offs.
+
+### Eventual Consistency
+
+Eventual consistency allows temporary inconsistencies. All replicas eventually converge. This provides high availability and partition tolerance.
+
+## 10. Consensus Algorithms
+
+### What Is Consensus
+
+Consensus is the process by which distributed nodes agree on a single value. It ensures consistency across replicas.
+
+### Consensus Algorithms for RTP
+
+Several consensus algorithms are used in RTP systems:
+
+```Raft``` is a consensus algorithm designed for understandability. It uses leader election and log replication.
+
+```Paxos``` is a family of consensus algorithms. It is complex but proven.
+
+```ZAB``` (ZooKeeper Atomic Broadcast) is used in Apache ZooKeeper.
+
+### Leader Election
+
+Leader election is the process of selecting a leader node. The leader coordinates consensus. If the leader fails, a new leader is elected.
+
+## 11. Clock Synchronization (NTP/PTP)
+
+### Why Clock Synchronization Matters
+
+Clock synchronization is critical in RTP systems. Timestamps are used for audit trails. Ordering of events depends on accurate time. Distributed systems require consistent time.
+
+### NTP (Network Time Protocol)
+
+NTP synchronizes clocks across network devices. It achieves millisecond accuracy. It uses a hierarchical tree of time sources.
+
+### PTP (Precision Time Protocol)
+
+PTP provides microsecond or nanosecond accuracy. It is used in financial systems that require high precision. It uses hardware timestamping.
+
+## 12. Time-Series Databases
+
+### What Are Time-Series Databases
+
+Time-series databases are optimized for storing and querying time-stamped data. They are used for metrics, logs, and monitoring.
+
+### Why TSDB for RTP
+
+TSDBs are essential for monitoring RTP systems. They store latency metrics, throughput data, and error rates. They enable analysis of system performance over time.
+
+### Popular TSDBs
+
+Prometheus is a leading TSDB for monitoring. InfluxDB is a general-purpose TSDB. TimescaleDB is a PostgreSQL-based TSDB.
+
+## 13. Multi-Region Replication
+
+### Why Multi-Region
+
+Multi-region replication provides disaster recovery. It enables low-latency access from multiple regions. It ensures high availability.
+
+### Replication Strategies
+
+```Synchronous Replication``` writes to all regions before confirming. This ensures consistency but increases latency.
+
+```Asynchronous Replication``` writes to the primary region first. Updates are replicated asynchronously. This improves performance but risks data loss.
+
+### Multi-Region Failover
+
+Multi-region failover automatically switches to a backup region. Health checks monitor the primary region. Traffic is routed to the healthy region.
+
+```
+MULTI-REGION FAILOVER
+
+    +-----------------------------------------------------------+
+    │               MULTI-REGION FAILOVER                       │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │               +---------------------------+               │
+    │               │      LOAD BALANCER       │               │
+    │               +---------------------------+               │
+    │                      /          \                        │
+    │                     /            \                       │
+    │                    ▼              ▼                      │
+    │   +---------------------------+  +---------------------------+ │
+    │   │       PRIMARY REGION     │  │       SECONDARY REGION   │ │
+    │   │  +-------------------+  │  │  +-------------------+  │ │
+    │   │  │    Active Nodes   │  │  │  │  Standby Nodes   │  │ │
+    │   │  │  - Processing    │  │  │  │  - Ready for     │  │ │
+    │   │  │  - Settlement    │  │  │  │    failover     │  │ │
+    │   │  └-------------------+  │  │  └-------------------+  │ │
+    │   │         │              │  │         │              │ │
+    │   │         ▼              │  │         ▼              │ │
+    │   │  +-------------------+  │  │  +-------------------+  │ │
+    │   │  │  Primary DB      │  │  │  │  Replica DB      │  │ │
+    │   │  └-------------------+  │  │  └-------------------+  │ │
+    │   └---------------------------+  +---------------------------+ │
+    │                     │                        │                │
+    │                     └────────Sync────────────┘                │
+    │                                                           │
+    │   If Primary Fails: Traffic automatically switches       │
+    │   to Secondary Region                                   │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 14. Disaster Recovery
+
+### Disaster Recovery Objectives
+
+```Recovery Time Objective (RTO)``` is the maximum acceptable downtime. RTP systems target RTO of < 5 minutes.
+
+```Recovery Point Objective (RPO)``` is the maximum acceptable data loss. RTP systems target RPO of < 1 second.
+
+### Disaster Recovery Strategies
+
+```Active-Active``` runs multiple active regions. Provides immediate failover. Most expensive.
+
+```Active-Passive``` runs one active region and one standby. Failover takes minutes. More cost-effective.
+
+```Pilot Light``` runs minimal infrastructure in standby. Scales up on failover.
+
+```
+DISASTER RECOVERY TARGETS
+
+    +-----------------------------------------------------------+
+    │               DISASTER RECOVERY TARGETS                   │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   RTO (Recovery Time Objective):                         │
+    │   - Target: < 5 minutes                                 │
+    │   - Critical: < 30 seconds                              │
+    │                                                           │
+    │   RPO (Recovery Point Objective):                       │
+    │   - Target: < 1 second                                 │
+    │   - Critical: Zero (no data loss)                      │
+    │                                                           │
+    │   Strategies:                                           │
+    │   - Active-Active: RTO ≈ 0, RPO = 0                   │
+    │   - Active-Passive: RTO ≈ 1-5 min, RPO ≈ 0           │
+    │   - Pilot Light: RTO ≈ 5-15 min, RPO ≈ 1 min        │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 15. Circuit Breakers
+
+### Circuit Breaker Pattern
+
+The circuit breaker pattern prevents cascading failures. It monitors failures to external services. When failures exceed a threshold, the circuit opens. Requests fail immediately without calling the service. After a timeout, the circuit attempts to close.
+
+### Circuit Breaker States
+
+```Closed``` is the normal state. Requests flow through. Failures are counted.
+
+```Open``` is the failure state. Requests fail immediately. No calls are made.
+
+```Half-Open``` is the testing state. A limited number of requests are allowed. Success closes the circuit. Failure reopens it.
+
+```
+CIRCUIT BREAKER STATE MACHINE
+
+    +-----------------------------------------------------------+
+    │               CIRCUIT BREAKER STATE MACHINE               │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   +--------------------+                                  │
+    │   |     CLOSED         |                                  │
+    │   |  (Normal Flow)     |                                  │
+    │   |  - Count failures  |                                  │
+    │   |  - Reset counter   |                                  │
+    │   +---------+----------+                                  │
+    │             │                                            │
+    │             │ Failure Threshold Reached                 │
+    │             ▼                                            │
+    │   +--------------------+                                  │
+    │   |     OPEN           |                                  │
+    │   |  (Requests Fail)   |                                  │
+    │   |  - No calls made  |                                  │
+    │   |  - Start timeout  |                                  │
+    │   +---------+----------+                                  │
+    │             │                                            │
+    │             │ Timeout Expires                           │
+    │             ▼                                            │
+    │   +--------------------+                                  │
+    │   |     HALF-OPEN      |                                  │
+    │   |  (Test Requests)   |                                  │
+    │   |  - Allow limited  |                                  │
+    │   |    requests       |                                  │
+    │   |  - Monitor success|                                  │
+    │   +---------+----------+                                  │
+    │             │                                            │
+    │       ┌─────┴─────┐                                      │
+    │       │           │                                      │
+    │    Success      Failure                                  │
+    │       │           │                                      │
+    │       ▼           ▼                                      │
+    │    CLOSED        OPEN                                    │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 16. Rate Limiting
+
+### Why Rate Limiting
+
+Rate limiting prevents system overload. It protects against denial of service attacks. It ensures fair resource allocation.
+
+### Rate Limiting Algorithms
+
+```Token Bucket``` uses tokens to control request rate. Tokens are added at a fixed rate. Each request consumes a token.
+
+```Leaky Bucket``` uses a queue with a fixed outflow. Requests are processed at a fixed rate.
+
+```Fixed Window``` counts requests in a fixed time window.
+
+```Sliding Window``` counts requests in a sliding time window.
+
+## 17. API Gateway Design
+
+### What Is an API Gateway
+
+An API gateway is a single entry point for API requests. It handles routing, authentication, rate limiting, and monitoring.
+
+### Gateway Functions
+
+```Authentication``` verifies client identity.
+
+```Rate Limiting``` controls request rates.
+
+```Routing``` forwards requests to appropriate services.
+
+```Monitoring``` logs requests and metrics.
+
+```Caching``` reduces backend load.
+
+```
+API GATEWAY ARCHITECTURE
+
+    +-----------------------------------------------------------+
+    │               API GATEWAY ARCHITECTURE                    │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   ┌───────────────────────────────────────────────────┐   │
+    │   │              API GATEWAY                         │   │
+    │   │                                                 │   │
+    │   │  ┌─────────────────────────────────────────┐    │   │
+    │   │  │  AUTHENTICATION LAYER                  │    │   │
+    │   │  │  JWT Validation, API Keys              │    │   │
+    │   │  └─────────────────────────────────────────┘    │   │
+    │   │  ┌─────────────────────────────────────────┐    │   │
+    │   │  │  RATE LIMITING LAYER                   │    │   │
+    │   │  │  Token Bucket, Leaky Bucket           │    │   │
+    │   │  └─────────────────────────────────────────┘    │   │
+    │   │  ┌─────────────────────────────────────────┐    │   │
+    │   │  │  ROUTING LAYER                         │    │   │
+    │   │  │  Path-based routing                    │    │   │
+    │   │  └─────────────────────────────────────────┘    │   │
+    │   │  ┌─────────────────────────────────────────┐    │   │
+    │   │  │  MONITORING LAYER                      │    │   │
+    │   │  │  Metrics, Logging, Tracing            │    │   │
+    │   │  └─────────────────────────────────────────┘    │   │
+    │   └───────────────────────────────────────────────────┘   │
+    │                           │                               │
+    │          ┌────────────────┼────────────────┐             │
+    │          │                │                │             │
+    │          ▼                ▼                ▼             │
+    │   ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
+    │   │  SERVICE A  │  │  SERVICE B  │  │  SERVICE C  │     │
+    │   └─────────────┘  └─────────────┘  └─────────────┘     │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 18. Kubernetes Deployment
+
+### What Is Kubernetes
+
+Kubernetes is a container orchestration platform. It automates deployment, scaling, and management of containerized applications.
+
+### Kubernetes Architecture
+
+```Nodes``` are worker machines that run containers.
+
+```Pods``` are the smallest deployable units. They contain one or more containers.
+
+```Services``` provide stable networking to pods.
+
+```Deployments``` manage rolling updates and rollbacks.
+
+```Ingress``` manages external access to services.
+
+### Why Kubernetes for RTP
+
+Kubernetes is ideal for RTP systems because it provides automated scaling (horizontal pod autoscaler), self-healing (restarts failed pods), rolling updates (zero-downtime deployments), and multi-region support.
+
+```
+KUBERNETES DEPLOYMENT
+
+    +-----------------------------------------------------------+
+    │               KUBERNETES DEPLOYMENT                       │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   +---------------------------------------------------+   │
+    │   │              INGRESS CONTROLLER                   │   │
+    │   │  (External Traffic Entry)                         │   │
+    │   └───────────────────────────────────────────────────────┘   │
+    │                           │                               │
+    │                           ▼                               │
+    │   +---------------------------------------------------+   │
+    │   │              API GATEWAY SERVICE                  │   │
+    │   │  (Load Balancer Type)                            │   │
+    │   └───────────────────────────────────────────────────────┘   │
+    │                           │                               │
+    │          ┌────────────────┼────────────────┐             │
+    │          │                │                │             │
+    │          ▼                ▼                ▼             │
+    │   +─────────────+  +─────────────+  +─────────────+     │
+    │   │  Pod: API   │  │  Pod: API   │  │  Pod: API   │     │
+    │   │  Gateway    │  │  Gateway    │  │  Gateway    │     │
+    │   │  - Container│  │  - Container│  │  - Container│     │
+    │   │  - CPU: 2  │  │  - CPU: 2  │  │  - CPU: 2  │     │
+    │   │  - Mem: 4GB│  │  - Mem: 4GB│  │  - Mem: 4GB│     │
+    │   └─────────────┘  └─────────────┘  └─────────────┘     │
+    │          │                │                │             │
+    │          └────────────────┼────────────────┘             │
+    │                           │                               │
+    │                           ▼                               │
+    │   +---------------------------------------------------+   │
+    │   │              KAFKA SERVICE                       │   │
+    │   │  (StatefulSet with persistent storage)           │   │
+    │   └───────────────────────────────────────────────────────┘   │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 19. Containerization
+
+### What Is Containerization
+
+Containerization packages applications and dependencies into isolated containers. Containers are lightweight and portable. They run consistently across environments.
+
+### Docker for RTP
+
+Docker is the most common containerization platform. Docker images contain the application and its dependencies. Docker containers run the images. Docker Compose manages multi-container applications.
+
+### Container Benefits
+
+Containers provide consistency across environments. They enable faster deployment. They improve resource utilization. They simplify scaling.
+
+## 20. Service Meshes
+
+### What Is a Service Mesh
+
+A service mesh is a dedicated infrastructure layer for service-to-service communication. It provides observability, security, and reliability.
+
+### Service Mesh Components
+
+```Data Plane``` handles traffic between services. ```Control Plane``` manages policies and configuration.
+
+### Popular Service Meshes
+
+```Istio``` is a popular service mesh. It provides traffic management, security, and observability.
+
+```Linkerd``` is a lightweight service mesh. It focuses on simplicity.
+
+```Consul``` provides service mesh functionality with service discovery.
+
+```
+SERVICE MESH ARCHITECTURE
+
+    +-----------------------------------------------------------+
+    │               SERVICE MESH ARCHITECTURE                   │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   +-------------------+    +-------------------+         │
+    │   │   CONTROL PLANE  │    │   CONTROL PLANE   │         │
+    │   │   (Istio Pilot)  │    │   (Istio Mixer)   │         │
+    │   └-------------------+    +-------------------+         │
+    │                                                           │
+    │   +---------------------------------------------------+   │
+    │   │                    DATA PLANE                      │   │
+    │   │                                                   │   │
+    │   │   ┌─────────────┐    ┌─────────────┐             │   │
+    │   │   │  SERVICE A  │────│  SERVICE B  │             │   │
+    │   │   │  +--------+ │    │  +--------+ │             │   │
+    │   │   │  │ Envoy  │ │    │  │ Envoy  │ │             │   │
+    │   │   │  │ Proxy  │ │    │  │ Proxy  │ │             │   │
+    │   │   │  +--------+ │    │  +--------+ │             │   │
+    │   │   └─────────────┘    └─────────────┘             │   │
+    │   │          │                  │                     │   │
+    │   │          └───────┬──────────┘                     │   │
+    │   │                  │                                │   │
+    │   │   ┌─────────────┐    ┌─────────────┐             │   │
+    │   │   │  SERVICE C  │────│  SERVICE D  │             │   │
+    │   │   │  +--------+ │    │  +--------+ │             │   │
+    │   │   │  │ Envoy  │ │    │  │ Envoy  │ │             │   │
+    │   │   │  │ Proxy  │ │    │  │ Proxy  │ │             │   │
+    │   │   │  +--------+ │    │  +--------+ │             │   │
+    │   │   └─────────────┘    └─────────────┘             │   │
+    │   │                                                   │   │
+    │   └---------------------------------------------------+   │
+    │                                                           │
+    │   Envoy Proxies handle:                                  │
+    │   - Load balancing                                      │
+    │   - Circuit breaking                                   │
+    │   - Retries                                            │
+    │   - Timeouts                                          │
+    │   - Mutual TLS                                        │
+    │   - Observability                                     │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 21. Observability (Prometheus, Grafana)
+
+### What Is Observability
+
+Observability is the ability to understand system state from external outputs. It includes metrics, logs, and traces.
+
+### Prometheus
+
+Prometheus is a monitoring system. It collects metrics from services. It stores metrics in a time-series database. It provides a powerful query language (PromQL).
+
+### Grafana
+
+Grafana is a visualization tool. It creates dashboards from Prometheus data. It provides alerting capabilities.
+
+### Key Metrics for RTP
+
+```Latency``` measures response time.
+
+```Throughput``` measures transactions per second.
+
+```Error Rate``` measures the percentage of failures.
+
+```Queue Depth``` measures the number of queued transactions.
+
+```Resource Utilization``` measures CPU, memory, and network usage.
+
+## 22. Distributed Tracing
+
+### What Is Distributed Tracing
+
+Distributed tracing tracks requests across service boundaries. It provides visibility into the end-to-end flow.
+
+### Tracing Components
+
+```Trace``` is the complete request path.
+
+```Span``` is a single unit of work.
+
+```Trace ID``` identifies the entire trace.
+
+```Span ID``` identifies a single span.
+
+### Popular Tracing Tools
+
+```Jaeger``` is a popular distributed tracing system.
+
+```Zipkin``` is another distributed tracing system.
+
+```OpenTelemetry``` is a standardization effort.
+
+```
+DISTRIBUTED TRACING EXAMPLE
+
+    +-----------------------------------------------------------+
+    │               DISTRIBUTED TRACING EXAMPLE                 │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   TRACE ID: abc123                                       │
+    │                                                           │
+    │   ┌─────────────────────────────────────────────────────┐ │
+    │   │  API Gateway (Span: gateway)                       │ │
+    │   │  Duration: 5ms                                    │ │
+    │   │  Tags: user=john, method=POST                     │ │
+    │   └────────────────────┬────────────────────────────────┘ │
+    │                        │                                  │
+    │                        ▼                                  │
+    │   ┌─────────────────────────────────────────────────────┐ │
+    │   │  Validation Service (Span: validate)               │ │
+    │   │  Duration: 8ms                                    │ │
+    │   │  Tags: account=12345, status=valid                 │ │
+    │   └────────────────────┬────────────────────────────────┘ │
+    │                        │                                  │
+    │                        ▼                                  │
+    │   ┌─────────────────────────────────────────────────────┐ │
+    │   │  Fraud Service (Span: fraud)                      │ │
+    │   │  Duration: 12ms                                   │ │
+    │   │  Tags: risk_score=0.2, decision=accept            │ │
+    │   └────────────────────┬────────────────────────────────┘ │
+    │                        │                                  │
+    │                        ▼                                  │
+    │   ┌─────────────────────────────────────────────────────┐ │
+    │   │  Routing Service (Span: route)                    │ │
+    │   │  Duration: 3ms                                    │ │
+    │   │  Tags: network=rtp, bank=target                   │ │
+    │   └────────────────────┬────────────────────────────────┘ │
+    │                        │                                  │
+    │                        ▼                                  │
+    │   ┌─────────────────────────────────────────────────────┐ │
+    │   │  Settlement Service (Span: settle)                │ │
+    │   │  Duration: 15ms                                   │ │
+    │   │  Tags: amount=100.00, status=settled              │ │
+    │   └─────────────────────────────────────────────────────┘ │
+    │                                                           │
+    │   Total Duration: 43ms                                  │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 23. SAGA Pattern
+
+### What Is the SAGA Pattern
+
+The SAGA pattern manages distributed transactions. It breaks a transaction into a series of local transactions. Each local transaction updates its local database. If a step fails, compensating transactions undo the changes.
+
+### SAGA Types
+
+```Choreography``` uses events to coordinate steps. Each service publishes events. Other services react to events.
+
+```Orchestration``` uses a central coordinator. The coordinator tells services what to do. This provides better control.
+
+### SAGA for RTP
+
+SAGA is used for complex multi-step RTP transactions. Each step is a local transaction. Compensation handles failures.
+
+```
+SAGA PATTERN EXAMPLE
+
+    +-----------------------------------------------------------+
+    │               SAGA PATTERN EXAMPLE                        │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   PAYMENT TRANSACTION: $100 FROM A TO B                  │
+    │                                                           │
+    │   STEP 1: DEBIT SENDER                                  │
+    │   ├── Sender's account is debited                      │
+    │   ├── Local transaction committed                      │
+    │   └── Compensating: Credit sender (if step fails)     │
+    │                                                           │
+    │   STEP 2: VALIDATE RECEIVER                             │
+    │   ├── Receiver's account is validated                  │
+    │   ├── Local transaction committed                      │
+    │   └── Compensating: Reject transaction (if step fails)│
+    │                                                           │
+    │   STEP 3: CREDIT RECEIVER                              │
+    │   ├── Receiver's account is credited                  │
+    │   ├── Local transaction committed                      │
+    │   └── Compensating: Debit receiver (if step fails)   │
+    │                                                           │
+    │   STEP 4: UPDATE STATUS                                │
+    │   ├── Transaction status updated to completed          │
+    │   └── Compensating: Mark as failed (if step fails)   │
+    │                                                           │
+    │   If any step fails, compensating transactions undo    │
+    │   completed steps.                                     │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 24. Event Sourcing
+
+### What Is Event Sourcing
+
+Event sourcing stores state changes as a sequence of events. The current state is derived by replaying events. This provides a complete audit trail.
+
+### Event Sourcing Benefits
+
+```Auditability``` provides a complete history of changes.
+
+```Replayability``` enables debugging and reconstruction.
+
+```Consistency``` provides a single source of truth.
+
+```Temporal Query``` enables querying past states.
+
+### Event Sourcing for RTP
+
+Event sourcing is ideal for RTP systems. Every transaction generates events. The current state is derived from events. This provides a complete audit trail for compliance.
+
+## 25. CQRS
+
+### What Is CQRS
+
+CQRS (Command Query Responsibility Segregation) separates read and write operations. Commands modify state. Queries read state. This enables independent scaling of reads and writes.
+
+### CQRS Benefits
+
+```Scalability``` enables independent scaling of reads and writes.
+
+```Performance``` optimizes each operation type.
+
+```Complexity``` isolates complexity.
+
+```Security``` provides different permissions for reads and writes.
+
+### CQRS for RTP
+
+CQRS is used in RTP systems to separate transaction processing (writes) from reporting (reads).
+
+```
+CQRS ARCHITECTURE
+
+    +-----------------------------------------------------------+
+    │               CQRS ARCHITECTURE                          │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   COMMAND SIDE (Write)                  QUERY SIDE (Read)│
+    │                                                           │
+    │   ┌───────────────────────────┐    ┌───────────────────┐ │
+    │   │  Payment Initiation      │    │  Payment Status   │ │
+    │   │  Command                 │    │  Query            │ │
+    │   └───────────┬───────────────┘    └────────┬──────────┘ │
+    │               │                             │           │
+    │               ▼                             ▼           │
+    │   ┌───────────────────────────┐    ┌───────────────────┐ │
+    │   │  Command Handler         │    │  Query Handler    │ │
+    │   │  - Validate             │    │  - Read from DB   │ │
+    │   │  - Process              │    │  - Return result  │ │
+    │   │  - Update state         │    └───────────────────┘ │
+    │   └───────────┬───────────────┘                         │
+    │               │                                         │
+    │               ▼                                         │
+    │   ┌───────────────────────────┐    ┌───────────────────┐ │
+    │   │  Write Database          │    │  Read Database    │ │
+    │   │  (Normalized)            │────│  (Denormalized)   │ │
+    │   └───────────────────────────┘    └───────────────────┘ │
+    │               │                       │                 │
+    │               │    Eventual Sync      │                 │
+    │               └───────────────────────┘                 │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 26. Exactly-Once Processing
+
+### What Is Exactly-Once Processing
+
+Exactly-once processing ensures that each message is processed exactly once. It prevents duplicates and ensures data consistency.
+
+### Achieving Exactly-Once
+
+Exactly-once processing requires idempotency and transactional boundaries. Kafka supports exactly-once semantics through transactional producers and idempotent producers.
+
+### Exactly-Once in RTP
+
+Exactly-once processing is critical for RTP systems to prevent duplicate payments. Transaction IDs are used for deduplication. Atomic operations ensure consistency.
+
+## 27. TLS Mutual Authentication
+
+### What Is Mutual TLS
+
+Mutual TLS (mTLS) authenticates both client and server. Each party presents a certificate. This provides strong authentication and encryption.
+
+### mTLS for RTP
+
+mTLS is used for secure communication between banks and the RTP network. Each participant presents a certificate. All traffic is encrypted.
+
+### mTLS Workflow
+
+The client presents its certificate to the server. The server verifies the client's certificate. The server presents its certificate to the client. The client verifies the server's certificate. A secure connection is established.
+
+## 28. HSM Integration
+
+### What Is an HSM
+
+A Hardware Security Module (HSM) is a physical device that protects cryptographic keys. It performs cryptographic operations securely.
+
+### HSM for RTP
+
+HSMs are used to protect signing keys, encryption keys, and authentication keys. They are tamper-resistant. They provide high security.
+
+### HSM Functions
+
+```Key Generation``` generates cryptographic keys securely.
+
+```Key Storage``` stores keys in tamper-resistant hardware.
+
+```Signing``` signs transactions and messages.
+
+```Encryption``` encrypts sensitive data.
+
+```Decryption``` decrypts sensitive data.
+
+## 29. M/M/1 Queue Models
+
+### What Is M/M/1
+
+M/M/1 is a queueing model with exponential interarrival times (M), exponential service times (M), and a single server (1). It is used to model simple queueing systems.
+
+### M/M/1 Formulas
+
+```
+M/M/1 QUEUE MODEL
+
+    +-----------------------------------------------------------+
+    │               M/M/1 QUEUE MODEL                          │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   λ = Arrival Rate (transactions per second)             │
+    │   μ = Service Rate (transactions per second)             │
+    │   ρ = Utilization = λ / μ                               │
+    │                                                           │
+    │   Average number in queue: Lq = ρ^2 / (1 - ρ)           │
+    │   Average number in system: L = ρ / (1 - ρ)             │
+    │   Average wait time in queue: Wq = ρ / (μ - λ)          │
+    │   Average time in system: W = 1 / (μ - λ)               │
+    │                                                           │
+    │   Example:                                               │
+    │   λ = 100 TPS, μ = 200 TPS                              │
+    │   ρ = 100/200 = 0.5                                     │
+    │   Lq = 0.25/0.5 = 0.5 transactions                     │
+    │   Wq = 0.5 / (200-100) = 0.005 seconds                │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 30. M/M/c Queue Models
+
+### What Is M/M/c
+
+M/M/c is a queueing model with exponential interarrival times (M), exponential service times (M), and c servers (c). It is used to model multi-server systems.
+
+### M/M/c Formulas
+
+```
+M/M/c QUEUE MODEL
+
+    +-----------------------------------------------------------+
+    │               M/M/c QUEUE MODEL                          │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   λ = Arrival Rate                                      │
+    │   μ = Service Rate per server                          │
+    │   c = Number of servers                               │
+    │   ρ = λ / (c × μ)                                    │
+    │                                                           │
+    │   Probability of zero customers:                         │
+    │   P0 = [Σ(k=0 to c-1) (cρ)^k/k! + (cρ)^c/(c!(1-ρ))]^(-1)│
+    │                                                           │
+    │   Average number in queue:                               │
+    │   Lq = (cρ)^c × ρ / (c! × (1-ρ)^2) × P0                │
+    │                                                           │
+    │   Example:                                               │
+    │   λ = 500 TPS, μ = 200 TPS, c = 4                      │
+    │   ρ = 500/(4×200) = 0.625                              │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 31. Reliability Engineering
+
+### Mean Time Between Failures (MTBF)
+
+MTBF is the average time between failures. It measures system reliability.
+
+```
+MTBF CALCULATION
+
+    +-----------------------------------------------------------+
+    │               MTBF CALCULATION                           │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   MTBF = Total Operating Time / Number of Failures      │
+    │                                                           │
+    │   Example:                                               │
+    │   Operating Time: 10,000 hours                         │
+    │   Failures: 5                                           │
+    │   MTBF = 10,000 / 5 = 2,000 hours                     │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+### Mean Time To Recovery (MTTR)
+
+MTTR is the average time to recover from a failure. It measures system resilience.
+
+```
+MTTR CALCULATION
+
+    +-----------------------------------------------------------+
+    │               MTTR CALCULATION                           │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   MTTR = Total Downtime / Number of Failures            │
+    │                                                           │
+    │   Example:                                               │
+    │   Downtime: 100 minutes                                │
+    │   Failures: 5                                           │
+    │   MTTR = 100 / 5 = 20 minutes                         │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+### Availability Calculation
+
+Availability is the percentage of time the system is operational.
+
+```
+AVAILABILITY CALCULATION
+
+    +-----------------------------------------------------------+
+    │               AVAILABILITY CALCULATION                   │
+    +-----------------------------------------------------------+
+    │                                                           │
+    │   Availability = MTBF / (MTBF + MTTR) × 100             │
+    │                                                           │
+    │   Example:                                               │
+    │   MTBF = 2,000 hours                                   │
+    │   MTTR = 0.5 hours                                    │
+    │   Availability = 2000 / (2000 + 0.5) × 100 = 99.975%  │
+    │                                                           │
+    │   Target: 99.999% (5.26 minutes/year)                   │
+    │                                                           │
+    └-----------------------------------------------------------+
+```
+
+## 32. Transaction Lifecycle
 
 ### RTP Transaction Lifecycle
 
@@ -413,591 +1424,7 @@ RTP TRANSACTION LIFECYCLE
     +-----------------------------------------------------------+
 ```
 
-## 8. Queueing Systems
-
-### Queueing Theory Fundamentals
-
-Queueing theory is the mathematical study of waiting lines. It is essential for understanding how RTP systems handle high transaction volumes.
-
-The key parameters are:
-
-λ = Arrival Rate (transactions per second)
-μ = Service Rate (transactions per second per server)
-ρ = Utilization = λ / (μ × c) where c = number of servers
-L = Average number of transactions in system = λ × W
-W = Average wait time = L / λ
-
-### Little's Law
-
-Little's Law is a fundamental theorem in queueing theory: L = λ × W, where L is the average number of items in the queueing system, λ is the average arrival rate, and W is the average time an item spends in the system.
-
-```
-LITTLE'S LAW EXAMPLE
-
-    +-----------------------------------------------------------+
-    │               LITTLE'S LAW EXAMPLE                        │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   Given:                                                 │
-    │   λ = 1,000 transactions per second                     │
-    │   W = 0.5 seconds average processing time              │
-    │                                                           │
-    │   L = λ × W = 1,000 × 0.5 = 500 transactions           │
-    │                                                           │
-    │   The system must handle 500 transactions on           │
-    │   average at any given time.                           │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Queue Architecture
-
-The queue architecture consists of multiple queues for different priority levels. High-priority transactions go to the priority queue. Standard transactions go to the standard queue. Failed transactions go to the dead letter queue for retry.
-
-```
-QUEUE ARCHITECTURE
-
-    +-----------------------------------------------------------+
-    │               QUEUE ARCHITECTURE                          │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   ┌───────────────────────────────────────────────────┐   │
-    │   │              PRIORITY QUEUE                      │   │
-    │   │  High-priority transactions (VIP, emergency)    │   │
-    │   └───────────────────────────────────────────────────┘   │
-    │                           │                               │
-    │   ┌───────────────────────────────────────────────────┐   │
-    │   │              STANDARD QUEUE                      │   │
-    │   │  Regular transactions                           │   │
-    │   └───────────────────────────────────────────────────┘   │
-    │                           │                               │
-    │   ┌───────────────────────────────────────────────────┐   │
-    │   │              DEAD LETTER QUEUE                  │   │
-    │   │  Failed transactions (retry later)              │   │
-    │   └───────────────────────────────────────────────────┘   │
-    │                           │                               │
-    │                           ▼                               │
-    │   ┌───────────────────────────────────────────────────┐   │
-    │   │              WORKER POOL                        │   │
-    │   │  W1  W2  W3  W4  W5  W6  W7  W8  W9  W10     │   │
-    │   └───────────────────────────────────────────────────┘   │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Backpressure
-
-Backpressure is a mechanism to prevent system overload. When the system becomes saturated, it applies backpressure to slow down incoming requests. This prevents resource exhaustion and ensures stability.
-
-### Retry Logic with Exponential Backoff
-
-Failed transactions are retried with exponential backoff to prevent overwhelming the system.
-
-```
-EXPONENTIAL BACKOFF
-
-    +-----------------------------------------------------------+
-    │               EXPONENTIAL BACKOFF                        │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   Retry 1: delay = 1s                                   │
-    │   Retry 2: delay = 2s                                   │
-    │   Retry 3: delay = 4s                                   │
-    │   Retry 4: delay = 8s                                   │
-    │   Retry 5: delay = 16s                                  │
-    │   Retry n: delay = 2^n seconds                         │
-    │                                                           │
-    │   Algorithm:                                            │
-    │   def calculate_backoff(attempt, base=1, max=60):      │
-    │       delay = min(base * (2 ** attempt), max)         │
-    │       jitter = random.uniform(0, delay * 0.1)        │
-    │       return delay + jitter                          │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-## 9. Routing Algorithms
-
-### Payment Routing
-
-Payment routing is the process of determining the optimal path for a payment instruction to reach its destination.
-
-### Routing Algorithms
-
-Several routing algorithms are used in RTP systems.
-
-```Shortest Path Routing``` selects the path with the fewest hops.
-
-```Least Cost Routing``` selects the path with the lowest cost.
-
-```Fastest Path Routing``` selects the path with the lowest latency.
-
-```Load Balancing Routing``` distributes traffic across multiple paths.
-
-```Smart Routing``` uses machine learning to select the optimal path dynamically.
-
-### Payment Orchestration
-
-Payment orchestration manages the end-to-end flow of a payment across multiple systems. It coordinates validation, routing, settlement, and confirmation.
-
-## 10. Consensus & Finality
-
-### Consensus Mechanisms
-
-Consensus mechanisms ensure that all participants agree on the state of a transaction.
-
-```Atomic Settlement``` ensures that all or none of the settlement steps are completed.
-
-```Two-Phase Commit``` ensures consistency across distributed systems.
-
-```Quorum-based Consensus``` requires a majority of nodes to agree.
-
-### Finality Models
-
-Finality models determine when a payment becomes irrevocable.
-
-```Immediate Finality``` means finality is achieved at settlement.
-
-```Deferred Finality``` means finality is achieved after a waiting period.
-
-```Conditional Finality``` means finality depends on certain conditions.
-
-## 11. Settlement Systems
-
-### How RTP Systems Settle Instantly
-
-RTP systems settle instantly through prefunding and real-time reserve transfers. Banks maintain prefunded accounts at the central bank. When a payment is made, the sending bank's prefunded account is debited, and the receiving bank's prefunded account is credited immediately.
-
-### Prefunding
-
-Prefunding requires banks to maintain sufficient balances in their settlement accounts. The central bank holds these accounts. Banks deposit funds in advance to ensure they can settle instant payments.
-
-### Gross Settlement
-
-Gross settlement settles each transaction individually. There is no netting. This provides immediate finality but requires more liquidity.
-
-```
-SETTLEMENT MECHANISM
-
-    +-----------------------------------------------------------+
-    │               SETTLEMENT MECHANISM                        │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   BEFORE PAYMENT:                                        │
-    │                                                           │
-    │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Central Bank Reserve Accounts:                  │   │
-    │   │  Bank A: $100,000,000                           │   │
-    │   │  Bank B: $50,000,000                            │   │
-    │   └───────────────────────────────────────────────────┘   │
-    │                                                           │
-    │   PAYMENT: $10,000 FROM BANK A TO BANK B                │
-    │                                                           │
-    │   AFTER PAYMENT:                                        │
-    │                                                           │
-    │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Central Bank Reserve Accounts:                  │   │
-    │   │  Bank A: $99,990,000 (-$10,000)                 │   │
-    │   │  Bank B: $50,010,000 (+$10,000)                 │   │
-    │   └───────────────────────────────────────────────────┘   │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-## 12. Liquidity Management
-
-### How Banks Maintain Liquidity
-
-Banks maintain liquidity through several mechanisms. They hold reserves at the central bank. They monitor intraday balances. They forecast payment flows. They manage funding through the interbank market.
-
-### Intraday Liquidity Management
-
-Banks manage intraday liquidity to ensure they can settle instant payments throughout the day. They monitor their reserve balance in real time. They forecast net payment flows. They manage queuing of large payments. They access intraday credit from the central bank if needed.
-
-## 13. High Availability Systems
-
-### Availability Requirements
-
-RTP systems target 99.999% availability, which is about 5.26 minutes of downtime per year.
-
-```
-AVAILABILITY CALCULATION
-
-    +-----------------------------------------------------------+
-    │               AVAILABILITY CALCULATION                    │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   Availability = (Uptime / Total Time) × 100             │
-    │                                                           │
-    │   99.9% = 8.76 hours downtime/year                       │
-    │   99.99% = 52.56 minutes downtime/year                   │
-    │   99.999% = 5.26 minutes downtime/year                   │
-    │   99.9999% = 31.5 seconds downtime/year                  │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Active-Active Architecture
-
-Active-active architecture runs multiple instances of the system simultaneously. Load is distributed across all instances. If one instance fails, others continue processing. This provides high availability and scalability.
-
-```
-ACTIVE-ACTIVE DEPLOYMENT
-
-    +-----------------------------------------------------------+
-    │               ACTIVE-ACTIVE DEPLOYMENT                    │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │               +---------------------------+               │
-    │               │      LOAD BALANCER       │               │
-    │               +---------------------------+               │
-    │                      /          \                        │
-    │                     /            \                       │
-    │                    ▼              ▼                      │
-    │   +---------------------------+  +---------------------------+ │
-    │   │       REGION A           │  │       REGION B           │ │
-    │   │  +-------------------+  │  │  +-------------------+  │ │
-    │   │  │     Node 1        │  │  │  │     Node 3        │  │ │
-    │   │  │  - Active        │  │  │  │  - Active        │  │ │
-    │   │  └-------------------+  │  │  └-------------------+  │ │
-    │   │  +-------------------+  │  │  +-------------------+  │ │
-    │   │  │     Node 2        │  │  │  │     Node 4        │  │ │
-    │   │  │  - Active        │  │  │  │  - Active        │  │ │
-    │   │  └-------------------+  │  │  └-------------------+  │ │
-    │   │         │              │  │         │              │ │
-    │   │         └─────Sync─────┘  │         └─────Sync─────┘ │
-    │   └---------------------------+  +---------------------------+ │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Failover Mechanisms
-
-Failover mechanisms automatically switch to backup systems when failures occur. Health checks monitor system health. Traffic is automatically routed to healthy instances.
-
-## 14. Fault Tolerance
-
-### Fault Tolerance Strategies
-
-Fault tolerance strategies ensure the system continues operating despite failures.
-
-```Redundancy``` duplicates critical components.
-
-```Retry``` retries failed operations.
-
-```Circuit Breaker``` prevents cascading failures.
-
-```Bulkhead``` isolates failures to prevent spread.
-
-```Timeout``` prevents operations from hanging indefinitely.
-
-### Circuit Breaker Pattern
-
-The circuit breaker pattern prevents cascading failures. When failures exceed a threshold, the circuit opens, and requests are failed immediately. After a timeout, the circuit attempts to close.
-
-```
-CIRCUIT BREAKER STATE MACHINE
-
-    +-----------------------------------------------------------+
-    │               CIRCUIT BREAKER STATE MACHINE               │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   +--------------------+                                  │
-    │   |     CLOSED         |                                  │
-    │   |  (Normal Flow)     |                                  │
-    │   +---------+----------+                                  │
-    │             │                                            │
-    │             │ Failure Threshold Reached                 │
-    │             ▼                                            │
-    │   +--------------------+                                  │
-    │   |     OPEN           |                                  │
-    │   |  (Requests Fail)   |                                  │
-    │   +---------+----------+                                  │
-    │             │                                            │
-    │             │ Timeout Expired                           │
-    │             ▼                                            │
-    │   +--------------------+                                  │
-    │   |     HALF-OPEN      |                                  │
-    │   |  (Test Requests)   |                                  │
-    │   +---------+----------+                                  │
-    │             │                                            │
-    │       ┌─────┴─────┐                                      │
-    │       │           │                                      │
-    │    Success      Failure                                  │
-    │       │           │                                      │
-    │       ▼           ▼                                      │
-    │    CLOSED        OPEN                                    │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-## 15. Distributed Systems
-
-### Distributed System Patterns
-
-RTP systems use several distributed system patterns.
-
-```Microservices``` decomposes the system into independent services.
-
-```Event Sourcing``` stores state changes as events.
-
-```CQRS``` separates command and query responsibilities.
-
-```Saga Pattern``` manages distributed transactions.
-
-```Leader Election``` elects a leader for coordination.
-
-### Horizontal Scaling
-
-Horizontal scaling adds more instances to handle increased load. This is achieved by adding more servers or containers. Load is distributed across instances.
-
-### Sharding
-
-Sharding partitions data across multiple database instances. Each shard handles a subset of the data. This enables horizontal scaling of the database.
-
-## 16. Database Design
-
-### Database Requirements
-
-RTP databases must meet strict requirements.
-
-```ACID Guarantees``` ensure transaction integrity.
-
-```Low Latency``` ensures fast reads and writes.
-
-```High Throughput``` handles thousands of transactions per second.
-
-```High Availability``` ensures continuous operation.
-
-```Consistency``` ensures data accuracy.
-
-### ACID Properties
-
-ACID properties ensure transaction integrity.
-
-```Atomicity``` ensures transactions complete fully or not at all.
-
-```Consistency``` ensures data remains valid after transactions.
-
-```Isolation``` ensures concurrent transactions don't interfere.
-
-```Durability``` ensures committed transactions survive failures.
-
-### Database Architecture
-
-The database architecture typically uses a primary-replica setup for high availability, with sharding for horizontal scaling.
-
-## 17. Performance Engineering
-
-### Throughput
-
-Throughput is the number of transactions processed per second.
-
-```
-THROUGHPUT CALCULATION
-
-    +-----------------------------------------------------------+
-    │               THROUGHPUT CALCULATION                     │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   TPS = Total Transactions / Time Period (seconds)       │
-    │                                                           │
-    │   Example: 10,000 transactions in 2 seconds             │
-    │   TPS = 10,000 / 2 = 5,000 TPS                         │
-    │                                                           │
-    │   RTP systems typically target:                          │
-    │   - 1,000 - 10,000 TPS                                 │
-    │   - Peak capacity 2-3x normal                          │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Latency
-
-Latency is the time from request to response.
-
-```
-LATENCY BREAKDOWN
-
-    +-----------------------------------------------------------+
-    │               LATENCY BREAKDOWN                          │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   Network: 10 ms                                         │
-    │   API Gateway: 5 ms                                      │
-    │   Validation: 8 ms                                       │
-    │   Fraud Detection: 12 ms                                │
-    │   Routing: 3 ms                                          │
-    │   Database Read: 5 ms                                   │
-    │   Database Write: 8 ms                                  │
-    │   Settlement: 15 ms                                     │
-    │   Notification: 6 ms                                    │
-    │   ──────────────────────────────────────────────────────│
-    │   TOTAL: 72 ms                                          │
-    │                                                           │
-    │   RTP systems target: < 10 seconds total                │
-    │   Core processing: < 1 second                           │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Performance Metrics
-
-Key performance metrics include:
-
-```Throughput``` measures transactions per second.
-
-```Latency``` measures response time.
-
-```p99 Latency``` measures 99th percentile latency.
-
-```Error Rate``` measures the percentage of failed transactions.
-
-```Availability``` measures uptime percentage.
-
-## 18. Security Engineering
-
-### Security Architecture
-
-RTP security architecture includes multiple layers.
-
-```Network Security``` uses TLS/SSL for encryption.
-
-```Application Security``` uses authentication and authorization.
-
-```Data Security``` uses encryption at rest.
-
-```Identity Security``` uses strong authentication.
-
-```Key Management``` uses hardware security modules.
-
-### Encryption
-
-Encryption protects data during transmission and storage.
-
-```TLS 1.3``` is used for network encryption.
-
-```AES-256``` is used for data at rest.
-
-```RSA``` or ```ECC``` is used for key exchange.
-
-## 19. Fraud Detection
-
-### Fraud Detection Systems
-
-Fraud detection systems analyze transactions in real time.
-
-```Rule-based Detection``` applies predefined rules to flag suspicious activity.
-
-```Machine Learning``` uses models trained on historical data.
-
-```Anomaly Detection``` identifies unusual patterns.
-
-```Behavioral Analysis``` analyzes user behavior patterns.
-
-### Fraud Scoring Model
-
-The fraud scoring model calculates a risk score for each transaction.
-
-```
-FRAUD SCORING MODEL
-
-    +-----------------------------------------------------------+
-    │               FRAUD SCORING MODEL                        │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   Risk Score =                                             │
-    │   0.30 × (Location Risk) +                               │
-    │   0.25 × (Device Risk) +                                 │
-    │   0.20 × (Behavior Risk) +                               │
-    │   0.15 × (Transaction Risk) +                            │
-    │   0.10 × (Network Risk)                                  │
-    │                                                           │
-    │   Location Risk: 0 (known) to 1 (unknown)               │
-    │   Device Risk: 0 (trusted) to 1 (new)                  │
-    │   Behavior Risk: 0 (normal) to 1 (anomalous)            │
-    │   Transaction Risk: 0 (low) to 1 (high amount)         │
-    │   Network Risk: 0 (safe) to 1 (risky)                  │
-    │                                                           │
-    │   Decision:                                              │
-    │   Risk < 0.3 → Accept                                  │
-    │   Risk 0.3-0.7 → Manual Review                         │
-    │   Risk > 0.7 → Reject                                  │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Real-time Fraud Detection
-
-Real-time fraud detection must complete within milliseconds. The system analyzes transaction data as it arrives. It applies models and rules instantly. It returns a decision before the payment is processed.
-
-## 20. Observability & Monitoring
-
-### Monitoring Architecture
-
-The monitoring architecture collects metrics, logs, and traces from all components.
-
-### Key Metrics
-
-Key metrics include latency, throughput, error rate, queue depth, and resource utilization.
-
-### Alerting
-
-Alerting triggers notifications when metrics exceed thresholds. Critical alerts require immediate action.
-
-## 21. Scalability
-
-### Scaling Strategies
-
-RTP systems use multiple scaling strategies.
-
-```Vertical Scaling``` adds more resources to existing servers.
-
-```Horizontal Scaling``` adds more servers.
-
-```Sharding``` partitions data across databases.
-
-```Caching``` reduces database load.
-
-### Load Testing
-
-Load testing validates system performance under expected loads. It uses simulated transaction volumes to verify throughput and latency targets.
-
-## 22. Mathematical Models
-
-### Queueing Theory
-
-Queueing theory models the behavior of waiting lines. It is essential for understanding system capacity.
-
-### Poisson Process
-
-The Poisson process models the arrival of transactions. The number of arrivals in a time interval follows a Poisson distribution.
-
-```
-POISSON DISTRIBUTION
-
-    +-----------------------------------------------------------+
-    │               POISSON DISTRIBUTION                       │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   P(X = k) = (λ^k × e^(-λ)) / k!                        │
-    │                                                           │
-    │   Where:                                                 │
-    │   λ = average arrival rate                              │
-    │   k = number of arrivals                               │
-    │   e = Euler's number (2.71828)                        │
-    │                                                           │
-    │   Example: λ = 100 transactions per second             │
-    │   P(X = 90) = (100^90 × e^(-100)) / 90!              │
-    │                                                           │
-    └-----------------------------------------------------------+
-```
-
-### Exponential Distribution
-
-The exponential distribution models the time between arrivals. It is memoryless, meaning the probability of an arrival in the next interval is independent of the past.
-
-## 23. Real-World RTP Systems
+## 33. Real-World RTP Systems
 
 ### FedNow (US)
 
@@ -1042,7 +1469,7 @@ REAL-WORLD RTP SYSTEMS
     └-----------------------------------------------------------+
 ```
 
-## 24. Future of RTP
+## 34. Future of RTP
 
 ### Emerging Trends
 
@@ -1062,7 +1489,7 @@ Several emerging trends are shaping the future of RTP.
 
 Challenges include interoperability between systems, liquidity management, fraud prevention, and regulatory compliance.
 
-## 25. Summary
+## 35. Summary
 
 ```
 SUMMARY
@@ -1089,10 +1516,11 @@ SUMMARY
 
     +-------------------------------------------------+
     |  ENGINEERING                                   |
-    |  - Queueing theory (Little's Law)             |
-    |  - Distributed systems (microservices)        |
+    |  - Queueing theory (Little's Law, M/M/1)      |
+    |  - Distributed systems (microservices, CAP)   |
     |  - High availability (active-active)          |
     |  - Performance (latency < 10s)               |
+    |  - Kubernetes, Kafka, Istio                  |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
