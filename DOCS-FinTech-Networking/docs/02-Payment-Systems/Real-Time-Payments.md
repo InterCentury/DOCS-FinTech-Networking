@@ -36,22 +36,22 @@ How it works: When a customer initiates a payment, the transaction is processed 
 RTP DEFINITION
 
                          +---------------------------+
-                         |   REAL-TIME PAYMENTS     |
-                         |  Instant fund transfer   |
-                         |  24/7/365 settlement     |
+                         |   REAL-TIME PAYMENTS      |
+                         |  Instant fund transfer    |
+                         |  24/7/365 settlement      |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  CORE REQUIREMENTS       |  |  USE CASES               |
-|  - Instant processing    |  |  - < 10 second latency   |  |  - P2P transfers         |
-|  - 24/7/365 availability |  |  - 99.999% uptime       |  |  - Bill payments          |
-|  - Immediate finality   |  |  - 1,000+ TPS           |  |  - Merchant settlements   |
-|  - Real-time settlement |  |  - ISO 20022 messaging  |  |  - Emergency payments     |
-|  - Rich data support   |  |  - High availability    |  |  - Government payments   |
-|  - Low value focus    |  |  - Fraud detection      |  |  - Payroll              |
+|  KEY CHARACTERISTICS      |  |  CORE REQUIREMENTS        |  |  USE CASES                |
+|  - Instant processing     |  |  - < 10 second latency    |  |  - P2P transfers          |
+|  - 24/7/365 availability  |  |  - 99.999% uptime         |  |  - Bill payments          |
+|  - Immediate finality     |  |  - 1,000+ TPS             |  |  - Merchant settlements   |
+|  - Real-time settlement   |  |  - ISO 20022 messaging    |  |  - Emergency payments     |
+|  - Rich data support      |  |  - High availability      |  |  - Government payments    |
+|  - Low value focus        |  |  - Fraud detection        |  |  - Payroll                |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
