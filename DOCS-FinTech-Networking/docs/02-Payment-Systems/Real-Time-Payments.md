@@ -1047,7 +1047,7 @@ DISTRIBUTED TRACING EXAMPLE
     │   │  Tags: amount=100.00, status=settled                │ │
     │   └─────────────────────────────────────────────────────┘ │
     │                                                           │
-    │   Total Duration: 43ms                                  │
+    │   Total Duration: 43ms                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
