@@ -387,26 +387,26 @@ IDEMPOTENCY MECHANISM
     │               IDEMPOTENCY MECHANISM                       │
     +-----------------------------------------------------------+
     │                                                           │
-    │   REQUEST WITH ID TX-123456                              │
+    │   REQUEST WITH ID TX-123456                               │
     │        │                                                  │
     │        ▼                                                  │
-    │   CHECK CACHE FOR TX-123456                              │
+    │   CHECK CACHE FOR TX-123456                               │
     │        │                                                  │
-    │   ┌────┴────┐                                            │
-    │   │         │                                            │
-    │   ▼         ▼                                            │
-    │ EXISTS    NOT EXISTS                                     │
-    │   │         │                                            │
-    │   ▼         ▼                                            │
-    │ RETURN    PROCESS                                       │
-    │ RESULT    TRANSACTION                                    │
+    │   ┌────┴────┐                                             │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │ EXISTS    NOT EXISTS                                      │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │ RETURN    PROCESS                                         │
+    │ RESULT    TRANSACTION                                     │
     │              │                                            │
     │              ▼                                            │
-    │          STORE RESULT                                   │
-    │          WITH ID                                        │
+    │          STORE RESULT                                     │
+    │          WITH ID                                          │
     │              │                                            │
     │              ▼                                            │
-    │          RETURN RESULT                                  │
+    │          RETURN RESULT                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
