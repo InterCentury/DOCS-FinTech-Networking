@@ -1416,10 +1416,10 @@ RTP TRANSACTION LIFECYCLE
     │   ├── Receiver's reserve credited                         │
     │   └── Settlement finality achieved                        │
     │                                                           │
-    │   PHASE 7: CONFIRMATION                                │
-    │   ├── Confirmation sent to sender                     │
-    │   ├── Confirmation sent to receiver                   │
-    │   └── Transaction complete                            │
+    │   PHASE 7: CONFIRMATION                                   │
+    │   ├── Confirmation sent to sender                         │
+    │   ├── Confirmation sent to receiver                       │
+    │   └── Transaction complete                                │
     │                                                           │
     +-----------------------------------------------------------+
 ```
