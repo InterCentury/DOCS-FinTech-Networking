@@ -436,37 +436,37 @@ EVENT-DRIVEN RTP ARCHITECTURE
     │               EVENT-DRIVEN RTP ARCHITECTURE               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   USER INITIATES PAYMENT ───► PAYMENT_INITIATED_EVENT   │
+    │   USER INITIATES PAYMENT ───► PAYMENT_INITIATED_EVENT     │
     │                                      │                    │
     │                                      ▼                    │
-    │                              VALIDATION SERVICE          │
+    │                              VALIDATION SERVICE           │
     │                                      │                    │
     │                                      ▼                    │
-    │                              PAYMENT_VALIDATED_EVENT     │
+    │                              PAYMENT_VALIDATED_EVENT      │
     │                                      │                    │
     │                                      ▼                    │
-    │                              FRAUD SERVICE               │
+    │                              FRAUD SERVICE                │
     │                                      │                    │
     │                                      ▼                    │
-    │                              PAYMENT_AUTHORIZED_EVENT    │
+    │                              PAYMENT_AUTHORIZED_EVENT     │
     │                                      │                    │
     │                                      ▼                    │
-    │                              ROUTING SERVICE             │
+    │                              ROUTING SERVICE              │
     │                                      │                    │
     │                                      ▼                    │
-    │                              PAYMENT_ROUTED_EVENT        │
+    │                              PAYMENT_ROUTED_EVENT         │
     │                                      │                    │
     │                                      ▼                    │
-    │                              SETTLEMENT SERVICE          │
+    │                              SETTLEMENT SERVICE           │
     │                                      │                    │
     │                                      ▼                    │
-    │                              PAYMENT_SETTLED_EVENT       │
+    │                              PAYMENT_SETTLED_EVENT        │
     │                                      │                    │
     │                                      ▼                    │
-    │                              NOTIFICATION SERVICE        │
+    │                              NOTIFICATION SERVICE         │
     │                                      │                    │
     │                                      ▼                    │
-    │                              PAYMENT_COMPLETE_EVENT      │
+    │                              PAYMENT_COMPLETE_EVENT       │
     │                                                           │
     └-----------------------------------------------------------+
 ```
