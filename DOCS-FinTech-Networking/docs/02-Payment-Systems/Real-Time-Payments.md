@@ -296,39 +296,39 @@ ISO 20022 messages have a hierarchical structure. The ```Document``` is the root
 ```
 ISO 20022 MESSAGE STRUCTURE
 
-    +-----------------------------------------------------------+
-    │               ISO 20022 MESSAGE STRUCTURE                 │
-    +-----------------------------------------------------------+
-    │                                                           │
-    │   <Document>                                             │
-    │     <FIToFICstmrCdtTrf>                                 │
-    │       <GrpHdr>                                          │
-    │         <MsgId>MSG123456</MsgId>                        │
-    │         <CreDtTm>2024-01-15T10:30:00Z</CreDtTm>        │
-    │         <NbOfTxs>1</NbOfTxs>                           │
-    │         <TtlIntrBkSttlmAmt Ccy="USD">100.00</TtlIntrBkSttlmAmt>│
-    │       </GrpHdr>                                        │
-    │       <PmtInf>                                         │
-    │         <PmtInfId>PAY001</PmtInfId>                    │
-    │         <PmtMtd>TRF</PmtMtd>                          │
-    │         <ReqdExctnDt>2024-01-15</ReqdExctnDt>          │
-    │         <Dbtr>                                         │
-    │           <Nm>John Smith</Nm>                         │
-    │           <PstlAdr>                                   │
-    │             <AdrLine>123 Main St</AdrLine>            │
-    │           </PstlAdr>                                  │
-    │         </Dbtr>                                        │
-    │         <DbtrAcct>                                     │
-    │           <Id>                                         │
-    │             <IBAN>US123456789</IBAN>                   │
-    │           </Id>                                        │
-    │         </DbtrAcct>                                    │
-    │         <DbtrAgt>                                      │
-    │           <FinInstnId>                                 │
-    │             <BIC>BANKUS33</BIC>                       │
-    │           </FinInstnId>                                │
-    │         </DbtrAgt>                                     │
-    │         <Cdtr>                                         │
+    +--------------------------------------------------------------------+
+    │               ISO 20022 MESSAGE STRUCTURE                          │
+    +--------------------------------------------------------------------+
+    │                                                                    │
+    │   <Document>                                                       │
+    │     <FIToFICstmrCdtTrf>                                            │
+    │       <GrpHdr>                                                     │
+    │         <MsgId>MSG123456</MsgId>                                   │
+    │         <CreDtTm>2024-01-15T10:30:00Z</CreDtTm>                    │
+    │         <NbOfTxs>1</NbOfTxs>                                       │
+    │         <TtlIntrBkSttlmAmt Ccy="USD">100.00</TtlIntrBkSttlmAmt>    │
+    │       </GrpHdr>                                                    │
+    │       <PmtInf>                                                     │
+    │         <PmtInfId>PAY001</PmtInfId>                                │
+    │         <PmtMtd>TRF</PmtMtd>                                       │
+    │         <ReqdExctnDt>2024-01-15</ReqdExctnDt>                      │
+    │         <Dbtr>                                                     │
+    │           <Nm>John Smith</Nm>                                      │
+    │           <PstlAdr>                                                │
+    │             <AdrLine>123 Main St</AdrLine>                         │
+    │           </PstlAdr>                                               │
+    │         </Dbtr>                                                    │
+    │         <DbtrAcct>                                                 │
+    │           <Id>                                                     │
+    │             <IBAN>US123456789</IBAN>                               │
+    │           </Id>                                                    │
+    │         </DbtrAcct>                                                │
+    │         <DbtrAgt>                                                  │
+    │           <FinInstnId>                                             │
+    │             <BIC>BANKUS33</BIC>                                    │
+    │           </FinInstnId>                                            │
+    │         </DbtrAgt>                                                 │
+    │         <Cdtr>                                                     │
     │           <Nm>Jane Doe</Nm>                           │
     │         </Cdtr>                                        │
     │         <CdtrAcct>                                     │
