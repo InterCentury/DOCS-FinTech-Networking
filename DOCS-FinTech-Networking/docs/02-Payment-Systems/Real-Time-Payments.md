@@ -1323,15 +1323,15 @@ MTTR is the average time to recover from a failure. It measures system resilienc
 MTTR CALCULATION
 
     +-----------------------------------------------------------+
-    │               MTTR CALCULATION                           │
+    │               MTTR CALCULATION                            │
     +-----------------------------------------------------------+
     │                                                           │
-    │   MTTR = Total Downtime / Number of Failures            │
+    │   MTTR = Total Downtime / Number of Failures              │
     │                                                           │
-    │   Example:                                               │
-    │   Downtime: 100 minutes                                │
-    │   Failures: 5                                           │
-    │   MTTR = 100 / 5 = 20 minutes                         │
+    │   Example:                                                │
+    │   Downtime: 100 minutes                                   │
+    │   Failures: 5                                             │
+    │   MTTR = 100 / 5 = 20 minutes                             │
     │                                                           │
     └-----------------------------------------------------------+
 ```
