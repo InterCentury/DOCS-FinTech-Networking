@@ -186,38 +186,38 @@ RTP ARCHITECTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           USER LAYER                             │   │
-    │   │  Mobile Apps | Web Portals | Banking APIs       │   │
+    │   │           USER LAYER                              │   │
+    │   │  Mobile Apps | Web Portals | Banking APIs         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           API GATEWAY LAYER                      │   │
-    │   │  Authentication | Rate Limiting | Routing        │   │
+    │   │           API GATEWAY LAYER                       │   │
+    │   │  Authentication | Rate Limiting | Routing         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           MESSAGE BUS LAYER                      │   │
-    │   │  Queueing | Routing | Message Processing        │   │
+    │   │           MESSAGE BUS LAYER                       │   │
+    │   │  Queueing | Routing | Message Processing          │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           PROCESSING LAYER                       │   │
-    │   │  Validation | Fraud Detection | Authorization   │   │
+    │   │           PROCESSING LAYER                        │   │
+    │   │  Validation | Fraud Detection | Authorization     │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           SETTLEMENT LAYER                       │   │
-    │   │  Central Bank Integration | Reserve Management   │   │
+    │   │           SETTLEMENT LAYER                        │   │
+    │   │  Central Bank Integration | Reserve Management    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           DATABASE LAYER                         │   │
-    │   │  Transaction Store | State Management           │   │
+    │   │           DATABASE LAYER                          │   │
+    │   │  Transaction Store | State Management             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
