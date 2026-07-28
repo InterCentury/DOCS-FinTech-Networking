@@ -1011,40 +1011,40 @@ DISTRIBUTED TRACING EXAMPLE
     │               DISTRIBUTED TRACING EXAMPLE                 │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TRACE ID: abc123                                       │
+    │   TRACE ID: abc123                                        │
     │                                                           │
     │   ┌─────────────────────────────────────────────────────┐ │
-    │   │  API Gateway (Span: gateway)                       │ │
-    │   │  Duration: 5ms                                    │ │
-    │   │  Tags: user=john, method=POST                     │ │
+    │   │  API Gateway (Span: gateway)                        │ │
+    │   │  Duration: 5ms                                      │ │
+    │   │  Tags: user=john, method=POST                       │ │
     │   └────────────────────┬────────────────────────────────┘ │
     │                        │                                  │
     │                        ▼                                  │
     │   ┌─────────────────────────────────────────────────────┐ │
-    │   │  Validation Service (Span: validate)               │ │
-    │   │  Duration: 8ms                                    │ │
-    │   │  Tags: account=12345, status=valid                 │ │
+    │   │  Validation Service (Span: validate)                │ │
+    │   │  Duration: 8ms                                      │ │
+    │   │  Tags: account=12345, status=valid                  │ │
     │   └────────────────────┬────────────────────────────────┘ │
     │                        │                                  │
     │                        ▼                                  │
     │   ┌─────────────────────────────────────────────────────┐ │
-    │   │  Fraud Service (Span: fraud)                      │ │
-    │   │  Duration: 12ms                                   │ │
-    │   │  Tags: risk_score=0.2, decision=accept            │ │
+    │   │  Fraud Service (Span: fraud)                        │ │
+    │   │  Duration: 12ms                                     │ │
+    │   │  Tags: risk_score=0.2, decision=accept              │ │
     │   └────────────────────┬────────────────────────────────┘ │
     │                        │                                  │
     │                        ▼                                  │
     │   ┌─────────────────────────────────────────────────────┐ │
-    │   │  Routing Service (Span: route)                    │ │
-    │   │  Duration: 3ms                                    │ │
-    │   │  Tags: network=rtp, bank=target                   │ │
+    │   │  Routing Service (Span: route)                      │ │
+    │   │  Duration: 3ms                                      │ │
+    │   │  Tags: network=rtp, bank=target                     │ │
     │   └────────────────────┬────────────────────────────────┘ │
     │                        │                                  │
     │                        ▼                                  │
     │   ┌─────────────────────────────────────────────────────┐ │
-    │   │  Settlement Service (Span: settle)                │ │
-    │   │  Duration: 15ms                                   │ │
-    │   │  Tags: amount=100.00, status=settled              │ │
+    │   │  Settlement Service (Span: settle)                  │ │
+    │   │  Duration: 15ms                                     │ │
+    │   │  Tags: amount=100.00, status=settled                │ │
     │   └─────────────────────────────────────────────────────┘ │
     │                                                           │
     │   Total Duration: 43ms                                  │
