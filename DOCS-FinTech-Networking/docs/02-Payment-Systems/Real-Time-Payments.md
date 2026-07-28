@@ -1515,12 +1515,12 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  ENGINEERING                                   |
-    |  - Queueing theory (Little's Law, M/M/1)      |
-    |  - Distributed systems (microservices, CAP)   |
-    |  - High availability (active-active)          |
-    |  - Performance (latency < 10s)               |
-    |  - Kubernetes, Kafka, Istio                  |
+    |  ENGINEERING                                    |
+    |  - Queueing theory (Little's Law, M/M/1)        |
+    |  - Distributed systems (microservices, CAP)     |
+    |  - High availability (active-active)            |
+    |  - Performance (latency < 10s)                  |
+    |  - Kubernetes, Kafka, Istio                     |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
