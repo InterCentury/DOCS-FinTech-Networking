@@ -1146,32 +1146,32 @@ CQRS is used in RTP systems to separate transaction processing (writes) from rep
 CQRS ARCHITECTURE
 
     +-----------------------------------------------------------+
-    │               CQRS ARCHITECTURE                          │
+    │               CQRS ARCHITECTURE                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   COMMAND SIDE (Write)                  QUERY SIDE (Read)│
+    │   COMMAND SIDE (Write)             QUERY SIDE (Read)      │
     │                                                           │
-    │   ┌───────────────────────────┐    ┌───────────────────┐ │
-    │   │  Payment Initiation      │    │  Payment Status   │ │
-    │   │  Command                 │    │  Query            │ │
-    │   └───────────┬───────────────┘    └────────┬──────────┘ │
-    │               │                             │           │
-    │               ▼                             ▼           │
-    │   ┌───────────────────────────┐    ┌───────────────────┐ │
-    │   │  Command Handler         │    │  Query Handler    │ │
-    │   │  - Validate             │    │  - Read from DB   │ │
-    │   │  - Process              │    │  - Return result  │ │
-    │   │  - Update state         │    └───────────────────┘ │
-    │   └───────────┬───────────────┘                         │
-    │               │                                         │
-    │               ▼                                         │
-    │   ┌───────────────────────────┐    ┌───────────────────┐ │
-    │   │  Write Database          │    │  Read Database    │ │
-    │   │  (Normalized)            │────│  (Denormalized)   │ │
-    │   └───────────────────────────┘    └───────────────────┘ │
-    │               │                       │                 │
-    │               │    Eventual Sync      │                 │
-    │               └───────────────────────┘                 │
+    │   ┌───────────────────────────┐    ┌───────────────────┐  │
+    │   │  Payment Initiation       │    │  Payment Status   │  │
+    │   │  Command                  │    │  Query            │  │
+    │   └───────────┬───────────────┘    └────────┬──────────┘  │
+    │               │                             │             │
+    │               ▼                             ▼             │
+    │   ┌───────────────────────────┐    ┌───────────────────┐  │
+    │   │  Command Handler          │    │  Query Handler    │  │
+    │   │  - Validate               │    │  - Read from DB   │  │
+    │   │  - Process                │    │  - Return result  │  │
+    │   │  - Update state           │    └───────────────────┘  │
+    │   └───────────┬───────────────┘                           │ 
+    │               │                                           │
+    │               ▼                                           │
+    │   ┌───────────────────────────┐    ┌───────────────────┐  │
+    │   │  Write Database           │    │  Read Database    │  │
+    │   │  (Normalized)             │────│  (Denormalized)   │  │
+    │   └───────────────────────────┘    └───────────────────┘  │
+    │               │                       │                   │
+    │               │    Eventual Sync      │                   │
+    │               └───────────────────────┘                   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
