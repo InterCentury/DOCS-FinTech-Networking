@@ -1524,10 +1524,10 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY TAKEAWAY                                  |
-    |  Real-time payments represent a fundamental   |
-    |  shift in payment infrastructure. They        |
-    |  require sophisticated engineering,           |
+    |  KEY TAKEAWAY                                   |
+    |  Real-time payments represent a fundamental     |
+    |  shift in payment infrastructure. They          |
+    |  require sophisticated engineering,             |
     |  mathematical modeling, and distributed      |
     |  systems design to achieve sub-second       |
     |  settlement 24/7/365.                       |
