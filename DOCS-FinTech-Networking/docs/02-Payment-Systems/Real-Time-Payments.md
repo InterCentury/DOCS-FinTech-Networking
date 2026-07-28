@@ -1344,17 +1344,17 @@ Availability is the percentage of time the system is operational.
 AVAILABILITY CALCULATION
 
     +-----------------------------------------------------------+
-    │               AVAILABILITY CALCULATION                   │
+    │               AVAILABILITY CALCULATION                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Availability = MTBF / (MTBF + MTTR) × 100             │
+    │   Availability = MTBF / (MTBF + MTTR) × 100               │
     │                                                           │
-    │   Example:                                               │
-    │   MTBF = 2,000 hours                                   │
-    │   MTTR = 0.5 hours                                    │
-    │   Availability = 2000 / (2000 + 0.5) × 100 = 99.975%  │
+    │   Example:                                                │
+    │   MTBF = 2,000 hours                                      │
+    │   MTTR = 0.5 hours                                        │
+    │   Availability = 2000 / (2000 + 0.5) × 100 = 99.975%      │
     │                                                           │
-    │   Target: 99.999% (5.26 minutes/year)                   │
+    │   Target: 99.999% (5.26 minutes/year)                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -1386,35 +1386,35 @@ RTP TRANSACTION LIFECYCLE
     │               RTP TRANSACTION LIFECYCLE                   │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PHASE 1: INITIATION                                    │
-    │   ├── Customer initiates payment                        │
-    │   └── Payment request created                           │
+    │   PHASE 1: INITIATION                                     │
+    │   ├── Customer initiates payment                          │
+    │   └── Payment request created                             │
     │                                                           │
-    │   PHASE 2: VALIDATION                                   │
-    │   ├── Sender's bank validates request                   │
-    │   ├── Check account validity                           │
-    │   ├── Check fund availability                          │
-    │   └── Check transaction limits                         │
+    │   PHASE 2: VALIDATION                                     │
+    │   ├── Sender's bank validates request                     │
+    │   ├── Check account validity                              │
+    │   ├── Check fund availability                             │
+    │   └── Check transaction limits                            │
     │                                                           │
-    │   PHASE 3: AUTHORIZATION                                │
-    │   ├── Customer authenticates                           │
-    │   └── Transaction authorized                           │
+    │   PHASE 3: AUTHORIZATION                                  │
+    │   ├── Customer authenticates                              │
+    │   └── Transaction authorized                              │
     │                                                           │
-    │   PHASE 4: ROUTING                                      │
-    │   ├── Payment routed through RTP network               │
-    │   ├── Message transmitted to receiver's bank          │
-    │   └── Routing decision made                           │
+    │   PHASE 4: ROUTING                                        │
+    │   ├── Payment routed through RTP network                  │
+    │   ├── Message transmitted to receiver's bank              │
+    │   └── Routing decision made                               │
     │                                                           │
-    │   PHASE 5: PROCESSING                                   │
-    │   ├── Receiver's bank validates                        │
-    │   ├── Check account validity                          │
-    │   ├── Credit recipient's account                      │
-    │   └── Update balances                                 │
+    │   PHASE 5: PROCESSING                                     │
+    │   ├── Receiver's bank validates                           │
+    │   ├── Check account validity                              │
+    │   ├── Credit recipient's account                          │
+    │   └── Update balances                                     │
     │                                                           │
-    │   PHASE 6: SETTLEMENT                                   │
-    │   ├── Sender's reserve debited                        │
-    │   ├── Receiver's reserve credited                     │
-    │   └── Settlement finality achieved                    │
+    │   PHASE 6: SETTLEMENT                                     │
+    │   ├── Sender's reserve debited                            │
+    │   ├── Receiver's reserve credited                         │
+    │   └── Settlement finality achieved                        │
     │                                                           │
     │   PHASE 7: CONFIRMATION                                │
     │   ├── Confirmation sent to sender                     │
