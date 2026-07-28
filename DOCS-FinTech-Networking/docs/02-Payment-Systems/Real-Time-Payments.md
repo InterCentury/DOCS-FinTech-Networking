@@ -1528,9 +1528,9 @@ SUMMARY
     |  Real-time payments represent a fundamental     |
     |  shift in payment infrastructure. They          |
     |  require sophisticated engineering,             |
-    |  mathematical modeling, and distributed      |
-    |  systems design to achieve sub-second       |
-    |  settlement 24/7/365.                       |
+    |  mathematical modeling, and distributed         |
+    |  systems design to achieve sub-second           |
+    |  settlement 24/7/365.                           |
     +-------------------------------------------------+
 ```
 
