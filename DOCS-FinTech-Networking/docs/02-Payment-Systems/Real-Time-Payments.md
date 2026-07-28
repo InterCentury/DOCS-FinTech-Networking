@@ -329,25 +329,25 @@ ISO 20022 MESSAGE STRUCTURE
     │           </FinInstnId>                                            │
     │         </DbtrAgt>                                                 │
     │         <Cdtr>                                                     │
-    │           <Nm>Jane Doe</Nm>                           │
-    │         </Cdtr>                                        │
-    │         <CdtrAcct>                                     │
-    │           <Id>                                         │
-    │             <IBAN>US987654321</IBAN>                   │
-    │           </Id>                                        │
-    │         </CdtrAcct>                                    │
-    │         <CdtrAgt>                                      │
-    │           <FinInstnId>                                 │
-    │             <BIC>BANKUS44</BIC>                       │
-    │           </FinInstnId>                                │
-    │         </CdtrAgt>                                     │
-    │         <InstdAmt Ccy="USD">100.00</InstdAmt>        │
-    │         <ChrgBr>SLEV</ChrgBr>                         │
-    │       </PmtInf>                                       │
-    │     </FIToFICstmrCdtTrf>                              │
-    │   </Document>                                          │
-    │                                                           │
-    └-----------------------------------------------------------+
+    │           <Nm>Jane Doe</Nm>                                        │
+    │         </Cdtr>                                                    │
+    │         <CdtrAcct>                                                 │
+    │           <Id>                                                     │
+    │             <IBAN>US987654321</IBAN>                               │
+    │           </Id>                                                    │
+    │         </CdtrAcct>                                                │
+    │         <CdtrAgt>                                                  │
+    │           <FinInstnId>                                             │
+    │             <BIC>BANKUS44</BIC>                                    │
+    │           </FinInstnId>                                            │
+    │         </CdtrAgt>                                                 │
+    │         <InstdAmt Ccy="USD">100.00</InstdAmt>                      │
+    │         <ChrgBr>SLEV</ChrgBr>                                      │
+    │       </PmtInf>                                                    │
+    │     </FIToFICstmrCdtTrf>                                           │
+    │   </Document>                                                      │
+    │                                                                    │
+    └--------------------------------------------------------------------+
 ```
 
 ### ISO 20022 Message Types
