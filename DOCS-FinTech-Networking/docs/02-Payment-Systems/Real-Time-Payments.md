@@ -1509,9 +1509,9 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  ARCHITECTURE                                  |
-    |  API Gateway → Message Bus → Processing →     |
-    |  Settlement → Database                         |
+    |  ARCHITECTURE                                   |
+    |  API Gateway → Message Bus → Processing →       |
+    |  Settlement → Database                          |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
