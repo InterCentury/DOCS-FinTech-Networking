@@ -1075,29 +1075,29 @@ SAGA PATTERN EXAMPLE
     │               SAGA PATTERN EXAMPLE                        │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PAYMENT TRANSACTION: $100 FROM A TO B                  │
+    │   PAYMENT TRANSACTION: $100 FROM A TO B                   │
     │                                                           │
-    │   STEP 1: DEBIT SENDER                                  │
-    │   ├── Sender's account is debited                      │
-    │   ├── Local transaction committed                      │
-    │   └── Compensating: Credit sender (if step fails)     │
+    │   STEP 1: DEBIT SENDER                                    │
+    │   ├── Sender's account is debited                         │
+    │   ├── Local transaction committed                         │
+    │   └── Compensating: Credit sender (if step fails)         │
     │                                                           │
-    │   STEP 2: VALIDATE RECEIVER                             │
-    │   ├── Receiver's account is validated                  │
-    │   ├── Local transaction committed                      │
-    │   └── Compensating: Reject transaction (if step fails)│
+    │   STEP 2: VALIDATE RECEIVER                               │
+    │   ├── Receiver's account is validated                     │
+    │   ├── Local transaction committed                         │
+    │   └── Compensating: Reject transaction (if step fails)    │
     │                                                           │
-    │   STEP 3: CREDIT RECEIVER                              │
-    │   ├── Receiver's account is credited                  │
-    │   ├── Local transaction committed                      │
-    │   └── Compensating: Debit receiver (if step fails)   │
+    │   STEP 3: CREDIT RECEIVER                                 │
+    │   ├── Receiver's account is credited                      │
+    │   ├── Local transaction committed                         │
+    │   └── Compensating: Debit receiver (if step fails)        │
     │                                                           │
-    │   STEP 4: UPDATE STATUS                                │
-    │   ├── Transaction status updated to completed          │
-    │   └── Compensating: Mark as failed (if step fails)   │
+    │   STEP 4: UPDATE STATUS                                   │
+    │   ├── Transaction status updated to completed             │
+    │   └── Compensating: Mark as failed (if step fails)        │
     │                                                           │
-    │   If any step fails, compensating transactions undo    │
-    │   completed steps.                                     │
+    │   If any step fails, compensating transactions undo       │
+    │   completed steps.                                        │
     │                                                           │
     └-----------------------------------------------------------+
 ```
