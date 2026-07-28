@@ -1501,11 +1501,11 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY CHARACTERISTICS                           |
-    |  - < 10 second latency                         |
-    |  - 99.999% availability                        |
-    |  - 24/7/365 operation                         |
-    |  - Immediate finality                         |
+    |  KEY CHARACTERISTICS                            |
+    |  - < 10 second latency                          |
+    |  - 99.999% availability                         |
+    |  - 24/7/365 operation                           |
+    |  - Immediate finality                           |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
