@@ -137,25 +137,25 @@ Immediate settlement means funds are transferred between banks in real time, as 
 ```
 RTP VS ACH COMPARISON
 
-                         +---------------------------+
-                         |  RTP VS ACH              |
-                         +-------------+-------------+
-                                       |
-          +----------------------------+----------------------------+
-          │                                                         │
-          ▼                                                         ▼
-+---------------------------+                            +---------------------------+
-|  RTP (Real-Time)        |                            |  ACH (Batch)              |
-+---------------------------+---------------------------+---------------------------+
-|  Processing: Seconds    │  Processing: 1-3 Days     |
-|  Settlement: Immediate  │  Settlement: Deferred     |
-|  Availability: 24/7/365 │  Availability: Business   |
-|  Finality: Immediate   │  Finality: Next day      |
-|  Messaging: ISO 20022  │  Messaging: NACHA        |
-|  Cost: Higher          │  Cost: Lower             |
-|  Value: Typically low  │  Value: All sizes        |
-|  Reversals: Irrevocable │  Reversals: Possible    |
-+---------------------------+---------------------------+
+                     +---------------------------+
+                     |  RTP VS ACH               |
+                     +-------------+-------------+
+                                   |
+          +------------------------+------------------------+
+          │                                                 │
+          ▼                                                 ▼
+       +---------------------------+---------------------------+
+       |  RTP (Real-Time)          |ACH (Batch)                |
+       +---------------------------+---------------------------+
+       |  Processing: Seconds      │  Processing: 1-3 Days     |
+       |  Settlement: Immediate    │  Settlement: Deferred     |
+       |  Availability: 24/7/365   │  Availability: Business   |
+       |  Finality: Immediate      │  Finality: Next day       |
+       |  Messaging: ISO 20022     │  Messaging: NACHA         |
+       |  Cost: Higher             │  Cost: Lower              |
+       |  Value: Typically low     │  Value: All sizes         |
+       |  Reversals: Irrevocable   │  Reversals: Possible      |
+       +---------------------------+---------------------------+
 ```
 
 ## 3. Real-Time Payment Architecture
