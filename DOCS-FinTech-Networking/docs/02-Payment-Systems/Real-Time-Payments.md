@@ -1457,14 +1457,14 @@ REAL-WORLD RTP SYSTEMS
     │               REAL-WORLD RTP SYSTEMS                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   System        │ Region      │ Launch   │ Max Amount    │
-    │   ──────────────│─────────────│──────────│───────────────│
-    │   FedNow       │ US          │ 2023     │ $1,000,000   │
-    │   RTP          │ US          │ 2017     │ $1,000,000   │
-    │   UPI          │ India       │ 2016     │ Varies       │
-    │   PIX          │ Brazil      │ 2020     │ Varies       │
-    │   Faster Pay   │ UK          │ 2008     │ £1,000,000  │
-    │   SEPA Instant │ Europe      │ 2017     │ €100,000    │
+    │   System        │ Region      │ Launch   │ Max Amount     │
+    │   ──────────────│─────────────│──────────│─────────────── │
+    │   FedNow        │ US          │ 2023     │ $1,000,000     │
+    │   RTP           │ US          │ 2017     │ $1,000,000     │
+    │   UPI           │ India       │ 2016     │ Varies         │
+    │   PIX           │ Brazil      │ 2020     │ Varies         │
+    │   Faster Pay    │ UK          │ 2008     │ £1,000,000     │
+    │   SEPA Instant  │ Europe      │ 2017     │ €100,000       │
     │                                                           │
     └-----------------------------------------------------------+
 ```
