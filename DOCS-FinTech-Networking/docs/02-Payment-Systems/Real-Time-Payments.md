@@ -262,22 +262,22 @@ RTP NETWORK INFRASTRUCTURE
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │              PARTICIPANT BANKS                    │   │
-    │   │  (Member banks with reserve accounts)            │   │
+    │   │  (Member banks with reserve accounts)             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           RTP OPERATOR (Network Core)            │   │
-    │   │  - Message routing                              │   │
-    │   │  - Queue management                            │   │
-    │   │  - Settlement coordination                     │   │
+    │   │           RTP OPERATOR (Network Core)             │   │
+    │   │  - Message routing                                │   │
+    │   │  - Queue management                               │   │
+    │   │  - Settlement coordination                        │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           CENTRAL BANK (Settlement)              │   │
-    │   │  - Reserve account management                   │   │
-    │   │  - Final settlement                            │   │
+    │   │           CENTRAL BANK (Settlement)               │   │
+    │   │  - Reserve account management                     │   │
+    │   │  - Final settlement                               │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
