@@ -1238,23 +1238,23 @@ M/M/1 is a queueing model with exponential interarrival times (M), exponential s
 M/M/1 QUEUE MODEL
 
     +-----------------------------------------------------------+
-    │               M/M/1 QUEUE MODEL                          │
+    │               M/M/1 QUEUE MODEL                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   λ = Arrival Rate (transactions per second)             │
-    │   μ = Service Rate (transactions per second)             │
-    │   ρ = Utilization = λ / μ                               │
+    │   λ = Arrival Rate (transactions per second)              │
+    │   μ = Service Rate (transactions per second)              │
+    │   ρ = Utilization = λ / μ                                 │
     │                                                           │
-    │   Average number in queue: Lq = ρ^2 / (1 - ρ)           │
-    │   Average number in system: L = ρ / (1 - ρ)             │
-    │   Average wait time in queue: Wq = ρ / (μ - λ)          │
-    │   Average time in system: W = 1 / (μ - λ)               │
+    │   Average number in queue: Lq = ρ^2 / (1 - ρ)             │
+    │   Average number in system: L = ρ / (1 - ρ)               │
+    │   Average wait time in queue: Wq = ρ / (μ - λ)            │
+    │   Average time in system: W = 1 / (μ - λ)                 │
     │                                                           │
-    │   Example:                                               │
-    │   λ = 100 TPS, μ = 200 TPS                              │
-    │   ρ = 100/200 = 0.5                                     │
-    │   Lq = 0.25/0.5 = 0.5 transactions                     │
-    │   Wq = 0.5 / (200-100) = 0.005 seconds                │
+    │   Example:                                                │
+    │   λ = 100 TPS, μ = 200 TPS                                │
+    │   ρ = 100/200 = 0.5                                       │
+    │   Lq = 0.25/0.5 = 0.5 transactions                        │
+    │   Wq = 0.5 / (200-100) = 0.005 seconds                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -1271,23 +1271,23 @@ M/M/c is a queueing model with exponential interarrival times (M), exponential s
 M/M/c QUEUE MODEL
 
     +-----------------------------------------------------------+
-    │               M/M/c QUEUE MODEL                          │
+    │               M/M/c QUEUE MODEL                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   λ = Arrival Rate                                      │
-    │   μ = Service Rate per server                          │
-    │   c = Number of servers                               │
-    │   ρ = λ / (c × μ)                                    │
+    │   λ = Arrival Rate                                        │
+    │   μ = Service Rate per server                             │
+    │   c = Number of servers                                   │
+    │   ρ = λ / (c × μ)                                         │
     │                                                           │
-    │   Probability of zero customers:                         │
-    │   P0 = [Σ(k=0 to c-1) (cρ)^k/k! + (cρ)^c/(c!(1-ρ))]^(-1)│
+    │   Probability of zero customers:                          │
+    │   P0 = [Σ(k=0 to c-1) (cρ)^k/k! + (cρ)^c/(c!(1-ρ))]^(-1)  │
     │                                                           │
-    │   Average number in queue:                               │
-    │   Lq = (cρ)^c × ρ / (c! × (1-ρ)^2) × P0                │
+    │   Average number in queue:                                │
+    │   Lq = (cρ)^c × ρ / (c! × (1-ρ)^2) × P0                   │
     │                                                           │
-    │   Example:                                               │
-    │   λ = 500 TPS, μ = 200 TPS, c = 4                      │
-    │   ρ = 500/(4×200) = 0.625                              │
+    │   Example:                                                │
+    │   λ = 500 TPS, μ = 200 TPS, c = 4                         │
+    │   ρ = 500/(4×200) = 0.625                                 │
     │                                                           │
     └-----------------------------------------------------------+
 ```
