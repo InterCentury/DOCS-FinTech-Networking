@@ -718,8 +718,8 @@ CIRCUIT BREAKER STATE MACHINE
     │   +--------------------+                                  │
     │   |     OPEN           |                                  │
     │   |  (Requests Fail)   |                                  │
-    │   |  - No calls made   |                                   │
-    │   |  - Start timeout   |                                   │
+    │   |  - No calls made   |                                  │
+    │   |  - Start timeout   |                                  │
     │   +---------+----------+                                  │
     │             │                                             │
     │             │ Timeout Expires                             │
