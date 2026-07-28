@@ -1496,8 +1496,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  WHAT ARE REAL-TIME PAYMENTS?                   |
-    |  Instant fund transfer with 24/7/365           |
-    |  settlement in seconds                        |
+    |  Instant fund transfer with 24/7/365            |
+    |  settlement in seconds                          |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
