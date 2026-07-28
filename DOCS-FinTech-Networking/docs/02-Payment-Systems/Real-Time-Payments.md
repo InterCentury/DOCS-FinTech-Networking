@@ -1302,15 +1302,15 @@ MTBF is the average time between failures. It measures system reliability.
 MTBF CALCULATION
 
     +-----------------------------------------------------------+
-    │               MTBF CALCULATION                           │
+    │               MTBF CALCULATION                            │
     +-----------------------------------------------------------+
     │                                                           │
-    │   MTBF = Total Operating Time / Number of Failures      │
+    │   MTBF = Total Operating Time / Number of Failures        │
     │                                                           │
-    │   Example:                                               │
-    │   Operating Time: 10,000 hours                         │
-    │   Failures: 5                                           │
-    │   MTBF = 10,000 / 5 = 2,000 hours                     │
+    │   Example:                                                │
+    │   Operating Time: 10,000 hours                            │
+    │   Failures: 5                                             │
+    │   MTBF = 10,000 / 5 = 2,000 hours                         │
     │                                                           │
     └-----------------------------------------------------------+
 ```
