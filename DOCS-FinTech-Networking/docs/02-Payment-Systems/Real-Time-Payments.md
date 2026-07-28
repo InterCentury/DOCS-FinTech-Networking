@@ -712,32 +712,32 @@ CIRCUIT BREAKER STATE MACHINE
     │   |  - Count failures  |                                  │
     │   |  - Reset counter   |                                  │
     │   +---------+----------+                                  │
-    │             │                                            │
-    │             │ Failure Threshold Reached                 │
-    │             ▼                                            │
+    │             │                                             │
+    │             │ Failure Threshold Reached                   │
+    │             ▼                                             │
     │   +--------------------+                                  │
     │   |     OPEN           |                                  │
     │   |  (Requests Fail)   |                                  │
-    │   |  - No calls made  |                                  │
-    │   |  - Start timeout  |                                  │
+    │   |  - No calls made   |                                   │
+    │   |  - Start timeout   |                                   │
     │   +---------+----------+                                  │
-    │             │                                            │
-    │             │ Timeout Expires                           │
-    │             ▼                                            │
+    │             │                                             │
+    │             │ Timeout Expires                             │
+    │             ▼                                             │
     │   +--------------------+                                  │
     │   |     HALF-OPEN      |                                  │
     │   |  (Test Requests)   |                                  │
-    │   |  - Allow limited  |                                  │
-    │   |    requests       |                                  │
-    │   |  - Monitor success|                                  │
+    │   |  - Allow limited   |                                  │
+    │   |    requests        |                                  │
+    │   |  - Monitor success |                                  │
     │   +---------+----------+                                  │
-    │             │                                            │
-    │       ┌─────┴─────┐                                      │
-    │       │           │                                      │
-    │    Success      Failure                                  │
-    │       │           │                                      │
-    │       ▼           ▼                                      │
-    │    CLOSED        OPEN                                    │
+    │             │                                             │
+    │       ┌─────┴─────┐                                       │
+    │       │           │                                       │
+    │    Success      Failure                                   │
+    │       │           │                                       │
+    │       ▼           ▼                                       │
+    │    CLOSED        OPEN                                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
