@@ -35,7 +35,7 @@ SETTLEMENT DEFINITION
                          +---------------------------+
                          |        SETTLEMENT         |
                          |  Actual transfer of value |
-                         |  Final and irrevocable   |
+                         |  Final and irrevocable    |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
