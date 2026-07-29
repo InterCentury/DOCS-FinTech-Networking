@@ -42,12 +42,12 @@ SETTLEMENT DEFINITION
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  PRIMARY FUNCTIONS       |  |  WHAT IT IS NOT          |
-|  - Final transfer        |  |  - Transfer reserves    |  |  - Clearing              |
-|  - Irrevocable           |  |  - Update ledgers      |  |  - Authorization          |
-|  - Legal finality        |  |  - Discharge obligations|  |  - Initiation            |
-|  - Central bank money   |  |  - Achieve finality    |  |  - Data exchange         |
-|  - No credit risk       |  |  - Record transaction  |  |  - Calculation           |
+|  KEY CHARACTERISTICS      |  |  PRIMARY FUNCTIONS        |  |  WHAT IT IS NOT           |
+|  - Final transfer         |  |  - Transfer reserves      |  |  - Clearing               |
+|  - Irrevocable            |  |  - Update ledgers         |  |  - Authorization          |
+|  - Legal finality         |  |  - Discharge obligations  |  |  - Initiation             |
+|  - Central bank money     |  |  - Achieve finality       |  |  - Data exchange          |
+|  - No credit risk         |  |  - Record transaction     |  |  - Calculation            |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
