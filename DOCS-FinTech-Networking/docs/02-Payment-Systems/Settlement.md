@@ -11,14 +11,14 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the definition and purpose of settlement                     │
-    │   Learn the distinction between clearing and settlement                  │
-    │   Study settlement models and their trade-offs                          │
-    │   Examine settlement engines and algorithms                            │
-    │   Understand liquidity management and optimization                     │
-    │   Study securities and FX settlement                                  │
-    │   Analyze settlement risk and mitigation                              │
-    │   Learn real-world settlement systems                                │
+    │   Understand the definition and purpose of settlement                       │
+    │   Learn the distinction between clearing and settlement                     │
+    │   Study settlement models and their trade-offs                              │
+    │   Examine settlement engines and algorithms                                 │
+    │   Understand liquidity management and optimization                          │
+    │   Study securities and FX settlement                                        │
+    │   Analyze settlement risk and mitigation                                    │
+    │   Learn real-world settlement systems                                       │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
