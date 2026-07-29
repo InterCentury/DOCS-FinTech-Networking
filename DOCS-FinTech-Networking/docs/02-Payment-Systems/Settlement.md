@@ -131,8 +131,8 @@ SETTLEMENT SYSTEM ARCHITECTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              BANK LAYER                          │   │
-    │   │  Participant banks with reserve accounts        │   │
+    │   │              BANK LAYER                           │   │
+    │   │  Participant banks with reserve accounts          │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
