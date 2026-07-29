@@ -69,7 +69,7 @@ SETTLEMENT DEFINITION
 SETTLEMENT VS CLEARING
 
                          +---------------------------+
-                         |  SETTLEMENT VS CLEARING  |
+                         |  SETTLEMENT VS CLEARING   |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
