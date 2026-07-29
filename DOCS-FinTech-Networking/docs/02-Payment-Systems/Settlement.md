@@ -76,14 +76,14 @@ SETTLEMENT VS CLEARING
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  CLEARING                |                            |  SETTLEMENT              |
-|  - Data exchange        |                            |  - Value transfer        |
-|  - Calculate net        |                            |  - Move reserves         |
-|  - No funds move       |                            |  - Funds actually move   |
-|  - Pre-settlement      |                            |  - Final step            |
-|  - Reversible          |                            |  - Irrevocable           |
-|  - Credit risk exists  |                            |  - No credit risk        |
-|  - Example: ACH        |                            |  - Example: Fedwire      |
+|  CLEARING                 |                            |  SETTLEMENT               |
+|  - Data exchange          |                            |  - Value transfer         |
+|  - Calculate net          |                            |  - Move reserves          |
+|  - No funds move          |                            |  - Funds actually move    |
+|  - Pre-settlement         |                            |  - Final step             |
+|  - Reversible             |                            |  - Irrevocable            |
+|  - Credit risk exists     |                            |  - No credit risk         |
+|  - Example: ACH           |                            |  - Example: Fedwire       |
 +---------------------------+                            +---------------------------+
 ```
 
