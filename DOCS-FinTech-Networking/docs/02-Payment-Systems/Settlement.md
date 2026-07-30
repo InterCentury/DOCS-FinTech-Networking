@@ -461,22 +461,22 @@ NETTING ALGORITHM
     │       incoming = 0                                        │
     │       outgoing = 0                                        │
     │                                                           │
-    │       For each transaction T:                            │
-    │           if T.payer == B:                              │
-    │               outgoing += T.amount                      │
-    │           if T.receiver == B:                           │
-    │               incoming += T.amount                      │
+    │       For each transaction T:                             │
+    │           if T.payer == B:                                │
+    │               outgoing += T.amount                        │
+    │           if T.receiver == B:                             │
+    │               incoming += T.amount                        │
     │                                                           │
-    │       net_position[B] = incoming - outgoing             │
+    │       net_position[B] = incoming - outgoing               │
     │                                                           │
-    │   OUTPUT: Net positions for each bank                    │
+    │   OUTPUT: Net positions for each bank                     │
     │                                                           │
-    │   Example:                                               │
-    │   Bank A: incoming $100, outgoing $80                   │
-    │   Net Position: +$20 (receives $20)                    │
+    │   Example:                                                │
+    │   Bank A: incoming $100, outgoing $80                     │
+    │   Net Position: +$20 (receives $20)                       │
     │                                                           │
-    │   Bank B: incoming $50, outgoing $90                   │
-    │   Net Position: -$40 (pays $40)                       │
+    │   Bank B: incoming $50, outgoing $90                      │
+    │   Net Position: -$40 (pays $40)                           │
     │                                                           │
     └-----------------------------------------------------------+
 ```
