@@ -415,17 +415,17 @@ SETTLEMENT ENGINE INTERNALS
     │   │  - Manage intraday credit                         │   │
     │   │  - Optimize liquidity                             │   │
     │   +---------------------------+-----------------------+   │
-    │                              │                          │
-    │                              ▼                          │
+    │                               │                           │
+    │                               ▼                           │
     │   +---------------------------------------------------+   │
-    │   │    EXECUTION ENGINE                            │   │
-    │   │  - Debit sender's account                     │   │
-    │   │  - Credit receiver's account                  │   │
-    │   │  - Execute atomic transfer                    │   │
-    │   │  - Commit transaction                         │   │
+    │   │    EXECUTION ENGINE                               │   │
+    │   │  - Debit sender's account                         │   │
+    │   │  - Credit receiver's account                      │   │
+    │   │  - Execute atomic transfer                        │   │
+    │   │  - Commit transaction                             │   │
     │   +---------------------------+-----------------------+   │
-    │                              │                          │
-    │                              ▼                          │
+    │                               │                          │
+    │                               ▼                          │
     │   +---------------------------------------------------+   │
     │   │    LEDGER UPDATE                               │   │
     │   │  - Update reserve balances                     │   │
