@@ -344,24 +344,26 @@ SETTLEMENT MODELS COMPARISON
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  GROSS SETTLEMENT       |                            |  NET SETTLEMENT           |
-|  (RTGS)                 |                            |  (DNS)                    |
-+---------------------------+---------------------------+---------------------------+
-|  Per transaction        │  Batched transactions      |
-|  Immediate finality    │  Deferred finality         |
-|  High liquidity need   │  Low liquidity need        |
-|  No settlement risk   │  Settlement risk exists    |
-|  Real-time processing  │  Batch processing          |
-|  Examples: Fedwire     │  Examples: ACH, CHIPS     |
-+---------------------------+---------------------------+
-          │                                              │
-          ▼                                              ▼
-+---------------------------+              +---------------------------+---------------------------+
-|  HYBRID SETTLEMENT       |
-|  Combines gross and net  |
-|  Some transactions gross |
-|  Some transactions net   |
-+---------------------------+
+|  GROSS SETTLEMENT        |                            |  NET SETTLEMENT           |
+|  (RTGS)                  |                            |  (DNS)                    |
++---------------------------+                            +---------------------------+
+|  Per transaction         |                            |  Batched transactions     |
+|  Immediate finality      |                            |  Deferred finality        |
+|  High liquidity need     |                            |  Low liquidity need       |
+|  No settlement risk      |                            |  Settlement risk exists   |
+|  Real-time processing    |                            |  Batch processing         |
+|  Examples: Fedwire       |                            |  Examples: ACH, CHIPS    |
++---------------------------+                            +---------------------------+
+          │                                                         │
+          +----------------------------+----------------------------+
+                                       │
+                                       ▼
+                         +---------------------------+
+                         |  HYBRID SETTLEMENT       |
+                         |  Combines gross and net  |
+                         |  Some transactions gross |
+                         |  Some transactions net   |
+                         +---------------------------+
 ```
 
 ## 7. Settlement Engines
