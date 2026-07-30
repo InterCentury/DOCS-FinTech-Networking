@@ -206,17 +206,17 @@ Several participants are involved in the settlement process.
 SETTLEMENT PARTICIPANTS
 
                     +-------------------------------------------------+
-                    |          SETTLEMENT PARTICIPANTS               |
+                    |          SETTLEMENT PARTICIPANTS                |
                     +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  PAYER BANK             |  |  BENEFICIARY BANK        |  |  CENTRAL BANK            |
-|  - Initiates settlement |  |  - Receives funds       |  |  - Maintains reserves    |
-|  - Reserve debited     |  |  - Reserve credited     |  |  - Provides finality    |
-|  - Obligation discharged |  |  - Obligation fulfilled |  |  - Operates RTGS        |
+|  PAYER BANK               |  |  BENEFICIARY BANK         |  |  CENTRAL BANK            |
+|  - Initiates settlement   |  |  - Receives funds         |  |  - Maintains reserves    |
+|  - Reserve debited        |  |  - Reserve credited       |  |  - Provides finality    |
+|  - Obligation discharged  |  |  - Obligation fulfilled   |  |  - Operates RTGS        |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
