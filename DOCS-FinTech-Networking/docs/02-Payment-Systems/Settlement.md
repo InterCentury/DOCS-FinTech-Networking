@@ -410,10 +410,10 @@ SETTLEMENT ENGINE INTERNALS
     │                              │                            │
     │                              ▼                            │
     │   +---------------------------------------------------+   │
-    │   │    LIQUIDITY MANAGER                            │   │
-    │   │  - Reserve funds if needed                     │   │
-    │   │  - Manage intraday credit                      │   │
-    │   │  - Optimize liquidity                          │   │
+    │   │    LIQUIDITY MANAGER                              │   │
+    │   │  - Reserve funds if needed                        │   │
+    │   │  - Manage intraday credit                         │   │
+    │   │  - Optimize liquidity                             │   │
     │   +---------------------------+-----------------------+   │
     │                              │                          │
     │                              ▼                          │
