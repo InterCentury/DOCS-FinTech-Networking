@@ -389,18 +389,18 @@ SETTLEMENT ENGINE INTERNALS
     │   │  - Limit validation                               │   │
     │   │  - Legal validation                               │   │
     │   +---------------------------+-----------------------+   │
-    │                              │                          │
-    │                              ▼                          │
+    │                              │                            │
+    │                              ▼                            │
     │   +---------------------------------------------------+   │
-    │   │    BALANCE CHECKER                             │   │
-    │   │  - Check reserve balance                       │   │
-    │   │  - Check collateral availability               │   │
-    │   │  - Check intraday limits                      │   │
+    │   │    BALANCE CHECKER                                │   │
+    │   │  - Check reserve balance                          │   │
+    │   │  - Check collateral availability                  │   │
+    │   │  - Check intraday limits                          │   │
     │   +---------------------------+-----------------------+   │
     │                              │                          │
     │                    ┌─────────┴─────────┐                │
     │                    │                   │                │
-    │                   ▼                   ▼                │
+    │                    ▼                   ▼                │
     │   +---------------------------+   +---------------------------+ │
     │   │    SUFFICIENT FUNDS      │   │    INSUFFICIENT FUNDS   │ │
     │   │    Continue             │   │    Queue or Reject     │ │
