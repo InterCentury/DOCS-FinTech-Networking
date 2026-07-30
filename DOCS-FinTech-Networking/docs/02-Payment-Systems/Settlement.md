@@ -424,16 +424,16 @@ SETTLEMENT ENGINE INTERNALS
     │   │  - Execute atomic transfer                        │   │
     │   │  - Commit transaction                             │   │
     │   +---------------------------+-----------------------+   │
+    │                               │                           │
+    │                               ▼                           │
+    │   +---------------------------------------------------+   │
+    │   │    LEDGER UPDATE                                  │   │
+    │   │  - Update reserve balances                        │   │
+    │   │  - Record settlement                              │   │
+    │   │  - Update audit log                               │   │
+    │   +---------------------------+-----------------------+   │
     │                               │                          │
     │                               ▼                          │
-    │   +---------------------------------------------------+   │
-    │   │    LEDGER UPDATE                               │   │
-    │   │  - Update reserve balances                     │   │
-    │   │  - Record settlement                           │   │
-    │   │  - Update audit log                           │   │
-    │   +---------------------------+-----------------------+   │
-    │                              │                          │
-    │                              ▼                          │
     │   +---------------------------------------------------+   │
     │   │    CONFIRMATION                                 │   │
     │   │  - Send to sender                              │   │
