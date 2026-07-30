@@ -432,13 +432,13 @@ SETTLEMENT ENGINE INTERNALS
     │   │  - Record settlement                              │   │
     │   │  - Update audit log                               │   │
     │   +---------------------------+-----------------------+   │
-    │                               │                          │
-    │                               ▼                          │
+    │                               │                           │
+    │                               ▼                           │
     │   +---------------------------------------------------+   │
-    │   │    CONFIRMATION                                 │   │
-    │   │  - Send to sender                              │   │
-    │   │  - Send to receiver                            │   │
-    │   │  - Notify all parties                          │   │
+    │   │    CONFIRMATION                                   │   │
+    │   │  - Send to sender                                 │   │
+    │   │  - Send to receiver                               │   │
+    │   │  - Notify all parties                             │   │
     │   +---------------------------------------------------+   │
     │                                                           │
     └-----------------------------------------------------------+
