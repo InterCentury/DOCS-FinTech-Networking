@@ -379,15 +379,15 @@ SETTLEMENT ENGINE INTERNALS
     │               SETTLEMENT ENGINE INTERNALS                 │
     +-----------------------------------------------------------+
     │                                                           │
-    │   SETTLEMENT REQUEST                                     │
+    │   SETTLEMENT REQUEST                                      │
     │        │                                                  │
     │        ▼                                                  │
     │   +---------------------------------------------------+   │
-    │   │    VALIDATION ENGINE                             │   │
-    │   │  - Format validation                            │   │
-    │   │  - Account validation                           │   │
-    │   │  - Limit validation                            │   │
-    │   │  - Legal validation                            │   │
+    │   │    VALIDATION ENGINE                              │   │
+    │   │  - Format validation                              │   │
+    │   │  - Account validation                             │   │
+    │   │  - Limit validation                               │   │
+    │   │  - Legal validation                               │   │
     │   +---------------------------+-----------------------+   │
     │                              │                          │
     │                              ▼                          │
