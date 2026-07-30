@@ -291,12 +291,12 @@ SETTLEMENT LIFECYCLE
     │   PHASE 7: FINALITY                                       │
     │   ├── Achieve legal finality                              │
     │   ├── Payment becomes irrevocable                         │
-    │   └── Obligations discharged                          │
+    │   └── Obligations discharged                              │
     │                                                           │
-    │   PHASE 8: CONFIRMATION                                 │
-    │   ├── Confirm to sender                                │
-    │   ├── Confirm to receiver                              │
-    │   └── Notify all parties                              │
+    │   PHASE 8: CONFIRMATION                                   │
+    │   ├── Confirm to sender                                   │
+    │   ├── Confirm to receiver                                 │
+    │   └── Notify all parties                                  │
     │                                                           │
     +-----------------------------------------------------------+
 ```
