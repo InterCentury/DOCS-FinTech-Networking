@@ -137,14 +137,14 @@ SETTLEMENT SYSTEM ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              API GATEWAY                         │   │
-    │   │  Authentication | Rate Limiting | Routing       │   │
+    │   │              API GATEWAY                          │   │
+    │   │  Authentication | Rate Limiting | Routing         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              MESSAGE QUEUE                       │   │
-    │   │  Settlement instructions buffering              │   │
+    │   │              MESSAGE QUEUE                        │   │
+    │   │  Settlement instructions buffering                │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
