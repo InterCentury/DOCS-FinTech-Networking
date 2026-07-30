@@ -163,8 +163,8 @@ SETTLEMENT SYSTEM ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              CENTRAL LEDGER                      │   │
-    │   │  Reserve account balances | Transaction records │   │
+    │   │              CENTRAL LEDGER                       │   │
+    │   │  Reserve account balances | Transaction records   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
