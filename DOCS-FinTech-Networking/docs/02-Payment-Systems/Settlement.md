@@ -157,8 +157,8 @@ SETTLEMENT SYSTEM ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              LIQUIDITY MANAGER                   │   │
-    │   │  Balance monitoring | Prefunding management     │   │
+    │   │              LIQUIDITY MANAGER                    │   │
+    │   │  Balance monitoring | Prefunding management       │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
