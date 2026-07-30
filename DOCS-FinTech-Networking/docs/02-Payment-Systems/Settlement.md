@@ -492,19 +492,19 @@ QUEUE OPTIMIZATION ALGORITHM
     │               QUEUE OPTIMIZATION ALGORITHM                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   INPUT: Settlement queue with pending instructions      │
+    │   INPUT: Settlement queue with pending instructions       │
     │                                                           │
-    │   For each settlement cycle:                             │
-    │       1. Sort instructions by priority                  │
-    │       2. For each instruction:                          │
-    │          if sender has sufficient funds:                │
-    │              execute instruction                        │
-    │          else:                                         │
-    │              queue instruction for next cycle          │
-    │       3. Attempt offsetting                             │
-    │       4. Repeat until queue empty or funds exhausted   │
+    │   For each settlement cycle:                              │
+    │       1. Sort instructions by priority                    │
+    │       2. For each instruction:                            │
+    │          if sender has sufficient funds:                  │
+    │              execute instruction                          │
+    │          else:                                            │
+    │              queue instruction for next cycle             │
+    │       3. Attempt offsetting                               │
+    │       4. Repeat until queue empty or funds exhausted      │
     │                                                           │
-    │   OUTPUT: Maximized settlement volume                    │
+    │   OUTPUT: Maximized settlement volume                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
