@@ -452,14 +452,14 @@ SETTLEMENT ENGINE INTERNALS
 NETTING ALGORITHM
 
     +-----------------------------------------------------------+
-    │               NETTING ALGORITHM                          │
+    │               NETTING ALGORITHM                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   INPUT: List of transactions between banks              │
+    │   INPUT: List of transactions between banks               │
     │                                                           │
-    │   For each bank B:                                       │
-    │       incoming = 0                                      │
-    │       outgoing = 0                                      │
+    │   For each bank B:                                        │
+    │       incoming = 0                                        │
+    │       outgoing = 0                                        │
     │                                                           │
     │       For each transaction T:                            │
     │           if T.payer == B:                              │
