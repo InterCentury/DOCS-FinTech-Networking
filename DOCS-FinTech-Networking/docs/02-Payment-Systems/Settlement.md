@@ -256,41 +256,41 @@ The settlement lifecycle consists of several phases from instruction to finality
 SETTLEMENT LIFECYCLE
 
     +-----------------------------------------------------------+
-    │               SETTLEMENT LIFECYCLE                       │
+    │               SETTLEMENT LIFECYCLE                        │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PHASE 1: INSTRUCTION CREATION                          │
-    │   ├── Settlement instruction created                    │
-    │   └── Sent to settlement system                        │
+    │   PHASE 1: INSTRUCTION CREATION                           │
+    │   ├── Settlement instruction created                      │
+    │   └── Sent to settlement system                           │
     │                                                           │
-    │   PHASE 2: INSTRUCTION VALIDATION                       │
-    │   ├── Validate instruction format                       │
-    │   ├── Verify account validity                           │
-    │   └── Check transaction limits                         │
+    │   PHASE 2: INSTRUCTION VALIDATION                         │
+    │   ├── Validate instruction format                         │
+    │   ├── Verify account validity                             │
+    │   └── Check transaction limits                            │
     │                                                           │
-    │   PHASE 3: LIQUIDITY CHECK                              │
-    │   ├── Verify sender has sufficient funds               │
-    │   ├── Check intraday limits                            │
-    │   └── Assess collateral availability                   │
+    │   PHASE 3: LIQUIDITY CHECK                                │
+    │   ├── Verify sender has sufficient funds                  │
+    │   ├── Check intraday limits                               │
+    │   └── Assess collateral availability                      │
     │                                                           │
-    │   PHASE 4: QUEUE PROCESSING                             │
-    │   ├── Add to settlement queue                          │
-    │   ├── Apply priority rules                             │
-    │   └── Wait for execution window                        │
+    │   PHASE 4: QUEUE PROCESSING                               │
+    │   ├── Add to settlement queue                             │
+    │   ├── Apply priority rules                                │
+    │   └── Wait for execution window                           │
     │                                                           │
-    │   PHASE 5: EXECUTION                                    │
-    │   ├── Debit sender's reserve account                   │
-    │   ├── Credit receiver's reserve account                │
-    │   └── Execute the transfer                            │
+    │   PHASE 5: EXECUTION                                      │
+    │   ├── Debit sender's reserve account                      │
+    │   ├── Credit receiver's reserve account                   │
+    │   └── Execute the transfer                                │
     │                                                           │
-    │   PHASE 6: LEDGER UPDATE                                │
-    │   ├── Update reserve account balances                  │
-    │   ├── Record transaction                              │
-    │   └── Update audit log                                │
+    │   PHASE 6: LEDGER UPDATE                                  │
+    │   ├── Update reserve account balances                     │
+    │   ├── Record transaction                                  │
+    │   └── Update audit log                                    │
     │                                                           │
-    │   PHASE 7: FINALITY                                     │
-    │   ├── Achieve legal finality                           │
-    │   ├── Payment becomes irrevocable                      │
+    │   PHASE 7: FINALITY                                       │
+    │   ├── Achieve legal finality                              │
+    │   ├── Payment becomes irrevocable                         │
     │   └── Obligations discharged                          │
     │                                                           │
     │   PHASE 8: CONFIRMATION                                 │
