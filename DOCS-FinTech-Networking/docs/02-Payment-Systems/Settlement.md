@@ -344,15 +344,15 @@ SETTLEMENT MODELS COMPARISON
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  GROSS SETTLEMENT        |                            |  NET SETTLEMENT           |
-|  (RTGS)                  |                            |  (DNS)                    |
+|  GROSS SETTLEMENT         |                            |  NET SETTLEMENT           |
+|  (RTGS)                   |                            |  (DNS)                    |
 +---------------------------+                            +---------------------------+
-|  Per transaction         |                            |  Batched transactions     |
-|  Immediate finality      |                            |  Deferred finality        |
-|  High liquidity need     |                            |  Low liquidity need       |
-|  No settlement risk      |                            |  Settlement risk exists   |
-|  Real-time processing    |                            |  Batch processing         |
-|  Examples: Fedwire       |                            |  Examples: ACH, CHIPS    |
+|  Per transaction          |                            |  Batched transactions     |
+|  Immediate finality       |                            |  Deferred finality        |
+|  High liquidity need      |                            |  Low liquidity need       |
+|  No settlement risk       |                            |  Settlement risk exists   |
+|  Real-time processing     |                            |  Batch processing         |
+|  Examples: Fedwire        |                            |  Examples: ACH, CHIPS    |
 +---------------------------+                            +---------------------------+
           │                                                         │
           +----------------------------+----------------------------+
