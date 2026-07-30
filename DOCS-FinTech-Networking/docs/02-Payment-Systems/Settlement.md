@@ -169,8 +169,8 @@ SETTLEMENT SYSTEM ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              AUDIT LOG                          │   │
-    │   │  Complete record of all settlement activity     │   │
+    │   │              AUDIT LOG                            │   │
+    │   │  Complete record of all settlement activity       │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
