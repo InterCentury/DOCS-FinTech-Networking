@@ -225,10 +225,10 @@ SETTLEMENT PARTICIPANTS
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  SETTLEMENT BANK          |  |  CCP (Securities)        |  |  CORRESPONDENT BANK      |
-|  - Manages accounts       |  |  - Central counterparty  |  |  (Cross-border)          |
-|  - Executes transfers     |  |  - Guarantees trades    |  |  - Nostro/Vostro         |
-|  - Maintains balances     |  |  - Novation             |  |  - Currency conversion   |
+|  SETTLEMENT BANK          |  |  CCP (Securities)         |  |  CORRESPONDENT BANK       |
+|  - Manages accounts       |  |  - Central counterparty   |  |  (Cross-border)           |
+|  - Executes transfers     |  |  - Guarantees trades      |  |  - Nostro/Vostro          |
+|  - Maintains balances     |  |  - Novation               |  |  - Currency conversion    |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
