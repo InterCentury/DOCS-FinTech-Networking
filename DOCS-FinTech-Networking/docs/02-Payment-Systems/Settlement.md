@@ -352,17 +352,17 @@ SETTLEMENT MODELS COMPARISON
 |  High liquidity need      |                            |  Low liquidity need       |
 |  No settlement risk       |                            |  Settlement risk exists   |
 |  Real-time processing     |                            |  Batch processing         |
-|  Examples: Fedwire        |                            |  Examples: ACH, CHIPS    |
+|  Examples: Fedwire        |                            |  Examples: ACH, CHIPS     |
 +---------------------------+                            +---------------------------+
           │                                                         │
           +----------------------------+----------------------------+
                                        │
                                        ▼
                          +---------------------------+
-                         |  HYBRID SETTLEMENT       |
-                         |  Combines gross and net  |
-                         |  Some transactions gross |
-                         |  Some transactions net   |
+                         |  HYBRID SETTLEMENT        |
+                         |  Combines gross and net   |
+                         |  Some transactions gross  |
+                         |  Some transactions net    |
                          +---------------------------+
 ```
 
