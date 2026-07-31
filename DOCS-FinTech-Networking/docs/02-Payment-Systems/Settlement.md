@@ -721,20 +721,20 @@ CROSS-BORDER SETTLEMENT
     │               CROSS-BORDER SETTLEMENT                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   ┌─────────────┐                                       │
-    │   │   BANK A    │   (USD Payment)                       │
-    │   │   (US)      │                                       │
-    │   └──────┬──────┘                                       │
-    │          │                                              │
-    │          │ SWIFT Message                               │
-    │          ▼                                              │
-    │   ┌─────────────────────────────────────────────────┐   │
-    │   │     CORRESPONDENT BANK (International)          │   │
-    │   │  - Nostro Account (USD)                        │   │
-    │   │  - Vostro Account (EUR)                        │   │
-    │   │  - Currency conversion                         │   │
-    │   └─────────────────────────────────────────────────┘   │
-    │          │                                              │
+    │   ┌─────────────┐                                         │
+    │   │   BANK A    │   (USD Payment)                         │
+    │   │   (US)      │                                         │
+    │   └──────┬──────┘                                         │
+    │          │                                                │
+    │          │ SWIFT Message                                  │
+    │          ▼                                                │
+    │   ┌─────────────────────────────────────────────────┐     │
+    │   │     CORRESPONDENT BANK (International)          │     │
+    │   │  - Nostro Account (USD)                         │     │
+    │   │  - Vostro Account (EUR)                         │     │
+    │   │  - Currency conversion                          │     │
+    │   └─────────────────────────────────────────────────┘     │
+    │          │                                                │
     │          │ Settlement Instruction                     │
     │          ▼                                              │
     │   ┌─────────────┐                                       │
