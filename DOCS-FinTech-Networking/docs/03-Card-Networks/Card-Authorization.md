@@ -255,16 +255,16 @@ AUTHORIZATION LIFECYCLE
     │   └── Stand-in processing (if issuer unavailable)         │
     │                                                           │
     │   PHASE 5: ISSUER PROCESSING                              │
-    │   ├── Card validated                                  │
-    │   ├── Account checked                                 │
-    │   ├── Risk assessed                                  │
-    │   ├── Rules applied                                  │
-    │   └── Decision made                                 │
+    │   ├── Card validated                                      │
+    │   ├── Account checked                                     │
+    │   ├── Risk assessed                                       │
+    │   ├── Rules applied                                       │
+    │   └── Decision made                                       │
     │                                                           │
-    │   PHASE 6: RESPONSE ROUTING                             │
-    │   ├── Response sent to network                         │
-    │   ├── Network routes to acquirer                       │
-    │   └── Acquirer sends to terminal                       │
+    │   PHASE 6: RESPONSE ROUTING                               │
+    │   ├── Response sent to network                           │
+    │   ├── Network routes to acquirer                         │
+    │   └── Acquirer sends to terminal                         │
     │                                                           │
     │   PHASE 7: RESPONSE DISPLAY                             │
     │   ├── Approved/Declined displayed                      │
