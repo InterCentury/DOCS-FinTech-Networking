@@ -735,21 +735,21 @@ CROSS-BORDER SETTLEMENT
     │   │  - Currency conversion                          │     │
     │   └─────────────────────────────────────────────────┘     │
     │          │                                                │
-    │          │ Settlement Instruction                     │
-    │          ▼                                              │
-    │   ┌─────────────┐                                       │
-    │   │   BANK B    │   (EUR Payment)                       │
-    │   │   (Europe)  │                                       │
-    │   └─────────────┘                                       │
+    │          │ Settlement Instruction                         │
+    │          ▼                                                │
+    │   ┌─────────────┐                                         │
+    │   │   BANK B    │   (EUR Payment)                         │
+    │   │   (Europe)  │                                         │
+    │   └─────────────┘                                         │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY COMPONENTS:                                  │  │
-    │   │  - SWIFT messaging                               │  │
-    │   │  - Correspondent banking                        │  │
-    │   │  - Nostro/Vostro accounts                      │  │
-    │   │  - Currency conversion                         │  │
-    │   │  - Settlement finality                         │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY COMPONENTS:                                  │   │
+    │   │  - SWIFT messaging                                │   │
+    │   │  - Correspondent banking                          │   │
+    │   │  - Nostro/Vostro accounts                         │   │
+    │   │  - Currency conversion                            │   │
+    │   │  - Settlement finality                            │   │
+    │   └---------------------------------------------------+   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
