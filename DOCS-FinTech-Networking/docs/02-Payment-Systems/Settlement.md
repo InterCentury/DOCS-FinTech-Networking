@@ -894,23 +894,23 @@ SETTLEMENT EFFICIENCY
 QUEUE UTILIZATION
 
     +-----------------------------------------------------------+
-    │               QUEUE UTILIZATION                          │
+    │               QUEUE UTILIZATION                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Queue Utilization = Average Queue Length /             │
-    │                      Queue Capacity × 100               │
+    │   Queue Utilization = Average Queue Length /              │
+    │                      Queue Capacity × 100                 │
     │                                                           │
-    │   ρ = λ / μ                                             │
+    │   ρ = λ / μ                                               │
     │                                                           │
-    │   Where:                                                 │
-    │   λ = Arrival Rate (transactions per second)           │
-    │   μ = Service Rate (transactions per second)           │
+    │   Where:                                                  │
+    │   λ = Arrival Rate (transactions per second)              │
+    │   μ = Service Rate (transactions per second)              │
     │                                                           │
-    │   Example:                                               │
-    │   λ = 100 TPS, μ = 120 TPS                             │
-    │   ρ = 100 / 120 = 0.833 (83.3%)                       │
+    │   Example:                                                │
+    │   λ = 100 TPS, μ = 120 TPS                                │
+    │   ρ = 100 / 120 = 0.833 (83.3%)                           │
     │                                                           │
-    │   Target Utilization: < 70%                            │
+    │   Target Utilization: < 70%                               │
     │                                                           │
     └-----------------------------------------------------------+
 ```
