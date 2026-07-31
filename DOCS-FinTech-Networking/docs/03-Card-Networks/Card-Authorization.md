@@ -384,27 +384,27 @@ DECISION PIPELINE
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │    RULES ENGINE                                │   │
-    │   │  - Transaction limits                         │   │
-    │   │  - Spending limits                           │   │
-    │   │  - Merchant category restrictions           │   │
-    │   │  - Velocity limits                         │   │
+    │   │    RULES ENGINE                                   │   │
+    │   │  - Transaction limits                             │   │
+    │   │  - Spending limits                                │   │
+    │   │  - Merchant category restrictions                 │   │
+    │   │  - Velocity limits                                │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │    BALANCE CHECK                               │   │
-    │   │  - Available credit/balance                   │   │
-    │   │  - Credit line                               │   │
-    │   │  - Pending holds                            │   │
+    │   │    BALANCE CHECK                                  │   │
+    │   │  - Available credit/balance                       │   │
+    │   │  - Credit line                                    │   │
+    │   │  - Pending holds                                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │    DECISION                                     │   │
-    │   │  - Approve                                     │   │
-    │   │  - Decline                                    │   │
-    │   │  - Refer (manual review)                     │   │
+    │   │    DECISION                                       │   │
+    │   │  - Approve                                        │   │
+    │   │  - Decline                                        │   │
+    │   │  - Refer (manual review)                          │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
