@@ -468,9 +468,9 @@ RISK ASSESSMENT SCORING
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     │   RISK SCORE INTERPRETATION:                              │
-    │   - 0.00 - 0.30: Low Risk → Approve                      │
-    │   - 0.31 - 0.60: Medium Risk → Review / 3-D Secure     │
-    │   - 0.61 - 1.00: High Risk → Decline                   │
+    │   - 0.00 - 0.30: Low Risk → Approve                       │
+    │   - 0.31 - 0.60: Medium Risk → Review / 3-D Secure        │
+    │   - 0.61 - 1.00: High Risk → Decline                      │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -556,23 +556,23 @@ EMV AUTHORIZATION FLOW
     │               EMV AUTHORIZATION FLOW                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CARD INSERTED INTO TERMINAL                            │
+    │   CARD INSERTED INTO TERMINAL                             │
     │        │                                                  │
     │        ▼                                                  │
-    │   TERMINAL READS CHIP DATA                               │
+    │   TERMINAL READS CHIP DATA                                │
     │        │                                                  │
     │        ▼                                                  │
-    │   TERMINAL GENERATES AUTHORIZATION REQUEST              │
+    │   TERMINAL GENERATES AUTHORIZATION REQUEST                │
     │        │                                                  │
     │        ▼                                                  │
-    │   CHIP GENERATES ARQC (Authorization Request            │
-    │   Cryptogram)                                            │
+    │   CHIP GENERATES ARQC (Authorization Request              │
+    │   Cryptogram)                                             │
     │        │                                                  │
     │        ▼                                                  │
-    │   REQUEST SENT TO ISSUER                                 │
+    │   REQUEST SENT TO ISSUER                                  │
     │        │                                                  │
     │        ▼                                                  │
-    │   ISSUER VALIDATES ARQC                                  │
+    │   ISSUER VALIDATES ARQC                                   │
     │        │                                                  │
     │        ▼                                                  │
     │   ISSUER GENERATES ARPC (Authorization Response         │
