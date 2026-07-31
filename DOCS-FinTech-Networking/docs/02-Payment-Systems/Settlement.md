@@ -643,10 +643,10 @@ DELIVERY VERSUS PAYMENT (DvP)
     +-----------------------------------------------------------+
     │                                                           │
     │   BUYER                               SELLER              │
-    │      │                                   │                │
-    │      │ Cash Transfer                     │ Securities     │
-    │      │                                   │  Transfer      │
-    │      ▼                                   ▼                │
+    │     │                                   │                 │
+    │     │ Cash Transfer                     │ Securities      │
+    │     │                                   │  Transfer       │
+    │     ▼                                   ▼                 │
     │   ┌────────────────────────────────────────────────────┐  │
     │   │              SETTLEMENT SYSTEM                     │  │
     │   │                                                    │  │
