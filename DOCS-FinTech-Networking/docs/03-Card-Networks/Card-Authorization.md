@@ -249,12 +249,12 @@ AUTHORIZATION LIFECYCLE
     │   ├── Format validated                                    │
     │   └── Forwarded to network                                │
     │                                                           │
-    │   PHASE 4: NETWORK ROUTING                              │
-    │   ├── Request routed to issuer                         │
-    │   ├── Network rules applied                            │
-    │   └── Stand-in processing (if issuer unavailable)      │
+    │   PHASE 4: NETWORK ROUTING                                │
+    │   ├── Request routed to issuer                            │
+    │   ├── Network rules applied                               │
+    │   └── Stand-in processing (if issuer unavailable)         │
     │                                                           │
-    │   PHASE 5: ISSUER PROCESSING                            │
+    │   PHASE 5: ISSUER PROCESSING                              │
     │   ├── Card validated                                  │
     │   ├── Account checked                                 │
     │   ├── Risk assessed                                  │
