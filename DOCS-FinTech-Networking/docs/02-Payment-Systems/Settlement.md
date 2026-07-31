@@ -1019,7 +1019,7 @@ SUMMARY
     |  requires sophisticated engineering,            |
     |  mathematical algorithms, and rigorous          |
     |  risk management to achieve finality            |
-    |  and irrevocability.                        |
+    |  and irrevocability.                            |
     +-------------------------------------------------+
 ```
 
