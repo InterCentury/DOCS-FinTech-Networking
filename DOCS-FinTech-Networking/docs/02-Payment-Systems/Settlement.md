@@ -956,13 +956,13 @@ REAL-WORLD SETTLEMENT SYSTEMS
     │               REAL-WORLD SETTLEMENT SYSTEMS               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   System        │ Region      │ Type       │ Volume      │
-    │   ──────────────│─────────────│────────────│─────────────│
-    │   Fedwire      │ US          │ RTGS       │ $5T daily   │
-    │   TARGET2      │ EU          │ RTGS       │ €2T daily   │
-    │   CHAPS        │ UK          │ RTGS       │ £500B daily │
-    │   CLS          │ Global      │ PvP        │ $6T daily   │
-    │   T2           │ EU          │ RTGS       │ €2T daily   │
+    │   System        │ Region      │ Type       │ Volume       │
+    │   ──────────────│─────────────│────────────│───────────── │
+    │   Fedwire       │ US          │ RTGS       │ $5T daily    │
+    │   TARGET2       │ EU          │ RTGS       │ €2T daily    │
+    │   CHAPS         │ UK          │ RTGS       │ £500B daily  │
+    │   CLS           │ Global      │ PvP        │ $6T daily    │
+    │   T2            │ EU          │ RTGS       │ €2T daily    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
