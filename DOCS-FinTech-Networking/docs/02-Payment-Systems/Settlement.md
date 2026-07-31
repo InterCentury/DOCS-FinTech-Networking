@@ -793,18 +793,18 @@ DISASTER RECOVERY TARGETS
     │               DISASTER RECOVERY TARGETS                   │
     +-----------------------------------------------------------+
     │                                                           │
-    │   RTO (Recovery Time Objective):                         │
-    │   - Target: < 5 minutes                                 │
-    │   - Critical: < 30 seconds                              │
+    │   RTO (Recovery Time Objective):                          │
+    │   - Target: < 5 minutes                                   │
+    │   - Critical: < 30 seconds                                │
     │                                                           │
-    │   RPO (Recovery Point Objective):                       │
-    │   - Target: < 1 second                                 │
-    │   - Critical: Zero (no data loss)                      │
+    │   RPO (Recovery Point Objective):                         │
+    │   - Target: < 1 second                                    │
+    │   - Critical: Zero (no data loss)                         │
     │                                                           │
-    │   Strategies:                                           │
-    │   - Active-Active: RTO ≈ 0, RPO = 0                   │
-    │   - Active-Passive: RTO ≈ 1-5 min, RPO ≈ 0           │
-    │   - Multi-Region: RTO ≈ 1-2 min, RPO ≈ 0            │
+    │   Strategies:                                             │
+    │   - Active-Active: RTO ≈ 0, RPO = 0                       │
+    │   - Active-Passive: RTO ≈ 1-5 min, RPO ≈ 0                │
+    │   - Multi-Region: RTO ≈ 1-2 min, RPO ≈ 0                  │
     │                                                           │
     └-----------------------------------------------------------+
 ```
