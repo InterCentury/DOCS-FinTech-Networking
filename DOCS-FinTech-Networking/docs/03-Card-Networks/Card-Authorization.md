@@ -233,21 +233,21 @@ AUTHORIZATION LIFECYCLE
     │               AUTHORIZATION LIFECYCLE                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PHASE 1: CARD READ                                     │
-    │   ├── Card tapped/inserted/swiped                       │
-    │   ├── Data read from chip/magstripe                    │
-    │   └── NFC (contactless) data captured                  │
+    │   PHASE 1: CARD READ                                      │
+    │   ├── Card tapped/inserted/swiped                         │
+    │   ├── Data read from chip/magstripe                       │
+    │   └── NFC (contactless) data captured                     │
     │                                                           │
-    │   PHASE 2: REQUEST GENERATION                            │
-    │   ├── Authorization request created                     │
-    │   ├── ISO 8583 message constructed                      │
-    │   ├── Fields populated                                 │
-    │   └── Cryptogram generated (EMV)                      │
+    │   PHASE 2: REQUEST GENERATION                             │
+    │   ├── Authorization request created                       │
+    │   ├── ISO 8583 message constructed                        │
+    │   ├── Fields populated                                    │
+    │   └── Cryptogram generated (EMV)                          │
     │                                                           │
-    │   PHASE 3: REQUEST TRANSMISSION                          │
-    │   ├── Sent to acquirer                                 │
-    │   ├── Format validated                                │
-    │   └── Forwarded to network                           │
+    │   PHASE 3: REQUEST TRANSMISSION                           │
+    │   ├── Sent to acquirer                                    │
+    │   ├── Format validated                                    │
+    │   └── Forwarded to network                                │
     │                                                           │
     │   PHASE 4: NETWORK ROUTING                              │
     │   ├── Request routed to issuer                         │
