@@ -642,25 +642,25 @@ DELIVERY VERSUS PAYMENT (DvP)
     │               DELIVERY VERSUS PAYMENT (DvP)               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   BUYER                               SELLER             │
-    │      │                                    │              │
-    │      │ Cash Transfer                     │ Securities   │
-    │      │                                    │  Transfer    │
-    │      ▼                                    ▼              │
-    │   ┌────────────────────────────────────────────────────┐ │
-    │   │              SETTLEMENT SYSTEM                    │ │
-    │   │                                                  │ │
-    │   │  ┌────────────────────────────────────────────┐  │ │
-    │   │  │  Cash Leg: Buyer → Seller                │  │ │
-    │   │  │  Securities Leg: Seller → Buyer          │  │ │
-    │   │  │  Both legs settle simultaneously         │  │ │
-    │   │  └────────────────────────────────────────────┘  │ │
-    │   └────────────────────────────────────────────────────┘ │
-    │      │                                    │              │
+    │   BUYER                               SELLER              │
+    │      │                                   │                │
+    │      │ Cash Transfer                     │ Securities     │
+    │      │                                   │  Transfer      │
+    │      ▼                                   ▼                │
+    │   ┌────────────────────────────────────────────────────┐  │
+    │   │              SETTLEMENT SYSTEM                     │  │
+    │   │                                                    │  │
+    │   │  ┌────────────────────────────────────────────┐    │  │
+    │   │  │  Cash Leg: Buyer → Seller                  │    │  │
+    │   │  │  Securities Leg: Seller → Buyer            │    │  │
+    │   │  │  Both legs settle simultaneously           │    │  │
+    │   │  └────────────────────────────────────────────┘    │  │
+    │   └────────────────────────────────────────────────────┘  │
+    │      │                                    │               │
     │      │ Securities Received                │ Cash Received │
-    │      ▼                                    ▼              │
-    │   BUYER                               SELLER            │
-    │   (Securities)                         (Cash)           │
+    │      ▼                                    ▼               │
+    │   BUYER                                 SELLER            │
+    │   (Securities)                          (Cash)            │
     │                                                           │
     └-----------------------------------------------------------+
 ```
