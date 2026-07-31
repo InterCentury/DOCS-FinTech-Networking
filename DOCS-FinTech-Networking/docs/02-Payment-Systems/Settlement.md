@@ -983,22 +983,22 @@ REAL-WORLD SETTLEMENT SYSTEMS
 SUMMARY
 
     +-------------------------------------------------+
-    |  WHAT IS SETTLEMENT?                           |
-    |  Actual transfer of value between             |
-    |  institutions. Final and irrevocable.        |
+    |  WHAT IS SETTLEMENT?                            |
+    |  Actual transfer of value between               |
+    |  institutions. Final and irrevocable.           |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  SETTLEMENT MODELS                             |
-    |  Gross (RTGS) - Per transaction              |
-    |  Net (DNS) - Batched and netted              |
-    |  Hybrid - Combination of both                 |
+    |  SETTLEMENT MODELS                              |
+    |  Gross (RTGS) - Per transaction                 |
+    |  Net (DNS) - Batched and netted                 |
+    |  Hybrid - Combination of both                   |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY COMPONENTS                                |
-    |  Settlement Engine, Liquidity Manager,        |
-    |  Central Ledger, Message Bus                 |
+    |  KEY COMPONENTS                                 |
+    |  Settlement Engine, Liquidity Manager,          |
+    |  Central Ledger, Message Bus                    |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
