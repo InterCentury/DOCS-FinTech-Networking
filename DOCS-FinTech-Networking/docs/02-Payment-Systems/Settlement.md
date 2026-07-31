@@ -337,7 +337,7 @@ SETTLEMENT LIFECYCLE
 SETTLEMENT MODELS COMPARISON
 
                          +---------------------------+
-                         |  SETTLEMENT MODELS        |
+                         |     SETTLEMENT MODELS     |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
