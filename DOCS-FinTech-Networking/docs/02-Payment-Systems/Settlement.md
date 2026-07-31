@@ -1002,14 +1002,14 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  ALGORITHMS                                    |
-    |  Netting, Queue Optimization, Liquidity        |
-    |  Saving, Multilateral Optimization             |
+    |  ALGORITHMS                                     |
+    |  Netting, Queue Optimization, Liquidity         |
+    |  Saving, Multilateral Optimization              |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  RISKS                                         |
-    |  Liquidity, Credit, Operational, Principal    |
+    |  RISKS                                          |
+    |  Liquidity, Credit, Operational, Principal      |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
