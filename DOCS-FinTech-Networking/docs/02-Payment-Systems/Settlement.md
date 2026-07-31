@@ -562,25 +562,25 @@ LIQUIDITY-SAVING OPTIMIZATION
 DOUBLE-ENTRY SETTLEMENT
 
     +-----------------------------------------------------------+
-    │               DOUBLE-ENTRY SETTLEMENT                    │
+    │               DOUBLE-ENTRY SETTLEMENT                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   BEFORE SETTLEMENT:                                     │
+    │   BEFORE SETTLEMENT:                                      │
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Central Bank Ledger                            │   │
-    │   │  Bank A: $100,000,000                          │   │
-    │   │  Bank B: $50,000,000                           │   │
+    │   │  Central Bank Ledger                              │   │
+    │   │  Bank A: $100,000,000                             │   │
+    │   │  Bank B: $50,000,000                              │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   PAYMENT: $10,000 FROM BANK A TO BANK B                │
+    │   PAYMENT: $10,000 FROM BANK A TO BANK B                  │
     │                                                           │
-    │   AFTER SETTLEMENT:                                      │
+    │   AFTER SETTLEMENT:                                       │
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Central Bank Ledger                            │   │
-    │   │  Bank A: $99,990,000 (-$10,000)                │   │
-    │   │  Bank B: $50,010,000 (+$10,000)                │   │
+    │   │  Central Bank Ledger                              │   │
+    │   │  Bank A: $99,990,000 (-$10,000)                   │   │
+    │   │  Bank B: $50,010,000 (+$10,000)                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     │   DOUBLE-ENTRY:                                         │
