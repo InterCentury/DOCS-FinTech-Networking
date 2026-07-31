@@ -872,18 +872,18 @@ LIQUIDITY UTILIZATION
 SETTLEMENT EFFICIENCY
 
     +-----------------------------------------------------------+
-    │               SETTLEMENT EFFICIENCY                      │
+    │               SETTLEMENT EFFICIENCY                       │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Efficiency = Settled Transactions / Submitted          │
-    │               Transactions × 100                         │
+    │   Efficiency = Settled Transactions / Submitted           │
+    │               Transactions × 100                          │
     │                                                           │
-    │   Example:                                               │
-    │   Settled: 95,000                                      │
-    │   Submitted: 100,000                                   │
-    │   Efficiency = 95,000 / 100,000 × 100 = 95%           │
+    │   Example:                                                │
+    │   Settled: 95,000                                         │
+    │   Submitted: 100,000                                      │
+    │   Efficiency = 95,000 / 100,000 × 100 = 95%               │
     │                                                           │
-    │   Target Efficiency: > 99%                              │
+    │   Target Efficiency: > 99%                                │
     │                                                           │
     └-----------------------------------------------------------+
 ```
