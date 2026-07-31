@@ -830,14 +830,14 @@ NET SETTLEMENT CALCULATION
     │               NET SETTLEMENT CALCULATION                  │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Net Position = Incoming Payments - Outgoing Payments   │
+    │   Net Position = Incoming Payments - Outgoing Payments    │
     │                                                           │
-    │   Example:                                               │
-    │   Bank A: Incoming $100M, Outgoing $80M                 │
-    │   Net Position = $100M - $80M = +$20M                  │
+    │   Example:                                                │
+    │   Bank A: Incoming $100M, Outgoing $80M                   │
+    │   Net Position = $100M - $80M = +$20M                     │
     │                                                           │
-    │   Bank B: Incoming $50M, Outgoing $90M                 │
-    │   Net Position = $50M - $90M = -$40M                  │
+    │   Bank B: Incoming $50M, Outgoing $90M                    │
+    │   Net Position = $50M - $90M = -$40M                      │
     │                                                           │
     └-----------------------------------------------------------+
 ```
