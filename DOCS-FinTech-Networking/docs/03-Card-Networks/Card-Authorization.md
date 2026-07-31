@@ -262,14 +262,14 @@ AUTHORIZATION LIFECYCLE
     │   └── Decision made                                       │
     │                                                           │
     │   PHASE 6: RESPONSE ROUTING                               │
-    │   ├── Response sent to network                           │
-    │   ├── Network routes to acquirer                         │
-    │   └── Acquirer sends to terminal                         │
+    │   ├── Response sent to network                            │
+    │   ├── Network routes to acquirer                          │
+    │   └── Acquirer sends to terminal                          │
     │                                                           │
-    │   PHASE 7: RESPONSE DISPLAY                             │
-    │   ├── Approved/Declined displayed                      │
-    │   ├── Receipt printed (optional)                       │
-    │   └── Transaction complete (authorization phase)      │
+    │   PHASE 7: RESPONSE DISPLAY                               │
+    │   ├── Approved/Declined displayed                         │
+    │   ├── Receipt printed (optional)                          │
+    │   └── Transaction complete (authorization phase)          │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -304,38 +304,38 @@ ISO 8583 AUTHORIZATION MESSAGE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  MESSAGE TYPE INDICATOR (MTI)                    │   │
-    │   │  0100 = Authorization Request                    │   │
-    │   │  0110 = Authorization Response                   │   │
+    │   │  MESSAGE TYPE INDICATOR (MTI)                     │   │
+    │   │  0100 = Authorization Request                     │   │
+    │   │  0110 = Authorization Response                    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  BITMAP (Primary + Secondary)                    │   │
-    │   │  Indicates which data elements are present       │   │
+    │   │  BITMAP (Primary + Secondary)                     │   │
+    │   │  Indicates which data elements are present        │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  DATA ELEMENTS                                  │   │
+    │   │  DATA ELEMENTS                                    │   │
     │   │                                                   │   │
-    │   │  Field 2: Primary Account Number (PAN)           │   │
-    │   │  Field 3: Processing Code (Transaction Type)     │   │
-    │   │  Field 4: Transaction Amount                     │   │
-    │   │  Field 11: System Trace Audit Number (STAN)      │   │
-    │   │  Field 12: Local Transaction Time                │   │
-    │   │  Field 13: Local Transaction Date                │   │
-    │   │  Field 14: Expiration Date                       │   │
-    │   │  Field 22: POS Entry Mode                        │   │
-    │   │  Field 25: POS Condition Code                    │   │
-    │   │  Field 32: Acquiring Institution ID              │   │
-    │   │  Field 33: Forwarding Institution ID             │   │
-    │   │  Field 42: Card Acceptor ID (Merchant ID)        │   │
-    │   │  Field 43: Card Acceptor Name/Location           │   │
-    │   │  Field 49: Currency Code                         │   │
-    │   │  Field 52: PIN Data (encrypted)                  │   │
-    │   │  Field 55: EMV Data (chip information)           │   │
-    │   │  Field 61: CVV/CVV2 Data                         │   │
+    │   │  Field 2: Primary Account Number (PAN)            │   │
+    │   │  Field 3: Processing Code (Transaction Type)      │   │
+    │   │  Field 4: Transaction Amount                      │   │
+    │   │  Field 11: System Trace Audit Number (STAN)       │   │
+    │   │  Field 12: Local Transaction Time                 │   │
+    │   │  Field 13: Local Transaction Date                 │   │
+    │   │  Field 14: Expiration Date                        │   │
+    │   │  Field 22: POS Entry Mode                         │   │
+    │   │  Field 25: POS Condition Code                     │   │
+    │   │  Field 32: Acquiring Institution ID               │   │
+    │   │  Field 33: Forwarding Institution ID              │   │
+    │   │  Field 42: Card Acceptor ID (Merchant ID)         │   │
+    │   │  Field 43: Card Acceptor Name/Location            │   │
+    │   │  Field 49: Currency Code                          │   │
+    │   │  Field 52: PIN Data (encrypted)                   │   │
+    │   │  Field 55: EMV Data (chip information)            │   │
+    │   │  Field 61: CVV/CVV2 Data                          │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
