@@ -583,10 +583,10 @@ DOUBLE-ENTRY SETTLEMENT
     │   │  Bank B: $50,010,000 (+$10,000)                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   DOUBLE-ENTRY:                                         │
-    │   Debit Bank A: $10,000                                │
-    │   Credit Bank B: $10,000                               │
-    │   Total Debits = Total Credits: $10,000               │
+    │   DOUBLE-ENTRY:                                           │
+    │   Debit Bank A: $10,000                                   │
+    │   Credit Bank B: $10,000                                  │
+    │   Total Debits = Total Credits: $10,000                   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
