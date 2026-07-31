@@ -375,11 +375,11 @@ DECISION PIPELINE
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │    RISK ASSESSMENT                              │   │
-    │   │  - Fraud score                                 │   │
-    │   │  - Velocity checks                            │   │
-    │   │  - Geographic analysis                       │   │
-    │   │  - Merchant risk assessment                 │   │
+    │   │    RISK ASSESSMENT                                │   │
+    │   │  - Fraud score                                    │   │
+    │   │  - Velocity checks                                │   │
+    │   │  - Geographic analysis                            │   │
+    │   │  - Merchant risk assessment                       │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
