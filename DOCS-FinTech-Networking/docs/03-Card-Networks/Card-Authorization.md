@@ -354,23 +354,23 @@ DECISION PIPELINE
     │               DECISION PIPELINE                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   AUTHORIZATION REQUEST                                  │
+    │   AUTHORIZATION REQUEST                                   │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │    VALIDATION                                   │   │
-    │   │  - Card number valid                          │   │
-    │   │  - Expiration date valid                     │   │
-    │   │  - CVV valid                                │   │
-    │   │  - Card not blocked                        │   │
+    │   │    VALIDATION                                     │   │
+    │   │  - Card number valid                              │   │
+    │   │  - Expiration date valid                          │   │
+    │   │  - CVV valid                                      │   │
+    │   │  - Card not blocked                               │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │    AUTHENTICATION                              │   │
-    │   │  - PIN verified (if entered)                  │   │
-    │   │  - EMV cryptogram validated                  │   │
-    │   │  - 3-D Secure (if applicable)                │   │
+    │   │    AUTHENTICATION                                 │   │
+    │   │  - PIN verified (if entered)                      │   │
+    │   │  - EMV cryptogram validated                       │   │
+    │   │  - 3-D Secure (if applicable)                     │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
