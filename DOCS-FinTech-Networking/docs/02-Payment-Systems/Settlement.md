@@ -700,9 +700,9 @@ PAYMENT VERSUS PAYMENT (PvP)
     │   │  │  Both legs settle simultaneously           │    │  │
     │   │  └────────────────────────────────────────────┘    │  │
     │   └────────────────────────────────────────────────────┘  │
-    │      │                                    │               │
-    │      │ Receives EUR                       │ Receives USD  │
-    │      ▼                                    ▼               │
+    │       │                                    │              │
+    │       │ Receives EUR                       │ Receives USD │
+    │       ▼                                    ▼              │
     │   BANK A (EUR)                         BANK B (USD)       │
     │                                                           │
     └-----------------------------------------------------------+
