@@ -389,8 +389,8 @@ SETTLEMENT ENGINE INTERNALS
     │   │  - Limit validation                               │   │
     │   │  - Legal validation                               │   │
     │   +---------------------------+-----------------------+   │
-    │                              │                            │
-    │                              ▼                            │
+    │                               │                           │
+    │                               ▼                           │
     │   +---------------------------------------------------+   │
     │   │    BALANCE CHECKER                                │   │
     │   │  - Check reserve balance                          │   │
@@ -405,10 +405,10 @@ SETTLEMENT ENGINE INTERNALS
     │   │    SUFFICIENT FUNDS    │   │  INSUFFICIENT FUNDS   │  │
     │   │    Continue            │   │  Queue or Reject      │  │
     │   +------------------------+   +-----------------------+  │
-    │                    │                   │                  │
-    │                    └─────────┬─────────┘                  │
-    │                              │                            │
-    │                              ▼                            │
+    │                     │                   │                 │
+    │                     └─────────┬─────────┘                 │
+    │                               │                           │
+    │                               ▼                           │
     │   +---------------------------------------------------+   │
     │   │    LIQUIDITY MANAGER                              │   │
     │   │  - Reserve funds if needed                        │   │
