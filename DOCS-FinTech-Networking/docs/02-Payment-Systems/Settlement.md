@@ -921,18 +921,18 @@ QUEUE UTILIZATION
 LIQUIDITY SAVING RATIO
 
     +-----------------------------------------------------------+
-    │               LIQUIDITY SAVING RATIO                     │
+    │               LIQUIDITY SAVING RATIO                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Liquidity Saving = (Gross Settlement - Net            │
-    │                    Settlement) / Gross Settlement × 100 │
+    │   Liquidity Saving = (Gross Settlement - Net              │
+    │                    Settlement) / Gross Settlement × 100   │
     │                                                           │
-    │   Example:                                               │
-    │   Gross Settlement: $100M                               │
-    │   Net Settlement: $10M                                  │
-    │   Saving = ($100M - $10M) / $100M × 100 = 90%          │
+    │   Example:                                                │
+    │   Gross Settlement: $100M                                 │
+    │   Net Settlement: $10M                                    │
+    │   Saving = ($100M - $10M) / $100M × 100 = 90%             │
     │                                                           │
-    │   Higher saving = More efficient                        │
+    │   Higher saving = More efficient                          │
     │                                                           │
     └-----------------------------------------------------------+
 ```
