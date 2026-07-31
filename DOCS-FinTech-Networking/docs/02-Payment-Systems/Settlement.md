@@ -1013,12 +1013,12 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY TAKEAWAY                                  |
-    |  Settlement is the final step where actual    |
-    |  value moves between institutions. It         |
-    |  requires sophisticated engineering,          |
-    |  mathematical algorithms, and rigorous       |
-    |  risk management to achieve finality         |
+    |  KEY TAKEAWAY                                   |
+    |  Settlement is the final step where actual      |
+    |  value moves between institutions. It           |
+    |  requires sophisticated engineering,            |
+    |  mathematical algorithms, and rigorous          |
+    |  risk management to achieve finality            |
     |  and irrevocability.                        |
     +-------------------------------------------------+
 ```
