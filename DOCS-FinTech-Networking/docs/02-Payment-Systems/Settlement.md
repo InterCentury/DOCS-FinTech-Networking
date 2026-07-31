@@ -686,24 +686,24 @@ PAYMENT VERSUS PAYMENT (PvP)
     │               PAYMENT VERSUS PAYMENT (PvP)                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   BANK A (USD)                    BANK B (EUR)           │
-    │      │                                    │              │
-    │      │ Pays USD                        │ Pays EUR       │
-    │      │                                    │              │
-    │      ▼                                    ▼              │
-    │   ┌────────────────────────────────────────────────────┐ │
-    │   │              CLS SETTLEMENT SYSTEM                 │ │
-    │   │                                                  │ │
-    │   │  ┌────────────────────────────────────────────┐  │ │
-    │   │  │  USD Leg: Bank A → Bank B                │  │ │
-    │   │  │  EUR Leg: Bank B → Bank A                │  │ │
-    │   │  │  Both legs settle simultaneously         │  │ │
-    │   │  └────────────────────────────────────────────┘  │ │
-    │   └────────────────────────────────────────────────────┘ │
-    │      │                                    │              │
-    │      │ Receives EUR                      │ Receives USD  │
-    │      ▼                                    ▼              │
-    │   BANK A (EUR)                         BANK B (USD)    │
+    │   BANK A (USD)                    BANK B (EUR)            │
+    │      │                                    │               │
+    │      │ Pays USD                           │ Pays EUR      │
+    │      │                                    │               │
+    │      ▼                                    ▼               │
+    │   ┌────────────────────────────────────────────────────┐  │
+    │   │              CLS SETTLEMENT SYSTEM                 │  │
+    │   │                                                    │  │
+    │   │  ┌────────────────────────────────────────────┐    │  │
+    │   │  │  USD Leg: Bank A → Bank B                  │    │  │
+    │   │  │  EUR Leg: Bank B → Bank A                  │    │  │
+    │   │  │  Both legs settle simultaneously           │    │  │
+    │   │  └────────────────────────────────────────────┘    │  │
+    │   └────────────────────────────────────────────────────┘  │
+    │      │                                    │               │
+    │      │ Receives EUR                       │ Receives USD  │
+    │      ▼                                    ▼               │
+    │   BANK A (EUR)                         BANK B (USD)       │
     │                                                           │
     └-----------------------------------------------------------+
 ```
