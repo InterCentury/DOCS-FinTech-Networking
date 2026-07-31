@@ -455,20 +455,20 @@ RISK ASSESSMENT SCORING
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │  Factor                       │ Weight            │   │
-    │   │  ─────────────────────────────│──────────────────│   │
-    │   │  Transaction Amount           │ 0.25             │   │
-    │   │  Merchant Category            │ 0.20             │   │
-    │   │  Transaction Velocity        │ 0.15             │   │
-    │   │  Geographic Distance         │ 0.15             │   │
-    │   │  Device Fingerprint          │ 0.10             │   │
-    │   │  Cardholder History          │ 0.10             │   │
-    │   │  Time of Day                 │ 0.05             │   │
-    │   │  ─────────────────────────────│──────────────────│   │
-    │   │  TOTAL RISK SCORE            │ 1.00             │   │
+    │   │  ─────────────────────────────│────────────────── │   │
+    │   │  Transaction Amount           │ 0.25              │   │
+    │   │  Merchant Category            │ 0.20              │   │
+    │   │  Transaction Velocity         │ 0.15              │   │
+    │   │  Geographic Distance          │ 0.15              │   │
+    │   │  Device Fingerprint           │ 0.10              │   │
+    │   │  Cardholder History           │ 0.10              │   │
+    │   │  Time of Day                  │ 0.05              │   │
+    │   │  ─────────────────────────────│────────────────── │   │
+    │   │  TOTAL RISK SCORE             │ 1.00              │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   RISK SCORE INTERPRETATION:                             │
-    │   - 0.00 - 0.30: Low Risk → Approve                     │
+    │   RISK SCORE INTERPRETATION:                              │
+    │   - 0.00 - 0.30: Low Risk → Approve                      │
     │   - 0.31 - 0.60: Medium Risk → Review / 3-D Secure     │
     │   - 0.61 - 1.00: High Risk → Decline                   │
     │                                                           │
