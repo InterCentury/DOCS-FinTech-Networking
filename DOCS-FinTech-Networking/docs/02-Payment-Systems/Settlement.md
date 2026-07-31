@@ -848,20 +848,20 @@ NET SETTLEMENT CALCULATION
 LIQUIDITY UTILIZATION
 
     +-----------------------------------------------------------+
-    │               LIQUIDITY UTILIZATION                      │
+    │               LIQUIDITY UTILIZATION                       │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Liquidity Utilization = Used Liquidity / Available     │
-    │                         Liquidity × 100                  │
+    │   Liquidity Utilization = Used Liquidity / Available      │
+    │                         Liquidity × 100                   │
     │                                                           │
-    │   Example:                                               │
-    │   Used Liquidity: $80M                                  │
-    │   Available Liquidity: $100M                            │
-    │   Utilization = $80M / $100M × 100 = 80%               │
+    │   Example:                                                │
+    │   Used Liquidity: $80M                                    │
+    │   Available Liquidity: $100M                              │
+    │   Utilization = $80M / $100M × 100 = 80%                  │
     │                                                           │
-    │   Target Utilization: < 70%                            │
-    │   Warning Level: > 80%                                 │
-    │   Critical Level: > 90%                               │
+    │   Target Utilization: < 70%                               │
+    │   Warning Level: > 80%                                    │
+    │   Critical Level: > 90%                                   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
