@@ -518,12 +518,12 @@ LIQUIDITY-SAVING OPTIMIZATION
     │               LIQUIDITY-SAVING OPTIMIZATION               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   WITHOUT OPTIMIZATION:                                  │
+    │   WITHOUT OPTIMIZATION:                                   │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Payment A: $50 million                         │   │
-    │   │  Payment B: $30 million                         │   │
-    │   │  Payment C: $20 million                         │   │
-    │   │  Total liquidity required: $100 million         │   │
+    │   │  Payment A: $50 million                           │   │
+    │   │  Payment B: $30 million                           │   │
+    │   │  Payment C: $20 million                           │   │
+    │   │  Total liquidity required: $100 million           │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     │   WITH OPTIMIZATION:                                     │
