@@ -899,18 +899,18 @@ EXPONENTIAL BACKOFF
 THROUGHPUT CALCULATION
 
     +-----------------------------------------------------------+
-    │               THROUGHPUT CALCULATION                     │
+    │               THROUGHPUT CALCULATION                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TPS = Total Transactions / Time Period (seconds)       │
+    │   TPS = Total Transactions / Time Period (seconds)        │
     │                                                           │
-    │   Example: 10,000 transactions in 2 seconds             │
-    │   TPS = 10,000 / 2 = 5,000 TPS                         │
+    │   Example: 10,000 transactions in 2 seconds               │
+    │   TPS = 10,000 / 2 = 5,000 TPS                            │
     │                                                           │
-    │   Typical targets:                                      │
-    │   - Card processing: 1,000 - 10,000 TPS                │
-    │   - ACH processing: 10,000 - 100,000 TPS               │
-    │   - RTP processing: 1,000 - 5,000 TPS                 │
+    │   Typical targets:                                        │
+    │   - Card processing: 1,000 - 10,000 TPS                   │
+    │   - ACH processing: 10,000 - 100,000 TPS                  │
+    │   - RTP processing: 1,000 - 5,000 TPS                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
