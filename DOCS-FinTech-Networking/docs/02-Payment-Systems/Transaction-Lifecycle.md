@@ -388,15 +388,15 @@ COMPLETE TRANSACTION LIFECYCLE
     │   ├── Reserve accounts updated                            │
     │   └── Finality achieved                                   │
     │                                                           │
-    │   PHASE 9: LEDGER UPDATE                                │
-    │   ├── Account balances updated                       │
-    │   ├── Transaction recorded                          │
-    │   └── Audit log updated                             │
+    │   PHASE 9: LEDGER UPDATE                                  │
+    │   ├── Account balances updated                            │
+    │   ├── Transaction recorded                                │
+    │   └── Audit log updated                                   │
     │                                                           │
-    │   PHASE 10: NOTIFICATION                                │
-    │   ├── Confirmation sent to user                      │
-    │   ├── Notification to merchant                      │
-    │   └── Receipt generated                             │
+    │   PHASE 10: NOTIFICATION                                  │
+    │   ├── Confirmation sent to user                           │
+    │   ├── Notification to merchant                            │
+    │   └── Receipt generated                                   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
