@@ -11,15 +11,15 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the unique closed-loop architecture of American Express      │
-    │   Learn how AmEx differs from Visa and Mastercard                         │
-    │   Study the AmEx network infrastructure and transaction flow             │
-    │   Examine authorization engines and risk management systems              │
-    │   Understand tokenization, EMV implementation, and contactless          │
-    │   payments                                                               │
-    │   Learn about Membership Rewards infrastructure                         │
-    │   Study Global Network Services (GNS) and partner bank model             │
-    │   Analyze engineering architecture and performance targets               │
+    │   Understand the unique closed-loop architecture of American Express        │
+    │   Learn how AmEx differs from Visa and Mastercard                           │
+    │   Study the AmEx network infrastructure and transaction flow                │
+    │   Examine authorization engines and risk management systems                 │
+    │   Understand tokenization, EMV implementation, and contactless              │
+    │   payments                                                                  │
+    │   Learn about Membership Rewards infrastructure                             │
+    │   Study Global Network Services (GNS) and partner bank model                │
+    │   Analyze engineering architecture and performance targets                  │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
