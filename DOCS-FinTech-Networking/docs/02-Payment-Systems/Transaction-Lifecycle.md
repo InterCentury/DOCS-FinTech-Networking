@@ -36,10 +36,10 @@ DOCUMENTATION OBJECTIVES
 TRANSACTION LIFECYCLE DEFINITION
 
                          +---------------------------+
-                         |  TRANSACTION LIFECYCLE   |
-                         |  Complete sequence of    |
-                         |  steps from initiation   |
-                         |  to settlement           |
+                         |  TRANSACTION LIFECYCLE    |
+                         |  Complete sequence of     |
+                         |  steps from initiation    |
+                         |  to settlement            |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
