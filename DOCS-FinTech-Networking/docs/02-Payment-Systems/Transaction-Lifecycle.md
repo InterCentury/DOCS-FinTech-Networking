@@ -190,18 +190,18 @@ TRANSACTION PARTICIPANTS
     │               TRANSACTION PARTICIPANTS                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CUSTOMER                                               │
-    │   (Payer)                                                │
-    │      │                                                   │
-    │      │ Initiates payment                                │
-    │      ▼                                                   │
-    │   MERCHANT                                               │
-    │   (Payee)                                                │
-    │      │                                                   │
-    │      │ Submits transaction                               │
-    │      ▼                                                   │
-    │   PAYMENT GATEWAY                                        │
-    │      │                                                   │
+    │   CUSTOMER                                                │
+    │   (Payer)                                                 │
+    │      │                                                    │
+    │      │ Initiates payment                                  │
+    │      ▼                                                    │
+    │   MERCHANT                                                │
+    │   (Payee)                                                 │
+    │      │                                                    │
+    │      │ Submits transaction                                │
+    │      ▼                                                    │
+    │   PAYMENT GATEWAY                                         │
+    │      │                                                    │
     │      │ Transmits data                                   │
     │      ▼                                                   │
     │   PAYMENT PROCESSOR                                      │
