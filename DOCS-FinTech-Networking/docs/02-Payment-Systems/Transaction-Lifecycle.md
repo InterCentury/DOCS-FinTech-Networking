@@ -492,21 +492,21 @@ FRAUD SCORING MODEL
     │               FRAUD SCORING MODEL                         │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Risk Score =                                             │
-    │   0.35 × Device Risk +                                   │
-    │   0.30 × Location Risk +                                 │
-    │   0.20 × Behavior Risk +                                 │
-    │   0.15 × Transaction Risk                                │
+    │   Risk Score =                                            │
+    │   0.35 × Device Risk +                                    │
+    │   0.30 × Location Risk +                                  │
+    │   0.20 × Behavior Risk +                                  │
+    │   0.15 × Transaction Risk                                 │
     │                                                           │
-    │   Device Risk: 0 (trusted) to 1 (new/suspicious)        │
-    │   Location Risk: 0 (known) to 1 (unusual)              │
-    │   Behavior Risk: 0 (normal) to 1 (anomalous)            │
-    │   Transaction Risk: 0 (low) to 1 (high amount/frequency)│
+    │   Device Risk: 0 (trusted) to 1 (new/suspicious)          │
+    │   Location Risk: 0 (known) to 1 (unusual)                 │
+    │   Behavior Risk: 0 (normal) to 1 (anomalous)              │
+    │   Transaction Risk: 0 (low) to 1 (high amount/frequency)  │
     │                                                           │
-    │   Decision:                                              │
-    │   Risk < 0.3 → Accept                                  │
-    │   Risk 0.3-0.7 → Manual Review                         │
-    │   Risk > 0.7 → Reject                                  │
+    │   Decision:                                               │
+    │   Risk < 0.3 → Accept                                     │
+    │   Risk 0.3-0.7 → Manual Review                            │
+    │   Risk > 0.7 → Reject                                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
