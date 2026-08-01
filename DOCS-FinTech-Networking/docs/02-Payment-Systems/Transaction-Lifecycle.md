@@ -1042,16 +1042,16 @@ FAILURE RATE CALCULATION
 LATENCY CALCULATION
 
     +-----------------------------------------------------------+
-    │               LATENCY CALCULATION                        │
+    │               LATENCY CALCULATION                         │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Average Latency = Σ(Transaction Latencies) /          │
-    │                     Number of Transactions               │
+    │   Average Latency = Σ(Transaction Latencies) /            │
+    │                     Number of Transactions                │
     │                                                           │
-    │   Example:                                               │
-    │   100 transactions with latencies ranging from          │
-    │   50ms to 200ms                                        │
-    │   Average Latency = 12,500ms / 100 = 125ms            │
+    │   Example:                                                │
+    │   100 transactions with latencies ranging from            │
+    │   50ms to 200ms                                           │
+    │   Average Latency = 12,500ms / 100 = 125ms                │
     │                                                           │
     │   p99 Latency = 99th percentile                         │
     │   (99% of transactions are faster than this)            │
