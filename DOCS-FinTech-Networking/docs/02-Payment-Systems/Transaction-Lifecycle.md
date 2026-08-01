@@ -1053,8 +1053,8 @@ LATENCY CALCULATION
     │   50ms to 200ms                                           │
     │   Average Latency = 12,500ms / 100 = 125ms                │
     │                                                           │
-    │   p99 Latency = 99th percentile                         │
-    │   (99% of transactions are faster than this)            │
+    │   p99 Latency = 99th percentile                           │
+    │   (99% of transactions are faster than this)              │
     │                                                           │
     └-----------------------------------------------------------+
 ```
