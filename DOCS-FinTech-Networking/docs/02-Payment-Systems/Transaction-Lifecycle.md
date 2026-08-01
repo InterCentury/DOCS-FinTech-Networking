@@ -1027,11 +1027,11 @@ FAILURE RATE CALCULATION
     │                  Total Transactions × 100%                │
     │                                                           │
     │   Example:                                                │
-    │   Failed: 2,000                                        │
-    │   Total: 100,000                                      │
-    │   Failure Rate = 2,000 / 100,000 × 100 = 2%          │
+    │   Failed: 2,000                                           │
+    │   Total: 100,000                                          │
+    │   Failure Rate = 2,000 / 100,000 × 100 = 2%               │
     │                                                           │
-    │   Target: < 0.5%                                       │
+    │   Target: < 0.5%                                          │
     │                                                           │
     └-----------------------------------------------------------+
 ```
