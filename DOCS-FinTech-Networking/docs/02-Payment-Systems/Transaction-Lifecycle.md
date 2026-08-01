@@ -1020,13 +1020,13 @@ SUCCESS RATE CALCULATION
 FAILURE RATE CALCULATION
 
     +-----------------------------------------------------------+
-    │               FAILURE RATE CALCULATION                   │
+    │               FAILURE RATE CALCULATION                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Failure Rate = Failed Transactions /                  │
-    │                  Total Transactions × 100%              │
+    │   Failure Rate = Failed Transactions /                    │
+    │                  Total Transactions × 100%                │
     │                                                           │
-    │   Example:                                               │
+    │   Example:                                                │
     │   Failed: 2,000                                        │
     │   Total: 100,000                                      │
     │   Failure Rate = 2,000 / 100,000 × 100 = 2%          │
