@@ -998,18 +998,18 @@ SCALING STRATEGY
 SUCCESS RATE CALCULATION
 
     +-----------------------------------------------------------+
-    │               SUCCESS RATE CALCULATION                   │
+    │               SUCCESS RATE CALCULATION                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Success Rate = Successful Transactions /              │
-    │                  Total Transactions × 100%              │
+    │   Success Rate = Successful Transactions /                │
+    │                  Total Transactions × 100%                │
     │                                                           │
-    │   Example:                                               │
-    │   Successful: 98,000                                   │
-    │   Total: 100,000                                      │
-    │   Success Rate = 98,000 / 100,000 × 100 = 98%        │
+    │   Example:                                                │
+    │   Successful: 98,000                                      │
+    │   Total: 100,000                                          │
+    │   Success Rate = 98,000 / 100,000 × 100 = 98%             │
     │                                                           │
-    │   Target: > 99.5%                                      │
+    │   Target: > 99.5%                                         │
     │                                                           │
     └-----------------------------------------------------------+
 ```
