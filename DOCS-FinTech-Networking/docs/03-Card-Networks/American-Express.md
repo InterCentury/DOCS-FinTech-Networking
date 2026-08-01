@@ -34,25 +34,25 @@ DOCUMENTATION OBJECTIVES
 AMERICAN EXPRESS DEFINITION
 
                          +---------------------------+
-                         |   AMERICAN EXPRESS       |
-                         |  Closed-loop payment     |
-                         |  network and issuer      |
+                         |   AMERICAN EXPRESS        |
+                         |  Closed-loop payment      |
+                         |  network and issuer       |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  WHAT AMEX DOES         |  |  WHAT AMEX IS NOT        |
-|  - Closed-loop network   |  |  - Issues cards         |  |  - Visa (open-loop)      |
-|  - Issuer + network     |  |  - Processes payments   |  |  - Mastercard (open-loop) |
-|  - Direct merchant       |  |  - Acquires merchants  |  |  - Bank (not a bank)     |
-|    acquisition          |  |  - Settles transactions |  |  - ACH network           |
-|  - Premium brand        |  |  - Manages rewards     |  |  - Wire transfer system  |
-|  - High spend customers  |  |  - Provides risk       |  |  - Payment processor     |
-|  - High merchant fees   |  |    management          |  |  - Credit card issuer    |
-|                         |  |                         |  |    (though it acts as   |
-|                         |  |                         |  |    one)                |
+|  KEY CHARACTERISTICS      |  |  WHAT AMEX DOES           |  |  WHAT AMEX IS NOT         |
+|  - Closed-loop network    |  |  - Issues cards           |  |  - Visa (open-loop)       |
+|  - Issuer + network       |  |  - Processes payments     |  |  - Mastercard (open-loop) |
+|  - Direct merchant        |  |  - Acquires merchants     |  |  - Bank (not a bank)      |
+|    acquisition            |  |  - Settles transactions   |  |  - ACH network            |
+|  - Premium brand          |  |  - Manages rewards        |  |  - Wire transfer system   |
+|  - High spend customers   |  |  - Provides risk          |  |  - Payment processor      |
+|  - High merchant fees     |  |    management             |  |  - Credit card issuer     |
+|                           |  |                           |  |    (though it acts as     |
+|                           |  |                           |  |    one)                   |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
