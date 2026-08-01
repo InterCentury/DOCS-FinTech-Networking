@@ -660,14 +660,14 @@ EVENT-DRIVEN TRANSACTION PROCESSING
     │         EVENT-DRIVEN TRANSACTION PROCESSING               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PAYMENT CREATED ───► PaymentInitiated Event            │
-    │          │                                               │
-    │          ▼                                               │
+    │   PAYMENT CREATED ───► PaymentInitiated Event             │
+    │          │                                                │
+    │          ▼                                                │
     │   +---------------------------------------------------+   │
-    │   │  Validation Service                              │   │
+    │   │  Validation Service                               │   │
     │   │  (Listens to PaymentInitiated)                    │   │
-    │   │  - Validates transaction                         │   │
-    │   │  - Publishes PaymentValidated                    │   │
+    │   │  - Validates transaction                          │   │
+    │   │  - Publishes PaymentValidated                     │   │
     │   └---------------------------------------------------+   │
     │          │                                               │
     │          ▼                                               │
