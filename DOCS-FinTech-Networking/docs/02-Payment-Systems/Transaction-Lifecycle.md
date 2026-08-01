@@ -669,13 +669,13 @@ EVENT-DRIVEN TRANSACTION PROCESSING
     │   │  - Validates transaction                          │   │
     │   │  - Publishes PaymentValidated                     │   │
     │   └---------------------------------------------------+   │
-    │          │                                               │
-    │          ▼                                               │
+    │          │                                                │
+    │          ▼                                                │
     │   +---------------------------------------------------+   │
-    │   │  Fraud Service                                   │   │
+    │   │  Fraud Service                                    │   │
     │   │  (Listens to PaymentValidated)                    │   │
-    │   │  - Runs risk analysis                            │   │
-    │   │  - Publishes PaymentAuthorized/Declined          │   │
+    │   │  - Runs risk analysis                             │   │
+    │   │  - Publishes PaymentAuthorized/Declined           │   │
     │   └---------------------------------------------------+   │
     │          │                                               │
     │          ▼                                               │
