@@ -202,11 +202,11 @@ TRANSACTION PARTICIPANTS
     │      ▼                                                    │
     │   PAYMENT GATEWAY                                         │
     │      │                                                    │
-    │      │ Transmits data                                   │
-    │      ▼                                                   │
-    │   PAYMENT PROCESSOR                                      │
-    │      │                                                   │
-    │      │ Processes transaction                            │
+    │      │ Transmits data                                     │
+    │      ▼                                                    │
+    │   PAYMENT PROCESSOR                                       │
+    │      │                                                    │
+    │      │ Processes transaction                              │
     │      ▼                                                   │
     │   ACQUIRING BANK                                         │
     │      │                                                   │
