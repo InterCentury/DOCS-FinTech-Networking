@@ -207,25 +207,25 @@ TRANSACTION PARTICIPANTS
     │   PAYMENT PROCESSOR                                       │
     │      │                                                    │
     │      │ Processes transaction                              │
-    │      ▼                                                   │
-    │   ACQUIRING BANK                                         │
-    │      │                                                   │
-    │      │ Routes to network                                │
-    │      ▼                                                   │
-    │   CARD NETWORK                                           │
-    │      │                                                   │
-    │      │ Routes to issuer                                 │
-    │      ▼                                                   │
-    │   ISSUING BANK                                           │
-    │      │                                                   │
-    │      │ Authorizes/declines                              │
-    │      │                                                   │
-    │      ▼                                                   │
-    │   AUTHORIZATION RESPONSE                                 │
-    │      │                                                   │
-    │      │ Returns through chain                            │
-    │      ▼                                                   │
-    │   MERCHANT (Confirmation)                                │
+    │      ▼                                                    │
+    │   ACQUIRING BANK                                          │
+    │      │                                                    │
+    │      │ Routes to network                                  │
+    │      ▼                                                    │
+    │   CARD NETWORK                                            │
+    │      │                                                    │
+    │      │ Routes to issuer                                   │
+    │      ▼                                                    │
+    │   ISSUING BANK                                            │
+    │      │                                                    │
+    │      │ Authorizes/declines                                │
+    │      │                                                    │
+    │      ▼                                                    │
+    │   AUTHORIZATION RESPONSE                                  │
+    │      │                                                    │
+    │      │ Returns through chain                              │
+    │      ▼                                                    │
+    │   MERCHANT (Confirmation)                                 │
     │                                                           │
     └-----------------------------------------------------------+
 ```
