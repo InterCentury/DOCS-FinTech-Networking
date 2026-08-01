@@ -46,13 +46,13 @@ TRANSACTION LIFECYCLE DEFINITION
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  PRIMARY FUNCTIONS       |  |  WHAT IT COVERS          |
-|  - End-to-end flow      |  |  - Orchestrate phases    |  |  - Initiation            |
-|  - State transitions    |  |  - Manage state         |  |  - Authentication         |
-|  - Multi-system         |  |  - Route messages      |  |  - Authorization          |
-|  - Event-driven         |  |  - Handle errors       |  |  - Clearing               |
-|  - Distributed          |  |  - Ensure idempotency  |  |  - Settlement             |
-|  - Observable           |  |  - Track status       |  |  - Reconciliation         |
+|  KEY CHARACTERISTICS      |  |  PRIMARY FUNCTIONS       |  |  WHAT IT COVERS          |
+|  - End-to-end flow        |  |  - Orchestrate phases    |  |  - Initiation            |
+|  - State transitions      |  |  - Manage state         |  |  - Authentication         |
+|  - Multi-system           |  |  - Route messages      |  |  - Authorization          |
+|  - Event-driven           |  |  - Handle errors       |  |  - Clearing               |
+|  - Distributed            |  |  - Ensure idempotency  |  |  - Settlement             |
+|  - Observable             |  |  - Track status       |  |  - Reconciliation         |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
