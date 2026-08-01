@@ -131,23 +131,23 @@ AMERICAN EXPRESS HISTORY
 OPEN LOOP VS CLOSED LOOP
 
                          +---------------------------+
-                         |  OPEN VS CLOSED LOOP     |
+                         |  OPEN VS CLOSED LOOP      |
                          +-------------+-------------+
                                        |
-          +----------------------------+----------------------------+
-          │                                                         │
-          ▼                                                         ▼
-+---------------------------+                            +---------------------------+
-|  OPEN LOOP (Visa/MC)    |                            |  CLOSED LOOP (AmEx)      |
-+---------------------------+---------------------------+---------------------------+
-|  Multiple issuers       │  Single issuer (AmEx)     |
-|  Multiple acquirers     │  Single acquirer (AmEx)   |
-|  Network only          │  Issuer + Network        |
-|  Bank relationships    │  Direct to consumer      |
-|  Interchange fees      │  Merchant fees           |
-|  Complex flow          │  Simplified flow        |
-|  4-party model         │  3-party model          |
-+---------------------------+---------------------------+
+               +-----------------------+----------------------+
+               │                                              │
+               ▼                                              ▼
+           +---------------------------+---------------------------+
+           |  OPEN LOOP (Visa/MC)      |  CLOSED LOOP (AmEx)       |
+           +---------------------------+---------------------------+
+           |  Multiple issuers         │  Single issuer (AmEx)     |
+           |  Multiple acquirers       │  Single acquirer (AmEx)   |
+           |  Network only             │  Issuer + Network         |
+           |  Bank relationships       │  Direct to consumer       |
+           |  Interchange fees         │  Merchant fees            |
+           |  Complex flow             │  Simplified flow          |
+           |  4-party model            │  3-party model            |
+           +---------------------------+---------------------------+
 ```
 
 ### How Does American Express Make Money
