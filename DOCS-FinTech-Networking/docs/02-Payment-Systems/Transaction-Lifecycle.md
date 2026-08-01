@@ -804,15 +804,15 @@ IDEMPOTENCY MECHANISM
     │   │           │                                           │
     │   ▼           ▼                                           │
     │ RETURN      PROCESS                                       │
-    │ RESULT      TRANSACTION                                    │
-    │                │                                            │
-    │                ▼                                            │
+    │ RESULT      TRANSACTION                                   │
+    │                │                                          │
+    │                ▼                                          │
     │            STORE RESULT                                   │
     │            WITH ID                                        │
-    │                │                                            │
-    │                ▼                                            │
+    │                │                                          │
+    │                ▼                                          │
     │            RETURN RESULT                                  │
-    │                                                             │
+    │                                                           │
     └-----------------------------------------------------------+
 ```
 
