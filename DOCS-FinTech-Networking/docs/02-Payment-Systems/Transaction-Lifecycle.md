@@ -959,23 +959,23 @@ END-TO-END LATENCY BREAKDOWN
 SCALING STRATEGY
 
     +-----------------------------------------------------------+
-    │               SCALING STRATEGY                           │
+    │               SCALING STRATEGY                            │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TRAFFIC INCREASE                                       │
+    │   TRAFFIC INCREASE                                        │
     │        │                                                  │
     │        ▼                                                  │
-    │   LOAD BALANCER DISTRIBUTES                              │
+    │   LOAD BALANCER DISTRIBUTES                               │
     │        │                                                  │
-    │   ┌────┼────┐                                           │
-    │   │    │    │                                           │
-    │   ▼    ▼    ▼                                           │
-    │ INS1 INS2 INS3                                          │
-    │   │    │    │                                           │
-    │   └────┼────┘                                           │
+    │   ┌────┼────┐                                             │
+    │   │    │    │                                             │
+    │   ▼    ▼    ▼                                             │
+    │ INS1 INS2 INS3                                            │
+    │   │    │    │                                             │
+    │   └────┼────┘                                             │
     │        │                                                  │
     │        ▼                                                  │
-    │   DATABASE SCALES (Sharding)                             │
+    │   DATABASE SCALES (Sharding)                              │
     │        │                                                  │
     │   ┌────┼────┐                                           │
     │   │    │    │                                           │
