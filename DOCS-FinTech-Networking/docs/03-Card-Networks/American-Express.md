@@ -165,22 +165,22 @@ OPEN LOOP VS CLOSED LOOP
 ```
 CLOSED-LOOP ADVANTAGES
 
-                         +---------------------------+
-                         |  CLOSED-LOOP ADVANTAGES  |
-                         +-------------+-------------+
-                                       |
-          +----------------------------+----------------------------+
-          │                            │                            │
-          ▼                            ▼                            ▼
+                               +---------------------------+
+                               |  CLOSED-LOOP ADVANTAGES   |
+                               +-------------+-------------+
+                                             |
+                +----------------------------+----------------------------+
+                │                            │                            │
+                ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  DATA ADVANTAGES         |  |  CONTROL ADVANTAGES      |  |  FINANCIAL ADVANTAGES     |
-|  - Richer transaction    |  |  - End-to-end control   |  |  - Higher revenue per     |
-|    data                 |  |  - Customized products  |  |    card                   |
-|  - Full customer view   |  |  - Faster settlement   |  |  - More predictable       |
-|  - Better risk analysis |  |  - Better fraud        |  |    revenue               |
-|  - Targeted rewards    |  |    detection           |  |  - Lower transaction      |
-|                         |  |  - Consistent          |  |    costs                |
-|                         |  |    experience          |  |  - Merchant fees         |
+|  DATA ADVANTAGES          |  |  CONTROL ADVANTAGES       |  |  FINANCIAL ADVANTAGES     |
+|  - Richer transaction     |  |  - End-to-end control     |  |  - Higher revenue per     |
+|    data                   |  |  - Customized products    |  |    card                   |
+|  - Full customer view     |  |  - Faster settlement      |  |  - More predictable       |
+|  - Better risk analysis   |  |  - Better fraud           |  |    revenue                |
+|  - Targeted rewards       |  |    detection              |  |  - Lower transaction      |
+|                           |  |  - Consistent             |  |    costs                  |
+|                           |  |    experience             |  |  - Merchant fees          |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
