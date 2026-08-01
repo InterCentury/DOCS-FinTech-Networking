@@ -11,17 +11,17 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the complete transaction lifecycle from initiation to        │
-    │   settlement                                                              │
-    │   Learn the state machine and state transitions of a payment transaction │
-    │   Study the architecture and participants involved in each phase         │
-    │   Examine message flows, routing, and protocol standards                 │
-    │   Understand authentication, authorization, validation, and fraud        │
-    │   analysis                                                               │
-    │   Learn clearing, settlement, and ledger update mechanics                │
-    │   Study distributed systems, event-driven architecture, and queueing    │
-    │   Understand error handling, idempotency, and retry mechanisms          │
-    │   Learn performance engineering and mathematical models                 │
+    │   Understand the complete transaction lifecycle from initiation to          │
+    │   settlement                                                                │
+    │   Learn the state machine and state transitions of a payment transaction    │
+    │   Study the architecture and participants involved in each phase            │
+    │   Examine message flows, routing, and protocol standards                    │
+    │   Understand authentication, authorization, validation, and fraud           │
+    │   analysis                                                                  │
+    │   Learn clearing, settlement, and ledger update mechanics                   │
+    │   Study distributed systems, event-driven architecture, and queueing        │
+    │   Understand error handling, idempotency, and retry mechanisms              │
+    │   Learn performance engineering and mathematical models                     │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
