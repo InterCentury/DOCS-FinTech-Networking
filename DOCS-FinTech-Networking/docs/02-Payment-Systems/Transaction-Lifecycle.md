@@ -693,13 +693,13 @@ EVENT-DRIVEN TRANSACTION PROCESSING
     │   │  - Executes settlement                            │   │
     │   │  - Publishes PaymentSettled                       │   │
     │   └---------------------------------------------------+   │
-    │          │                                               │
-    │          ▼                                               │
+    │          │                                                │
+    │          ▼                                                │
     │   +---------------------------------------------------+   │
-    │   │  Notification Service                            │   │
-    │   │  (Listens to PaymentSettled)                     │   │
-    │   │  - Sends confirmation                           │   │
-    │   │  - Publishes PaymentComplete                     │   │
+    │   │  Notification Service                             │   │
+    │   │  (Listens to PaymentSettled)                      │   │
+    │   │  - Sends confirmation                             │   │
+    │   │  - Publishes PaymentComplete                      │   │
     │   └---------------------------------------------------+   │
     │                                                           │
     └-----------------------------------------------------------+
