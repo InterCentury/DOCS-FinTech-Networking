@@ -940,9 +940,9 @@ END-TO-END LATENCY BREAKDOWN
     │   ────────────────────────────────────────────────────────│
     │   TOTAL: 70 ms                                            │
     │                                                           │
-    │   Target: < 200 ms for card payments                    │
-    │   Target: < 1 second for RTP                           │
-    │   Target: < 2 seconds for ACH                         │
+    │   Target: < 200 ms for card payments                      │
+    │   Target: < 1 second for RTP                              │
+    │   Target: < 2 seconds for ACH                             │
     │                                                           │
     └-----------------------------------------------------------+
 ```
