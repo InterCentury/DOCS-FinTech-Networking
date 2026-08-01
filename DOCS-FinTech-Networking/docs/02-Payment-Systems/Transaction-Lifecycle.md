@@ -347,35 +347,35 @@ COMPLETE TRANSACTION LIFECYCLE
     │               COMPLETE TRANSACTION LIFECYCLE              │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PHASE 1: INITIATION                                    │
-    │   ├── User initiates payment                            │
-    │   └── Payment request created                           │
+    │   PHASE 1: INITIATION                                     │
+    │   ├── User initiates payment                              │
+    │   └── Payment request created                             │
     │                                                           │
-    │   PHASE 2: AUTHENTICATION                                │
-    │   ├── User identity verified                            │
-    │   ├── MFA or biometric                                  │
-    │   └── Session validated                                │
+    │   PHASE 2: AUTHENTICATION                                 │
+    │   ├── User identity verified                              │
+    │   ├── MFA or biometric                                    │
+    │   └── Session validated                                   │
     │                                                           │
-    │   PHASE 3: AUTHORIZATION                                 │
-    │   ├── Issuer approves transaction                      │
-    │   ├── Funds reserved                                  │
-    │   └── Auth code generated                             │
+    │   PHASE 3: AUTHORIZATION                                  │
+    │   ├── Issuer approves transaction                         │
+    │   ├── Funds reserved                                      │
+    │   └── Auth code generated                                 │
     │                                                           │
-    │   PHASE 4: VALIDATION                                   │
-    │   ├── Account validity checked                         │
-    │   ├── Balance verified                                │
-    │   ├── Business rules applied                          │
-    │   └── Limits validated                                │
-    │                                                           │
-    │   PHASE 5: FRAUD ANALYSIS                                │
-    │   ├── Risk scoring applied                            │
-    │   ├── Anomaly detection                               │
-    │   ├── Decision made                                  │
-    │   └── Accept/Reject/Review                           │
-    │                                                           │
-    │   PHASE 6: ROUTING                                      │
-    │   ├── Optimal path selected                           │
-    │   ├── Message sent to network                         │
+    │   PHASE 4: VALIDATION                                     │
+    │   ├── Account validity checked                            │
+    │   ├── Balance verified                                    │
+    │   ├── Business rules applied                              │
+    │   └── Limits validated                                    │
+    │                                                              │
+    │   PHASE 5: FRAUD ANALYSIS                                   │
+    │   ├── Risk scoring applied                               │
+    │   ├── Anomaly detection                                  │
+    │   ├── Decision made                                     │
+    │   └── Accept/Reject/Review                              │
+    │                                                              │
+    │   PHASE 6: ROUTING                                         │
+    │   ├── Optimal path selected                              │
+    │   ├── Message sent to network                            │
     │   └── Network routing                                │
     │                                                           │
     │   PHASE 7: CLEARING                                     │
