@@ -932,13 +932,13 @@ END-TO-END LATENCY BREAKDOWN
     │   Acquirer → Network: 4 ms                                │
     │   Network → Issuer: 6 ms                                  │
     │   Issuer Processing: 12 ms                                │
-    │   Response → Network: 6 ms                               │
-    │   Network → Acquirer: 4 ms                               │
-    │   Acquirer → Processor: 6 ms                            │
-    │   Processor → Gateway: 8 ms                            │
-    │   Gateway → Client: 5 ms                              │
-    │   ──────────────────────────────────────────────────────────────│
-    │   TOTAL: 70 ms                                     │
+    │   Response → Network: 6 ms                                │
+    │   Network → Acquirer: 4 ms                                │
+    │   Acquirer → Processor: 6 ms                              │
+    │   Processor → Gateway: 8 ms                               │
+    │   Gateway → Client: 5 ms                                  │
+    │   ────────────────────────────────────────────────────────│
+    │   TOTAL: 70 ms                                            │
     │                                                           │
     │   Target: < 200 ms for card payments                    │
     │   Target: < 1 second for RTP                           │
