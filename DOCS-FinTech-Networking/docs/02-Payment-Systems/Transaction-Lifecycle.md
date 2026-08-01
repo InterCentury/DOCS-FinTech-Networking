@@ -677,21 +677,21 @@ EVENT-DRIVEN TRANSACTION PROCESSING
     │   │  - Runs risk analysis                             │   │
     │   │  - Publishes PaymentAuthorized/Declined           │   │
     │   └---------------------------------------------------+   │
-    │          │                                               │
-    │          ▼                                               │
+    │          │                                                │
+    │          ▼                                                │
     │   +---------------------------------------------------+   │
-    │   │  Routing Service                                 │   │
+    │   │  Routing Service                                  │   │
     │   │  (Listens to PaymentAuthorized)                   │   │
-    │   │  - Routes to network                            │   │
-    │   │  - Publishes PaymentRouted                       │   │
+    │   │  - Routes to network                              │   │
+    │   │  - Publishes PaymentRouted                        │   │
     │   └---------------------------------------------------+   │
-    │          │                                               │
-    │          ▼                                               │
+    │          │                                                │
+    │          ▼                                                │
     │   +---------------------------------------------------+   │
-    │   │  Settlement Service                              │   │
-    │   │  (Listens to PaymentRouted)                      │   │
-    │   │  - Executes settlement                          │   │
-    │   │  - Publishes PaymentSettled                     │   │
+    │   │  Settlement Service                               │   │
+    │   │  (Listens to PaymentRouted)                       │   │
+    │   │  - Executes settlement                            │   │
+    │   │  - Publishes PaymentSettled                       │   │
     │   └---------------------------------------------------+   │
     │          │                                               │
     │          ▼                                               │
