@@ -926,17 +926,17 @@ END-TO-END LATENCY BREAKDOWN
     │               END-TO-END LATENCY BREAKDOWN                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Client → Gateway: 5 ms                                │
-    │   Gateway → Processor: 8 ms                            │
-    │   Processor → Acquirer: 6 ms                         │
-    │   Acquirer → Network: 4 ms                           │
-    │   Network → Issuer: 6 ms                            │
-    │   Issuer Processing: 12 ms                          │
-    │   Response → Network: 6 ms                         │
-    │   Network → Acquirer: 4 ms                         │
-    │   Acquirer → Processor: 6 ms                      │
-    │   Processor → Gateway: 8 ms                      │
-    │   Gateway → Client: 5 ms                        │
+    │   Client → Gateway: 5 ms                                  │
+    │   Gateway → Processor: 8 ms                               │
+    │   Processor → Acquirer: 6 ms                              │
+    │   Acquirer → Network: 4 ms                                │
+    │   Network → Issuer: 6 ms                                  │
+    │   Issuer Processing: 12 ms                                │
+    │   Response → Network: 6 ms                               │
+    │   Network → Acquirer: 4 ms                               │
+    │   Acquirer → Processor: 6 ms                            │
+    │   Processor → Gateway: 8 ms                            │
+    │   Gateway → Client: 5 ms                              │
     │   ──────────────────────────────────────────────────────────────│
     │   TOTAL: 70 ms                                     │
     │                                                           │
