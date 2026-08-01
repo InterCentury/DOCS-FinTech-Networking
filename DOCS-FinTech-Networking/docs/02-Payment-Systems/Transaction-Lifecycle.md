@@ -566,19 +566,19 @@ DOUBLE-ENTRY LEDGER UPDATE
     │               DOUBLE-ENTRY LEDGER UPDATE                  │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TRANSACTION: $100 PAYMENT FROM CUSTOMER TO MERCHANT    │
+    │   TRANSACTION: $100 PAYMENT FROM CUSTOMER TO MERCHANT     │
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  ACCOUNT                     │ DEBIT  │ CREDIT   │   │
-    │   │  ────────────────────────────│────────│──────────│   │
-    │   │  Customer Deposit (Liability)│ $100   │          │   │
-    │   │  Merchant Deposit (Liability)│        │ $100     │   │
+    │   │  ACCOUNT                     │ DEBIT  │ CREDIT    │   │
+    │   │  ────────────────────────────│────────│────────── │   │
+    │   │  Customer Deposit (Liability)│ $100   │           │   │
+    │   │  Merchant Deposit (Liability)│        │ $100      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   From Bank's Perspective:                               │
-    │   - Customer deposit decreases (liability decreases)    │
-    │   - Merchant deposit increases (liability increases)    │
-    │   - Total liabilities unchanged                         │
+    │   From Bank's Perspective:                                │
+    │   - Customer deposit decreases (liability decreases)      │
+    │   - Merchant deposit increases (liability increases)      │
+    │   - Total liabilities unchanged                           │
     │                                                           │
     └-----------------------------------------------------------+
 ```
