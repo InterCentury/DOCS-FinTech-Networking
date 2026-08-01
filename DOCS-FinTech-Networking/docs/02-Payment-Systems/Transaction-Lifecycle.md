@@ -111,37 +111,37 @@ SYSTEM ARCHITECTURE
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │           APPLICATION LAYER                       │   │
-    │   │  Mobile Apps | Websites | POS Terminals          │   │
+    │   │  Mobile Apps | Websites | POS Terminals           │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           GATEWAY LAYER                          │   │
-    │   │  Payment Gateway | Data Encryption | Routing    │   │
+    │   │           GATEWAY LAYER                           │   │
+    │   │  Payment Gateway | Data Encryption | Routing      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           PROCESSING LAYER                       │   │
-    │   │  Payment Processor | Fraud Detection | Routing  │   │
+    │   │           PROCESSING LAYER                        │   │
+    │   │  Payment Processor | Fraud Detection | Routing    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           CLEARING LAYER                         │   │
-    │   │  Data Exchange | Net Calculation | Routing      │   │
+    │   │           CLEARING LAYER                          │   │
+    │   │  Data Exchange | Net Calculation | Routing        │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           SETTLEMENT LAYER                       │   │
-    │   │  Fund Transfer | Reserve Accounts | Finality    │   │
+    │   │           SETTLEMENT LAYER                        │   │
+    │   │  Fund Transfer | Reserve Accounts | Finality      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           LEDGER LAYER                           │   │
-    │   │  Transaction Recording | Balance Updates | Audit │   │
+    │   │           LEDGER LAYER                            │   │
+    │   │  Transaction Recording | Balance Updates | Audit  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
