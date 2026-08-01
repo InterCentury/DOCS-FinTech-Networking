@@ -834,21 +834,21 @@ IDEMPOTENCY MECHANISM
 EXPONENTIAL BACKOFF
 
     +-----------------------------------------------------------+
-    │               EXPONENTIAL BACKOFF                        │
+    │               EXPONENTIAL BACKOFF                         │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Retry 1: delay = 1s                                   │
-    │   Retry 2: delay = 2s                                   │
-    │   Retry 3: delay = 4s                                   │
-    │   Retry 4: delay = 8s                                   │
-    │   Retry 5: delay = 16s                                  │
-    │   Retry n: delay = base × 2^n                          │
+    │   Retry 1: delay = 1s                                     │
+    │   Retry 2: delay = 2s                                     │
+    │   Retry 3: delay = 4s                                     │
+    │   Retry 4: delay = 8s                                     │
+    │   Retry 5: delay = 16s                                    │
+    │   Retry n: delay = base × 2^n                             │
     │                                                           │
-    │   Algorithm:                                            │
-    │   def calculate_backoff(attempt, base=1, max=60):      │
-    │       delay = min(base * (2 ** attempt), max)         │
-    │       jitter = random.uniform(0, delay * 0.1)        │
-    │       return delay + jitter                          │
+    │   Algorithm:                                              │
+    │   def calculate_backoff(attempt, base=1, max=60):         │
+    │       delay = min(base * (2 ** attempt), max)             │
+    │       jitter = random.uniform(0, delay * 0.1)             │
+    │       return delay + jitter                               │
     │                                                           │
     └-----------------------------------------------------------+
 ```
