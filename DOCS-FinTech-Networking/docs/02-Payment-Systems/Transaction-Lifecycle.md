@@ -366,27 +366,27 @@ COMPLETE TRANSACTION LIFECYCLE
     │   ├── Balance verified                                    │
     │   ├── Business rules applied                              │
     │   └── Limits validated                                    │
-    │                                                              │
-    │   PHASE 5: FRAUD ANALYSIS                                   │
-    │   ├── Risk scoring applied                               │
-    │   ├── Anomaly detection                                  │
-    │   ├── Decision made                                     │
-    │   └── Accept/Reject/Review                              │
-    │                                                              │
-    │   PHASE 6: ROUTING                                         │
-    │   ├── Optimal path selected                              │
-    │   ├── Message sent to network                            │
-    │   └── Network routing                                │
     │                                                           │
-    │   PHASE 7: CLEARING                                     │
-    │   ├── Data exchange                                   │
-    │   ├── Obligations calculated                          │
-    │   └── Net positions determined                        │
+    │   PHASE 5: FRAUD ANALYSIS                                 │
+    │   ├── Risk scoring applied                                │
+    │   ├── Anomaly detection                                   │
+    │   ├── Decision made                                       │
+    │   └── Accept/Reject/Review                                │
     │                                                           │
-    │   PHASE 8: SETTLEMENT                                   │
-    │   ├── Funds transferred                               │
-    │   ├── Reserve accounts updated                       │
-    │   └── Finality achieved                              │
+    │   PHASE 6: ROUTING                                        │
+    │   ├── Optimal path selected                               │
+    │   ├── Message sent to network                             │
+    │   └── Network routing                                     │
+    │                                                           │
+    │   PHASE 7: CLEARING                                       │
+    │   ├── Data exchange                                       │
+    │   ├── Obligations calculated                              │
+    │   └── Net positions determined                            │
+    │                                                           │
+    │   PHASE 8: SETTLEMENT                                     │
+    │   ├── Funds transferred                                   │
+    │   ├── Reserve accounts updated                            │
+    │   └── Finality achieved                                   │
     │                                                           │
     │   PHASE 9: LEDGER UPDATE                                │
     │   ├── Account balances updated                       │
