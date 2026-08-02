@@ -91,14 +91,14 @@ WIRE VS ACH VS RTP
                                        │
                                        ▼
                          +---------------------------+
-                         |  RTP (Real-Time)         |
-                         |  - Low-medium value     |
-                         |  - Real-time            |
-                         |  - Irrevocable          |
-                         |  - Gross settlement    |
-                         |  - Medium cost         |
-                         |  - Finality: immediate |
-                         |  - 24/7/365            |
+                         |  RTP (Real-Time)          |
+                         |  - Low-medium value       |
+                         |  - Real-time              |
+                         |  - Irrevocable            |
+                         |  - Gross settlement       |
+                         |  - Medium cost            |
+                         |  - Finality: immediate    |
+                         |  - 24/7/365               |
                          +---------------------------+
 ```
 
