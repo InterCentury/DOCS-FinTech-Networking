@@ -1074,12 +1074,12 @@ QUEUE UTILIZATION (ρ)
     │   λ = Arrival Rate (transactions per second)              │
     │   μ = Service Rate (transactions per second)              │
     │                                                           │
-    │   Example:                                               │
-    │   λ = 100 TPS, μ = 120 TPS                             │
-    │   ρ = 100 / 120 = 0.833 (83.3%)                       │
+    │   Example:                                                │
+    │   λ = 100 TPS, μ = 120 TPS                                │
+    │   ρ = 100 / 120 = 0.833 (83.3%)                           │
     │                                                           │
-    │   Target Utilization: < 70%                            │
-    │   At ρ > 0.8, queues grow exponentially               │
+    │   Target Utilization: < 70%                               │
+    │   At ρ > 0.8, queues grow exponentially                   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
