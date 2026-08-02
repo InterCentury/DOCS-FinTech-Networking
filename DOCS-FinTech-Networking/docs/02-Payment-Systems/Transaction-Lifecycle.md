@@ -1068,11 +1068,11 @@ QUEUE UTILIZATION (ρ)
     │               QUEUE UTILIZATION                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   ρ = λ / μ                                              │
+    │   ρ = λ / μ                                               │
     │                                                           │
-    │   Where:                                                 │
-    │   λ = Arrival Rate (transactions per second)           │
-    │   μ = Service Rate (transactions per second)           │
+    │   Where:                                                  │
+    │   λ = Arrival Rate (transactions per second)              │
+    │   μ = Service Rate (transactions per second)              │
     │                                                           │
     │   Example:                                               │
     │   λ = 100 TPS, μ = 120 TPS                             │
