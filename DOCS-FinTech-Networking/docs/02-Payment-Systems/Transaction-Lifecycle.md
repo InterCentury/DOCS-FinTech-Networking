@@ -1104,8 +1104,8 @@ LITTLE'S LAW
     │   λ = 1,000 TPS, W = 0.5 seconds                          │
     │   L = 1,000 × 0.5 = 500 transactions                      │
     │                                                           │
-    │   The system must handle 500 transactions on           │
-    │   average at any given time.                           │
+    │   The system must handle 500 transactions on              │
+    │   average at any given time.                              │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -1116,10 +1116,10 @@ LITTLE'S LAW
 AVAILABILITY CALCULATION
 
     +-----------------------------------------------------------+
-    │               AVAILABILITY CALCULATION                   │
+    │               AVAILABILITY CALCULATION                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Availability = (Uptime / Total Time) × 100            │
+    │   Availability = (Uptime / Total Time) × 100              │
     │                                                           │
     │   99.9% = 8.76 hours downtime/year                       │
     │   99.99% = 52.56 minutes downtime/year                   │
