@@ -176,14 +176,14 @@ WIRE TRANSFER ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           SETTLEMENT ENGINE                      │   │
-    │   │  Reserve transfers | Gross settlement | Finality│   │
+    │   │           SETTLEMENT ENGINE                       │   │
+    │   │  Reserve transfers | Gross settlement | Finality  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           CENTRAL LEDGER                         │   │
-    │   │  Reserve account balances | Transaction records │   │
+    │   │           CENTRAL LEDGER                          │   │
+    │   │  Reserve account balances | Transaction records   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
@@ -220,19 +220,19 @@ Several participants are involved in a wire transfer.
 ```
 WIRE TRANSFER PARTICIPANTS
 
-                    +-------------------------------------------------+
-                    |          WIRE TRANSFER PARTICIPANTS            |
-                    +-------------------------------------------------+
+              +-------------------------------------------------+
+              |          WIRE TRANSFER PARTICIPANTS             |
+              +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  SENDER                  |  |  ORIGINATING BANK        |  |  INTERMEDIARY BANK       |
-|  (Initiator)             |  |  (Sender's Bank)         |  |  (Correspondent)         |
-|  - Authorizes transfer  |  |  - Validates instruction  |  |  - Routes payment       |
-|  - Provides funds       |  |  - Sends wire            |  |  - Provides nostros     |
-|  - Pays fees            |  |  - Debited account       |  |  - Currency conversion  |
+|  SENDER                   |  |  ORIGINATING BANK         |  |  INTERMEDIARY BANK        |
+|  (Initiator)              |  |  (Sender's Bank)          |  |  (Correspondent)          |
+|  - Authorizes transfer    |  |  - Validates instruction  |  |  - Routes payment         |
+|  - Provides funds         |  |  - Sends wire             |  |  - Provides nostros       |
+|  - Pays fees              |  |  - Debited account        |  |  - Currency conversion    |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
@@ -241,11 +241,11 @@ WIRE TRANSFER PARTICIPANTS
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  RECEIVING BANK          |  |  CENTRAL BANK            |  |  RECIPIENT               |
-|  (Receiver's Bank)       |  |  (Settlement)            |  |  (Beneficiary)           |
-|  - Receives wire        |  |  - Maintains reserves    |  |  - Receives funds       |
-|  - Credits account      |  |  - Provides finality    |  |  - Account credited     |
-|  - Notifies recipient   |  |  - Operates RTGS        |  |  - Notified of transfer |
+|  RECEIVING BANK           |  |  CENTRAL BANK             |  |  RECIPIENT                |
+|  (Receiver's Bank)        |  |  (Settlement)             |  |  (Beneficiary)            |
+|  - Receives wire          |  |  - Maintains reserves     |  |  - Receives funds         |
+|  - Credits account        |  |  - Provides finality      |  |  - Account credited       |
+|  - Notifies recipient     |  |  - Operates RTGS          |  |  - Notified of transfer   |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
