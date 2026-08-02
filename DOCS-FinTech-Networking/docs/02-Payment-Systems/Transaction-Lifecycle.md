@@ -1096,13 +1096,13 @@ LITTLE'S LAW
     │   L = λ × W                                               │
     │                                                           │
     │   Where:                                                  │
-    │   L = Average number of transactions in system          │
-    │   λ = Average arrival rate (transactions per second)   │
-    │   W = Average time a transaction spends in system     │
+    │   L = Average number of transactions in system            │
+    │   λ = Average arrival rate (transactions per second)      │
+    │   W = Average time a transaction spends in system         │
     │                                                           │
-    │   Example:                                               │
-    │   λ = 1,000 TPS, W = 0.5 seconds                       │
-    │   L = 1,000 × 0.5 = 500 transactions                    │
+    │   Example:                                                │
+    │   λ = 1,000 TPS, W = 0.5 seconds                          │
+    │   L = 1,000 × 0.5 = 500 transactions                      │
     │                                                           │
     │   The system must handle 500 transactions on           │
     │   average at any given time.                           │
