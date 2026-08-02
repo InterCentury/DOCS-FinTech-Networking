@@ -1279,12 +1279,12 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY TAKEAWAY                                  |
-    |  The transaction lifecycle is the master      |
-    |  blueprint for payment systems. It defines    |
-    |  the flow, states, participants, and          |
-    |  engineering patterns that make digital      |
-    |  payments possible.                          |
+    |  KEY TAKEAWAY                                   |
+    |  The transaction lifecycle is the master        |
+    |  blueprint for payment systems. It defines      |
+    |  the flow, states, participants, and            |
+    |  engineering patterns that make digital         |
+    |  payments possible.                             |
     +-------------------------------------------------+
 ```
 
