@@ -11,15 +11,15 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the definition and purpose of wire transfers                 │
-    │   Learn the architecture and components of wire transfer systems         │
-    │   Study domestic and international wire networks (Fedwire, CHAPS,        │
-    │   TARGET, SWIFT)                                                         │
-    │   Examine messaging standards (ISO 20022, SWIFT MT/MX)                  │
-    │   Understand payment routing and correspondent banking                  │
-    │   Study settlement systems and RTGS engines                            │
-    │   Learn security, compliance, and risk management                      │
-    │   Examine distributed systems and performance engineering              │
+    │   Understand the definition and purpose of wire transfers                   │
+    │   Learn the architecture and components of wire transfer systems            │
+    │   Study domestic and international wire networks (Fedwire, CHAPS,           │
+    │   TARGET, SWIFT)                                                            │
+    │   Examine messaging standards (ISO 20022, SWIFT MT/MX)                      │
+    │   Understand payment routing and correspondent banking                      │
+    │   Study settlement systems and RTGS engines                                 │
+    │   Learn security, compliance, and risk management                           │
+    │   Examine distributed systems and performance engineering                   │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
