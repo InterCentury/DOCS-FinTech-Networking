@@ -1090,12 +1090,12 @@ QUEUE UTILIZATION (ρ)
 LITTLE'S LAW
 
     +-----------------------------------------------------------+
-    │               LITTLE'S LAW                               │
+    │               LITTLE'S LAW                                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   L = λ × W                                              │
+    │   L = λ × W                                               │
     │                                                           │
-    │   Where:                                                 │
+    │   Where:                                                  │
     │   L = Average number of transactions in system          │
     │   λ = Average arrival rate (transactions per second)   │
     │   W = Average time a transaction spends in system     │
