@@ -1137,23 +1137,23 @@ AVAILABILITY CALCULATION
 RETRY DELAY CALCULATION
 
     +-----------------------------------------------------------+
-    │               RETRY DELAY CALCULATION                    │
+    │               RETRY DELAY CALCULATION                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   delay = base × 2^n                                    │
+    │   delay = base × 2^n                                      │
     │                                                           │
-    │   Where:                                                 │
-    │   base = initial delay (e.g., 1 second)                │
-    │   n = retry attempt number (0, 1, 2, ...)             │
+    │   Where:                                                  │
+    │   base = initial delay (e.g., 1 second)                   │
+    │   n = retry attempt number (0, 1, 2, ...)                 │
     │                                                           │
-    │   Example:                                               │
-    │   Attempt 0: 1s                                         │
-    │   Attempt 1: 2s                                         │
-    │   Attempt 2: 4s                                         │
-    │   Attempt 3: 8s                                         │
-    │   Attempt 4: 16s                                        │
+    │   Example:                                                │
+    │   Attempt 0: 1s                                           │
+    │   Attempt 1: 2s                                           │
+    │   Attempt 2: 4s                                           │
+    │   Attempt 3: 8s                                           │
+    │   Attempt 4: 16s                                          │
     │                                                           │
-    │   With jitter: delay += random(0, delay * 0.1)         │
+    │   With jitter: delay += random(0, delay * 0.1)            │
     │                                                           │
     └-----------------------------------------------------------+
 ```
