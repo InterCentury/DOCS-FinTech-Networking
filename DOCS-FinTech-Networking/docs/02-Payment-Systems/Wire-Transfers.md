@@ -71,20 +71,20 @@ WIRE TRANSFER DEFINITION
 WIRE VS ACH VS RTP
 
                          +---------------------------+
-                         |  WIRE VS ACH VS RTP      |
+                         |     WIRE VS ACH VS RTP    |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  WIRE TRANSFER           |                            |  ACH                     |
-|  - High value            |                            |  - Low value             |
-|  - Real-time             |                            |  - Batch (1-3 days)      |
-|  - Irrevocable           |                            |  - Reversible            |
-|  - Gross settlement     |                            |  - Net settlement        |
-|  - High cost            |                            |  - Low cost              |
-|  - Finality: immediate  |                            |  - Finality: next day    |
+|  WIRE TRANSFER            |                            |  ACH                     |
+|  - High value             |                            |  - Low value             |
+|  - Real-time              |                            |  - Batch (1-3 days)      |
+|  - Irrevocable            |                            |  - Reversible            |
+|  - Gross settlement       |                            |  - Net settlement        |
+|  - High cost              |                            |  - Low cost              |
+|  - Finality: immediate    |                            |  - Finality: next day    |
 +---------------------------+                            +---------------------------+
           │                                                         │
           +----------------------------+----------------------------+
