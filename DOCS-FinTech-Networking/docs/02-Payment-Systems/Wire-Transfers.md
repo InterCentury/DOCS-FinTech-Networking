@@ -146,14 +146,14 @@ WIRE TRANSFER ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              API GATEWAY                         │   │
-    │   │  Authentication | Rate Limiting | Routing       │   │
+    │   │              API GATEWAY                          │   │
+    │   │  Authentication | Rate Limiting | Routing         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              MESSAGE QUEUE                       │   │
-    │   │  Wire instructions buffering                    │   │
+    │   │              MESSAGE QUEUE                        │   │
+    │   │  Wire instructions buffering                      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
