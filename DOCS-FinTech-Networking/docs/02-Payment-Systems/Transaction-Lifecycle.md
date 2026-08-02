@@ -1171,18 +1171,18 @@ CARD PAYMENT TIMELINE
     │               CARD PAYMENT TIMELINE                       │
     +-----------------------------------------------------------+
     │                                                           │
-    │   0 ms: Customer enters card details                     │
-    │   5 ms: Gateway encrypts data                           │
-    │   15 ms: Processor receives request                      │
-    │   25 ms: Acquirer routes to network                     │
-    │   40 ms: Network routes to issuer                       │
-    │   60 ms: Issuer authorizes transaction                  │
-    │   75 ms: Response returns to network                    │
-    │   90 ms: Acquirer receives response                     │
-    │   110 ms: Processor receives response                   │
-    │   130 ms: Gateway returns response                      │
-    │   150 ms: Customer sees approval                       │
-    │   1-2 days: Clearing and settlement                    │
+    │   0 ms: Customer enters card details                      │
+    │   5 ms: Gateway encrypts data                             │
+    │   15 ms: Processor receives request                       │
+    │   25 ms: Acquirer routes to network                       │
+    │   40 ms: Network routes to issuer                         │
+    │   60 ms: Issuer authorizes transaction                    │
+    │   75 ms: Response returns to network                      │
+    │   90 ms: Acquirer receives response                       │
+    │   110 ms: Processor receives response                     │
+    │   130 ms: Gateway returns response                        │
+    │   150 ms: Customer sees approval                          │
+    │   1-2 days: Clearing and settlement                       │
     │                                                           │
     └-----------------------------------------------------------+
 ```
