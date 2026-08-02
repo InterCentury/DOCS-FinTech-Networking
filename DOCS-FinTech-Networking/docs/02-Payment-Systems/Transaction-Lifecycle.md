@@ -1121,12 +1121,12 @@ AVAILABILITY CALCULATION
     │                                                           │
     │   Availability = (Uptime / Total Time) × 100              │
     │                                                           │
-    │   99.9% = 8.76 hours downtime/year                       │
-    │   99.99% = 52.56 minutes downtime/year                   │
-    │   99.999% = 5.26 minutes downtime/year                   │
-    │   99.9999% = 31.5 seconds downtime/year                  │
+    │   99.9% = 8.76 hours downtime/year                        │
+    │   99.99% = 52.56 minutes downtime/year                    │
+    │   99.999% = 5.26 minutes downtime/year                    │
+    │   99.9999% = 31.5 seconds downtime/year                   │
     │                                                           │
-    │   Target: 99.999% for payment systems                   │
+    │   Target: 99.999% for payment systems                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
