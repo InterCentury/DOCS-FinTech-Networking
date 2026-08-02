@@ -1214,25 +1214,25 @@ FUTURE TRANSACTION LIFECYCLE
     │               FUTURE TRANSACTION LIFECYCLE                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   USER INITIATES PAYMENT                                 │
+    │   USER INITIATES PAYMENT                                  │
     │        │                                                  │
     │        ▼                                                  │
-    │   AI FRAUD DETECTION (Real-time)                         │
+    │   AI FRAUD DETECTION (Real-time)                          │
     │        │                                                  │
     │        ▼                                                  │
-    │   CBDC SETTLEMENT (Instant)                              │
+    │   CBDC SETTLEMENT (Instant)                               │
     │        │                                                  │
     │        ▼                                                  │
-    │   PROGRAMMABLE CONDITIONS CHECK                          │
+    │   PROGRAMMABLE CONDITIONS CHECK                           │
     │        │                                                  │
     │        ▼                                                  │
-    │   ATOMIC SETTLEMENT (Simultaneous)                       │
+    │   ATOMIC SETTLEMENT (Simultaneous)                        │
     │        │                                                  │
     │        ▼                                                  │
-    │   BLOCKCHAIN LEDGER UPDATE                               │
+    │   BLOCKCHAIN LEDGER UPDATE                                │
     │        │                                                  │
     │        ▼                                                  │
-    │   INSTANT CONFIRMATION                                   │
+    │   INSTANT CONFIRMATION                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
