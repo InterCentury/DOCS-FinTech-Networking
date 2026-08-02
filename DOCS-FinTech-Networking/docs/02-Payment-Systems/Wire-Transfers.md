@@ -158,20 +158,20 @@ WIRE TRANSFER ARCHITECTURE
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           VALIDATION ENGINE                      │   │
-    │   │  Format validation | Balance checks | Limits    │   │
+    │   │           VALIDATION ENGINE                       │   │
+    │   │  Format validation | Balance checks | Limits      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           COMPLIANCE ENGINE                      │   │
-    │   │  AML checks | KYC verification | Sanctions      │   │
+    │   │           COMPLIANCE ENGINE                       │   │
+    │   │  AML checks | KYC verification | Sanctions        │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           ROUTING ENGINE                         │   │
-    │   │  Path selection | Correspondent bank routing    │   │
+    │   │           ROUTING ENGINE                          │   │
+    │   │  Path selection | Correspondent bank routing      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
