@@ -43,13 +43,13 @@ WIRE TRANSFER DEFINITION
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS      |  |  PRIMARY USES             |  |  WHAT IT IS NOT          |
-|  - High value             |  |  - Corporate payments     |  |  - ACH (batch)           |
-|  - Real-time              |  |  - Real estate            |  |  - Card payments         |
-|  - Irrevocable            |  |  - Securities             |  |  - P2P transfers         |
-|  - Immediate finality     |  |  - Government             |  |  - Instant payments      |
-|  - Gross settlement       |  |  - International trade    |  |  - QR payments           |
-|  - High cost              |  |  - Emergency payments     |  |  - Digital wallets       |
+|  KEY CHARACTERISTICS      |  |  PRIMARY USES             |  |  WHAT IT IS NOT           |
+|  - High value             |  |  - Corporate payments     |  |  - ACH (batch)            |
+|  - Real-time              |  |  - Real estate            |  |  - Card payments          |
+|  - Irrevocable            |  |  - Securities             |  |  - P2P transfers          |
+|  - Immediate finality     |  |  - Government             |  |  - Instant payments       |
+|  - Gross settlement       |  |  - International trade    |  |  - QR payments            |
+|  - High cost              |  |  - Emergency payments     |  |  - Digital wallets        |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
