@@ -1257,25 +1257,25 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  STATES                                        |
-    |  Created → Pending → Authorized → Cleared →   |
-    |  Settled → Completed                          |
+    |  STATES                                         |
+    |  Created → Pending → Authorized → Cleared →     |
+    |  Settled → Completed                            |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  PARTICIPANTS                                  |
-    |  Customer, Merchant, Gateway, Processor,       |
-    |  Acquirer, Network, Issuer                    |
+    |  PARTICIPANTS                                   |
+    |  Customer, Merchant, Gateway, Processor,        |
+    |  Acquirer, Network, Issuer                      |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY ENGINEERING CONCEPTS                      |
-    |  - Event-driven architecture                  |
-    |  - Distributed systems                        |
-    |  - Idempotency                                |
-    |  - Queueing                                   |
-    |  - State management                           |
-    |  - Error handling                             |
+    |  KEY ENGINEERING CONCEPTS                       |
+    |  - Event-driven architecture                    |
+    |  - Distributed systems                          |
+    |  - Idempotency                                  |
+    |  - Queueing                                     |
+    |  - State management                             |
+    |  - Error handling                               |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
