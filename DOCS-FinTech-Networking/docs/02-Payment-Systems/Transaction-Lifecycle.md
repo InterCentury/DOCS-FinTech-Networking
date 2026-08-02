@@ -1243,17 +1243,17 @@ FUTURE TRANSACTION LIFECYCLE
 SUMMARY
 
     +-------------------------------------------------+
-    |  WHAT IS A TRANSACTION LIFECYCLE?              |
-    |  Complete sequence from initiation to          |
-    |  settlement                                   |
+    |  WHAT IS A TRANSACTION LIFECYCLE?               |
+    |  Complete sequence from initiation to           |
+    |  settlement                                     |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY PHASES                                    |
-    |  Initiation → Authentication → Authorization  |
-    |  → Validation → Fraud Analysis → Routing      |
-    |  → Clearing → Settlement → Ledger Update      |
-    |  → Notification                               |
+    |  KEY PHASES                                     |
+    |  Initiation → Authentication → Authorization    |
+    |  → Validation → Fraud Analysis → Routing        |
+    |  → Clearing → Settlement → Ledger Update        |
+    |  → Notification                                 |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
