@@ -671,27 +671,27 @@ TOKENIZATION ARCHITECTURE
     │               TOKENIZATION ARCHITECTURE                   │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CARD PAN (371234567890123)                            │
+    │   CARD PAN (371234567890123)                              │
     │        │                                                  │
-    │        │ Request token                                  │
+    │        │ Request token                                    │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           AMEX TOKEN SERVICE PROVIDER           │   │
+    │   │           AMEX TOKEN SERVICE PROVIDER             │   │
     │   │                                                   │   │
-    │   │  1. Validate PAN                               │   │
-    │   │  2. Generate token (unique per device)         │   │
-    │   │  3. Store mapping in secure vault              │   │
-    │   │  4. Return token                               │   │
+    │   │  1. Validate PAN                                  │   │
+    │   │  2. Generate token (unique per device)            │   │
+    │   │  3. Store mapping in secure vault                 │   │
+    │   │  4. Return token                                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
-    │        │ Payment token                                  │
+    │        │ Payment token                                    │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           DEVICE / MERCHANT                     │   │
+    │   │           DEVICE / MERCHANT                       │   │
     │   │                                                   │   │
-    │   │  - Store token (not PAN)                        │   │
-    │   │  - Send token for payments                     │   │
-    │   │  - Token has no value if intercepted           │   │
+    │   │  - Store token (not PAN)                          │   │
+    │   │  - Send token for payments                        │   │
+    │   │  - Token has no value if intercepted              │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
