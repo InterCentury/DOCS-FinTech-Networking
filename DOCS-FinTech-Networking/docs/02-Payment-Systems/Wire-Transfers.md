@@ -678,34 +678,34 @@ CROSS-BORDER WIRE FLOW
 SECURITY LAYERS
 
     +-----------------------------------------------------------+
-    │               SECURITY LAYERS                            │
+    │               SECURITY LAYERS                             │
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  LAYER 5: PHYSICAL SECURITY                     │   │
-    │   │  - Secure data centers                          │   │
-    │   │  - Access controls                             │   │
+    │   │  LAYER 5: PHYSICAL SECURITY                       │   │
+    │   │  - Secure data centers                            │   │
+    │   │  - Access controls                                │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  LAYER 4: NETWORK SECURITY                     │   │
-    │   │  - TLS/SSL encryption                          │   │
-    │   │  - Firewalls                                  │   │
-    │   │  - DDoS protection                            │   │
+    │   │  LAYER 4: NETWORK SECURITY                        │   │
+    │   │  - TLS/SSL encryption                             │   │
+    │   │  - Firewalls                                      │   │
+    │   │  - DDoS protection                                │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  LAYER 3: APPLICATION SECURITY                 │   │
-    │   │  - Authentication                             │   │
-    │   │  - Authorization                              │   │
-    │   │  - Digital signatures                         │   │
+    │   │  LAYER 3: APPLICATION SECURITY                    │   │
+    │   │  - Authentication                                 │   │
+    │   │  - Authorization                                  │   │
+    │   │  - Digital signatures                             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  LAYER 2: DATA SECURITY                        │   │
-    │   │  - AES-256 encryption                         │   │
-    │   │  - HSMs for key storage                      │   │
-    │   │  - Data masking                              │   │
+    │   │  LAYER 2: DATA SECURITY                           │   │
+    │   │  - AES-256 encryption                             │   │
+    │   │  - HSMs for key storage                           │   │
+    │   │  - Data masking                                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
