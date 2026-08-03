@@ -884,21 +884,21 @@ LIQUIDITY UTILIZATION
 QUEUE UTILIZATION
 
     +-----------------------------------------------------------+
-    │               QUEUE UTILIZATION                          │
+    │               QUEUE UTILIZATION                           │
     +-----------------------------------------------------------+
     │                                                           │
-    │   ρ = λ / μ                                              │
+    │   ρ = λ / μ                                               │
     │                                                           │
-    │   Where:                                                 │
-    │   λ = Arrival Rate (transactions per second)           │
-    │   μ = Service Rate (transactions per second)           │
+    │   Where:                                                  │
+    │   λ = Arrival Rate (transactions per second)              │
+    │   μ = Service Rate (transactions per second)              │
     │                                                           │
-    │   Example:                                               │
-    │   λ = 10 wires per minute = 0.167 per second          │
-    │   μ = 15 wires per minute = 0.25 per second           │
-    │   ρ = 0.167 / 0.25 = 0.667 (66.7%)                    │
+    │   Example:                                                │
+    │   λ = 10 wires per minute = 0.167 per second              │
+    │   μ = 15 wires per minute = 0.25 per second               │
+    │   ρ = 0.167 / 0.25 = 0.667 (66.7%)                        │
     │                                                           │
-    │   Target: < 70%                                        │
+    │   Target: < 70%                                           │
     │                                                           │
     └-----------------------------------------------------------+
 ```
