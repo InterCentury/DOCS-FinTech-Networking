@@ -274,43 +274,43 @@ WIRE TRANSFER LIFECYCLE
     │               WIRE TRANSFER LIFECYCLE                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PHASE 1: INITIATION                                    │
-    │   ├── Sender requests wire at bank                       │
-    │   ├── Provides beneficiary details                       │
-    │   └── Authorizes transfer                              │
+    │   PHASE 1: INITIATION                                     │
+    │   ├── Sender requests wire at bank                        │
+    │   ├── Provides beneficiary details                        │
+    │   └── Authorizes transfer                                 │
     │                                                           │
-    │   PHASE 2: AUTHENTICATION                                │
-    │   ├── Identity verified                                │
-    │   ├── MFA or secure token                              │
-    │   └── Authorization confirmed                          │
+    │   PHASE 2: AUTHENTICATION                                 │
+    │   ├── Identity verified                                   │
+    │   ├── MFA or secure token                                 │
+    │   └── Authorization confirmed                             │
     │                                                           │
-    │   PHASE 3: VALIDATION                                    │
-    │   ├── Account validity checked                         │
-    │   ├── Sufficient funds verified                         │
-    │   ├── Limits checked                                   │
-    │   └── Business rules applied                           │
+    │   PHASE 3: VALIDATION                                     │
+    │   ├── Account validity checked                            │
+    │   ├── Sufficient funds verified                           │
+    │   ├── Limits checked                                      │
+    │   └── Business rules applied                              │
     │                                                           │
-    │   PHASE 4: COMPLIANCE CHECKS                             │
-    │   ├── AML screening                                     │
-    │   ├── KYC verification                                  │
-    │   ├── Sanctions list screening                         │
-    │   └── Fraud detection                                  │
+    │   PHASE 4: COMPLIANCE CHECKS                              │
+    │   ├── AML screening                                       │
+    │   ├── KYC verification                                    │
+    │   ├── Sanctions list screening                            │
+    │   └── Fraud detection                                     │
     │                                                           │
-    │   PHASE 5: ROUTING                                       │
-    │   ├── Optimal path selected                            │
-    │   ├── SWIFT message sent                               │
-    │   └── Network routing                                  │
+    │   PHASE 5: ROUTING                                        │
+    │   ├── Optimal path selected                               │
+    │   ├── SWIFT message sent                                  │
+    │   └── Network routing                                     │
     │                                                           │
-    │   PHASE 6: SETTLEMENT                                    │
-    │   ├── Sender's reserve debited                          │
-    │   ├── Receiver's reserve credited                      │
-    │   ├── Gross settlement executed                        │
-    │   └── Finality achieved                                │
+    │   PHASE 6: SETTLEMENT                                     │
+    │   ├── Sender's reserve debited                            │
+    │   ├── Receiver's reserve credited                         │
+    │   ├── Gross settlement executed                           │
+    │   └── Finality achieved                                   │
     │                                                           │
-    │   PHASE 7: CONFIRMATION                                  │
-    │   ├── Confirmation to sender                            │
-    │   ├── Notification to recipient                         │
-    │   └── Receipt generated                                │
+    │   PHASE 7: CONFIRMATION                                   │
+    │   ├── Confirmation to sender                              │
+    │   ├── Notification to recipient                           │
+    │   └── Receipt generated                                   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
