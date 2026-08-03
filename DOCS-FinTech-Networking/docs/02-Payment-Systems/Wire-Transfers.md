@@ -1029,22 +1029,22 @@ FUTURE OF WIRE TRANSFERS
     │               FUTURE OF WIRE TRANSFERS                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CURRENT:                                               │
+    │   CURRENT:                                                │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Legacy MT messages                             │   │
-    │   │  Correspondent banking                         │   │
-    │   │  ​Days for settlement                          │   │
-    │   │  High costs                                    │   │
+    │   │  Legacy MT messages                               │   │
+    │   │  Correspondent banking                            │   │
+    │   │  ​Days for settlement                              │   │
+    │   │  High costs                                       │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
-    │   FUTURE:                                               │
+    │   FUTURE:                                                 │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  ISO 20022 messages                             │   │
-    │   │  CBDC settlement                              │   │
-    │   │  Instant settlement                           │   │
-    │   │  Lower costs                                  │   │
-    │   │  Programmable payments                        │   │
+    │   │  ISO 20022 messages                               │   │
+    │   │  CBDC settlement                                  │   │
+    │   │  Instant settlement                               │   │
+    │   │  Lower costs                                      │   │
+    │   │  Programmable payments                            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
