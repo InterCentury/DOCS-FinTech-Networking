@@ -909,16 +909,16 @@ QUEUE UTILIZATION
 AVAILABILITY CALCULATION
 
     +-----------------------------------------------------------+
-    │               AVAILABILITY CALCULATION                   │
+    │               AVAILABILITY CALCULATION                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Availability = (Uptime / Total Time) × 100            │
+    │   Availability = (Uptime / Total Time) × 100              │
     │                                                           │
-    │   99.9% = 8.76 hours downtime/year                       │
-    │   99.99% = 52.56 minutes downtime/year                   │
-    │   99.999% = 5.26 minutes downtime/year                   │
+    │   99.9% = 8.76 hours downtime/year                        │
+    │   99.99% = 52.56 minutes downtime/year                    │
+    │   99.999% = 5.26 minutes downtime/year                    │
     │                                                           │
-    │   Target: 99.999% (5.26 minutes/year)                   │
+    │   Target: 99.999% (5.26 minutes/year)                     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
