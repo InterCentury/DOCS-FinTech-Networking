@@ -452,30 +452,30 @@ AMEX TRANSACTION FLOW
     │                                                           │
     │   CUSTOMER                                                │
     │        │                                                  │
-    │        │ Presents AmEx card                              │
+    │        │ Presents AmEx card                               │
     │        ▼                                                  │
     │   MERCHANT                                                │
     │        │                                                  │
-    │        │ Authorization request                           │
+    │        │ Authorization request                            │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           AMERICAN EXPRESS NETWORK              │   │
+    │   │           AMERICAN EXPRESS NETWORK                │   │
     │   │                                                   │   │
-    │   │  1. Validate merchant                           │   │
-    │   │  2. Check card validity                        │   │
-    │   │  3. Verify account status                     │   │
-    │   │  4. Check available credit                    │   │
-    │   │  5. Run fraud checks                         │   │
-    │   │  6. Make authorization decision              │   │
-    │   │  7. Reserve funds (or charge)               │   │
-    │   │  8. Return approval/decline                │   │
+    │   │  1. Validate merchant                             │   │
+    │   │  2. Check card validity                           │   │
+    │   │  3. Verify account status                         │   │
+    │   │  4. Check available credit                        │   │
+    │   │  5. Run fraud checks                              │   │
+    │   │  6. Make authorization decision                   │   │
+    │   │  7. Reserve funds (or charge)                     │   │
+    │   │  8. Return approval/decline                       │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
-    │        │ Authorization response                         │
+    │        │ Authorization response                           │
     │        ▼                                                  │
     │   MERCHANT                                                │
     │        │                                                  │
-    │        │ Settlement                                      │
+    │        │ Settlement                                       │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │           AMERICAN EXPRESS SETTLEMENT          │   │
