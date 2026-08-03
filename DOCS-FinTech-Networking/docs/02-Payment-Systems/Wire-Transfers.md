@@ -369,18 +369,18 @@ WIRE TRANSFER LIFECYCLE
 WIRE NETWORK COMPARISON
 
                          +---------------------------+
-                         |  WIRE NETWORKS           |
+                         |  WIRE NETWORKS            |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  FEDWIRE (US)           |  |  CHAPS (UK)              |  |  TARGET2 (EU)            |
-|  - RTGS                 |  |  - RTGS                  |  |  - RTGS                  |
-|  - $5T daily            |  |  - £500B daily           |  |  - €2T daily            |
-|  - Immediate finality  |  |  - Immediate finality   |  |  - Immediate finality   |
-|  - Federal Reserve     |  |  - Bank of England      |  |  - Eurosystem           |
+|  FEDWIRE (US)             |  |  CHAPS (UK)               |  |  TARGET2 (EU)             |
+|  - RTGS                   |  |  - RTGS                   |  |  - RTGS                   |
+|  - $5T daily              |  |  - £500B daily            |  |  - €2T daily              |
+|  - Immediate finality     |  |  - Immediate finality     |  |  - Immediate finality     |
+|  - Federal Reserve        |  |  - Bank of England        |  |  - Eurosystem             |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
@@ -389,10 +389,10 @@ WIRE NETWORK COMPARISON
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  BOJ-NET (Japan)        |  |  CNAPS (China)           |  |  LYNX (Canada)           |
-|  - RTGS                 |  |  - RTGS                  |  |  - RTGS                  |
-|  - ¥400B daily          |  |  - ¥5T daily            |  |  - CAD 250B daily       |
-|  - Bank of Japan        |  |  - PBOC                 |  |  - Payments Canada      |
+|  BOJ-NET (Japan)          |  |  CNAPS (China)           |  |  LYNX (Canada)           |
+|  - RTGS                   |  |  - RTGS                  |  |  - RTGS                  |
+|  - ¥400B daily            |  |  - ¥5T daily            |  |  - CAD 250B daily       |
+|  - Bank of Japan          |  |  - PBOC                 |  |  - Payments Canada      |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
