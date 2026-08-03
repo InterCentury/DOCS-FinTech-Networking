@@ -236,10 +236,10 @@ CLOSED-LOOP ARCHITECTURE
     │   │  └───────────────────────────────────────────┘    │   │
     │   │                                                   │   │
     │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Merchant Acquisition                    │   │   │
-    │   │  │  - Merchant onboarding                  │   │   │
-    │   │  │  - Settlement                          │   │   │
-    │   │  │  - Fee collection                     │   │   │
+    │   │  │  Merchant Acquisition                     │   │   │
+    │   │  │  - Merchant onboarding                    │   │   │
+    │   │  │  - Settlement                             │   │   │
+    │   │  │  - Fee collection                         │   │   │
     │   │  └───────────────────────────────────────────┘   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
