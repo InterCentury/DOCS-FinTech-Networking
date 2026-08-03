@@ -426,30 +426,30 @@ SWIFT MESSAGE STRUCTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  HEADER                                          │   │
-    │   │  - Message type (MT103, pacs.008)               │   │
-    │   │  - Sender BIC                                   │   │
-    │   │  - Receiver BIC                                 │   │
-    │   │  - Timestamp                                    │   │
-    │   │  - Unique reference                             │   │
+    │   │  HEADER                                           │   │
+    │   │  - Message type (MT103, pacs.008)                 │   │
+    │   │  - Sender BIC                                     │   │
+    │   │  - Receiver BIC                                   │   │
+    │   │  - Timestamp                                      │   │
+    │   │  - Unique reference                               │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  PAYMENT INFORMATION                            │   │
-    │   │  - Amount and currency                          │   │
-    │   │  - Sender name and account                     │   │
-    │   │  - Recipient name and account                  │   │
-    │   │  - Intermediary bank (if applicable)           │   │
-    │   │  - Payment reference                           │   │
+    │   │  PAYMENT INFORMATION                              │   │
+    │   │  - Amount and currency                            │   │
+    │   │  - Sender name and account                        │   │
+    │   │  - Recipient name and account                     │   │
+    │   │  - Intermediary bank (if applicable)              │   │
+    │   │  - Payment reference                              │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  SETTLEMENT DETAILS                             │   │
-    │   │  - Settlement date                             │   │
-    │   │  - Settlement currency                         │   │
-    │   │  - Correspondent bank                          │   │
+    │   │  SETTLEMENT DETAILS                               │   │
+    │   │  - Settlement date                                │   │
+    │   │  - Settlement currency                            │   │
+    │   │  - Correspondent bank                             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
