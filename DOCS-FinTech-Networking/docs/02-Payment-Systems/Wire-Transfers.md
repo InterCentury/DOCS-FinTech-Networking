@@ -820,14 +820,14 @@ THROUGHPUT CALCULATION
 LATENCY CALCULATION
 
     +-----------------------------------------------------------+
-    │               LATENCY CALCULATION                        │
+    │               LATENCY CALCULATION                         │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Average Latency = Σ(Transaction Times) /              │
-    │                    Number of Transactions                │
+    │   Average Latency = Σ(Transaction Times) /                │
+    │                    Number of Transactions                 │
     │                                                           │
-    │   Example: 100 wires with times: 30-90 seconds          │
-    │   Average Latency = 60 seconds                          │
+    │   Example: 100 wires with times: 30-90 seconds            │
+    │   Average Latency = 60 seconds                            │
     │                                                           │
     └-----------------------------------------------------------+
 ```
@@ -838,20 +838,20 @@ LATENCY CALCULATION
 END-TO-END DELAY
 
     +-----------------------------------------------------------+
-    │               END-TO-END DELAY                           │
+    │               END-TO-END DELAY                            │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Total Delay = Network + Validation + Compliance +     │
-    │                  Routing + Settlement                   │
+    │   Total Delay = Network + Validation + Compliance +       │
+    │                  Routing + Settlement                     │
     │                                                           │
-    │   Components:                                           │
-    │   - Network: 2-10 seconds                              │
-    │   - Validation: 1-5 seconds                           │
-    │   - Compliance: 5-30 seconds                          │
-    │   - Routing: 1-5 seconds                              │
-    │   - Settlement: 1-10 seconds                          │
+    │   Components:                                             │
+    │   - Network: 2-10 seconds                                 │
+    │   - Validation: 1-5 seconds                               │
+    │   - Compliance: 5-30 seconds                              │
+    │   - Routing: 1-5 seconds                                  │
+    │   - Settlement: 1-10 seconds                              │
     │                                                           │
-    │   Typical total delay: 10-60 seconds                   │
+    │   Typical total delay: 10-60 seconds                      │
     │                                                           │
     └-----------------------------------------------------------+
 ```
