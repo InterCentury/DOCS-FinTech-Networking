@@ -358,18 +358,18 @@ AMEX CARD NUMBER STRUCTURE
     │   │   │    │        │        │                            │
     │   │   │    │        │        └── Check Digit              │
     │   │   │    │        └─────────── Account Number (7 digits)│
-    │   │   │    └──────────────────── BIN/IIN (6 digits)      │
-    │   │   └───────────────────────── Card Type (4=Personal,  │
-    │   │                             7=Corporate)            │
-    │   └───────────────────────────── Industry (3=Travel &    │
-    │                                   Entertainment)         │
+    │   │   │    └──────────────────── BIN/IIN (6 digits)       │
+    │   │   └───────────────────────── Card Type (4=Personal,   │
+    │   │                             7=Corporate)              │
+    │   └───────────────────────────── Industry (3=Travel &     │
+    │                                   Entertainment)          │
     │                                                           │
     │   Example: 371234567890123                                │
-    │   - 3: Travel/Entertainment industry                     │
-    │   - 7: Corporate/Business card                           │
+    │   - 3: Travel/Entertainment industry                      │
+    │   - 7: Corporate/Business card                            │
     │   - 123456: BIN/IIN                                       │
     │   - 7890123: Account number                               │
-    │   - 8: Check digit                                       │
+    │   - 8: Check digit                                        │
     │                                                           │
     └-----------------------------------------------------------+
 ```
