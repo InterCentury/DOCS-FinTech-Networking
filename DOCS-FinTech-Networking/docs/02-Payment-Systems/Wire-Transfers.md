@@ -369,7 +369,7 @@ WIRE TRANSFER LIFECYCLE
 WIRE NETWORK COMPARISON
 
                          +---------------------------+
-                         |      WIRE NETWORKS        |
+                         |       WIRE NETWORKS       |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
