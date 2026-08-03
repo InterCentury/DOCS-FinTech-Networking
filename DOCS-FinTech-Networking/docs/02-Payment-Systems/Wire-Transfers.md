@@ -929,15 +929,15 @@ AVAILABILITY CALCULATION
 FX CONVERSION CALCULATION
 
     +-----------------------------------------------------------+
-    │               FX CONVERSION CALCULATION                  │
+    │               FX CONVERSION CALCULATION                   │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Destination Amount = Source Amount × Exchange Rate    │
+    │   Destination Amount = Source Amount × Exchange Rate      │
     │                                                           │
-    │   Example:                                               │
-    │   Source Amount: $1,000,000 USD                         │
-    │   Exchange Rate: 1.10 USD/EUR                          │
-    │   Destination Amount: $1,000,000 / 1.10 = €909,091     │
+    │   Example:                                                │
+    │   Source Amount: $1,000,000 USD                           │
+    │   Exchange Rate: 1.10 USD/EUR                             │
+    │   Destination Amount: $1,000,000 / 1.10 = €909,091        │
     │                                                           │
     └-----------------------------------------------------------+
 ```
