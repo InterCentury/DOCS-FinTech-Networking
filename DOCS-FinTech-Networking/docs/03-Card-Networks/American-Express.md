@@ -383,31 +383,31 @@ LUHN ALGORITHM (Python Example)
     │               LUHN ALGORITHM IMPLEMENTATION               │
     +-----------------------------------------------------------+
     │                                                           │
-    │   def validate_amex(number):                            │
-    │       # Remove spaces                                   │
-    │       number = number.replace(' ', '')                  │
-    │                                                         │
-    │       # Check prefix (34 or 37)                         │
-    │       if not (number.startswith('34') or               │
-    │               number.startswith('37')):                │
-    │           return False                                 │
-    │                                                         │
-    │       # Check length (15 digits)                        │
-    │       if len(number) != 15:                             │
-    │           return False                                 │
-    │                                                         │
-    │       # Luhn algorithm                                 │
-    │       sum = 0                                          │
-    │       for i in range(len(number)):                     │
-    │           digit = int(number[i])                       │
-    │           if i % 2 == 0:                              │
-    │               digit *= 2                               │
-    │               if digit > 9:                            │
-    │                   digit -= 9                           │
-    │           sum += digit                                 │
-    │                                                         │
-    │       return sum % 10 == 0                             │
-    │                                                         │
+    │   def validate_amex(number):                              │
+    │       # Remove spaces                                     │
+    │       number = number.replace(' ', '')                    │
+    │                                                           │
+    │       # Check prefix (34 or 37)                           │
+    │       if not (number.startswith('34') or                  │
+    │               number.startswith('37')):                   │
+    │           return False                                    │
+    │                                                           │
+    │       # Check length (15 digits)                          │
+    │       if len(number) != 15:                               │
+    │           return False                                    │
+    │                                                           │
+    │       # Luhn algorithm                                    │
+    │       sum = 0                                             │
+    │       for i in range(len(number)):                        │
+    │           digit = int(number[i])                          │
+    │           if i % 2 == 0:                                  │
+    │               digit *= 2                                  │
+    │               if digit > 9:                               │
+    │                   digit -= 9                              │
+    │           sum += digit                                    │
+    │                                                           │
+    │       return sum % 10 == 0                                │
+    │                                                           │
     └-----------------------------------------------------------+
 ```
 
