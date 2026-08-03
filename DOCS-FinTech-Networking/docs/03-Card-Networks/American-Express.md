@@ -833,37 +833,40 @@ MEMBERSHIP REWARDS PIPELINE
 AMEX VS VISA VS MASTERCARD
 
                          +---------------------------+
-                         |  AMEX VS VISA VS MC     |
+                         |  AMEX VS VISA VS MC       |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                                                         │
           ▼                                                         ▼
 +---------------------------+                            +---------------------------+
-|  AMERICAN EXPRESS        |                            |  VISA                    |
-|  - Closed-loop           |                            |  - Open-loop             |
-|  - Issuer + network     |                            |  - Network only          |
-|  - Direct merchant      |                            |  - Multiple issuers      |
-|  - 3-party model       |                            |  - 4-party model        |
-|  - Higher fees         |                            |  - Lower fees           |
-|  - Premium brand       |                            |  - Widely accepted      |
-|  - 15-digit numbers    |                            |  - 16-digit numbers     |
-|  - Prefix: 34, 37      |                            |  - Prefix: 4           |
+|  AMERICAN EXPRESS         |                            |  VISA                     |
+|  - Closed-loop            |                            |  - Open-loop              |
+|  - Issuer + network       |                            |  - Network only           |
+|  - Direct merchant        |                            |  - Multiple issuers       |
+|  - 3-party model          |                            |  - 4-party model          |
+|  - Higher fees            |                            |  - Lower fees             |
+|  - Premium brand          |                            |  - Widely accepted        |
+|  - 15-digit numbers       |                            |  - 16-digit numbers       |
+|  - Prefix: 34, 37         |                            |  - Prefix: 4              |
 +---------------------------+                            +---------------------------+
-          │                                              │
-          ▼                                              ▼
-+---------------------------+              +---------------------------+---------------------------+
-|  MASTERCARD              |
-|  - Open-loop            |
-|  - Network only         |
-|  - Multiple issuers     |
-|  - 4-party model        |
-|  - Lower fees           |
-|  - Widely accepted      |
-|  - 16-digit numbers     |
-|  - Prefix: 51-55,      |
-|    2221-2720           |
-+---------------------------+
+          │                                                         │
+          +----------------------------+----------------------------+
+                                       │
+                                       ▼
+                         +---------------------------+
+                         |  MASTERCARD               |
+                         |  - Open-loop              |
+                         |  - Network only           |
+                         |  - Multiple issuers       |
+                         |  - 4-party model          |
+                         |  - Lower fees             |
+                         |  - Widely accepted        |
+                         |  - 16-digit numbers       |
+                         |  - Prefix: 51-55,         |
+                         |    2221-2720              |
+                         +---------------------------+
+
 ```
 
 ## 22. Engineering Architecture
