@@ -219,21 +219,21 @@ CLOSED-LOOP ARCHITECTURE
     │                           │ Transaction                   │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │            AMERICAN EXPRESS NETWORK              │   │
+    │   │            AMERICAN EXPRESS NETWORK               │   │
     │   │                                                   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Card Issuance                          │   │   │
-    │   │  │  - Credit approval                      │   │   │
-    │   │  │  - Card production                     │   │   │
-    │   │  │  - Account management                  │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  Card Issuance                            │    │   │
+    │   │  │  - Credit approval                        │    │   │
+    │   │  │  - Card production                        │    │   │
+    │   │  │  - Account management                     │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
     │   │                                                   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Transaction Processing                 │   │   │
-    │   │  │  - Authorization                        │   │   │
-    │   │  │  - Clearing                            │   │   │
-    │   │  │  - Settlement                          │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  Transaction Processing                   │    │   │
+    │   │  │  - Authorization                          │    │   │
+    │   │  │  - Clearing                               │    │   │
+    │   │  │  - Settlement                             │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
     │   │                                                   │   │
     │   │  ┌───────────────────────────────────────────┐   │   │
     │   │  │  Merchant Acquisition                    │   │   │
