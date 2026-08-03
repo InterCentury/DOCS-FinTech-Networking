@@ -507,18 +507,18 @@ CORRESPONDENT BANKING STRUCTURE
     │                           │ Nostro Account (EUR)          │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │            CORRESPONDENT BANK                   │   │
-    │   │  - Holds Nostro accounts for Bank A             │   │
-    │   │  - Holds Vostro accounts for Bank B             │   │
-    │   │  - Provides currency conversion                 │   │
+    │   │            CORRESPONDENT BANK                     │   │
+    │   │  - Holds Nostro accounts for Bank A               │   │
+    │   │  - Holds Vostro accounts for Bank B               │   │
+    │   │  - Provides currency conversion                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Vostro Account (USD)         │
+    │                           │ Vostro Account (USD)          │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              BANK B (Europe)                     │   │
-    │   │  - Holds EUR account                            │   │
-    │   │  - Receives EUR from Bank A                    │   │
+    │   │              BANK B (Europe)                      │   │
+    │   │  - Holds EUR account                              │   │
+    │   │  - Receives EUR from Bank A                       │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
