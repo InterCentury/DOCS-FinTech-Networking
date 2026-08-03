@@ -1056,37 +1056,37 @@ FUTURE OF WIRE TRANSFERS
 SUMMARY
 
     +-------------------------------------------------+
-    |  WHAT IS A WIRE TRANSFER?                      |
-    |  High-value electronic transfer with           |
-    |  immediate finality and irrevocable           |
-    |  settlement                                  |
+    |  WHAT IS A WIRE TRANSFER?                       |
+    |  High-value electronic transfer with            |
+    |  immediate finality and irrevocable             |
+    |  settlement                                     |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY CHARACTERISTICS                           |
-    |  - Real-time processing                       |
-    |  - Gross settlement                         |
-    |  - Immediate finality                       |
-    |  - High cost                               |
-    |  - High value                              |
+    |  KEY CHARACTERISTICS                            |
+    |  - Real-time processing                         |
+    |  - Gross settlement                             |
+    |  - Immediate finality                           |
+    |  - High cost                                    |
+    |  - High value                                   |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  NETWORKS                                      |
-    |  Fedwire (US), CHAPS (UK), TARGET2 (EU),      |
-    |  BOJ-NET (Japan), CNAPS (China)               |
+    |  NETWORKS                                       |
+    |  Fedwire (US), CHAPS (UK), TARGET2 (EU),        |
+    |  BOJ-NET (Japan), CNAPS (China)                 |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  MESSAGING                                     |
-    |  SWIFT MT (legacy), SWIFT MX (ISO 20022),      |
-    |  MT103, MT202, pacs.008, pacs.009             |
+    |  MESSAGING                                      |
+    |  SWIFT MT (legacy), SWIFT MX (ISO 20022),       |
+    |  MT103, MT202, pacs.008, pacs.009               |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  PARTICIPANTS                                  |
-    |  Sender, Originating Bank, Intermediary Bank,  |
-    |  Receiving Bank, Central Bank, Recipient      |
+    |  PARTICIPANTS                                   |
+    |  Sender, Originating Bank, Intermediary Bank,   |
+    |  Receiving Bank, Central Bank, Recipient        |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
