@@ -594,30 +594,30 @@ MERCHANT ACCEPTANCE FLOW
     │               MERCHANT ACCEPTANCE FLOW                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   MERCHANT REQUESTS ACCEPTANCE                          │
+    │   MERCHANT REQUESTS ACCEPTANCE                            │
     │        │                                                  │
     │        ▼                                                  │
-    │   AMEX MERCHANT ONBOARDING                               │
+    │   AMEX MERCHANT ONBOARDING                                │
     │        │                                                  │
     │        ▼                                                  │
-    │   DUE DILIGENCE                                          │
+    │   DUE DILIGENCE                                           │
     │        │                                                  │
     │        ▼                                                  │
-    │   MERCHANT AGREEMENT EXECUTED                            │
+    │   MERCHANT AGREEMENT EXECUTED                             │
     │        │                                                  │
     │        ▼                                                  │
-    │   TECHNICAL INTEGRATION                                  │
+    │   TECHNICAL INTEGRATION                                   │
     │        │                                                  │
     │        ▼                                                  │
-    │   READY TO ACCEPT                                       │
+    │   READY TO ACCEPT                                         │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  INTEGRATION OPTIONS:                             │  │
-    │   │  - Direct API                                   │  │
-    │   │  - Payment gateway (Stripe, Adyen)              │  │
-    │   │  - POS terminal integration                    │  │
-    │   │  - Online checkout integration                │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  INTEGRATION OPTIONS:                             │   │
+    │   │  - Direct API                                     │   │
+    │   │  - Payment gateway (Stripe, Adyen)                │   │
+    │   │  - POS terminal integration                       │   │
+    │   │  - Online checkout integration                    │   │
+    │   └---------------------------------------------------+   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
