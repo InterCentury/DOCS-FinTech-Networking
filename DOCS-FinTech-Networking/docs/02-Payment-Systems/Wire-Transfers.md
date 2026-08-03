@@ -1090,18 +1090,18 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  SETTLEMENT                                   |
-    |  RTGS, Gross Settlement, Central Bank Money,  |
-    |  Immediate Finality                          |
+    |  SETTLEMENT                                     |
+    |  RTGS, Gross Settlement, Central Bank Money,    |
+    |  Immediate Finality                             |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY TAKEAWAY                                  |
-    |  Wire transfers are the backbone of high-     |
-    |  value payments. They provide certainty,      |
-    |  finality, and speed for large, time-        |
-    |  critical transactions across domestic and   |
-    |  international borders.                     |
+    |  KEY TAKEAWAY                                   |
+    |  Wire transfers are the backbone of high-       |
+    |  value payments. They provide certainty,        |
+    |  finality, and speed for large, time-           |
+    |  critical transactions across domestic and      |
+    |  international borders.                         |
     +-------------------------------------------------+
 ```
 
