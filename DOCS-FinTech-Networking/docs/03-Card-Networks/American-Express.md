@@ -564,10 +564,10 @@ FRAUD DETECTION ARCHITECTURE
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           RISK SCORE                           │   │
-    │   │  - Low: Accept                               │   │
-    │   │  - Medium: Review                           │   │
-    │   │  - High: Decline                          │   │
+    │   │           RISK SCORE                              │   │
+    │   │  - Low: Accept                                    │   │
+    │   │  - Medium: Review                                 │   │
+    │   │  - High: Decline                                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
