@@ -389,10 +389,10 @@ WIRE NETWORK COMPARISON
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  BOJ-NET (Japan)          |  |  CNAPS (China)           |  |  LYNX (Canada)           |
-|  - RTGS                   |  |  - RTGS                  |  |  - RTGS                  |
-|  - ¥400B daily            |  |  - ¥5T daily            |  |  - CAD 250B daily       |
-|  - Bank of Japan          |  |  - PBOC                 |  |  - Payments Canada      |
+|  BOJ-NET (Japan)          |  |  CNAPS (China)            |  |  LYNX (Canada)            |
+|  - RTGS                   |  |  - RTGS                   |  |  - RTGS                   |
+|  - ¥400B daily            |  |  - ¥5T daily              |  |  - CAD 250B daily         |
+|  - Bank of Japan          |  |  - PBOC                   |  |  - Payments Canada        |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
