@@ -478,12 +478,12 @@ AMEX TRANSACTION FLOW
     │        │ Settlement                                       │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           AMERICAN EXPRESS SETTLEMENT          │   │
-    │   │  1. Capture transaction                       │   │
-    │   │  2. Debit cardholder's account               │   │
-    │   │  3. Credit merchant's account                │   │
-    │   │  4. Post to ledgers                         │   │
-    │   │  5. Generate statement                     │   │
+    │   │           AMERICAN EXPRESS SETTLEMENT             │   │
+    │   │  1. Capture transaction                           │   │
+    │   │  2. Debit cardholder's account                    │   │
+    │   │  3. Credit merchant's account                     │   │
+    │   │  4. Post to ledgers                               │   │
+    │   │  5. Generate statement                            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
