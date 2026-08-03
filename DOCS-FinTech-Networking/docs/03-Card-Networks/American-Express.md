@@ -532,25 +532,25 @@ FRAUD DETECTION ARCHITECTURE
     │               FRAUD DETECTION ARCHITECTURE                │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TRANSACTION DATA                                       │
+    │   TRANSACTION DATA                                        │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           FEATURE EXTRACTION                    │   │
-    │   │  - Merchant category                          │   │
-    │   │  - Transaction amount                       │   │
-    │   │  - Location                                │   │
-    │   │  - Device fingerprint                     │   │
-    │   │  - Historical patterns                    │   │
+    │   │           FEATURE EXTRACTION                      │   │
+    │   │  - Merchant category                              │   │
+    │   │  - Transaction amount                             │   │
+    │   │  - Location                                       │   │
+    │   │  - Device fingerprint                             │   │
+    │   │  - Historical patterns                            │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           RULE-BASED ENGINE                    │   │
-    │   │  - Velocity checks                           │   │
-    │   │  - Amount limits                           │   │
-    │   │  - Geographic checks                     │   │
-    │   │  - Card type checks                     │   │
+    │   │           RULE-BASED ENGINE                       │   │
+    │   │  - Velocity checks                                │   │
+    │   │  - Amount limits                                  │   │
+    │   │  - Geographic checks                              │   │
+    │   │  - Card type checks                               │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
