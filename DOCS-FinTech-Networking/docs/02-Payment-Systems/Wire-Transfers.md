@@ -553,28 +553,28 @@ RTGS SETTLEMENT MECHANISM
     │               RTGS SETTLEMENT MECHANISM                   │
     +-----------------------------------------------------------+
     │                                                           │
-    │   BEFORE PAYMENT:                                        │
+    │   BEFORE PAYMENT:                                         │
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Central Bank Ledger                            │   │
-    │   │  Bank A: $100,000,000                          │   │
-    │   │  Bank B: $50,000,000                           │   │
+    │   │  Central Bank Ledger                              │   │
+    │   │  Bank A: $100,000,000                             │   │
+    │   │  Bank B: $50,000,000                              │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   PAYMENT: $10,000,000 FROM BANK A TO BANK B            │
+    │   PAYMENT: $10,000,000 FROM BANK A TO BANK B              │
     │                                                           │
-    │   AFTER PAYMENT:                                        │
+    │   AFTER PAYMENT:                                          │
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Central Bank Ledger                            │   │
-    │   │  Bank A: $90,000,000 (-$10,000,000)            │   │
-    │   │  Bank B: $60,000,000 (+$10,000,000)            │   │
+    │   │  Central Bank Ledger                              │   │
+    │   │  Bank A: $90,000,000 (-$10,000,000)               │   │
+    │   │  Bank B: $60,000,000 (+$10,000,000)               │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   RESULT:                                                │
-    │   - Payment is final and irrevocable                    │
-    │   - No credit risk                                      │
-    │   - Immediate finality                                  │
+    │   RESULT:                                                 │
+    │   - Payment is final and irrevocable                      │
+    │   - No credit risk                                        │
+    │   - Immediate finality                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
