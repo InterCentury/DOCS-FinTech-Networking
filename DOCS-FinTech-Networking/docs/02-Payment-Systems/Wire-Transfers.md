@@ -948,17 +948,17 @@ FX CONVERSION CALCULATION
 WIRE FEES CALCULATION
 
     +-----------------------------------------------------------+
-    │               WIRE FEES CALCULATION                      │
+    │               WIRE FEES CALCULATION                       │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Total Cost = Transfer Fee + Intermediary Fees +       │
-    │                FX Margin                                 │
+    │   Total Cost = Transfer Fee + Intermediary Fees +         │
+    │                FX Margin                                  │
     │                                                           │
-    │   Example:                                               │
-    │   Transfer Fee: $25                                     │
-    │   Intermediary Fees: $15                                │
-    │   FX Margin: $500                                       │
-    │   Total Cost: $540                                      │
+    │   Example:                                                │
+    │   Transfer Fee: $25                                       │
+    │   Intermediary Fees: $15                                  │
+    │   FX Margin: $500                                         │
+    │   Total Cost: $540                                        │
     │                                                           │
     └-----------------------------------------------------------+
 ```
