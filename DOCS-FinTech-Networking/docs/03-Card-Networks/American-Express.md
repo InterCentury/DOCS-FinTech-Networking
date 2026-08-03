@@ -555,11 +555,11 @@ FRAUD DETECTION ARCHITECTURE
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           MACHINE LEARNING MODELS               │   │
-    │   │  - Random Forest                             │   │
-    │   │  - Gradient Boosting                        │   │
-    │   │  - Deep Neural Networks                   │   │
-    │   │  - Ensemble Models                       │   │
+    │   │           MACHINE LEARNING MODELS                 │   │
+    │   │  - Random Forest                                  │   │
+    │   │  - Gradient Boosting                              │   │
+    │   │  - Deep Neural Networks                           │   │
+    │   │  - Ensemble Models                                │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
