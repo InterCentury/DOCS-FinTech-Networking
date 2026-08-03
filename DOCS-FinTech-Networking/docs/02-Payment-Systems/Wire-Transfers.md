@@ -619,27 +619,27 @@ RTGS SETTLEMENT MECHANISM
 CROSS-BORDER WIRE FLOW
 
     +-----------------------------------------------------------+
-    │               CROSS-BORDER WIRE FLOW                     │
+    │               CROSS-BORDER WIRE FLOW                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   SENDER (US)                                            │
+    │   SENDER (US)                                             │
     │        │                                                  │
-    │        │ Initiates USD payment                           │
+    │        │ Initiates USD payment                            │
     │        ▼                                                  │
-    │   ORIGINATING BANK (US)                                  │
+    │   ORIGINATING BANK (US)                                   │
     │        │                                                  │
-    │        │ SWIFT MT103                                     │
+    │        │ SWIFT MT103                                      │
     │        ▼                                                  │
-    │   CORRESPONDENT BANK                                     │
+    │   CORRESPONDENT BANK                                      │
     │        │                                                  │
-    │        │ Currency conversion (USD → EUR)                 │
-    │        │ Settlement                                      │
+    │        │ Currency conversion (USD → EUR)                  │
+    │        │ Settlement                                       │
     │        ▼                                                  │
-    │   RECEIVING BANK (Europe)                                │
+    │   RECEIVING BANK (Europe)                                 │
     │        │                                                  │
-    │        │ Credits recipient's account                    │
+    │        │ Credits recipient's account                      │
     │        ▼                                                  │
-    │   RECIPIENT (Europe)                                    │
+    │   RECIPIENT (Europe)                                      │
     │                                                           │
     │   +---------------------------------------------------+  │
     │   │  KEY COMPONENTS:                                  │  │
