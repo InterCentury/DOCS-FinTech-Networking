@@ -750,34 +750,34 @@ MEMBERSHIP REWARDS PIPELINE
     │               MEMBERSHIP REWARDS PIPELINE                 │
     +-----------------------------------------------------------+
     │                                                           │
-    │   PURCHASE                                               │
+    │   PURCHASE                                                │
     │        │                                                  │
     │        ▼                                                  │
-    │   TRANSACTION DATA                                       │
+    │   TRANSACTION DATA                                        │
     │        │                                                  │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           REWARDS ENGINE                        │   │
+    │   │           REWARDS ENGINE                          │   │
     │   │                                                   │   │
-    │   │  1. Identify merchant category                 │   │
-    │   │  2. Apply bonus multipliers                   │   │
-    │   │  3. Calculate points earned                   │   │
-    │   │  4. Credit to member account                 │   │
-    │   │  5. Update point balance                     │   │
+    │   │  1. Identify merchant category                    │   │
+    │   │  2. Apply bonus multipliers                       │   │
+    │   │  3. Calculate points earned                       │   │
+    │   │  4. Credit to member account                      │   │
+    │   │  5. Update point balance                          │   │
     │   └───────────────────────────────────────────────────┘   │
     │        │                                                  │
     │        ▼                                                  │
-    │   POINTS ACCOUNT                                        │
+    │   POINTS ACCOUNT                                          │
     │        │                                                  │
-    │        │ Redemption request                             │
+    │        │ Redemption request                               │
     │        ▼                                                  │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │           REDEMPTION PORTAL                     │   │
+    │   │           REDEMPTION PORTAL                       │   │
     │   │                                                   │   │
-    │   │  - Travel booking                              │   │
-    │   │  - Gift card selection                        │   │
-    │   │  - Partner transfers                        │   │
-    │   │  - Statement credit                        │   │
+    │   │  - Travel booking                                 │   │
+    │   │  - Gift card selection                            │   │
+    │   │  - Partner transfers                              │   │
+    │   │  - Statement credit                               │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
