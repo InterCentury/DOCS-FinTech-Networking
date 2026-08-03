@@ -989,17 +989,17 @@ WIRE FEES CALCULATION
 REAL-WORLD WIRE SYSTEMS
 
     +-----------------------------------------------------------+
-    │               REAL-WORLD WIRE SYSTEMS                    │
+    │               REAL-WORLD WIRE SYSTEMS                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   System        │ Region      │ Type       │ Volume      │
-    │   ──────────────│─────────────│────────────│─────────────│
-    │   Fedwire      │ US          │ RTGS       │ $5T daily   │
-    │   CHAPS        │ UK          │ RTGS       │ £500B daily │
-    │   TARGET2/T2   │ EU          │ RTGS       │ €2T daily   │
-    │   BOJ-NET      │ Japan       │ RTGS       │ ¥400B daily │
-    │   CNAPS        │ China       │ RTGS       │ ¥5T daily   │
-    │   Lynx         │ Canada      │ RTGS       │ CAD 250B    │
+    │   System        │ Region      │ Type       │ Volume       │
+    │   ──────────────│─────────────│────────────│───────────── │
+    │   Fedwire       │ US          │ RTGS       │ $5T daily    │
+    │   CHAPS         │ UK          │ RTGS       │ £500B daily  │
+    │   TARGET2/T2    │ EU          │ RTGS       │ €2T daily    │
+    │   BOJ-NET       │ Japan       │ RTGS       │ ¥400B daily  │
+    │   CNAPS         │ China       │ RTGS       │ ¥5T daily    │
+    │   Lynx          │ Canada      │ RTGS       │ CAD 250B     │
     │                                                           │
     └-----------------------------------------------------------+
 ```
