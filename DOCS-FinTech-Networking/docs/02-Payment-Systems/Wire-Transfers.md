@@ -862,18 +862,18 @@ END-TO-END DELAY
 LIQUIDITY UTILIZATION
 
     +-----------------------------------------------------------+
-    │               LIQUIDITY UTILIZATION                      │
+    │               LIQUIDITY UTILIZATION                       │
     +-----------------------------------------------------------+
     │                                                           │
-    │   Liquidity Utilization = Used Liquidity /              │
-    │                          Available Liquidity × 100      │
+    │   Liquidity Utilization = Used Liquidity /                │
+    │                          Available Liquidity × 100        │
     │                                                           │
-    │   Example:                                               │
-    │   Used: $80M                                           │
-    │   Available: $100M                                    │
-    │   Utilization = $80M / $100M × 100 = 80%              │
+    │   Example:                                                │
+    │   Used: $80M                                              │
+    │   Available: $100M                                        │
+    │   Utilization = $80M / $100M × 100 = 80%                  │
     │                                                           │
-    │   Target: < 70%                                        │
+    │   Target: < 70%                                           │
     │                                                           │
     └-----------------------------------------------------------+
 ```
