@@ -641,13 +641,13 @@ CROSS-BORDER WIRE FLOW
     │        ▼                                                  │
     │   RECIPIENT (Europe)                                      │
     │                                                           │
-    │   +---------------------------------------------------+  │
-    │   │  KEY COMPONENTS:                                  │  │
-    │   │  - SWIFT messaging                               │  │
-    │   │  - Correspondent banking                        │  │
-    │   │  - FX conversion                                │  │
-    │   │  - Settlement in CLS                            │  │
-    │   └---------------------------------------------------+  │
+    │   +---------------------------------------------------+   │
+    │   │  KEY COMPONENTS:                                  │   │
+    │   │  - SWIFT messaging                                │   │
+    │   │  - Correspondent banking                          │   │
+    │   │  - FX conversion                                  │   │
+    │   │  - Settlement in CLS                              │   │
+    │   └---------------------------------------------------+   │
     │                                                           │
     └-----------------------------------------------------------+
 ```
