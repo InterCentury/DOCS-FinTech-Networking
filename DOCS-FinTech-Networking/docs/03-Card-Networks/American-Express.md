@@ -210,10 +210,10 @@ CLOSED-LOOP ARCHITECTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              CARDHOLDER                         │   │
-    │   │  - Applies for AmEx card                       │   │
-    │   │  - Uses card for purchases                     │   │
-    │   │  - Pays AmEx directly                         │   │
+    │   │              CARDHOLDER                           │   │
+    │   │  - Applies for AmEx card                          │   │
+    │   │  - Uses card for purchases                        │   │
+    │   │  - Pays AmEx directly                             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           │ Transaction                   │
