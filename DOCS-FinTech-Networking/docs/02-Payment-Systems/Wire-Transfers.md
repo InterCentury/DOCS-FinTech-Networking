@@ -802,14 +802,14 @@ SECURITY LAYERS
 THROUGHPUT CALCULATION
 
     +-----------------------------------------------------------+
-    │               THROUGHPUT CALCULATION                     │
+    │               THROUGHPUT CALCULATION                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TPS = Transactions / Time (seconds)                    │
+    │   TPS = Transactions / Time (seconds)                     │
     │                                                           │
-    │   Example: Fedwire handles 500,000 transactions         │
-    │   in 24 hours = 86,400 seconds                         │
-    │   TPS = 500,000 / 86,400 = 5.8 TPS                    │
+    │   Example: Fedwire handles 500,000 transactions           │
+    │   in 24 hours = 86,400 seconds                            │
+    │   TPS = 500,000 / 86,400 = 5.8 TPS                        │
     │                                                           │
     └-----------------------------------------------------------+
 ```
