@@ -235,20 +235,20 @@ CLOSED-LOOP ARCHITECTURE
     │   │  │  - Settlement                             │    │   │
     │   │  └───────────────────────────────────────────┘    │   │
     │   │                                                   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Merchant Acquisition                     │   │   │
-    │   │  │  - Merchant onboarding                    │   │   │
-    │   │  │  - Settlement                             │   │   │
-    │   │  │  - Fee collection                         │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  Merchant Acquisition                     │    │   │
+    │   │  │  - Merchant onboarding                    │    │   │
+    │   │  │  - Settlement                             │    │   │
+    │   │  │  - Fee collection                         │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Settlement                   │
+    │                           │ Settlement                    │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              MERCHANT                          │   │
-    │   │  - Accepts AmEx cards                         │   │
-    │   │  - Receives settlement from AmEx              │   │
+    │   │              MERCHANT                             │   │
+    │   │  - Accepts AmEx cards                             │   │
+    │   │  - Receives settlement from AmEx                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
