@@ -499,12 +499,12 @@ CORRESPONDENT BANKING STRUCTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              BANK A (US)                         │   │
-    │   │  - Holds USD account                            │   │
-    │   │  - Wants to send EUR to Bank B                 │   │
+    │   │              BANK A (US)                          │   │
+    │   │  - Holds USD account                              │   │
+    │   │  - Wants to send EUR to Bank B                    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Nostro Account (EUR)         │
+    │                           │ Nostro Account (EUR)          │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │            CORRESPONDENT BANK                   │   │
