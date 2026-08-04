@@ -2,7 +2,7 @@
 
 ## Documentation Overview
 
-Settlement is the final step in the payment lifecycle where actual funds are transferred between financial institutions to discharge obligations. Unlike clearing, which calculates obligations, settlement involves the actual movement of value—the irreversible transfer of central bank money. This document provides a comprehensive examination of settlement systems: the architecture, algorithms, participants, models, risk management, and engineering that make value transfer possible.
+**Settlement** is the final step in the payment lifecycle where actual funds are transferred between financial institutions to discharge obligations. Unlike clearing, which calculates obligations, settlement involves the actual movement of value—the irreversible transfer of central bank money. This document provides a comprehensive examination of settlement systems: the architecture, algorithms, participants, models, risk management, and engineering that make value transfer possible.
 
 ## Documentation Objectives
 
@@ -25,9 +25,9 @@ DOCUMENTATION OBJECTIVES
 
 ## 1. Introduction to Settlement
 
-Settlement is the final step in the payment lifecycle where actual funds are transferred between financial institutions to discharge obligations. It is the moment when a payment becomes final and irrevocable—the irreversible transfer of value.
+**Settlement** is the final step in the payment lifecycle where actual funds are transferred between financial institutions to discharge obligations. It is the moment when a payment becomes final and irrevocable—the irreversible transfer of value.
 
-How it works: After clearing determines what each bank owes, settlement executes the actual transfer. The sending bank's account at the central bank is debited. The receiving bank's account at the central bank is credited. This transfer of central bank reserves is the ultimate form of money settlement—final, risk-free, and irrevocable.
+**How it works:** After clearing determines what each bank owes, settlement executes the actual transfer. The sending bank's account at the central bank is debited. The receiving bank's account at the central bank is credited. This transfer of central bank reserves is the ultimate form of money settlement—final, risk-free, and irrevocable.
 
 ```
 SETTLEMENT DEFINITION
@@ -53,13 +53,17 @@ SETTLEMENT DEFINITION
 
 ### Why Does Settlement Exist
 
-Settlement exists because value transfer must be final and legally binding. Without settlement, payments would never be complete. Settlement provides the mechanism for final transfer of value. It ensures that obligations are discharged. It provides legal certainty.
+**Settlement exists because value transfer must be final and legally binding.** Without settlement, payments would never be complete. Settlement provides the mechanism for final transfer of value. It ensures that obligations are discharged. It provides legal certainty.
 
 ### What Problem Does Settlement Solve
 
-Settlement solves the problem of final value transfer. It ensures that funds move permanently. It eliminates the risk of reversal. It provides legal finality. It completes the payment lifecycle.
+**Settlement solves the problem of final value transfer.** It ensures that funds move permanently. It eliminates the risk of reversal. It provides legal finality. It completes the payment lifecycle.
 
 ### Settlement vs Clearing
+
+**Clearing** is the data exchange and calculation phase. It determines what each bank owes. No funds move during clearing. It is reversible and carries credit risk. Examples include ACH processing and card clearing.
+
+**Settlement** is the actual value transfer phase. It moves funds between banks. It is final and irrevocable. It carries no credit risk. Examples include Fedwire transfers and RTGS settlement.
 
 ```
 SETTLEMENT VS CLEARING
@@ -85,53 +89,39 @@ SETTLEMENT VS CLEARING
 
 ### When Is a Payment Legally Final
 
-A payment is legally final when settlement is complete and irrevocable. In RTGS systems, finality is immediate. In net settlement systems, finality occurs at the settlement time. Legal finality is established by law and settlement system rules.
+**A payment is legally final when settlement is complete and irrevocable.** In RTGS systems, finality is immediate. In net settlement systems, finality occurs at the settlement time. Legal finality is established by law and settlement system rules.
 
 ## 2. Settlement Fundamentals
 
-### What Is Settlement Finality
+**Settlement Finality** is the moment when a payment becomes irrevocable and unconditional. Once final, the payer cannot reverse the transaction. The payee has an unconditional claim to the funds. Finality is the ultimate goal of settlement.
 
-Settlement finality is the moment when a payment becomes irrevocable and unconditional. Once final, the payer cannot reverse the transaction. The payee has an unconditional claim to the funds. Finality is the ultimate goal of settlement.
+**Transfer of Value** is the actual movement of funds between accounts. In settlement, this is the transfer of central bank reserves from one bank's account to another's.
 
-### What Is Transfer of Value
+**Settlement Date** is the date on which the settlement occurs. In RTGS, this is the transaction date. In deferred settlement, it is a future date.
 
-Transfer of value is the actual movement of funds between accounts. In settlement, this is the transfer of central bank reserves from one bank's account to another's.
+**Value Date** is the date from which interest accrues on the transferred funds. It may be the same as or different from the settlement date.
 
-### What Is Settlement Date
+**Trade Date** is the date the transaction was agreed upon. Settlement occurs on the settlement date, which may be T+1, T+2, or T+3.
 
-The settlement date is the date on which the settlement occurs. In RTGS, this is the transaction date. In deferred settlement, it is a future date.
-
-### What Is Value Date
-
-The value date is the date from which interest accrues on the transferred funds. It may be the same as or different from the settlement date.
-
-### What Is Trade Date
-
-The trade date is the date the transaction was agreed upon. Settlement occurs on the settlement date, which may be T+1, T+2, or T+3.
-
-### Why Does Settlement Take Time
-
-Settlement takes time because of processing delays, clearing cycles, bank business hours, and international time zones. Deferred settlement systems batch transactions for efficiency.
+**Why Settlement Takes Time:** Settlement takes time because of processing delays, clearing cycles, bank business hours, and international time zones. Deferred settlement systems batch transactions for efficiency.
 
 ## 3. Settlement Architecture
 
-### Settlement System Architecture
+**Settlement System Architecture** consists of several layers working together to enable value transfer.
 
-The settlement system architecture consists of several layers working together to enable value transfer.
+The **Bank Layer** includes participant banks with accounts at the central bank.
 
-The ```Bank Layer``` includes participant banks with accounts at the central bank.
+The **API Gateway** provides secure access to the settlement system.
 
-The ```API Gateway``` provides secure access to the settlement system.
+The **Message Queue** processes settlement instructions asynchronously.
 
-The ```Message Queue``` processes settlement instructions asynchronously.
+The **Settlement Engine** executes the actual value transfer.
 
-The ```Settlement Engine``` executes the actual value transfer.
+The **Liquidity Manager** ensures sufficient funds for settlement.
 
-The ```Liquidity Manager``` ensures sufficient funds for settlement.
+The **Central Ledger** records all settlement transactions.
 
-The ```Central Ledger``` records all settlement transactions.
-
-The ```Audit Log``` provides a complete record of all settlement activity.
+The **Audit Log** provides a complete record of all settlement activity.
 
 ```
 SETTLEMENT SYSTEM ARCHITECTURE
@@ -188,33 +178,29 @@ SETTLEMENT SYSTEM ARCHITECTURE
 
 ### Components of a Settlement System
 
-The key components of a settlement system include:
+**Settlement Engine** executes the value transfer. It validates instructions, checks balances, and updates ledgers.
 
-```Settlement Engine``` executes the value transfer. It validates instructions, checks balances, and updates ledgers.
+**Liquidity Manager** monitors and manages settlement liquidity. It ensures sufficient funds are available.
 
-```Liquidity Manager``` monitors and manages settlement liquidity. It ensures sufficient funds are available.
+**Central Ledger** records all settlement transactions. It maintains reserve account balances.
 
-```Central Ledger``` records all settlement transactions. It maintains reserve account balances.
+**Message Bus** routes settlement messages between participants and the settlement system.
 
-```Message Bus``` routes settlement messages between participants and the settlement system.
-
-```API Gateway``` provides secure access to settlement services.
+**API Gateway** provides secure access to settlement services.
 
 ## 4. Settlement Participants
 
-### Who Participates in Settlement
-
 Several participants are involved in the settlement process.
 
-The ```Payer Bank``` initiates the settlement instruction. Its reserve account is debited.
+**Payer Bank** initiates the settlement instruction. Its reserve account is debited.
 
-The ```Beneficiary Bank``` receives the settlement instruction. Its reserve account is credited.
+**Beneficiary Bank** receives the settlement instruction. Its reserve account is credited.
 
-The ```Settlement Bank``` manages the settlement accounts. It executes the transfer.
+**Settlement Bank** manages the settlement accounts. It executes the transfer.
 
-The ```Central Bank``` provides the settlement infrastructure. It maintains the reserve accounts and ensures finality.
+**Central Bank** provides the settlement infrastructure. It maintains the reserve accounts and ensures finality.
 
-The ```Central Counterparty (CCP)``` may act as an intermediary in securities settlement.
+**Central Counterparty (CCP)** may act as an intermediary in securities settlement.
 
 ```
 SETTLEMENT PARTICIPANTS
@@ -248,25 +234,23 @@ SETTLEMENT PARTICIPANTS
 
 ## 5. Settlement Lifecycle
 
-### Settlement Lifecycle Overview
-
 The settlement lifecycle consists of several phases from instruction to finality.
 
-```Instruction Creation``` begins when the settlement instruction is created.
+**Instruction Creation** begins when the settlement instruction is created.
 
-```Instruction Validation``` validates the instruction and checks balances.
+**Instruction Validation** validates the instruction and checks balances.
 
-```Liquidity Check``` verifies sufficient funds are available.
+**Liquidity Check** verifies sufficient funds are available.
 
-```Queue Processing``` adds the instruction to the settlement queue.
+**Queue Processing** adds the instruction to the settlement queue.
 
-```Execution``` executes the value transfer.
+**Execution** executes the value transfer.
 
-```Ledger Update``` updates the reserve accounts.
+**Ledger Update** updates the reserve accounts.
 
-```Finality``` achieves legal finality.
+**Finality** achieves legal finality.
 
-```Confirmation``` confirms settlement to all parties.
+**Confirmation** confirms settlement to all parties.
 
 ```
 SETTLEMENT LIFECYCLE
@@ -319,45 +303,35 @@ SETTLEMENT LIFECYCLE
 
 ### How Settlement Begins
 
-Settlement begins when a settlement instruction is created. This can be from a payment system, securities trade, or FX transaction. The instruction is sent to the settlement system.
+**Settlement begins when a settlement instruction is created.** This can be from a payment system, securities trade, or FX transaction. The instruction is sent to the settlement system.
 
 ### How Are Obligations Received
 
-Obligations are received through settlement instructions. Each instruction specifies the payer, payee, amount, currency, and value date. Instructions may come from payment systems, clearing systems, or directly from banks.
+**Obligations are received through settlement instructions.** Each instruction specifies the payer, payee, amount, currency, and value date. Instructions may come from payment systems, clearing systems, or directly from banks.
 
 ### How Are Balances Verified
 
-Balances are verified by checking the sender's reserve account balance at the central bank. The system ensures sufficient funds are available. If funds are insufficient, the instruction may be queued or rejected.
+**Balances are verified by checking the sender's reserve account balance at the central bank.** The system ensures sufficient funds are available. If funds are insufficient, the instruction may be queued or rejected.
 
 ### How Are Funds Transferred
 
-Funds are transferred by updating reserve accounts at the central bank. The sender's account is debited. The receiver's account is credited. The transfer is recorded in the central ledger.
+**Funds are transferred by updating reserve accounts at the central bank.** The sender's account is debited. The receiver's account is credited. The transfer is recorded in the central ledger.
 
 ### When Is Settlement Completed
 
-Settlement is completed when the ledger update is committed and finality is achieved. The payment becomes irrevocable. The obligation is discharged.
+**Settlement is completed when the ledger update is committed and finality is achieved.** The payment becomes irrevocable. The obligation is discharged.
 
 ## 6. Settlement Models
 
-### Gross Settlement
+**Gross Settlement** settles each transaction individually. Every payment is processed separately. There is no netting. Settlement is immediate and final. RTGS systems use gross settlement.
 
-Gross settlement settles each transaction individually. Every payment is processed separately. There is no netting. Settlement is immediate and final. RTGS systems use gross settlement.
+**Net Settlement** offsets payment obligations. Transactions are accumulated and netted. Only the net amount is settled. This reduces liquidity requirements but introduces settlement risk.
 
-### Net Settlement
+**Hybrid Settlement** combines gross and net settlement. Some transactions are settled gross, others net. This balances liquidity and risk.
 
-Net settlement offsets payment obligations. Transactions are accumulated and netted. Only the net amount is settled. This reduces liquidity requirements but introduces settlement risk.
+**Deferred Net Settlement** accumulates transactions throughout the day. Net positions are calculated at the end of the settlement cycle. Only net positions are settled. ACH systems use deferred net settlement.
 
-### Hybrid Settlement
-
-Hybrid settlement combines gross and net settlement. Some transactions are settled gross, others net. This balances liquidity and risk.
-
-### Deferred Net Settlement
-
-Deferred net settlement accumulates transactions throughout the day. Net positions are calculated at the end of the settlement cycle. Only net positions are settled. ACH systems use deferred net settlement.
-
-### Real-Time Gross Settlement (RTGS)
-
-RTGS settles each transaction individually in real time. Settlement is immediate and final. There is no settlement risk. High liquidity is required.
+**Real-Time Gross Settlement (RTGS)** settles each transaction individually in real time. Settlement is immediate and final. There is no settlement risk. High liquidity is required.
 
 ```
 SETTLEMENT MODELS COMPARISON
@@ -392,13 +366,9 @@ SETTLEMENT MODELS COMPARISON
 
 ## 7. Settlement Engines
 
-### What Is a Settlement Engine
+**Settlement Engine** is the core processing system that executes value transfers. It validates settlement instructions, checks balances, manages queues, and updates ledgers.
 
-A settlement engine is the core processing system that executes value transfers. It validates settlement instructions, checks balances, manages queues, and updates ledgers.
-
-### How Does a Settlement Engine Work
-
-The settlement engine receives settlement instructions. It validates the instructions. It checks that sufficient funds are available. It executes the transfer by updating reserve accounts. It records the transaction in the central ledger. It sends confirmations to participants.
+**How It Works:** The settlement engine receives settlement instructions. It validates the instructions. It checks that sufficient funds are available. It executes the transfer by updating reserve accounts. It records the transaction in the central ledger. It sends confirmations to participants.
 
 ```
 SETTLEMENT ENGINE INTERNALS
@@ -474,9 +444,7 @@ SETTLEMENT ENGINE INTERNALS
 
 ## 8. Settlement Algorithms
 
-### Netting Algorithm
-
-The netting algorithm calculates net positions by offsetting obligations.
+**Netting Algorithm** calculates net positions by offsetting obligations.
 
 ```
 NETTING ALGORITHM
@@ -511,13 +479,9 @@ NETTING ALGORITHM
     └-----------------------------------------------------------+
 ```
 
-### Multilateral Netting
+**Multilateral Netting** calculates net positions across all participants. Each bank has a single net position against the clearing house.
 
-Multilateral netting calculates net positions across all participants. Each bank has a single net position against the clearing house.
-
-### Queue Optimization
-
-Queue optimization prioritizes settlement instructions to maximize settlement success.
+**Queue Optimization Algorithm** prioritizes settlement instructions to maximize settlement success.
 
 ```
 QUEUE OPTIMIZATION ALGORITHM
@@ -543,9 +507,7 @@ QUEUE OPTIMIZATION ALGORITHM
     └-----------------------------------------------------------+
 ```
 
-### Liquidity-Saving Optimization
-
-Liquidity-saving optimization reduces the liquidity required for settlement.
+**Liquidity-Saving Optimization** reduces the liquidity required for settlement.
 
 ```
 LIQUIDITY-SAVING OPTIMIZATION
@@ -576,37 +538,23 @@ LIQUIDITY-SAVING OPTIMIZATION
 
 ## 9. Settlement Infrastructure
 
-### Databases for Settlement
+**Databases for Settlement:** Settlement systems use high-performance databases. The Reserve Account Database stores account balances. The Transaction Database stores settlement records. The Audit Database stores audit trails.
 
-Settlement systems use high-performance databases. ```Reserve Account Database``` stores account balances. ```Transaction Database``` stores settlement records. ```Audit Database``` stores audit trails.
+**Message Buses for Settlement:** Message buses route settlement messages between participants. They provide reliable, ordered delivery. They handle message persistence.
 
-### Message Buses for Settlement
-
-Message buses route settlement messages between participants. They provide reliable, ordered delivery. They handle message persistence.
-
-### APIs for Settlement
-
-APIs provide programmatic access to settlement services. They enable real-time settlement status queries. They support integration with banking systems.
+**APIs for Settlement:** APIs provide programmatic access to settlement services. They enable real-time settlement status queries. They support integration with banking systems.
 
 ## 10. Settlement Messaging
 
-### ISO 20022 Settlement Messages
+**ISO 20022 Settlement Messages:** ISO 20022 defines settlement messages for various transaction types. pacs.008 is for credit transfers. pacs.002 is for payment status. sese.023 is for securities settlement.
 
-ISO 20022 defines settlement messages for various transaction types. ```pacs.008``` is for credit transfers. ```pacs.002``` is for payment status. ```sese.023``` is for securities settlement.
-
-### Settlement Instructions
-
-Settlement instructions contain payment details, settlement date, value date, and counterparty information.
+**Settlement Instructions:** Settlement instructions contain payment details, settlement date, value date, and counterparty information.
 
 ## 11. Settlement Ledgers
 
-### Central Bank Ledger
+**Central Bank Ledger** records all reserve account balances and settlement transactions. It is the ultimate source of truth for settlement.
 
-The central bank ledger records all reserve account balances and settlement transactions. It is the ultimate source of truth for settlement.
-
-### Double-Entry Settlement
-
-Double-entry settlement ensures that every debit is matched by a credit. The sender's account is debited. The receiver's account is credited. The total supply of reserves is unchanged.
+**Double-Entry Settlement** ensures that every debit is matched by a credit. The sender's account is debited. The receiver's account is credited. The total supply of reserves is unchanged.
 
 ```
 DOUBLE-ENTRY SETTLEMENT
@@ -641,83 +589,49 @@ DOUBLE-ENTRY SETTLEMENT
     └-----------------------------------------------------------+
 ```
 
-### Audit Logs
-
-Audit logs record all settlement activity. They provide a complete audit trail for compliance and dispute resolution.
+**Audit Logs** record all settlement activity. They provide a complete audit trail for compliance and dispute resolution.
 
 ## 12. Liquidity & Funding
 
-### Why Is Liquidity Important
+**Why Liquidity Is Important:** Liquidity is essential for settlement. Without sufficient liquidity, settlement fails. Banks must have adequate reserves to meet settlement obligations.
 
-Liquidity is essential for settlement. Without sufficient liquidity, settlement fails. Banks must have adequate reserves to meet settlement obligations.
+**How Banks Fund Settlement:** Banks fund settlement through prefunding, intraday liquidity, and interbank borrowing.
 
-### How Do Banks Fund Settlement
+**Prefunding** requires banks to maintain sufficient balances in their settlement accounts. Banks deposit funds in advance to ensure they can settle.
 
-Banks fund settlement through prefunding, intraday liquidity, and interbank borrowing.
-
-### Prefunding
-
-Prefunding requires banks to maintain sufficient balances in their settlement accounts. Banks deposit funds in advance to ensure they can settle.
-
-### Intraday Liquidity
-
-Intraday liquidity is available during the day for settlement. Central banks may provide intraday credit.
+**Intraday Liquidity** is available during the day for settlement. Central banks may provide intraday credit.
 
 ## 13. Settlement Optimization
 
-### Liquidity Saving Mechanism (LSM)
+**Liquidity Saving Mechanism (LSM)** reduces the liquidity required for settlement. It uses offsetting and netting to reduce gross payment volumes.
 
-LSM reduces the liquidity required for settlement. It uses offsetting and netting to reduce gross payment volumes.
+**Payment Prioritization** ensures critical payments are settled first. High-priority payments are processed before lower-priority payments.
 
-### Payment Prioritization
+**Bilateral Offsetting** offsets payments between two banks. Only the net amount is settled.
 
-Payment prioritization ensures critical payments are settled first. High-priority payments are processed before lower-priority payments.
-
-### Bilateral Offsetting
-
-Bilateral offsetting offsets payments between two banks. Only the net amount is settled.
-
-### Multilateral Optimization
-
-Multilateral optimization offsets payments across multiple banks. This provides greater liquidity savings.
+**Multilateral Optimization** offsets payments across multiple banks. This provides greater liquidity savings.
 
 ## 14. Real-Time Settlement
 
-### RTGS Overview
+**RTGS (Real-Time Gross Settlement)** settles each transaction individually in real time. Settlement is immediate and final. No netting is used.
 
-RTGS settles each transaction individually in real time. Settlement is immediate and final. No netting is used.
+**How RTGS Settles Instantly:** RTGS settles instantly by transferring reserves at the central bank. Each payment is processed individually. Settlement is final and irrevocable.
 
-### How RTGS Settles Instantly
-
-RTGS settles instantly by transferring reserves at the central bank. Each payment is processed individually. Settlement is final and irrevocable.
-
-### Engineering Challenges
-
-RTGS engineering challenges include high throughput (thousands of transactions per second), low latency (sub-second settlement), high availability (99.999% uptime), and data consistency.
+**Engineering Challenges:** RTGS engineering challenges include high throughput (thousands of transactions per second), low latency (sub-second settlement), high availability (99.999% uptime), and data consistency.
 
 ## 15. Deferred Settlement
 
-### Deferred Net Settlement
+**Deferred Net Settlement** accumulates transactions throughout the day. Net positions are calculated at settlement times. Only net positions are settled.
 
-Deferred net settlement accumulates transactions throughout the day. Net positions are calculated at settlement times. Only net positions are settled.
+**Batching** groups transactions for efficient processing. Transactions are accumulated in batches. The batch is processed at the settlement time.
 
-### Batching
-
-Batching groups transactions for efficient processing. Transactions are accumulated in batches. The batch is processed at the settlement time.
-
-### Settlement Cycles
-
-Settlement cycles are predefined times when settlement occurs. ACH has multiple settlement cycles per day.
+**Settlement Cycles** are predefined times when settlement occurs. ACH has multiple settlement cycles per day.
 
 ## 16. Securities Settlement
 
-### How Are Stocks Settled
+**How Stocks Are Settled:** Stocks are settled by transferring ownership from seller to buyer and funds from buyer to seller. This is called Delivery versus Payment (DvP).
 
-Stocks are settled by transferring ownership from seller to buyer and funds from buyer to seller. This is called Delivery versus Payment (DvP).
-
-### Delivery versus Payment (DvP)
-
-DvP ensures simultaneous delivery of securities and payment. The seller delivers securities. The buyer delivers funds. Both must occur for settlement to complete.
+**Delivery versus Payment (DvP)** ensures simultaneous delivery of securities and payment. The seller delivers securities. The buyer delivers funds. Both must occur for settlement to complete.
 
 ```
 DELIVERY VERSUS PAYMENT (DvP)
@@ -749,31 +663,19 @@ DELIVERY VERSUS PAYMENT (DvP)
     └-----------------------------------------------------------+
 ```
 
-### Free of Payment (FoP)
+**Free of Payment (FoP)** settles securities without a corresponding cash payment. This is used for gifts and internal transfers.
 
-FoP settles securities without a corresponding cash payment. This is used for gifts and internal transfers.
-
-### T+1 and T+2
-
-T+1 means settlement one day after trade date. T+2 means settlement two days after trade date. Most markets are moving to T+1.
+**T+1 and T+2:** T+1 means settlement one day after trade date. T+2 means settlement two days after trade date. Most markets are moving to T+1.
 
 ## 17. Foreign Exchange Settlement
 
-### How Are FX Trades Settled
+**How FX Trades Are Settled:** FX trades are settled by exchanging currencies. Each party pays the currency they sold and receives the currency they bought.
 
-FX trades are settled by exchanging currencies. Each party pays the currency they sold and receives the currency they bought.
+**CLS (Continuous Linked Settlement)** is the primary settlement system for FX trades. It provides PvP (Payment versus Payment) settlement. It eliminates Herstatt risk.
 
-### CLS (Continuous Linked Settlement)
+**Herstatt Risk** is the risk that one party delivers currency but the other fails. This can happen due to time zone differences. CLS eliminates this risk.
 
-CLS is the primary settlement system for FX trades. It provides PvP (Payment versus Payment) settlement. It eliminates Herstatt risk.
-
-### Herstatt Risk
-
-Herstatt risk is the risk that one party delivers currency but the other fails. This can happen due to time zone differences. CLS eliminates this risk.
-
-### Payment versus Payment (PvP)
-
-PvP ensures simultaneous exchange of currencies. Both currencies are exchanged at the same time. This eliminates settlement risk.
+**Payment versus Payment (PvP)** ensures simultaneous exchange of currencies. Both currencies are exchanged at the same time. This eliminates settlement risk.
 
 ```
 PAYMENT VERSUS PAYMENT (PvP)
@@ -806,13 +708,9 @@ PAYMENT VERSUS PAYMENT (PvP)
 
 ## 18. Cross-Border Settlement
 
-### How International Settlements Work
+**How International Settlements Work:** International settlements involve multiple currencies and correspondent banks. SWIFT messages are used for communication. Correspondent banks hold accounts in different currencies.
 
-International settlements involve multiple currencies and correspondent banks. SWIFT messages are used for communication. Correspondent banks hold accounts in different currencies.
-
-### Correspondent Banking
-
-Correspondent banks facilitate cross-border payments. They maintain Nostro and Vostro accounts. They provide currency conversion and settlement services.
+**Correspondent Banking** facilitates cross-border payments. Correspondent banks maintain Nostro and Vostro accounts. They provide currency conversion and settlement services.
 
 ```
 CROSS-BORDER SETTLEMENT
@@ -856,61 +754,35 @@ CROSS-BORDER SETTLEMENT
 
 ## 19. Settlement Risk
 
-### Settlement Risk
+**Settlement Risk** is the risk that settlement fails. This includes liquidity risk, credit risk, and operational risk.
 
-Settlement risk is the risk that settlement fails. This includes liquidity risk, credit risk, and operational risk.
+**Liquidity Risk** is the risk that a bank cannot fund its settlement obligations. This can cause settlement failure.
 
-### Liquidity Risk
+**Credit Risk** is the risk that a counterparty defaults during settlement. This can result in financial loss.
 
-Liquidity risk is the risk that a bank cannot fund its settlement obligations. This can cause settlement failure.
+**Operational Risk** is the risk of system failure during settlement. This can delay or prevent settlement.
 
-### Credit Risk
-
-Credit risk is the risk that a counterparty defaults during settlement. This can result in financial loss.
-
-### Operational Risk
-
-Operational risk is the risk of system failure during settlement. This can delay or prevent settlement.
-
-### Principal Risk
-
-Principal risk is the risk that one party delivers value but the other fails. This is also called Herstatt risk.
+**Principal Risk** is the risk that one party delivers value but the other fails. This is also called Herstatt risk.
 
 ## 20. Security & Compliance
 
-### Authentication
+**Authentication** verifies the identity of settlement participants. Digital certificates and mutual TLS are used.
 
-Authentication verifies the identity of settlement participants. Digital certificates and mutual TLS are used.
+**Digital Signatures** ensure message integrity. They verify that messages are authentic and unmodified.
 
-### Digital Signatures
-
-Digital signatures ensure message integrity. They verify that messages are authentic and unmodified.
-
-### Message Integrity
-
-Message integrity protects settlement messages from tampering. Cryptographic hashes are used to verify integrity.
+**Message Integrity** protects settlement messages from tampering. Cryptographic hashes are used to verify integrity.
 
 ## 21. Performance Engineering
 
-### Throughput
+**Throughput:** Settlement systems must process thousands of transactions per second. High-performance databases and in-memory processing are used.
 
-Settlement systems must process thousands of transactions per second. High-performance databases and in-memory processing are used.
+**Latency:** Latency targets for settlement are sub-second for RTGS. Network optimization and efficient algorithms are critical.
 
-### Latency
+**Fault Tolerance** ensures settlement continues despite failures. Redundancy and failover mechanisms are essential.
 
-Latency targets for settlement are sub-second for RTGS. Network optimization and efficient algorithms are critical.
+**High Availability** targets 99.999% uptime. Active-active deployments and automatic failover are used.
 
-### Fault Tolerance
-
-Fault tolerance ensures settlement continues despite failures. Redundancy and failover mechanisms are essential.
-
-### High Availability
-
-High availability targets 99.999% uptime. Active-active deployments and automatic failover are used.
-
-### Disaster Recovery
-
-Disaster recovery ensures settlement can continue after major failures. Multi-region replication and backup systems are critical.
+**Disaster Recovery** ensures settlement can continue after major failures. Multi-region replication and backup systems are critical.
 
 ```
 DISASTER RECOVERY TARGETS
@@ -937,25 +809,17 @@ DISASTER RECOVERY TARGETS
 
 ## 22. Distributed Systems
 
-### Consistency
+**Consistency** ensures all copies of data are the same. Strong consistency is critical for settlement. Eventual consistency is not acceptable.
 
-Consistency ensures all copies of data are the same. Strong consistency is critical for settlement. Eventual consistency is not acceptable.
+**Replication** copies data to multiple locations. This provides fault tolerance and high availability.
 
-### Replication
+**Consensus** ensures all nodes agree on the state of the system. Raft and Paxos are used for consensus.
 
-Replication copies data to multiple locations. This provides fault tolerance and high availability.
-
-### Consensus
-
-Consensus ensures all nodes agree on the state of the system. Raft and Paxos are used for consensus.
-
-### Exactly-Once Settlement
-
-Exactly-once settlement ensures each transaction is settled exactly once. This is critical to prevent duplicate settlements.
+**Exactly-Once Settlement** ensures each transaction is settled exactly once. This is critical to prevent duplicate settlements.
 
 ## 23. Mathematical Models
 
-### Net Settlement Calculation
+**Net Settlement Calculation:**
 
 ```
 NET SETTLEMENT CALCULATION
@@ -976,7 +840,7 @@ NET SETTLEMENT CALCULATION
     └-----------------------------------------------------------+
 ```
 
-### Liquidity Utilization
+**Liquidity Utilization:**
 
 ```
 LIQUIDITY UTILIZATION
@@ -1000,7 +864,7 @@ LIQUIDITY UTILIZATION
     └-----------------------------------------------------------+
 ```
 
-### Settlement Efficiency
+**Settlement Efficiency:**
 
 ```
 SETTLEMENT EFFICIENCY
@@ -1022,7 +886,7 @@ SETTLEMENT EFFICIENCY
     └-----------------------------------------------------------+
 ```
 
-### Queue Utilization
+**Queue Utilization:**
 
 ```
 QUEUE UTILIZATION
@@ -1049,7 +913,7 @@ QUEUE UTILIZATION
     └-----------------------------------------------------------+
 ```
 
-### Liquidity Saving Ratio
+**Liquidity Saving Ratio:**
 
 ```
 LIQUIDITY SAVING RATIO
@@ -1073,25 +937,15 @@ LIQUIDITY SAVING RATIO
 
 ## 24. Real-World Settlement Systems
 
-### Fedwire (US)
+**Fedwire (US)** is the US RTGS system operated by the Federal Reserve. It settles high-value payments in real time. It handles billions of dollars daily.
 
-Fedwire is the US RTGS system operated by the Federal Reserve. It settles high-value payments in real time. It handles billions of dollars daily.
+**TARGET2 (EU)** is the European RTGS system. It is operated by the Eurosystem. It settles euro payments in real time.
 
-### TARGET2 (EU)
+**CHAPS (UK)** is the UK RTGS system. It is operated by the Bank of England. It settles high-value sterling payments.
 
-TARGET2 is the European RTGS system. It is operated by the Eurosystem. It settles euro payments in real time.
+**CLS (FX)** is the FX settlement system. It provides PvP settlement for major currencies. It eliminates Herstatt risk.
 
-### CHAPS (UK)
-
-CHAPS is the UK RTGS system. It is operated by the Bank of England. It settles high-value sterling payments.
-
-### CLS (FX)
-
-CLS is the FX settlement system. It provides PvP settlement for major currencies. It eliminates Herstatt risk.
-
-### T2 (Euro)
-
-T2 is the new Euro settlement system. It replaces TARGET2 with enhanced functionality.
+**T2 (Euro)** is the new Euro settlement system. It replaces TARGET2 with enhanced functionality.
 
 ```
 REAL-WORLD SETTLEMENT SYSTEMS
@@ -1113,21 +967,13 @@ REAL-WORLD SETTLEMENT SYSTEMS
 
 ## 25. Future of Settlement
 
-### CBDC and Settlement
+**CBDC and Settlement:** CBDCs will change settlement by enabling direct central bank digital money. Settlement could become more efficient and accessible.
 
-CBDCs will change settlement by enabling direct central bank digital money. Settlement could become more efficient and accessible.
+**Blockchain for Settlement:** Blockchain could enable atomic settlement—simultaneous transfer of assets and funds. This could eliminate settlement risk.
 
-### Blockchain for Settlement
+**Atomic Settlement** ensures that either all parts of a transaction settle or none do. This eliminates partial settlement risk.
 
-Blockchain could enable atomic settlement—simultaneous transfer of assets and funds. This could eliminate settlement risk.
-
-### Atomic Settlement
-
-Atomic settlement ensures that either all parts of a transaction settle or none do. This eliminates partial settlement risk.
-
-### Programmable Settlement
-
-Programmable settlement enables automated, conditional settlement. Smart contracts could execute settlement automatically.
+**Programmable Settlement** enables automated, conditional settlement. Smart contracts could execute settlement automatically.
 
 ## 26. Summary
 
