@@ -528,12 +528,12 @@ LIQUIDITY-SAVING OPTIMIZATION
     │                                                           │
     │   WITH OPTIMIZATION:                                      │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  Net positions calculated                        │   │
-    │   │  Offsetting applied                             │   │
-    │   │  Total liquidity required: $10 million          │   │
+    │   │  Net positions calculated                         │   │
+    │   │  Offsetting applied                               │   │
+    │   │  Total liquidity required: $10 million            │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
-    │   SAVINGS: 90%                                           │
+    │   SAVINGS: 90%                                            │
     │                                                           │
     └-----------------------------------------------------------+
 ```
