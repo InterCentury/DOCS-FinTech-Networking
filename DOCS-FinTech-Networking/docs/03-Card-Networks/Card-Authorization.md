@@ -827,17 +827,17 @@ AUTHORIZATION SECURITY LAYERS
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  NETWORK SECURITY                               │   │
-    │   │  - TLS 1.3 encryption                          │   │
-    │   │  - Secure network connections                  │   │
-    │   │  - VPN (private networks)                     │   │
+    │   │  NETWORK SECURITY                                 │   │
+    │   │  - TLS 1.3 encryption                             │   │
+    │   │  - Secure network connections                     │   │
+    │   │  - VPN (private networks)                         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  MESSAGE SECURITY                               │   │
-    │   │  - MAC (Message Authentication Code)            │   │
-    │   │  - Digital signatures                          │   │
-    │   │  - Sequence numbers                           │   │
+    │   │  MESSAGE SECURITY                                 │   │
+    │   │  - MAC (Message Authentication Code)              │   │
+    │   │  - Digital signatures                             │   │
+    │   │  - Sequence numbers                               │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
