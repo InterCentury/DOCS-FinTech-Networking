@@ -11,14 +11,14 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the real-time card authorization process                     │
-    │   Learn the architecture and components of authorization systems         │
-    │   Study ISO 8583 messaging and field structures                         │
-    │   Examine decision engines and risk assessment algorithms               │
-    │   Understand EMV, contactless, and online/offline authorization         │
-    │   Learn stand-in processing and authorization holds                    │
-    │   Study security mechanisms and performance engineering                │
-    │   Analyze real-world authorization scenarios                          │
+    │   Understand the real-time card authorization process                       │
+    │   Learn the architecture and components of authorization systems            │
+    │   Study ISO 8583 messaging and field structures                             │
+    │   Examine decision engines and risk assessment algorithms                   │
+    │   Understand EMV, contactless, and online/offline authorization             │
+    │   Learn stand-in processing and authorization holds                         │
+    │   Study security mechanisms and performance engineering                     │
+    │   Analyze real-world authorization scenarios                                │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
