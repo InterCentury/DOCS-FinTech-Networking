@@ -33,9 +33,9 @@ DOCUMENTATION OBJECTIVES
 CARD AUTHORIZATION DEFINITION
 
                          +---------------------------+
-                         |  CARD AUTHORIZATION      |
-                         |  Real-time approve/      |
-                         |  decline decision        |
+                         |  CARD AUTHORIZATION       |
+                         |  Real-time approve/       |
+                         |  decline decision         |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
