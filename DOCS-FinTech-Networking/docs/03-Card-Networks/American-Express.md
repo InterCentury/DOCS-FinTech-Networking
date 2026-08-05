@@ -1013,16 +1013,16 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  CARD NUMBER STRUCTURE                         |
-    |  15 digits (2+6+7)                           |
-    |  Prefix 34 or 37                            |
+    |  CARD NUMBER STRUCTURE                          |
+    |  15 digits (2+6+7)                              |
+    |  Prefix 34 or 37                                |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  COMPARISON                                    |
-    |  AmEx: Closed-loop, 3-party model            |
-    |  Visa: Open-loop, 4-party model              |
-    |  Mastercard: Open-loop, 4-party model       |
+    |  COMPARISON                                     |
+    |  AmEx: Closed-loop, 3-party model               |
+    |  Visa: Open-loop, 4-party model                 |
+    |  Mastercard: Open-loop, 4-party model           |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
