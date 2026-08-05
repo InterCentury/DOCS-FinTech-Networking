@@ -42,13 +42,13 @@ CARD AUTHORIZATION DEFINITION
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  PRIMARY FUNCTIONS       |  |  WHAT IT IS NOT          |
-|  - Real-time (< 1s)     |  |  - Validate card        |  |  - Clearing              |
-|  - Always online (most) |  |  - Check funds         |  |  - Settlement            |
-|  - Authorizes funds     |  |  - Assess risk         |  |  - Capturing             |
-|  - Places hold on funds |  |  - Apply rules        |  |  - Accounting            |
-|  - Returns code         |  |  - Return decision    |  |  - Reconciliation        |
-|  - Security critical    |  |  - Reserve funds      |  |  - Payout                |
+|  KEY CHARACTERISTICS      |  |  PRIMARY FUNCTIONS        |  |  WHAT IT IS NOT           |
+|  - Real-time (< 1s)       |  |  - Validate card          |  |  - Clearing               |
+|  - Always online (most)   |  |  - Check funds            |  |  - Settlement             |
+|  - Authorizes funds       |  |  - Assess risk            |  |  - Capturing              |
+|  - Places hold on funds   |  |  - Apply rules            |  |  - Accounting             |
+|  - Returns code           |  |  - Return decision        |  |  - Reconciliation         |
+|  - Security critical      |  |  - Reserve funds          |  |  - Payout                 |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
