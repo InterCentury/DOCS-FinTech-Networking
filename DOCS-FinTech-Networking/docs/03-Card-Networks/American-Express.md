@@ -1026,14 +1026,14 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY TAKEAWAY                                  |
-    |  American Express is unique in the payments   |
-    |  industry. Its closed-loop architecture      |
-    |  provides end-to-end control, richer data,   |
-    |  and a premium customer experience. It      |
-    |  operates as both issuer and network,       |
-    |  simplifying the transaction flow and      |
-    |  enabling personalized services.          |
+    |  KEY TAKEAWAY                                   |
+    |  American Express is unique in the payments     |
+    |  industry. Its closed-loop architecture         |
+    |  provides end-to-end control, richer data,      |
+    |  and a premium customer experience. It          |
+    |  operates as both issuer and network,           |
+    |  simplifying the transaction flow and           |
+    |  enabling personalized services.                |
     +-------------------------------------------------+
 ```
 
