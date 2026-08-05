@@ -754,49 +754,49 @@ RESPONSE CODES
     │                                                           │
     │   Code  │ Description                                     │
     │   ──────│─────────────────────────────────────────────────│
-    │   00    │ Approved (Transaction approved)               │
-    │   01    │ Refer to Issuer (call card center)            │
-    │   02    │ Refer to Issuer (special condition)           │
-    │   03    │ Invalid Merchant (merchant ID invalid)        │
-    │   04    │ Pick Up Card (capture card)                   │
-    │   05    │ Do Not Honor (decline)                        │
-    │   06    │ Error                                         │
-    │   07    │ Pick Up Card (special condition)              │
-    │   10    │ Partial Approval (approved partial amount)    │
-    │   11    │ VIP Approval (approved)                       │
-    │   12    │ Invalid Transaction (invalid data)            │
-    │   13    │ Invalid Amount (amount limit exceeded)        │
-    │   14    │ Invalid Card Number (card number invalid)     │
-    │   15    │ No Such Issuer (issuer not found)            │
-    │   19    │ Re-enter Transaction                          │
-    │   22    │ Suspected Malfunction                         │
-    │   28    │ File Not Found (account not found)            │
-    │   30    │ Format Error (invalid message format)         │
-    │   31    │ Bank Not Supported                            │
-    │   33    │ Expired Card (card expired)                   │
-    │   34    │ Suspected Fraud (fraud suspected)             │
-    │   40    │ Restricted Card (card restricted)             │
-    │   41    │ Lost Card (card reported lost)                │
-    │   43    │ Stolen Card (card reported stolen)            │
-    │   51    │ Insufficient Funds (over limit)               │
-    │   54    │ Expired Card (card expired)                   │
-    │   55    │ Incorrect PIN (PIN invalid)                   │
-    │   57    │ Transaction Not Permitted                     │
-    │   58    │ Transaction Not Permitted (terminal)          │
-    │   61    │ Exceeds Withdrawal Limit                      │
-    │   62    │ Restricted Card                               │
-    │   63    │ Security Violation                            │
-    │   65    │ Exceeds Withdrawal Frequency                  │
-    │   66    │ Exceeds Withdrawal Frequency                  │
-    │   75    │ PIN Tries Exceeded                            │
-    │   76    │ Invalid Institution ID                        │
-    │   78    │ Invalid Account                               │
-    │   81    │ PIN Blocked                                   │
-    │   82    │ Invalid CVV                                   │
-    │   91    │ Issuer Unavailable (STIP processing)          │
-    │   92    │ Destination Not Found                         │
-    │   94    │ Duplicate Transaction                         │
-    │   96    │ System Error                                  │
+    │   00    │ Approved (Transaction approved)                 │
+    │   01    │ Refer to Issuer (call card center)              │
+    │   02    │ Refer to Issuer (special condition)             │
+    │   03    │ Invalid Merchant (merchant ID invalid)          │
+    │   04    │ Pick Up Card (capture card)                     │
+    │   05    │ Do Not Honor (decline)                          │
+    │   06    │ Error                                           │
+    │   07    │ Pick Up Card (special condition)                │
+    │   10    │ Partial Approval (approved partial amount)      │
+    │   11    │ VIP Approval (approved)                         │
+    │   12    │ Invalid Transaction (invalid data)              │
+    │   13    │ Invalid Amount (amount limit exceeded)          │
+    │   14    │ Invalid Card Number (card number invalid)       │
+    │   15    │ No Such Issuer (issuer not found)               │
+    │   19    │ Re-enter Transaction                            │
+    │   22    │ Suspected Malfunction                           │
+    │   28    │ File Not Found (account not found)              │
+    │   30    │ Format Error (invalid message format)           │
+    │   31    │ Bank Not Supported                              │
+    │   33    │ Expired Card (card expired)                     │
+    │   34    │ Suspected Fraud (fraud suspected)               │
+    │   40    │ Restricted Card (card restricted)               │
+    │   41    │ Lost Card (card reported lost)                  │
+    │   43    │ Stolen Card (card reported stolen)              │
+    │   51    │ Insufficient Funds (over limit)                 │
+    │   54    │ Expired Card (card expired)                     │
+    │   55    │ Incorrect PIN (PIN invalid)                     │
+    │   57    │ Transaction Not Permitted                       │
+    │   58    │ Transaction Not Permitted (terminal)            │
+    │   61    │ Exceeds Withdrawal Limit                        │
+    │   62    │ Restricted Card                                 │
+    │   63    │ Security Violation                              │
+    │   65    │ Exceeds Withdrawal Frequency                    │
+    │   66    │ Exceeds Withdrawal Frequency                    │
+    │   75    │ PIN Tries Exceeded                              │
+    │   76    │ Invalid Institution ID                          │
+    │   78    │ Invalid Account                                 │
+    │   81    │ PIN Blocked                                     │
+    │   82    │ Invalid CVV                                     │
+    │   91    │ Issuer Unavailable (STIP processing)            │
+    │   92    │ Destination Not Found                           │
+    │   94    │ Duplicate Transaction                           │
+    │   96    │ System Error                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
