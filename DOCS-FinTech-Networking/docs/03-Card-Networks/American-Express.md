@@ -993,23 +993,23 @@ REAL-WORLD TRANSACTION EXAMPLE
 SUMMARY
 
     +-------------------------------------------------+
-    |  WHAT IS AMERICAN EXPRESS?                     |
-    |  Closed-loop payment network and issuer       |
-    |  End-to-end control of transactions          |
+    |  WHAT IS AMERICAN EXPRESS?                      |
+    |  Closed-loop payment network and issuer         |
+    |  End-to-end control of transactions             |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY CHARACTERISTICS                           |
-    |  - Closed-loop network                        |
-    |  - Issuer + network in one                   |
-    |  - Direct merchant relationships             |
-    |  - Premium brand                            |
+    |  KEY CHARACTERISTICS                            |
+    |  - Closed-loop network                          |
+    |  - Issuer + network in one                      |
+    |  - Direct merchant relationships                |
+    |  - Premium brand                                |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  BUSINESS MODEL                               |
-    |  Merchant fees + card fees + interest         |
-    |  Rewards funded by merchant fees              |
+    |  BUSINESS MODEL                                 |
+    |  Merchant fees + card fees + interest           |
+    |  Rewards funded by merchant fees                |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
