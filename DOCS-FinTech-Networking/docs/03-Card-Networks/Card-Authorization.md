@@ -841,17 +841,17 @@ AUTHORIZATION SECURITY LAYERS
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  DATA SECURITY                                  │   │
-    │   │  - AES-256 encryption (PIN blocks)             │   │
-    │   │  - EMV cryptograms                            │   │
-    │   │  - HSM key storage                           │   │
+    │   │  DATA SECURITY                                    │   │
+    │   │  - AES-256 encryption (PIN blocks)                │   │
+    │   │  - EMV cryptograms                                │   │
+    │   │  - HSM key storage                                │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  APPLICATION SECURITY                           │   │
-    │   │  - Authentication                              │   │
-    │   │  - Authorization                              │   │
-    │   │  - Audit logging                             │   │
+    │   │  APPLICATION SECURITY                             │   │
+    │   │  - Authentication                                 │   │
+    │   │  - Authorization                                  │   │
+    │   │  - Audit logging                                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
