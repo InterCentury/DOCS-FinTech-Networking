@@ -645,34 +645,34 @@ STAND-IN PROCESSING (STIP)
     │               STAND-IN PROCESSING (STIP)                  │
     +-----------------------------------------------------------+
     │                                                           │
-    │   AUTHORIZATION REQUEST                                  │
+    │   AUTHORIZATION REQUEST                                   │
     │        │                                                  │
     │        ▼                                                  │
-    │   CARD NETWORK                                           │
+    │   CARD NETWORK                                            │
     │        │                                                  │
-    │        │ Attempt issuer connection                       │
+    │        │ Attempt issuer connection                        │
     │        ▼                                                  │
-    │   ISSUER AVAILABLE?                                      │
+    │   ISSUER AVAILABLE?                                       │
     │        │                                                  │
-    │   ┌────┴────┐                                            │
-    │   │         │                                            │
-    │   ▼         ▼                                            │
-    │  YES       NO                                            │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    STIP ACTIVATED                                   │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    APPLY STIP RULES                                 │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    AUTHORIZE/DECLINE                               │
-    │   │         │                                            │
-    │   │         │                                            │
-    │   └────┬────┘                                            │
+    │   ┌────┴────┐                                             │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │  YES       NO                                             │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    STIP ACTIVATED                                     │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    APPLY STIP RULES                                   │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    AUTHORIZE/DECLINE                                  │
+    │   │         │                                             │
+    │   │         │                                             │
+    │   └────┬────┘                                             │
     │        │                                                  │
     │        ▼                                                  │
-    │   RESPONSE                                               │
+    │   RESPONSE                                                │
     │                                                           │
     └-----------------------------------------------------------+
 ```
