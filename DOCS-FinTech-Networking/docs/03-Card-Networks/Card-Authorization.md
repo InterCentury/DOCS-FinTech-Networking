@@ -181,17 +181,17 @@ Several participants are involved in the authorization process.
 AUTHORIZATION PARTICIPANTS
 
                     +-------------------------------------------------+
-                    |          AUTHORIZATION PARTICIPANTS            |
+                    |          AUTHORIZATION PARTICIPANTS             |
                     +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  CARDHOLDER              |  |  MERCHANT                |  |  MERCHANT TERMINAL        |
-|  - Initiates payment    |  |  - Accepts card         |  |  - Reads card data        |
-|  - Presents card        |  |  - Submits authorization |  |  - Generates request      |
-|  - Receives approval    |  |  - Provides goods       |  |  - Displays response      |
+|  CARDHOLDER               |  |  MERCHANT                 |  |  MERCHANT TERMINAL        |
+|  - Initiates payment      |  |  - Accepts card           |  |  - Reads card data        |
+|  - Presents card          |  |  - Submits authorization  |  |  - Generates request      |
+|  - Receives approval      |  |  - Provides goods         |  |  - Displays response      |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
