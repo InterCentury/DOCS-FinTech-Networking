@@ -940,31 +940,31 @@ REAL-WORLD TRANSACTION EXAMPLE
     │               REAL-WORLD TRANSACTION EXAMPLE              │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CUSTOMER BUYS $100 ONLINE                             │
+    │   CUSTOMER BUYS $100 ONLINE                               │
     │        │                                                  │
-    │        │ Enters AmEx card details                       │
+    │        │ Enters AmEx card details                         │
     │        ▼                                                  │
     │   MERCHANT                                                │
     │        │                                                  │
-    │        │ API request to AmEx                            │
+    │        │ API request to AmEx                              │
     │        ▼                                                  │
     │   AMEX NETWORK                                            │
     │        │                                                  │
-    │        │ Authorization (50ms)                           │
-    │        │ Risk check (30ms)                             │
-    │        │ Decision (10ms)                              │
+    │        │ Authorization (50ms)                             │
+    │        │ Risk check (30ms)                                │
+    │        │ Decision (10ms)                                  │
     │        ▼                                                  │
-    │   AMEX RESPONSE (APPROVED)                               │
+    │   AMEX RESPONSE (APPROVED)                                │
     │        │                                                  │
-    │        │ Approval code: 123456                          │
+    │        │ Approval code: 123456                            │
     │        ▼                                                  │
     │   MERCHANT                                                │
     │        │                                                  │
-    │        │ Settlement (end of day)                        │
+    │        │ Settlement (end of day)                          │
     │        ▼                                                  │
     │   AMEX SETTLEMENT                                         │
     │        │                                                  │
-    │        │ Merchant receives $96 (less $4 fee)            │
+    │        │ Merchant receives $96 (less $4 fee)              │
     │                                                           │
     └-----------------------------------------------------------+
 ```
