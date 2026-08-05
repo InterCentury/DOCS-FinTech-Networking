@@ -180,9 +180,9 @@ Several participants are involved in the authorization process.
 ```
 AUTHORIZATION PARTICIPANTS
 
-                    +-------------------------------------------------+
-                    |          AUTHORIZATION PARTICIPANTS             |
-                    +-------------------------------------------------+
+              +-------------------------------------------------+
+              |          AUTHORIZATION PARTICIPANTS             |
+              +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
           │                            │                            │
@@ -200,11 +200,11 @@ AUTHORIZATION PARTICIPANTS
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  ACQUIRER                |  |  CARD NETWORK            |  |  ISSUER                  |
-|  - Merchant's bank      |  |  - Routes requests      |  |  - Cardholder's bank     |
-|  - Routes to network   |  |  - Stand-in processing  |  |  - Validates card        |
-|  - Receives response   |  |  - Returns response    |  |  - Checks account        |
-|  - Settles funds       |  |  - Applies rules       |  |  - Makes decision        |
+|  ACQUIRER                 |  |  CARD NETWORK             |  |  ISSUER                   |
+|  - Merchant's bank        |  |  - Routes requests        |  |  - Cardholder's bank      |
+|  - Routes to network      |  |  - Stand-in processing    |  |  - Validates card         |
+|  - Receives response      |  |  - Returns response       |  |  - Checks account         |
+|  - Settles funds          |  |  - Applies rules          |  |  - Makes decision         |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
