@@ -128,29 +128,29 @@ AUTHORIZATION SYSTEM ARCHITECTURE
     │   │  - Returns response to acquirer                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Authorization Request        │
+    │                           │ Authorization Request         │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              ISSUER                             │   │
+    │   │              ISSUER                               │   │
     │   │                                                   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Authorization Service                   │   │   │
-    │   │  │  - Validate card                        │   │   │
-    │   │  │  - Authenticate                         │   │   │
-    │   │  │  - Check account                        │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Risk Engine                            │   │   │
-    │   │  │  - Real-time scoring                   │   │   │
-    │   │  │  - Rule evaluation                    │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  Decision Engine                        │   │   │
-    │   │  │  - Apply business rules                │   │   │
-    │   │  │  - Check limits                       │   │   │
-    │   │  │  - Make approve/decline decision      │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  Authorization Service                    │    │   │
+    │   │  │  - Validate card                          │    │   │
+    │   │  │  - Authenticate                           │    │   │
+    │   │  │  - Check account                          │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  Risk Engine                              │    │   │
+    │   │  │  - Real-time scoring                      │    │   │
+    │   │  │  - Rule evaluation                        │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  Decision Engine                          │    │   │
+    │   │  │  - Apply business rules                   │    │   │
+    │   │  │  - Check limits                           │    │   │
+    │   │  │  - Make approve/decline decision          │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
     │   │  │  Database                               │   │   │
     │   │  │  - Account balances                    │   │   │
     │   │  │  - Spending limits                    │   │   │
