@@ -102,30 +102,30 @@ AUTHORIZATION SYSTEM ARCHITECTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              TERMINAL / POS                     │   │
-    │   │  - Reads card (magstripe, chip, NFC)          │   │
-    │   │  - Generates authorization request           │   │
-    │   │  - Displays response to customer             │   │
+    │   │              TERMINAL / POS                       │   │
+    │   │  - Reads card (magstripe, chip, NFC)              │   │
+    │   │  - Generates authorization request                │   │
+    │   │  - Displays response to customer                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ ISO 8583                     │
+    │                           │ ISO 8583                      │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              ACQUIRER                           │   │
-    │   │  - Receives request                            │   │
-    │   │  - Formats for network                         │   │
-    │   │  - Routes to network                          │   │
-    │   │  - Returns response to merchant               │   │
+    │   │              ACQUIRER                             │   │
+    │   │  - Receives request                               │   │
+    │   │  - Formats for network                            │   │
+    │   │  - Routes to network                              │   │
+    │   │  - Returns response to merchant                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Network Message              │
+    │                           │ Network Message               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              CARD NETWORK                       │   │
-    │   │  - Routes to issuer                            │   │
-    │   │  - Applies network rules                       │   │
-    │   │  - Stand-in processing (STIP)                  │   │
-    │   │  - Returns response to acquirer               │   │
+    │   │              CARD NETWORK                         │   │
+    │   │  - Routes to issuer                               │   │
+    │   │  - Applies network rules                          │   │
+    │   │  - Stand-in processing (STIP)                     │   │
+    │   │  - Returns response to acquirer                   │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           │ Authorization Request        │
