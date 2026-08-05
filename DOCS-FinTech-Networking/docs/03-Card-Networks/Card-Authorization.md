@@ -878,25 +878,25 @@ AUTHORIZATION TIMELINE
     │               AUTHORIZATION TIMELINE                      │
     +-----------------------------------------------------------+
     │                                                           │
-    │   0 ms   Card tapped/inserted                            │
-    │   5 ms   Terminal reads card data                       │
-    │   20 ms  Terminal generates authorization request        │
-    │   30 ms  Request sent to acquirer                       │
-    │   50 ms  Acquirer processes request                     │
-    │   70 ms  Network routes request                         │
-    │   90 ms  Issuer receives request                        │
-    │   100 ms Issuer validates card                          │
-    │   120 ms Issuer checks account                         │
-    │   140 ms Risk engine runs                              │
-    │   160 ms Rules engine evaluates                        │
-    │   180 ms Decision made                                 │
-    │   200 ms Response sent to network                     │
-    │   220 ms Network routes response                      │
-    │   240 ms Acquirer receives response                   │
-    │   260 ms Terminal displays result                     │
-    │   280 ms Transaction complete                         │
+    │   0 ms   Card tapped/inserted                             │
+    │   5 ms   Terminal reads card data                         │
+    │   20 ms  Terminal generates authorization request         │
+    │   30 ms  Request sent to acquirer                         │
+    │   50 ms  Acquirer processes request                       │
+    │   70 ms  Network routes request                           │
+    │   90 ms  Issuer receives request                          │
+    │   100 ms Issuer validates card                            │
+    │   120 ms Issuer checks account                            │
+    │   140 ms Risk engine runs                                 │
+    │   160 ms Rules engine evaluates                           │
+    │   180 ms Decision made                                    │
+    │   200 ms Response sent to network                         │
+    │   220 ms Network routes response                          │
+    │   240 ms Acquirer receives response                       │
+    │   260 ms Terminal displays result                         │
+    │   280 ms Transaction complete                             │
     │                                                           │
-    │   TOTAL: 280 ms (well under 500 ms target)              │
+    │   TOTAL: 280 ms (well under 500 ms target)                │
     │                                                           │
     └-----------------------------------------------------------+
 ```
