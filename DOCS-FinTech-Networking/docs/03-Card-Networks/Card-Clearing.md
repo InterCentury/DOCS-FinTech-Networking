@@ -472,11 +472,11 @@ BATCH PROCESSING FLOW
     │        │                                                  │
     │        ▼                                                  │
     │   +---------------------------------------------------+   │
-    │   │  PROCESSING                                      │   │
-    │   │  ├── Transaction matching                      │   │
-    │   │  ├── Interchange calculation                  │   │
-    │   │  ├── Fee calculation                         │   │
-    │   │  └── Net position calculation               │   │
+    │   │  PROCESSING                                       │   │
+    │   │  ├── Transaction matching                         │   │
+    │   │  ├── Interchange calculation                      │   │
+    │   │  ├── Fee calculation                              │   │
+    │   │  └── Net position calculation                     │   │
     │   └---------------------------------------------------+   │
     │        │                                                  │
     │        ▼                                                  │
