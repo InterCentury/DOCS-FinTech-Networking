@@ -1079,40 +1079,40 @@ SUMMARY
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY CHARACTERISTICS                           |
-    |  - Sub-second response                        |
-    |  - Real-time validation                      |
-    |  - Risk assessment                          |
-    |  - Funds reservation                       |
-    |  - Security critical                      |
+    |  KEY CHARACTERISTICS                            |
+    |  - Sub-second response                          |
+    |  - Real-time validation                         |
+    |  - Risk assessment                              |
+    |  - Funds reservation                            |
+    |  - Security critical                            |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  PARTICIPANTS                                  |
-    |  Cardholder, Merchant, Terminal, Acquirer,     |
-    |  Card Network, Issuer                         |
+    |  PARTICIPANTS                                   |
+    |  Cardholder, Merchant, Terminal, Acquirer,      |
+    |  Card Network, Issuer                           |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  DECISION PIPELINE                             |
-    |  Validation → Authentication → Risk → Rules →  |
-    |  Balance Check → Decision                     |
+    |  DECISION PIPELINE                              |
+    |  Validation → Authentication → Risk → Rules →   |
+    |  Balance Check → Decision                       |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  RESPONSE CODES                                |
-    |  00 (Approved), 05 (Do Not Honor), 51          |
-    |  (Insufficient Funds), 91 (Issuer Unavailable) |
+    |  RESPONSE CODES                                 |
+    |  00 (Approved), 05 (Do Not Honor), 51           |
+    |  (Insufficient Funds), 91 (Issuer Unavailable)  |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
-    |  KEY TAKEAWAY                                  |
-    |  Card authorization is the most critical      |
-    |  real-time decision in payments. It           |
-    |  combines cryptography, risk assessment,      |
-    |  business rules, and high-performance         |
-    |  systems to make instant approve/decline      |
-    |  decisions with sub-second latency.          |
+    |  KEY TAKEAWAY                                   |
+    |  Card authorization is the most critical        |
+    |  real-time decision in payments. It             |
+    |  combines cryptography, risk assessment,        |
+    |  business rules, and high-performance           |
+    |  systems to make instant approve/decline        |
+    |  decisions with sub-second latency.             |
     +-------------------------------------------------+
 ```
 
