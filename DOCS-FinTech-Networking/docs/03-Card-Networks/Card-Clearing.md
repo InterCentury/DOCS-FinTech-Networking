@@ -297,17 +297,17 @@ AUTHORIZATION TO CLEARING
     │        │ File submitted to network                        │
     │        │                                                  │
     │        ▼                                                  │
-    │   NETWORK MATCHING                                      │
+    │   NETWORK MATCHING                                        │
     │        │                                                  │
-    │        │ Clearing record matched with authorization     │
-    │        │                                                 │
-    │        ▼                                                  │
-    │   ISSUER VALIDATION                                     │
+    │        │ Clearing record matched with authorization       │
     │        │                                                  │
-    │        │ Issuer confirms authorization matches capture  │
-    │        │                                                 │
     │        ▼                                                  │
-    │   CLEARING COMPLETE                                     │
+    │   ISSUER VALIDATION                                       │
+    │        │                                                  │
+    │        │ Issuer confirms authorization matches capture    │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   CLEARING COMPLETE                                       │
     │                                                           │
     └-----------------------------------------------------------+
 ```
