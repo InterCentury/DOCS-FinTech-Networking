@@ -1045,12 +1045,12 @@ FUTURE AUTHORIZATION
     │               FUTURE AUTHORIZATION                        │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CURRENT:                                               │
+    │   CURRENT:                                                │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  - PAN-based authorization                     │   │
-    │   │  - PIN or CVV verification                   │   │
-    │   │  - Rule-based risk engines                 │   │
-    │   │  - 200-500 ms latency                     │   │
+    │   │  - PAN-based authorization                        │   │
+    │   │  - PIN or CVV verification                        │   │
+    │   │  - Rule-based risk engines                        │   │
+    │   │  - 200-500 ms latency                             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
