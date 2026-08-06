@@ -284,18 +284,18 @@ AUTHORIZATION TO CLEARING
     │        ▼                                                  │
     │   CAPTURE REQUEST                                         │
     │        │                                                  │
-    │        │ Merchant submits: $100, Auth: ABC123          │
-    │        │                                                 │
-    │        ▼                                                  │
-    │   ACQUIRER BATCHING                                     │
+    │        │ Merchant submits: $100, Auth: ABC123             │
     │        │                                                  │
-    │        │ Multiple transactions batched                  │
-    │        │                                                 │
     │        ▼                                                  │
-    │   CLEARING SUBMISSION                                   │
+    │   ACQUIRER BATCHING                                       │
     │        │                                                  │
-    │        │ File submitted to network                     │
-    │        │                                                 │
+    │        │ Multiple transactions batched                    │
+    │        │                                                  │
+    │        ▼                                                  │
+    │   CLEARING SUBMISSION                                     │
+    │        │                                                  │
+    │        │ File submitted to network                        │
+    │        │                                                  │
     │        ▼                                                  │
     │   NETWORK MATCHING                                      │
     │        │                                                  │
