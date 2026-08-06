@@ -224,18 +224,18 @@ Several participants are involved in card clearing.
 ```
 CARD CLEARING PARTICIPANTS
 
-                    +-------------------------------------------------+
-                    |          CARD CLEARING PARTICIPANTS            |
-                    +-------------------------------------------------+
+               +-------------------------------------------------+
+               |          CARD CLEARING PARTICIPANTS             |
+               +-------------------------------------------------+
                                        │
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  MERCHANT                |  |  ACQUIRER                |  |  ACQUIRER PROCESSOR      |
-|  - Captures transaction  |  |  - Batches transactions  |  |  - Formats clearing data |
-|  - Submits to acquirer  |  |  - Creates clearing file |  |  - Validates records    |
-|  - Provides final amount |  |  - Submits to network   |  |  - Applies rules       |
+|  MERCHANT                 |  |  ACQUIRER                 |  |  ACQUIRER PROCESSOR       |
+|  - Captures transaction   |  |  - Batches transactions   |  |  - Formats clearing data  |
+|  - Submits to acquirer    |  |  - Creates clearing file  |  |  - Validates records      |
+|  - Provides final amount  |  |  - Submits to network     |  |  - Applies rules          |
 +---------------------------+  +---------------------------+  +---------------------------+
           │                            │                            │
           +----------------------------+----------------------------+
@@ -244,11 +244,11 @@ CARD CLEARING PARTICIPANTS
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  CARD NETWORK            |  |  ISSUER PROCESSOR        |  |  ISSUER                  |
-|  - Processes clearing    |  |  - Receives records     |  |  - Accepts records      |
-|  - Matches transactions  |  |  - Validates records   |  |  - Prepares settlement  |
-|  - Calculates fees      |  |  - Applies rules      |  |  - Post to accounts    |
-|  - Calculates net       |  |  - Rejects invalid    |  |                         |
+|  CARD NETWORK             |  |  ISSUER PROCESSOR         |  |  ISSUER                   |
+|  - Processes clearing     |  |  - Receives records       |  |  - Accepts records        |
+|  - Matches transactions   |  |  - Validates records      |  |  - Prepares settlement    |
+|  - Calculates fees        |  |  - Applies rules          |  |  - Post to accounts       |
+|  - Calculates net         |  |  - Rejects invalid        |  |                           |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
