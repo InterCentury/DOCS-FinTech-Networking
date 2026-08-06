@@ -993,37 +993,37 @@ REAL-WORLD EXAMPLES
     │               REAL-WORLD EXAMPLES                         │
     +-----------------------------------------------------------+
     │                                                           │
-    │   SUPERMARKET (Contactless, $50)                         │
-    │   ────────────────────────────────────────────────────── │
-    │   0 ms: Card tapped                                     │
-    │   20 ms: NFC read complete                              │
-    │   50 ms: ARQC generated                                │
-    │   100 ms: Authorization request sent                   │
-    │   200 ms: Response received (Approved)                 │
-    │   230 ms: Display shows "Approved"                    │
-    │   250 ms: Receipt printed                              │
+    │   SUPERMARKET (Contactless, $50)                          │
+    │   ──────────────────────────────────────────────────────  │
+    │   0 ms: Card tapped                                       │
+    │   20 ms: NFC read complete                                │
+    │   50 ms: ARQC generated                                   │
+    │   100 ms: Authorization request sent                      │
+    │   200 ms: Response received (Approved)                    │
+    │   230 ms: Display shows "Approved"                        │
+    │   250 ms: Receipt printed                                 │
     │                                                           │
-    │   ONLINE PURCHASE (Card-Not-Present, $200)              │
-    │   ────────────────────────────────────────────────────── │
-    │   0 ms: Customer enters card details                   │
-    │   30 ms: CVV validated                                 │
-    │   50 ms: AVS checked                                   │
-    │   80 ms: 3-D Secure authentication triggered          │
-    │   120 ms: 3-D Secure passed                           │
-    │   150 ms: Authorization request sent                  │
-    │   300 ms: Response received (Approved)               │
-    │   320 ms: Order confirmation displayed               │
+    │   ONLINE PURCHASE (Card-Not-Present, $200)                │
+    │   ──────────────────────────────────────────────────────  │
+    │   0 ms: Customer enters card details                      │
+    │   30 ms: CVV validated                                    │
+    │   50 ms: AVS checked                                      │
+    │   80 ms: 3-D Secure authentication triggered              │
+    │   120 ms: 3-D Secure passed                               │
+    │   150 ms: Authorization request sent                      │
+    │   300 ms: Response received (Approved)                    │
+    │   320 ms: Order confirmation displayed                    │
     │                                                           │
-    │   ATM WITHDRAWAL (PIN, $200)                            │
-    │   ────────────────────────────────────────────────────── │
-    │   0 ms: Card inserted                                   │
-    │   20 ms: PIN entered                                    │
-    │   50 ms: PIN block encrypted                           │
-    │   80 ms: Authorization request sent                    │
-    │   200 ms: PIN verified                                 │
-    │   230 ms: Account checked                              │
-    │   260 ms: Cash dispensed                               │
-    │   280 ms: Receipt printed                              │
+    │   ATM WITHDRAWAL (PIN, $200)                              │
+    │   ──────────────────────────────────────────────────────  │
+    │   0 ms: Card inserted                                     │
+    │   20 ms: PIN entered                                      │
+    │   50 ms: PIN block encrypted                              │
+    │   80 ms: Authorization request sent                       │
+    │   200 ms: PIN verified                                    │
+    │   230 ms: Account checked                                 │
+    │   260 ms: Cash dispensed                                  │
+    │   280 ms: Receipt printed                                 │
     │                                                           │
     └-----------------------------------------------------------+
 ```
