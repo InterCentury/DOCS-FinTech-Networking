@@ -176,10 +176,10 @@ CARD CLEARING ARCHITECTURE
     │                           │ Clearing Records              │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              ISSUER PROCESSOR                  │   │
-    │   │  - Receives clearing records                  │   │
-    │   │  - Validates records                         │   │
-    │   │  - Applies issuer rules                    │   │
+    │   │              ISSUER PROCESSOR                     │   │
+    │   │  - Receives clearing records                      │   │
+    │   │  - Validates records                              │   │
+    │   │  - Applies issuer rules                           │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           │ Accepted/Rejected            │
