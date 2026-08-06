@@ -83,29 +83,29 @@ CARD CLEARING DEFINITION
 AUTHORIZATION → CAPTURE → CLEARING → SETTLEMENT
 
     +-----------------------------------------------------------+
-    │               PAYMENT PHASES                               │
+    │               PAYMENT PHASES                              │
     +-----------------------------------------------------------+
     │                                                           │
-    │   AUTHORIZATION: Real-time approve/decline decision      │
-    │   ├── Funds reserved                                   │
-    │   ├── Authorization code generated                    │
-    │   └── No funds moved                                │
+    │   AUTHORIZATION: Real-time approve/decline decision       │
+    │   ├── Funds reserved                                      │
+    │   ├── Authorization code generated                        │
+    │   └── No funds moved                                      │
     │                                                           │
-    │   CAPTURE: Merchant submits transaction for payment      │
-    │   ├── Final amount confirmed                          │
-    │   ├── Adjustments added                              │
-    │   └── Batch created                                 │
+    │   CAPTURE: Merchant submits transaction for payment       │
+    │   ├── Final amount confirmed                              │
+    │   ├── Adjustments added                                   │
+    │   └── Batch created                                       │
     │                                                           │
-    │   CLEARING: Data exchange between banks                 │
-    │   ├── Validation                                     │
-    │   ├── Matching                                      │
-    │   ├── Interchange calculation                     │
-    │   └── Net position calculation                   │
+    │   CLEARING: Data exchange between banks                   │
+    │   ├── Validation                                          │
+    │   ├── Matching                                            │
+    │   ├── Interchange calculation                             │
+    │   └── Net position calculation                            │
     │                                                           │
-    │   SETTLEMENT: Actual funds transfer                     │
-    │   ├── Funds move                                     │
-    │   ├── Final and irrevocable                        │
-    │   └── Obligations discharged                      │
+    │   SETTLEMENT: Actual funds transfer                       │
+    │   ├── Funds move                                          │
+    │   ├── Final and irrevocable                               │
+    │   └── Obligations discharged                              │
     │                                                           │
     └-----------------------------------------------------------+
 ```
