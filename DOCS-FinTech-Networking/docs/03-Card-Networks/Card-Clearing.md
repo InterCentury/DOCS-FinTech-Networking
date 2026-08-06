@@ -539,25 +539,25 @@ INTERCHANGE CALCULATION
     │               INTERCHANGE CALCULATION                     │
     +-----------------------------------------------------------+
     │                                                           │
-    │   TRANSACTION DETAILS:                                   │
-    │   ────────────────────────────────────────────────────── │
-    │   Amount: $100.00                                      │
-    │   Card Type: Consumer Credit                            │
-    │   MCC: 5411 (Grocery)                                   │
-    │   Channel: Card-Present                                │
+    │   TRANSACTION DETAILS:                                    │
+    │   ──────────────────────────────────────────────────────  │
+    │   Amount: $100.00                                         │
+    │   Card Type: Consumer Credit                              │
+    │   MCC: 5411 (Grocery)                                     │
+    │   Channel: Card-Present                                   │
     │                                                           │
-    │   INTERCHANGE RATE DETERMINATION:                       │
-    │   ────────────────────────────────────────────────────── │
-    │   Card Type: Consumer Credit → Rate Group A            │
-    │   MCC: 5411 (Grocery) → Rate: 1.50%                   │
-    │   Channel: Card-Present → Base Rate                    │
+    │   INTERCHANGE RATE DETERMINATION:                         │
+    │   ──────────────────────────────────────────────────────  │
+    │   Card Type: Consumer Credit → Rate Group A               │
+    │   MCC: 5411 (Grocery) → Rate: 1.50%                       │
+    │   Channel: Card-Present → Base Rate                       │
     │                                                           │
-    │   CALCULATION:                                          │
-    │   ────────────────────────────────────────────────────── │
-    │   Interchange = $100.00 × 1.50% = $1.50               │
+    │   CALCULATION:                                            │
+    │   ──────────────────────────────────────────────────────  │
+    │   Interchange = $100.00 × 1.50% = $1.50                   │
     │                                                           │
-    │   TOTAL FEES:                                           │
-    │   ────────────────────────────────────────────────────── │
+    │   TOTAL FEES:                                             │
+    │   ──────────────────────────────────────────────────────  │
     │   Interchange: $1.50 (paid to issuer)                  │
     │   Network Assessment: $0.10 (paid to network)          │
     │   Acquirer Markup: $0.25 (acquirer revenue)            │
