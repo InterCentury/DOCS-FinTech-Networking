@@ -159,21 +159,21 @@ CARD CLEARING ARCHITECTURE
     │   │  - Applies acquirer rules                         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Network Format               │
+    │                           │ Network Format                │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              CARD NETWORK                       │   │
+    │   │              CARD NETWORK                         │   │
     │   │                                                   │   │
-    │   │  ┌───────────────────────────────────────────┐   │   │
-    │   │  │  CLEARING ENGINE                        │   │   │
-    │   │  │  - Validation                          │   │   │
-    │   │  │  - Matching                           │   │   │
-    │   │  │  - Interchange calculation          │   │   │
-    │   │  │  - Net position calculation       │   │   │
-    │   │  └───────────────────────────────────────────┘   │   │
+    │   │  ┌───────────────────────────────────────────┐    │   │
+    │   │  │  CLEARING ENGINE                          │    │   │
+    │   │  │  - Validation                             │    │   │
+    │   │  │  - Matching                               │    │   │
+    │   │  │  - Interchange calculation                │    │   │
+    │   │  │  - Net position calculation               │    │   │
+    │   │  └───────────────────────────────────────────┘    │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Clearing Records             │
+    │                           │ Clearing Records              │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
     │   │              ISSUER PROCESSOR                  │   │
