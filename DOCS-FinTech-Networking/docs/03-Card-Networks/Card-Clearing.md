@@ -11,13 +11,13 @@ DOCUMENTATION OBJECTIVES
 
     ┌─────────────────────────────────────────────────────────────────────────────┐
     │                                                                             │
-    │   Understand the purpose and process of card clearing                     │
-    │   Learn the transition from authorization to clearing                    │
-    │   Study clearing architecture, participants, and message flows           │
-    │   Examine batch processing, transaction matching, and validation        │
-    │   Understand interchange calculation and network fees                  │
-    │   Learn exception processing, chargebacks, and reconciliation          │
-    │   Study clearing infrastructure, security, and performance             │
+    │   Understand the purpose and process of card clearing                       │
+    │   Learn the transition from authorization to clearing                       │
+    │   Study clearing architecture, participants, and message flows              │
+    │   Examine batch processing, transaction matching, and validation            │
+    │   Understand interchange calculation and network fees                       │
+    │   Learn exception processing, chargebacks, and reconciliation               │
+    │   Study clearing infrastructure, security, and performance                  │
     │                                                                             │
     └─────────────────────────────────────────────────────────────────────────────┘
 ```
