@@ -136,27 +136,27 @@ CARD CLEARING ARCHITECTURE
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              MERCHANT / POS                     │   │
-    │   │  - Captures transaction                        │   │
-    │   │  - Sends to acquirer                          │   │
+    │   │              MERCHANT / POS                       │   │
+    │   │  - Captures transaction                           │   │
+    │   │  - Sends to acquirer                              │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Capture Data                 │
+    │                           │ Capture Data                  │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              ACQUIRER                           │   │
-    │   │  - Batches transactions                        │   │
-    │   │  - Creates clearing file                      │   │
-    │   │  - Submits to network                        │   │
+    │   │              ACQUIRER                             │   │
+    │   │  - Batches transactions                           │   │
+    │   │  - Creates clearing file                          │   │
+    │   │  - Submits to network                             │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Clearing File                │
+    │                           │ Clearing File                 │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              ACQUIRER PROCESSOR                 │   │
-    │   │  - Formats clearing data                       │   │
-    │   │  - Validates records                          │   │
-    │   │  - Applies acquirer rules                    │   │
+    │   │              ACQUIRER PROCESSOR                   │   │
+    │   │  - Formats clearing data                          │   │
+    │   │  - Validates records                              │   │
+    │   │  - Applies acquirer rules                         │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           │ Network Format               │
