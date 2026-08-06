@@ -182,12 +182,12 @@ CARD CLEARING ARCHITECTURE
     │   │  - Applies issuer rules                           │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
-    │                           │ Accepted/Rejected            │
+    │                           │ Accepted/Rejected             │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │              ISSUER                            │   │
-    │   │  - Accepts clearing records                   │   │
-    │   │  - Prepares for settlement                   │   │
+    │   │              ISSUER                               │   │
+    │   │  - Accepts clearing records                       │   │
+    │   │  - Prepares for settlement                        │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
