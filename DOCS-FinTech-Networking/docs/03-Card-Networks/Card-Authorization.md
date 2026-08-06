@@ -1054,14 +1054,14 @@ FUTURE AUTHORIZATION
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
-    │   FUTURE:                                               │
+    │   FUTURE:                                                 │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  - Token-based authorization                   │   │
-    │   │  - Biometric authentication                  │   │
-    │   │  - AI-powered risk engines                  │   │
-    │   │  - Sub-100 ms latency                      │   │
-    │   │  - ISO 20022 rich data                    │   │
-    │   │  - Real-time behavioral analysis          │   │
+    │   │  - Token-based authorization                      │   │
+    │   │  - Biometric authentication                       │   │
+    │   │  - AI-powered risk engines                        │   │
+    │   │  - Sub-100 ms latency                             │   │
+    │   │  - ISO 20022 rich data                            │   │
+    │   │  - Real-time behavioral analysis                  │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
