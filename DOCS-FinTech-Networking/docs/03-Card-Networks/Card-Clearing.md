@@ -274,15 +274,15 @@ CARD CLEARING PARTICIPANTS
 AUTHORIZATION TO CLEARING
 
     +-----------------------------------------------------------+
-    │               AUTHORIZATION TO CLEARING                    │
+    │               AUTHORIZATION TO CLEARING                   │
     +-----------------------------------------------------------+
     │                                                           │
-    │   AUTHORIZATION                                         │
+    │   AUTHORIZATION                                           │
     │        │                                                  │
-    │        │ Approval: $100, Auth Code: ABC123              │
-    │        │                                                 │
+    │        │ Approval: $100, Auth Code: ABC123                │
+    │        │                                                  │
     │        ▼                                                  │
-    │   CAPTURE REQUEST                                       │
+    │   CAPTURE REQUEST                                         │
     │        │                                                  │
     │        │ Merchant submits: $100, Auth: ABC123          │
     │        │                                                 │
