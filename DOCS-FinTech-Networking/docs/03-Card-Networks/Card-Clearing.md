@@ -481,10 +481,10 @@ BATCH PROCESSING FLOW
     │        │                                                  │
     │        ▼                                                  │
     │   +---------------------------------------------------+   │
-    │   │  OUTPUT                                         │   │
-    │   │  ├── Cleared transactions                     │   │
-    │   │  ├── Exception reports                       │   │
-    │   │  └── Settlement instructions                │   │
+    │   │  OUTPUT                                           │   │
+    │   │  ├── Cleared transactions                         │   │
+    │   │  ├── Exception reports                            │   │
+    │   │  └── Settlement instructions                      │   │
     │   └---------------------------------------------------+   │
     │                                                           │
     └-----------------------------------------------------------+
