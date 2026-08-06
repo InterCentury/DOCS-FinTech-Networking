@@ -673,40 +673,40 @@ EXCEPTION PROCESSING
     │               EXCEPTION PROCESSING                        │
     +-----------------------------------------------------------+
     │                                                           │
-    │   CLEARING RECORD                                        │
+    │   CLEARING RECORD                                         │
     │        │                                                  │
     │        ▼                                                  │
-    │   VALIDATION                                             │
+    │   VALIDATION                                              │
     │        │                                                  │
-    │   ┌────┴────┐                                            │
-    │   │         │                                            │
-    │   ▼         ▼                                            │
-    │  PASS      FAIL                                         │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    EXCEPTION QUEUE                                  │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    INVESTIGATION                                    │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    CORRECTION                                       │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    RESUBMISSION                                     │
-    │   │         │                                            │
-    │   │         ▼                                            │
-    │   │    VALIDATION                                       │
-    │   │         │                                            │
-    │   │   ┌────┴────┐                                      │
-    │   │   │         │                                      │
-    │   │   ▼         ▼                                      │
-    │   │  PASS      FAIL                                    │
-    │   │   │         │                                      │
-    │   └───┴─────────┘                                      │
+    │   ┌────┴────┐                                             │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │  PASS      FAIL                                           │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    EXCEPTION QUEUE                                    │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    INVESTIGATION                                      │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    CORRECTION                                         │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    RESUBMISSION                                       │
+    │   │         │                                             │
+    │   │         ▼                                             │
+    │   │    VALIDATION                                         │
+    │   │         │                                             │
+    │   │   ┌────┴────┐                                         │
+    │   │   │         │                                         │
+    │   │   ▼         ▼                                         │
+    │   │  PASS      FAIL                                       │
+    │   │   │         │                                         │
+    │   └───┴─────────┘                                         │
     │        │                                                  │
     │        ▼                                                  │
-    │   PROCESSED                                             │
+    │   PROCESSED                                               │
     │                                                           │
     └-----------------------------------------------------------+
 ```
