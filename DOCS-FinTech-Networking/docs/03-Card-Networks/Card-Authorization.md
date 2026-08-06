@@ -1074,8 +1074,8 @@ SUMMARY
 
     +-------------------------------------------------+
     |  WHAT IS CARD AUTHORIZATION?                    |
-    |  Real-time approve/decline decision for        |
-    |  card transactions                            |
+    |  Real-time approve/decline decision for         |
+    |  card transactions                              |
     +-------------------------------------------------+
 
     +-------------------------------------------------+
