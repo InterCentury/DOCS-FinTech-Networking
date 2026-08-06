@@ -609,23 +609,23 @@ NET POSITION CALCULATION
     │               NET POSITION CALCULATION                    │
     +-----------------------------------------------------------+
     │                                                           │
-    │   ACQUIRER POSITION:                                     │
-    │   ────────────────────────────────────────────────────── │
-    │   Receivables (from merchants): $10,000,000            │
-    │   Payables (to issuers): $9,500,000                    │
-    │   Net Position: +$500,000 (Acquirer receives)         │
+    │   ACQUIRER POSITION:                                      │
+    │   ──────────────────────────────────────────────────────  │
+    │   Receivables (from merchants): $10,000,000               │
+    │   Payables (to issuers): $9,500,000                       │
+    │   Net Position: +$500,000 (Acquirer receives)             │
     │                                                           │
-    │   ISSUER POSITION:                                      │
-    │   ────────────────────────────────────────────────────── │
-    │   Receivables (from acquirers): $9,500,000            │
-    │   Payables (to cardholders): $10,000,000              │
-    │   Net Position: -$500,000 (Issuer pays)              │
+    │   ISSUER POSITION:                                        │
+    │   ──────────────────────────────────────────────────────  │
+    │   Receivables (from acquirers): $9,500,000                │
+    │   Payables (to cardholders): $10,000,000                  │
+    │   Net Position: -$500,000 (Issuer pays)                   │
     │                                                           │
-    │   NET SETTLEMENT:                                       │
-    │   ────────────────────────────────────────────────────── │
-    │   Acquirer receives $500,000                           │
-    │   Issuer pays $500,000                               │
-    │   Settlement through central bank                      │
+    │   NET SETTLEMENT:                                         │
+    │   ──────────────────────────────────────────────────────  │
+    │   Acquirer receives $500,000                              │
+    │   Issuer pays $500,000                                    │
+    │   Settlement through central bank                         │
     │                                                           │
     └-----------------------------------------------------------+
 ```
