@@ -575,17 +575,17 @@ EMV AUTHORIZATION FLOW
     │   ISSUER VALIDATES ARQC                                   │
     │        │                                                  │
     │        ▼                                                  │
-    │   ISSUER GENERATES ARPC (Authorization Response         │
-    │   Cryptogram)                                            │
+    │   ISSUER GENERATES ARPC (Authorization Response           │
+    │   Cryptogram)                                             │
     │        │                                                  │
     │        ▼                                                  │
-    │   RESPONSE SENT TO TERMINAL                              │
+    │   RESPONSE SENT TO TERMINAL                               │
     │        │                                                  │
     │        ▼                                                  │
-    │   TERMINAL VALIDATES ARPC                                │
+    │   TERMINAL VALIDATES ARPC                                 │
     │        │                                                  │
     │        ▼                                                  │
-    │   TRANSACTION APPROVED                                   │
+    │   TRANSACTION APPROVED                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
