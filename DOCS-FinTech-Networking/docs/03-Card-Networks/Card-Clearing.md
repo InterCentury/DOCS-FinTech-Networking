@@ -32,22 +32,22 @@ DOCUMENTATION OBJECTIVES
 CARD CLEARING DEFINITION
 
                          +---------------------------+
-                         |    CARD CLEARING         |
-                         |  Post-authorization      |
-                         |  batch data exchange     |
+                         |    CARD CLEARING          |
+                         |  Post-authorization       |
+                         |  batch data exchange      |
                          +-------------+-------------+
                                        |
           +----------------------------+----------------------------+
           │                            │                            │
           ▼                            ▼                            ▼
 +---------------------------+  +---------------------------+  +---------------------------+
-|  KEY CHARACTERISTICS     |  |  PRIMARY FUNCTIONS       |  |  WHAT IT IS NOT          |
-|  - Batch processing      |  |  - Validate records     |  |  - Authorization          |
-|  - Data exchange         |  |  - Match transactions  |  |  - Settlement             |
-|  - Post-authorization    |  |  - Calculate fees      |  |  - Real-time              |
-|  - Pre-settlement        |  |  - Calculate net       |  |  - Individual             |
-|  - High volume           |  |  - Generate settlement |  |  - Payment                |
-|  - Deferred              |  |    obligations         |  |  - Fund transfer          |
+|  KEY CHARACTERISTICS      |  |  PRIMARY FUNCTIONS        |  |  WHAT IT IS NOT           |
+|  - Batch processing       |  |  - Validate records       |  |  - Authorization          |
+|  - Data exchange          |  |  - Match transactions     |  |  - Settlement             |
+|  - Post-authorization     |  |  - Calculate fees         |  |  - Real-time              |
+|  - Pre-settlement         |  |  - Calculate net          |  |  - Individual             |
+|  - High volume            |  |  - Generate settlement    |  |  - Payment                |
+|  - Deferred               |  |    obligations            |  |  - Fund transfer          |
 +---------------------------+  +---------------------------+  +---------------------------+
 ```
 
