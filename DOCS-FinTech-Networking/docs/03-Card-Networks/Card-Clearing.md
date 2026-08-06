@@ -364,38 +364,38 @@ AUTHORIZATION TO CLEARING
 CLEARING MESSAGE STRUCTURE
 
     +-----------------------------------------------------------+
-    │               CLEARING MESSAGE STRUCTURE                   │
+    │               CLEARING MESSAGE STRUCTURE                  │
     +-----------------------------------------------------------+
     │                                                           │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  MESSAGE TYPE INDICATOR (MTI)                    │   │
-    │   │  0120 = Clearing Request                        │   │
-    │   │  0130 = Clearing Response                      │   │
-    │   │  0140 = Clearing Exception                    │   │
+    │   │  MESSAGE TYPE INDICATOR (MTI)                     │   │
+    │   │  0120 = Clearing Request                          │   │
+    │   │  0130 = Clearing Response                         │   │
+    │   │  0140 = Clearing Exception                        │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  BITMAP                                         │   │
-    │   │  Indicates which clearing fields are present    │   │
+    │   │  BITMAP                                           │   │
+    │   │  Indicates which clearing fields are present      │   │
     │   └───────────────────────────────────────────────────┘   │
     │                           │                               │
     │                           ▼                               │
     │   ┌───────────────────────────────────────────────────┐   │
-    │   │  DATA ELEMENTS                                  │   │
+    │   │  DATA ELEMENTS                                    │   │
     │   │                                                   │   │
-    │   │  Field 2: PAN (Primary Account Number)           │   │
-    │   │  Field 4: Transaction Amount                     │   │
-    │   │  Field 7: Transmission Date & Time               │   │
-    │   │  Field 11: STAN (System Trace Audit Number)      │   │
-    │   │  Field 31: Acquiring Institution ID              │   │
-    │   │  Field 32: Issuing Institution ID                │   │
-    │   │  Field 38: Authorization Code                    │   │
-    │   │  Field 42: Merchant ID                          │   │
-    │   │  Field 49: Currency Code                        │   │
-    │   │  Field 93: Transaction Amount (Settlement)      │   │
-    │   │  Field 102: Account ID (Merchant)               │   │
-    │   │  Field 103: Account ID (Customer)               │   │
+    │   │  Field 2: PAN (Primary Account Number)            │   │
+    │   │  Field 4: Transaction Amount                      │   │
+    │   │  Field 7: Transmission Date & Time                │   │
+    │   │  Field 11: STAN (System Trace Audit Number)       │   │
+    │   │  Field 31: Acquiring Institution ID               │   │
+    │   │  Field 32: Issuing Institution ID                 │   │
+    │   │  Field 38: Authorization Code                     │   │
+    │   │  Field 42: Merchant ID                            │   │
+    │   │  Field 49: Currency Code                          │   │
+    │   │  Field 93: Transaction Amount (Settlement)        │   │
+    │   │  Field 102: Account ID (Merchant)                 │   │
+    │   │  Field 103: Account ID (Customer)                 │   │
     │   └───────────────────────────────────────────────────┘   │
     │                                                           │
     └-----------------------------------------------------------+
