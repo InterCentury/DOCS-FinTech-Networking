@@ -558,10 +558,10 @@ INTERCHANGE CALCULATION
     │                                                           │
     │   TOTAL FEES:                                             │
     │   ──────────────────────────────────────────────────────  │
-    │   Interchange: $1.50 (paid to issuer)                  │
-    │   Network Assessment: $0.10 (paid to network)          │
-    │   Acquirer Markup: $0.25 (acquirer revenue)            │
-    │   Total Merchant Fee: $1.85                           │
+    │   Interchange: $1.50 (paid to issuer)                     │
+    │   Network Assessment: $0.10 (paid to network)             │
+    │   Acquirer Markup: $0.25 (acquirer revenue)               │
+    │   Total Merchant Fee: $1.85                               │
     │                                                           │
     └-----------------------------------------------------------+
 ```
