@@ -941,29 +941,29 @@ AUTHORIZATION TIMELINE
 DUPLICATE PREVENTION
 
     +-----------------------------------------------------------+
-    │               DUPLICATE PREVENTION                       │
+    │               DUPLICATE PREVENTION                        │
     +-----------------------------------------------------------+
     │                                                           │
-    │   REQUEST WITH STAN: 123456                             │
+    │   REQUEST WITH STAN: 123456                               │
     │        │                                                  │
     │        ▼                                                  │
-    │   SYSTEM CHECKS STAN                                     │
+    │   SYSTEM CHECKS STAN                                      │
     │        │                                                  │
-    │   ┌────┴────┐                                            │
-    │   │         │                                            │
-    │   ▼         ▼                                            │
-    │ EXISTS    NOT EXISTS                                     │
-    │   │         │                                            │
-    │   ▼         ▼                                            │
-    │ RETURN    PROCESS                                       │
-    │ RESULT    TRANSACTION                                    │
+    │   ┌────┴────┐                                             │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │ EXISTS    NOT EXISTS                                      │
+    │   │         │                                             │
+    │   ▼         ▼                                             │
+    │ RETURN    PROCESS                                         │
+    │ RESULT    TRANSACTION                                     │
     │              │                                            │
     │              ▼                                            │
-    │          STORE RESULT                                   │
-    │          WITH STAN                                      │
+    │          STORE RESULT                                     │
+    │          WITH STAN                                        │
     │              │                                            │
     │              ▼                                            │
-    │          RETURN RESULT                                  │
+    │          RETURN RESULT                                    │
     │                                                           │
     └-----------------------------------------------------------+
 ```
